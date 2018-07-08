@@ -1,0 +1,131 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         FORMATO DE TESIS FC UNAM                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% based on Harish Bhanderi's PhD/MPhil template, then Uni Cambridge
+% http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/ThesisStyle/
+% corrected and extended in 2007 by Jakob Suckale, then MPI-iCBG PhD programme
+% and made available through OpenWetWare.org - the free biology wiki
+
+%                     Under GNU License v3
+
+% ADAPTADO PARA FI-UNAM:  Jesús Velázquez y Marco Ruiz
+
+\documentclass[twoside,11pt]{Latex/Classes/PhDthesisPSnPDF} 
+\usepackage{blindtext}
+%\usepackage{multicols}
+\usepackage{natbib} 
+%\usepackage[dvips]{graphicx}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{theorem}
+\setlength{\theorempreskipamount}{5mm}
+\setlength{\theorempostskipamount}{5mm}
+\theoremstyle{break}
+\theorembodyfont{\normalfont}
+\theoremheaderfont{\scshape}
+\newtheorem{thm}{\bf \textit{Teorema} }
+\newtheorem{lem}{\bf \textit{Lema}    }
+\newtheorem{defini}{\bf \textit{Definición}    }
+\newtheorem{corola}{\bf \textit{Corolario}    }
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[all]{xy} %paquete de diagramas
+\setcitestyle{square}
+%\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+%\usepackage{showframe}% http://ctan.org/pkg/showframe
+%\usepackage{eso-pic}% http://ctan.org/pkg/eso-pic
+\usepackage{graphicx}% http://ctan.org/pkg/graphicx
+%\usepackage{algorithm2e}
+%[ruled,vlined,lined,linesnumbered,algochapter,portugues]
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+                     % Para insertar texto dummy, de ejemplo, pues.
+% Note:
+% The \blindtext or \Blindtext commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing thesis content.
+\include{Latex/Macros/MacroFile1}           % Archivo con funciones útiles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   DATOS                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Método de parametrización: Variedades estables e inestables en mapeos hamiltonianos de dos dimensiones}
+\author{Evelyn Álvarez Cruz}        
+\degree{Físico}               % Carrera
+\director{Dr. Luis Benet Fernández}               % Director de tesis
+\degreedate{2018}                           % Año de la fecha del examen
+\lugar{México, D.F.}                        % Lugar
+%\portadafalse                              % Portada en NEGRO, descomentar y comentar la línea siguiente si se quiere utilizar
+\portadatrue                                % Portada en COLOR
+
+\keywords{tesis,autor,tutor,etc}            % Palablas clave para los metadatos del PDF
+\subject{tema_1,tema_2}    
+
+           % Tema para metadatos del PDF  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   PORTADA                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle									% Se redefinió este comando en el archivo de la clase para generar automáticamente la portada a partir de los datos
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                  PRÓLOGO                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+\include{Agradecimientos/Dedicatoria} 
+\include{Declaracion/Declaracion}      % Comentar línea si no se usa
+\include{introduccion/introduccion}            % ~10 páginas - Explicar el propósito de la tesis
+%\include{Agradecimientos/Agradecimientos}   % Comentar línea si no se usa 
+%\include{Declaracion/Declaracion}           % Comentar línea si no se usa
+%\include{Resumen/Resumen}                   % Comentar línea si no se usa
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Esta sección genera el índice
+\setcounter{secnumdepth}{3} % organisational level that receives a numbers%                   ÍNDICES                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{tocdepth}{3}    % print table of contents for level 3
+\tableofcontents            % Genera el índice 
+%: ----------------------- list of figures/tables ------------------------
+%\listoffigures              % Genera el ínidce de figuras, comentar línea si no se usa
+%\listoftables               % Genera índice de tablas, comentar línea si no se usa
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   CONTENIDO                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% the main text starts here with the introduction, 1st chapter,...
+\mainmatter
+\def\baselinestretch{1.5}                   % Interlineado de 1.5
+\include{Capitulo1/preliminares}  % ~15 pag.
+\include{Capitulo2/parametrizacion}   
+\include{Capitulo3/Henon} 
+%\lhead{\begin{picture}(0,0) \put(0,0){\includegraphics[H][width=20mm]{curvas1}} \end{picture}}
+\include{Capitulo4/conclusiones-p}     % ~20 páginas - Explicar el problema en específico que se va a resolver, la met   % ~20 páginas - Presentar los resultados tal cual son, y analizarlos.
+%\include{Capitulo4/Conclusiones}            % ~5 páginas - Resumir lo que se hizo y lo que no y comentar trabajos futuros sobre el tema
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   APÉNDICES                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+%\include{Apendice1/Apendice1}               % Colocar los circuitos, manuales, código fuente, pruebas de teoremas, etc.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   REFERENCIAS                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% existen varios estilos de bilbiografía, pueden cambiarlos a placer
+ % otros estilos pueden ser abbrv, acm, alpha, apalike, ieeetr, plain, siam, unsrt
+
+%El formato trae otros estilos, o pueden agregar uno que les guste:
+%\bibliographystyle{Latex/Classes/PhDbiblio-case} % title forced lower case
+%\bibliographystyle{Latex/Classes/PhDbiblio-bold} % title as in bibtex but bold
+%\bibliographystyle{Latex/Classes/PhDbiblio-url} % bold + www link if provided
+%\bibliographystyle{Latex/Classes/jmb} % calls style file jmb.bst
+\bibliographystyle{unsrt}
+\bibliography{referencias}             % Archivo .bib
+\nocite{*}
+\end{document}

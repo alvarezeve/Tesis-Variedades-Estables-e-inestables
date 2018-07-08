@@ -1,0 +1,407 @@
+\chapter{Análisis de estabilidad}
+En este capítulo se hará un estudio general de la teoría de Floquet, es decir, de las propiedades de las ecuaciones diferenciales lineales con coeficientes periódicos. En particular, se hará un análisis de las regiones de estabilidad de las soluciones de la ecuación de Mathieu obtenida en el primer modelo y la ecuación de Hill obtenida en el segundo modelo en función de los parámetros de la ecuación, que en nuestro caso dependen de parámetros fisicos del sistema (masas, constantes de resorte, etc.), así como de las condiciones iniciales del movimiento (amplitud de oscilación) que están relacionadas directamente con la energía.
+\\
+\\
+Antes de describir las zonas de estabilidad de la solución, se hará un repaso del concepto de estabilidad en el sentido de Lyapunov y de la estabilidad orbital. Se tomará como base el estudio hecho en \citep{ortega}.
+\section{Estabilidad}
+Considérese un sistema hamiltoniano de la forma (1.3) con $v=(q,p)^{T} \in \Omega \subset \mathbb{R}^{2n}$. El concepto de estabilidad de una solución asociada a cierta condición inicial nace del hecho de querer estudiar el comportamiento de soluciones con condiciones iniciales "cercanas" a la condición inicial de la solución en cuestión. 
+\\
+\\
+La idea intuitica de que una solución del sistema (1.3) respecto a cierta condición inicial sea estable es que si al tomar otra solución con condición inicial \textit{cercana}, ésta solución también es \textit{cercana} a la solución estudiada para tiempos \textit{largos}, mientras que la idea de que una solución sea inestable es precisamente lo contrario: que la solución con concondición inicial \textit{cercana} más bien se aleje de la solución estudiada. Evidentemente, para dar un concepto formal de estabilidad, hay que escribir el significado preciso de \textit{cercanía} y de \textit{tiempos largos}.
+\\
+\\
+En éste capítulo se denotará a la solución del sistema (1.3) con condición inicial $v_{0}$ como:
+\begin{eqnarray*}
+\phi(t;v_{0}).
+\end{eqnarray*}
+\textbf{Definición 3.1.-} \textit{Considérese un sistema hamiltoniano de la forma (1.3). Sea $v_{0} \in \Omega$ y supóngase que $\phi(t;x_{0})$  está bien definido para todo $t \geq 0$. Se dice que ésta solución es estable en el sentido de Lyapunov si para cualquier $\epsilon > 0$ existe $\delta > 0$ tal que si $\left \| x - x_{0} \right \| \leq \delta $ entonces $\phi(t;x)$  está bien definido para todo $t \geq 0$ y:}
+\begin{eqnarray*}
+\left \|  \phi(t;v) - \phi(t;v_{0}) \right \| < \epsilon,
+\end{eqnarray*}
+\textit{Si no ocurre lo anterior, se dice que ésta solución es inestable.}
+\\
+\\
+Intuitivamente, que la solución sea estable en el sentido de Lyapunov significa que al tomar una solución con condición inicial cercana, ésta se mantenga en una vecindad alrededor de la solución para cualquier tiempo mayor o igual a cero, es decir, que las soluciones se mantengan cerca en tiempos largos.
+\\
+\\
+En sistemas hamiltonianos, éste tipo de estabilidad es muy restrictiva. Hay algunos sistemas periódicos en los que las órbitas permanecen cercanas espacialmente pero para un tiempo $t$, la posición de las partículas de cada solución pueden estar lejos. Recuérdese que una órbita es un conjunto de la forma:
+\begin{eqnarray*}
+\mathcal{O}=\lbrace  (q(t),p(t)) \mid t \geq 0 \rbrace
+\end{eqnarray*}
+\textbf{Definición 3.2.-} \textit{Se dice que una órbita $\mathcal{O} \subset \Omega$ es orbitalmente estable si dada una vecindad $\mathbf{U}=\mathbf{U}(\mathcal{O})$ existe otra vecindad $\mathbf{V}=\mathbf{V}(\mathcal{O})$  tal que si $v\in \mathbf{V}$ entonces $\phi(t;v) \in \mathbf{U}$ para $t \geq 0$.}
+\\
+\\
+Es claro que la estabilidad en el sentido de Lyapunov implíca la estabilidad ortibal. En \citep{ortega} se pueden consutar ejemplos en donde el reciproco de ésta afirmación no es cierta.
+\\
+\\
+Hay pocas maneras de probar que una solución es estable en el sentido de Lyapunov u orbitalmente estable. La manera directa es encontrar una función llamada \emph{función de Lyapunov} que es una función que cumple ciertas condiciones y su existencia determina si un sistema es o no estable. Éste problema es muy complicado en la mayoría de los casos. Existe otro tipo de estabilidad más "débil" que resulta más fácil de probar:
+\\
+\\
+\textbf{Definición 3.3.-} \textit{Una solución $\phi(t;v_{0})$ del sistema (1.3) es linealmente estable si la solución trivial del sistema linealizado respecto a $\phi$ es estable en el sentido de Lyapunov.}
+\\
+\\
+Estudiar la estabilidad en el sentido de Lyapunov de los sistemas lineales es sencillo porque la solución de éstos sistemas se conoce explícitamente. Si bien la estabilidad lineal no es una condición suficiente para la estabilidad en el sentido de Lyapunov u orbital, sí es una condición necesaria. Esto es, si el sistema no es estable linealmente, entonces no puede tener ninguna de las otras dos estabilidades.
+\\
+\\
+En las secciones 2.1.3 y 2.2.3 se encontraron las ecuaciones linealizadas alrededor de ciertas soluciones de equilibrio. Al encontrar cuándo éstos sistemas no son estables, se encontrará también cuando las soluciones respecto a las cuales se linealizó no son estables en el sentido de Lyapunon, por lo que tampoco serán estables orbitalmente.
+\subsection{Ecuación con coeficientes constantes.}
+Para empezar con el análisis de estabilidad, se comenzará con un caso sencillo. Considérese una ecuación de la forma:
+\begin{eqnarray}
+\dot{x}=Ax,
+\end{eqnarray}
+donde $A$ es una matríz de $n\times n$ con coeficientes constantes. Sean $\lambda_{j}$ los valores propios de $A$. Según la teoría de ecuaciones diferenciales ordinarias, las solución del sistema (3.1) es de las siguientes formas, dependiendo de la multiplicidad de los valores propios.
+\\
+\\
+\textit{Caso 1.-} Si todos los valores propios tienen multiplicidad 1, y denotamos como $c_{j}$ a los respectivos valores propios, entonces las funciones:
+\begin{eqnarray*}
+c_{j}e^{\lambda_{j}t}
+\end{eqnarray*}
+son soluciones linealmente independiente y, por tanto, forman un conjunto fundamental de soluciones de (3.1)
+\\
+\\
+\textit{Caso 2.-} Si algún valor propio tienen multiplicidad $m$ distinta de 1, por ejemplo, $\lambda_{k}$, entonces es posible construir $m$ soluciones linealmente independientes asociadas a $\lambda_{k}$ que tendrán la forma:
+\begin{eqnarray*}
+p_{0}e^{\lambda_{k}t}, p_{1}(t)e^{\lambda_{k}t}, ... , p_{m-1}(t)e^{\lambda_{k}t},
+\end{eqnarray*}
+donde $p_{0},p_{1},...,p_{m-1}$ son polinomios de grado menor o igual a $m$.
+\\
+\\
+En cualquiera de los dos casos, se obtendran $n$ soluciones linealmente independientes $x_{1},...,x_{n}$ con las cuales se forma la matríz fundamental de soluciones:
+\begin{eqnarray*}
+\Phi(t)=(x_{1},...,x_{n}).
+\end{eqnarray*}
+Con ésta matríz, cualquier solución de (3.1) se puede escribir de la forma:
+\begin{eqnarray*}
+\phi(t)=\Phi(t)c,
+\end{eqnarray*}
+con $c$ un vector constante que depende de las condiciones iniciales. Con ésto, la solución asociada a la condicion inicial $x_{0}$ es de la forma:
+\begin{eqnarray*}
+\phi(t;x_{0})=\Phi(t)\Phi^{-1}(0)x_{0}.
+\end{eqnarray*}
+Normalmente se puede escoger a $\Phi(t)$ de tal manera que $\Phi(t_{0})=\textrm{Id}$, la matríz identidad de $n\times n$.
+\\
+\\
+Nótese que en cualquiera de los dos casos, las soluciones tienen a una exponencial como factor, hecho que es clave para el estudio de la estabilidad de éstos sistemas. Como es bien sabido, si una exponencial tiene parte real positiva crece arbitrariamente cuando $t$ crece; si tiene parte real cero, la exponencial es periodica y si tiene parte real negativa la exponencial tiende a cero conforme $t$ crece. Entonces, es claro que para que haya estabilidad, la parte real de las exponenciales tienen que ser no positivas, mientras que si hay alguna que sea positiva, la solución tendrá que ser inestable. El signo de la parte real de las exponenciales está determinado por el signo de $\mbox{Re}(\lambda_{j})$. A reserva de detalles expuestos en \citep{ver}, se ha probado el siguiente:
+\\
+\\
+\textbf{Teorema 3.4.-} \textit{Considérese la ecuación diferencial (3.1) con $A$ una matríz de $n\times n$ con coeficientes constantes, con valores propios $\lambda_{1},...,\lambda_{n}$.}
+\\
+\textit{a) Si $\mbox{Re}(\lambda_{j})<0$ para $j=1,...,n$ entonces para cualquer $x(t_{0})=x_{0}\in \mathbb{R}^{n}$ se tiene:}
+\begin{eqnarray*}
+\left \| x(t) \right \| \leq C \left \| x_{0} \right \| e^{-\mu t} \ \mbox{y} \ \displaystyle\lim_{t \to \infty}{ x(t)} = 0,
+\end{eqnarray*}
+\textit{con $C$ y $\mu$ constantes adecuadas.}
+\\
+\textit{b) Si $\mbox{Re}(\lambda_{j})\leq 0$ para $j=1,...,n$ y los valores propios con parte real cero son diferentes, entonces:}
+\begin{eqnarray*}
+\left \| x(t) \right \| \leq C \left \| x_{0} \right \|,
+\end{eqnarray*}
+\textit{con $C$ una constante adecuada positiva.}
+\\
+\textit{c) Si existe un valor propio $\lambda_{k}$ tal que $\mbox{Re}(\lambda_{k}) > 0$, entonces en cualquier vecindad de $x=0$ existen condiciones iniciales tal que la correspondiente solución cumple que:}
+\begin{eqnarray*}
+\displaystyle\lim_{t \to \infty}{ x(t)} = +\infty
+\end{eqnarray*}
+\textit{En los casos a) y b) la solución $x=0$ es estable en el sentido de Lyapunov y en el caso c) la solución $x=0$ es inestable.}
+\section{Ecuaciones con coeficientes periódicos: Teoría de Floquet}
+Ahora se analizará la estabilidad en el caso general de un sistema lineal de primer orden con coeficientes periódicos. Para ello se estudiará la forma que tiene su solución fundamental y ésta nos dará información acerca de la existencia de soluciones periódicas del sistema, así como de la estabilidad de la solución trivial.
+\\
+\\
+El sistema a analizar es el siguiente:
+\begin{eqnarray}
+\dot{x}=A(t)x,
+\end{eqnarray}
+donde A es una matríz continua $T-$ periódica. El teorema de Floquet contiene el resultado fundamental para las ecuaciones con coeficientes periódicos (que es el caso de la función de Mathieu y la ecuación de Hill obtenida) el cual describe la forma que tiene la matríz fundamental en éstos sistemas.
+\\
+\\
+\textbf{Teorema 3.5 (de Floquet)} \textit{Cualquier matríz fundamental del sistema (3.2) es de la forma:}
+\begin{eqnarray*}
+\Phi (t)=P(t)e^{Bt}
+\end{eqnarray*}
+\textit{donde $P$ es $T-$periódica y $B$ es una matríz constante.}
+\\
+\\
+\textit{Demostración:} Si se tiene una matríz fundamental $\Phi(t)$, entonces $\Phi(t+T)$ también es una matríz fundamental, por lo tanto deben de ser linealmente dependientes. Esto implíca que debe de existir una matríz no-singular $C$ que satisfaga $\Phi(t+T)=\Phi(t)C$. Al ser $C$ no-singular, se puede demostrar \citep{hale} que ésta se puede escribir como $C=\exp(BT)$. Proponiendo a $P(t)=\Phi(t)\exp(-Bt)$ se llega al resultado. $\blacksquare$
+\\
+\\
+Debido a que se pueden elegir las condiciones iniciales de tal forma que la matríz fundamental cumpla $\Phi(0)=Id$, entonces se tiene que $C=\Phi(T)$. La matríz $C$ es llamada matríz de monodromía. Los eigenvalores de $C$, denotados por $\rho$ son llamados multiplicadores característicos (o de Floquet) y a cualquier número complejo $\lambda$ que cumpla que:
+\begin{eqnarray*}
+\rho=e^{\lambda T}
+\end{eqnarray*} 
+se le llama exponente característico (o de Floquet). Debido a la periodicidad de la exponencial compleja, la parte imaginaria de los exponentes característicos no está definida de manera única. Por lo tanto, siempre se pueden elegir a éstos de tal forma que sean los valores propios de la matríz $B$. Los multiplicadores característicos sí están definidos de manera única, pues la $C$ lo está.
+\\
+\\
+Con el teorema de Floquet se puede demostrar que la solución del sistema (3.2) consiste de un producto de polinomios, exponenciales de la forma $e^{\lambda t}$ y términos $T-$periódicos. Para ver ésto, se introduce una nueva variables $y$ con el cambio:
+\begin{eqnarray}
+x=P(t)y.
+\end{eqnarray}
+Derivando y simplificando se tiene:
+\begin{eqnarray}
+\begin{split}
+\dot{x}=&P(t)\dot{y}+\dot{P}(t)y \\ 
+& \Rightarrow \ A(t)x=A(t)P(t)y=P(t)\dot{y}+\dot{P}(t)y \Rightarrow \dot{y} = P^{-1}(AP-\dot{P})y.
+\end{split}
+\end{eqnarray}
+Para calcular $\dot{P}$, se deriva la expresión que la define, teniendo:
+\begin{eqnarray*}
+P(t)=\Phi(t)e^{Bt} \ \Rightarrow \ \dot{P}= \dot{\Phi}(t)e^{Bt} - \Phi(t)e^{Bt}B = AP - PB
+\end{eqnarray*}
+Sustituyendo ésto en la ecuación (3.3)y usando (3.2) se obtiene la ecuación que satiface la variable $y$:
+\begin{eqnarray}
+\dot{y}=By.
+\end{eqnarray}
+Ésto significa que con el cambio de variable, la ecuación (3.2) se vuelve una ecuación con coeficientes constantes que, como se vio en la sección anterior, sus soluciones tienen la forma de productos de polinomios con exponenciales. Por lo tanto, las soluciones $x$ de (3.2) son de la forma polinomios por exponenciales por algo periódico, llegando así al resultado afirmado.
+\\
+\\
+Ya que $P(t)$ es una matríz periódic, la forma que tenga ésta no va a influenciar la estabilidad de la solución $x=0$. Ésto implíca que la estabilidad de la solución $x=0$ de la ecuación (3.2) va a depender sólamente de la estabilidad de la solución $y=0$ de la ecuación (3.5) que, debido al Teorema 3.3 depende a su vez de los valores propios de $B$ que son precisamente los exponentes característicos.
+\\
+\\
+En resúmen, las condicioens para la estabilidad de la solución $x=0$ para el sistema (3.2) son las siguientes:
+\\
+\\
+\textit{1.- Una condición necesaria para la existencia de soluciones $T$ periódicas es que uno o más exponentes característicos sean puramente imaginarios (multiplicadores característicos de módulo 1). Esto es debida a la observación hecha previamente acerca de la parte real nula de una exponencial.}
+\\
+\\
+\textit{2.- Una condición necesaria y suficiente para la estabilidad en el sentido de Lyapunov de la solución trivial es que los exponentes característicos tengan parte real no-positiva mientras que los exponentes con parte real cero tengan multiplicidad $1$.}
+\\
+\\
+El principal problema de este análisis es que no es posible encontrar analíticamente a la función $P(t)$, y por lo tanto, no se pueden encontrar explícitamente los multiplicadores ni los exponentes característicos. Sin enbargo, se puede utilizar el siguiente resultado bien conocido \citep{ver}: Si $\rho_{j}$ y $\lambda_{j}$ son los multiplicadores y exponentes característicos (respectivamente), entonces se cumple:
+\begin{eqnarray}
+\rho_{1}\rho_{2}...\rho{n}=\exp\left(\int_{0}^{\pi}Tr(A(\tau))d\tau) \right)
+\end{eqnarray}
+\begin{eqnarray}
+\lambda_{1}+ \lambda_{2}+...+\lambda_{n}=\dfrac{1}{\pi}\int_{0}^{\pi}Tr(A(\tau))d\tau \ (\mod 2i)
+\end{eqnarray}
+\section{Método de Poincaré-Lindsted}
+El objetivo de ésta seción es describir un método para encontrar la relación entre los parámetros físicos del sistema para que haya solución periódica sin utilizar los valores propios explícitamente, ya que éstos no se pueden encontrar analíticamente. Es de interés encontrar soluciones periódicas porque, según los resultados discutiso en la sección anterior, cuando hay solución periódica se encuentra el punto de transición entre soluciones estables e inestables.
+\\
+\\
+Supóngase una ecuación diferencial de la forma:
+\begin{eqnarray}
+\ddot{x}+m^{2}x=qf(x,\dot{x},q);
+\end{eqnarray}
+con $x(0)=A$, $\dot{x}(0)=0$. Se supondrá que para la ecuación (3.8) existen soluciones periódicas para valores pequeños de $q$. Se recomienda consultar el capítulo 10 de \citep{ver} para estudiar resultados acerca de la existencia de las soluciones. Es claro que si $q=0$ la solución general del sistema es de la forma:
+\begin{eqnarray}
+x(t)=c_{1}\cos(mt)+c_{2}\sin(mt).
+\end{eqnarray}
+Usando la fórmula de variación de las constantes y las condiciones iniciales de la ecuación, la solución es de la forma:
+\begin{eqnarray}
+x(t)=A\cos(mt)+q\displaystyle\int_{0}^{t} \sin(m(t-\tau))f(x(\tau),\dot{x}(\tau),q) \, d\tau .
+\end{eqnarray}
+Para que haya solución periódica, se tiene que cumplir que $x(t+2\pi/m)=x(t)$. Usando ésta condición en (3.10) se llega a que:
+\begin{eqnarray*}
+\displaystyle\int_{t}^{t+2\pi / m} \sin(m(t-\tau))f(x(\tau),\dot{x}(\tau),q) \, d\tau =0.
+\end{eqnarray*}
+Desarrollando $\sin(m(t-\tau))$ y usando la independencia lineal de $\sin(mt)$ y $\cos(mt)$ se llegan a las siguientes condiciones:
+\begin{eqnarray}
+\displaystyle\int_{0}^{2\pi / m} \sin(m\tau)f(x(\tau),\dot{x}(\tau),q) \, d\tau =0;
+\end{eqnarray}
+\begin{eqnarray}
+\displaystyle\int_{0}^{2\pi / m} \cos(m\tau)f(x(\tau),\dot{x}(\tau),q) \, d\tau =0.
+\end{eqnarray}
+A las condiciones (3.11) y (3.12) se les conoce como \emph{condiciones de existencia de soluciones periódicas de Poincaré-Linstedt}, las cuales serán usadas para encontrar las condicones de estabilidad de los sistemas estudiados.
+\\
+\\
+Para aplicar éstas condiciones, se hará una transformación a la ecuación. Si se tiene una ecuación de la forma (3.8), la solución para $q=0$ es de la forma (3.9). El método de variación de las constantes dice que la solución del sistema cuando $q\neq 0$ es de la forma:
+\begin{eqnarray}
+x(t)=y_{1}(t)\cos(mt)+y_{2}(t)\sin(mt);
+\end{eqnarray}
+\begin{eqnarray}
+\dot{x}(t)=-my_{1}(t)\sin(mt)+my_{2}(t)\cos(mt).
+\end{eqnarray}
+El objetivo de la transformación es analizar las ecuaciones que cumplen $y_{1}$ y $y_{2}$ en lugar de estudiar las ecuaciones que cumplen $x$ y $\dot{x}$. Invirtiendo el sistema anterior se tiene que:
+\begin{eqnarray}
+\dot{y_{1}}=x\cos(mt)-\dfrac{1}{m}\dot{x}\sin(mt);
+\end{eqnarray}
+\begin{eqnarray}
+\dot{y_{2}}=x\sin(mt)+\dfrac{1}{m}\dot{x}\cos(mt).
+\end{eqnarray}
+Derivando ambas ecuaciones y usando la ecuación (3.8) se llega a que:
+\begin{eqnarray}
+\dot{y_{1}}=-\dfrac{q}{m}f(x,\dot{x},q)\sin(mt);
+\end{eqnarray}
+\begin{eqnarray}
+\dot{y_{2}}=\dfrac{q}{m}f(x,\dot{x},q)\cos(mt).
+\end{eqnarray}
+Con esto, el sistema anterior es equivalente al sistema (3.8). Esto implíca que si se quiere extraer la forma de $f$ para el sistema (3.8) se puede extraer directamente de (3.17) o de (3.18), las cuales son más accesibles en la práctica.
+\section{Ecuación de Mathieu}
+Ahora, se aplicará la teoría descrita anteriormente para el sistema bloque-resorte con un péndulo acoplado. La ecuación diferencial linealizada en este sistema en la dirección horizontal resultó ser:
+\begin{eqnarray*}
+\ddot{x}+\left[\dfrac{g}{R}+\dfrac{A\omega_{0}^{2}}{R}\cos\left( \omega_{0}t\right)  \right]x=0, 
+\end{eqnarray*} 
+donde $\omega_{0}=\sqrt{k/(m+M)}$ es la frecuencia natural de oscilación del resorte. La cantidad $\omega_{1}=\sqrt{g/R}$ que aparece en la ecuación es la frecuencia natural de oscilación del péndulo simple. Con esto:
+\begin{eqnarray}
+\ddot{x}+\left[\omega_{1}^{2}+A\omega_{0}^{2}\cos\left( \omega_{0}t\right)  \right]x=0.
+\end{eqnarray} 
+Esta ecuación es $2\pi / \omega_{0}$-periódica. Para usar la teoría de Floquet, es necesario que la ecuación diferencial sea $\pi$-periódica. Por tanto, se hará el cambio de variable:
+\begin{eqnarray*}
+2\tau=\omega_{0}t.
+\end{eqnarray*}
+Aplicando la regla de la cadena, la ecuación (3.19) en la nueva variable $\tau$ es:
+\begin{eqnarray}
+x''+\left[ \left( \dfrac{2\omega_{1}}{\omega_{0}}\right)^{2}+\dfrac{4A}{R}\cos\left( 2\tau\right)  \right]x=0, 
+\end{eqnarray}
+donde $x''=d^2x/d\tau^{2}$, es decir, las comillas denotan derivadas respecto a la nueva variable $\tau$. Haciendo:
+\begin{eqnarray*}
+a=\left(2\omega_{1}/\omega_{0}\right)^{2};
+\end{eqnarray*}
+\begin{eqnarray*}
+q=\dfrac{2A}{R},
+\end{eqnarray*}
+y reescribiendo la variable independiente con $t$ en la ecuación (3.20) se obtiene la ecuación de segundo orden:
+\begin{eqnarray}
+x''+\left[a+2q\cos\left( 2t \right)  \right]x=0.
+\end{eqnarray}
+Esta es la ecuación de Mathieu en su forma más estándar. Escribiendo la ecuación (3.21) como un sistema de ecuaciones de primer orden, la matríz $A(t)$ que define al sistema es:
+\begin{eqnarray*}
+A(t)=\begin{pmatrix} 0 & 1 \\  -\left[a+2q\cos\left( 2t \right)  \right] & 0 \end{pmatrix}.
+\end{eqnarray*}
+Debido a las propiedades de diferenciabilidad de la matríz $A$, se tiene que los exponentes caracteríscos dependen continuamente de los paramétros en ésta, es decir, los parámetros $a$ y $q$, en una vecindad de $q=0$, para cualquier $a$.
+\\
+\\
+Lo que interesa es conocer la estructura de los exponentes característicos en función a los parámetros $a$ y $q$. Esto dará como resultado la condición de estabilidad de la solución trivial en función a dichos parámetros. Si resulta que los exponentes característicos tienen parte real cero para ciertos valores de los parámetros $a$ y $q$, estos valores pueden ser la transición entre los casos de soluciones estables e inestables. Además, en esta transición se tiene una solución periódica, pues la parte exponencial en el teorema de Floquet también sería periódica (exponentes imaginarios puros). 
+\\
+\\
+Si $\rho_{1}, \rho_{2}$ son los multiplicadores y $\lambda_{1},\lambda_{2}$ son los exponentes característicos, entonces se tiene por las ecuaciones (3.6) y (3.7) que:
+\begin{eqnarray*}
+\rho_{1}\rho_{2}=1 \ ; \ \lambda_{1}+\lambda_{2}=0.
+\end{eqnarray*}
+Como ya se dijo, los exponentes dependen de los parámetros, esto es, $\lambda_{i}(a,q)$ es una función continua en sus dos entradas. Al hacer $q=0$ en la ecuación (3.21), es claro que $\lambda_{1}(a,q)=i\sqrt{a}$ y $\lambda_{1}(a,q)=-i\sqrt{a}$. Esto implíca que para cualquier valor de $a$, la solución es estable y además periódica (esto ya se sabía, pues si $q=0$, resulta la ecuación del oscilador armónico). Como $\lambda_{1}=-\lambda_{2}$, los exponentes no pueden tener parte real diferente de cero, pues eso resultaría en una ecuación inestable. La única posibilidad para que haya parte reales distintas de cero en los exponentes para una vecindad alrededor de $q=0$, es que $a=m^2$, donde $m$ es un entero positivo; así, la parte imaginaria, que es la que causaría problemas, puede ser absorbida por la parte periódica de $P(t)$ (Floquet). 
+\subsection{Soluciones periódicas}
+Con lo anterior se concluye que para el caso en el que $a\neq m^2$, se tiene estabilidad alrededor de una vecindad de $q=0$. El caso $a=m^2$ se estudiará como sigue. Se derminará la relación $a=a(q)$, tal que para $m=1,2,...$ la ecuación de Mathieu tenga solución periódica. Esta relación determinará las fronteras entre los dominios de estabilidad e inestabilidad de la solución trivial. Para ello se utilizará el método de continuación de Poincaré-Lindstedt descrito anteriormente. Sabemos que si $q=0$ la solución del sistema tiene la forma (3.9). En el caso en el que $q \neq 0$ se hará variación de parámetros, es decir, se supondrá que la solución tiene la forma (3.13) y (3.14) con $y_{1}$ y $y_{2}$ funciones a determinar. Se necesitan entonces las ecuaciones que cumplen éstas funciones. Despejando a $y_{1}$ y $y_{2}$ como función de $x$ y $x'$ se tienen las ecuaciones (3.15) y (3.16). Derivando respecto al tiempo ambas ecuaciones se llega a:
+\begin{eqnarray*}
+y_{1}'(t)=-(mx(t)+\dfrac{1}{m}x''(t))\sin(mt)
+\end{eqnarray*}
+\begin{eqnarray*}
+y_{2}'(t)=(mx(t)+\dfrac{1}{m}x''(t))\cos(mt).
+\end{eqnarray*}
+De la ecuación (3.21) se puede despejar a $x''$ como función de $x$. Haciendo $a=m^2-q\beta$ y sustituyendo $x$ de (3.13) se tiene:
+\begin{eqnarray}
+y_{1}'(t)=-\dfrac{q}{m}(\beta-\cos(2t))(y_{1}\cos(mt)+y_{2}\sin(mt))\sin(mt);
+\end{eqnarray}
+\begin{eqnarray}
+y_{2}'(t)=\dfrac{q}{m}(\beta-\cos(2t))(y_{1}\cos(mt)+y_{2}\sin(mt))\cos(mt).
+\end{eqnarray}
+\subsubsection{El caso m=1}
+Utilizando las condiciones (3.11) y (3.12) y sustituyendo $m=1$ se tiene:
+\begin{eqnarray*}
+\int_{0}^{2\pi} (\beta-\cos(2t))(y_{1}\cos(t)+y_{2}\sin(t))\sin(t) dt=0;
+\end{eqnarray*}
+\begin{eqnarray*}
+\int_{0}^{2\pi} (\beta-\cos(2t))(y_{1}\cos(t)+y_{2}\sin(t))\cos(t) dt=0.
+\end{eqnarray*}
+Para encontrar la forma de las curvas a primer orden, supóngase que $y_{1}=y_{1}(0)$ y $y_{2}=y_{2}(0)$. Con éstas suposiciones se evalúan las integrales anteriores, resultando:
+\begin{eqnarray}
+y_{2}(0)(\beta - \dfrac{1}{2})=0 \ \Longrightarrow \ \beta = -\dfrac{1}{2} ;
+\end{eqnarray}
+\begin{eqnarray}
+y_{1}(0)(\beta - \dfrac{1}{2})=0 \ \Longrightarrow \ \beta = \dfrac{1}{2}.
+\end{eqnarray}
+Por lo tanto, existen soluciones periodicas si $a=1\pm \dfrac{1}{2}q + \mathcal{O}(q^{2})$.
+\subsubsection{El caso m=2}
+Utilizando de nuevo las condiciones de periodicidad y sustituyendo $m=2$ se tiene:
+\begin{eqnarray*}
+\int_{0}^{2\pi} (\beta-\cos(2t))(y_{1}\cos(2t)+y_{2}\sin(2t))\sin(2t) dt=0;
+\end{eqnarray*}
+\begin{eqnarray*}
+\int_{0}^{2\pi} (\beta-\cos(2t))(y_{1}\cos(2t)+y_{2}\sin(2t))\cos(2t) dt=0;.
+\end{eqnarray*}
+Si de nuevo se hace una aproximación a primer orden se llega en ambos casos a que $\beta =0$- Esto implíca que en éste caso $\beta = \beta(q)$ por lo que se hará una aproximación a segundo orden. Desarrollando y evaluando las integrales anteriores, se obtiene:
+\begin{eqnarray}
+\beta = \dfrac{1}{48}q ;
+\end{eqnarray}
+\begin{eqnarray}
+\beta = -\dfrac{5}{48}q.
+\end{eqnarray}
+Por lo tanto, existen soluciones periodicas si $a=1 + \dfrac{1}{48}q^{2} + \mathcal{O}(q^{4})$ y $a=1 - \dfrac{5}{48}q^{2} + \mathcal{O}(q^{4})$.
+\\
+\\
+Para encontrar las siguientes curvas donde existen las soluciones periódicas se procede de la misma manera. En la figura (\ref{tongues}) se indican los domininos de estabilidad de la solución trivial en la ecuación de Mathieu en el plano $(a,q)$.
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=0.4]{tongues}      %Ruta completa de la imagen, porque se compila desde el archivo tesis.tex
+  \caption{Dominios de estabilidad. La región azul indica las regiones en donde el sistema es estable. La zona blanca entre las curvas es la zona de inestabilidad.}            %Pie de imagen
+  \label{tongues}                            %nombre de referencia
+\end{figure}
+\subsection{Separación de las curvas}.
+Como puede verse con las ecuaciones de las curvas, las derivadas de cada una de ellas para el mismo valor de $m$ tienen signos contrarios. Con ésto se prueba de que localmente las curvas se separan. Se puede consultar \citep{ize} donde se hace una prueba global de éste comportamiento utilizando series de Fourier de las soluciones.
+\section{Ecuación de Hill}
+Ahora, se aplicará la teoría descrita anteriormente para el sistema del péndulo elástico. La ecuación diferencial linealizada en este sistema en la dirección horizontal resultó ser una ecuación de Hill, a saber:
+\begin{eqnarray}
+\ddot{x}+\omega_{0}\left[ \dfrac{mg+kA\cos (\omega_{0}t)}{mg+kR+A\cos (\omega_{0}t)}\right] x=0;
+\end{eqnarray}
+donde $\omega_{0}=\sqrt{k/m}$ es la frecuencia natural de oscilación del resorte. Recuérdese que la cantidad $\omega_{1}=\sqrt{g/R}$ es la frecuencia natural de oscilación del péndulo simple. Dividiendo arriba y abajo de la fracción entre $mg+kR$ se obtiene la ecuación:
+\begin{eqnarray}
+\ddot{x}+\omega_{0}^{2}\left[ \dfrac{a+q\cos (\omega_{0}t)}{1+q\cos (\omega_{0}t)}\right] x=0;
+\end{eqnarray}
+donde las constantes $a$ y $q$ son parámetros definidos por:
+\begin{eqnarray*}
+a=\dfrac{mg}{mg+kR}=\dfrac{\omega_{1}^{2}}{\omega_{1}^{2}+\omega_{0}^{2}};
+\end{eqnarray*} 
+\begin{eqnarray*}
+q=\dfrac{kA}{mg+kR}.
+\end{eqnarray*}
+La ecuación (3.29) es $\frac{2\pi}{\omega_{0}}$-periódica. Para usar la teoría de Floquet es necesario que la ecuación diferencial sea $\pi$-periódica. Por tanto, se hará el cambio de variable:
+\begin{eqnarray*}
+2\tau=\omega_{0}t.
+\end{eqnarray*}
+Aplicando la regla de la cadena a la ecuación (3.29) y renombrando a la variable $\tau$ con $t$ de nuevo, resulta:
+\begin{eqnarray}
+x''+4\omega_{0}^{2}\left[ \dfrac{a+q\cos (2t)}{1+q\cos (2t)}\right] x=0;
+\end{eqnarray}
+Ésta es la ecuación de Hill con la que se trabajará. Escribiendo la ecuación (3.30) como un sistema de ecuaciones de primer orden, la matríz $A(t)$ que define al sistema es:
+\begin{eqnarray*}
+A(t)=\begin{pmatrix} 0 & 1 \\ -4\omega_{0}^{2}\left[ \dfrac{a+q\cos (2t)}{1+q\cos (2t)}\right] & 0 \end{pmatrix}.
+\end{eqnarray*}
+Debido a las propiedades de diferenciabilidad de la matríz $A$, se tiene que los exponentes caracteríscos dependen continuamente de los paramétros en ésta, es decir, los parámetros $a$ y $q$, en una vecindad de $q=0$, para cualquier $a$.
+\\
+\\
+A partir de aquí, el análisis es completamente análogo al caso de Mathieu estudiado previamente: lo que interesa es conocer la estructura de los exponentes característicos en función a los parámetros $a$ y $q$. Esto dará como resultado la condición de estabilidad de la solución trivial en función a dichos parámetros. Si resulta que los exponentes característicos tienen parte real cero para ciertos valores de los parámetros $a$ y $q$, estos valores pueden ser la transición entre los casos de soluciones estables e inestables. Además, en esta transición se tiene una solución periódica, pues la parte exponencial en el teorema de Floquet también sería periódica (exponentes imaginarios puros). 
+\\
+\\
+En éste caso la traza de la matríz $A$ también es cero, así que el comportamiento de los multiplicadores y exponentes es igual que en el sistema anterior. Por lo tanto, la única posibilidad para que haya parte reales distintas de cero en los exponentes para una vecindad alrededor de $q=0$, es que $a=m^2$, donde $m$ es un entero positivo; así, la parte imaginaria, que es la que causaría problemas, puede ser absorbida por la parte periódica de $P(t)$. 
+\subsection{Soluciones periódicas}
+Con lo anterior se concluye que para el caso en el que $a\neq m^2$, se tiene estabilidad alrededor de una vecindad de $q=0$. El caso $a=m^2$ se estudiará como sigue. Se derminará la relación $a=a(q)$, tal que para $m=1,2,...$ la ecuación de Hill tenga solución periódica. Esta relación determinará las fronteras entre los dominios de estabilidad e inestabilidad de la solución trivial. Procediendo de manera análoga al caso de la ecuación de Mathieu se llega a que:
+\begin{eqnarray}
+y_{1}'(t)=-q\left( \dfrac{1+4\beta}{1+q\cos(2t)}\right)(y_{1}\cos(mt)+y_{2}\sin(mt))\sin(mt)\cos(2t);
+\end{eqnarray}
+\begin{eqnarray}
+y_{2}'(t)=-q\left( \dfrac{1-4\beta}{1+q\cos(2t)}\right)(y_{1}\cos(mt)+y_{2}\sin(mt))\cos(mt)\cos(2t).
+\end{eqnarray}
+\subsubsection{El caso m=1}
+Utilizando las condiciones (3.11) y (3.12) y sustituyendo $m=1$ se tiene:
+\begin{eqnarray*}
+\int_{0}^{2\pi}  \left( \dfrac{1+4\beta}{1+q\cos(2t)}\right)(y_{1}\cos(t)+y_{2}\sin(t))\sin(t)cos(2t) dt=0;
+\end{eqnarray*}
+\begin{eqnarray*}
+\int_{0}^{2\pi}  \left( \dfrac{1-4\beta}{1+q\cos(2t)}\right)(y_{1}\cos(t)+y_{2}\sin(t))\cos(t)cos(2t) dt=0.
+\end{eqnarray*}
+Debido a que los valores de $q$ son pequeños, se puede escribir el denominador de ambas integrales como una serie geométrica, ésto es:
+\begin{eqnarray*}
+\dfrac{1}{1+q\cos(2t)}=\displaystyle\sum_{n=0}^{\infty} (-q\cos(2t))^{n}. 
+\end{eqnarray*}
+Para encontrar la forma de las curvas a primer orden, supóngase que $y_{1}=y_{1}(0)=a$ y $y_{2}=y_{2}(0)=b$. La primera integral se separa a su vez en dos integrales. Abriendo las sumas infinitas con la integral y sacando las constantes, las dos integrales a resolver son:
+\begin{eqnarray*}
+\int_{0}^{2\pi} a\cos(t)\sin(t)\cos(2t)\cos^{n}(2t) dt \ ; \ \int_{0}^{2\pi} b\sin^{2}(t)\cos(2t)\cos^{n}(2t) dt.
+\end{eqnarray*}
+La primera de éstas integrales es cero para cualquier valor de $n$. La segunda es diferente de cero para cualquier valor de $n$. Si sólo tomamos el primer término, es decir, $n=0$ el valor de la integral resulta ser $\pi / 2$. Por la condición de existencia de soluciones periódicas, se tiene que cumplir que:
+\begin{eqnarray}
+\dfrac{\pi}{2}(1+4\beta)b=0 \ \Longrightarrow \ \beta = -\dfrac{1}{4} + \mathcal{O}(q).
+\end{eqnarray}
+Esto implíca que existe solución periódica si $a=1-\dfrac{1}{4}q+\mathcal{O}(q^{2})$.
+\\
+\\
+Para la segunda integral se procede de forma idéntica. Las dos integrales resultantes después de escribir el denominador con su serie geométrica son:
+\begin{eqnarray*}
+\int_{0}^{2\pi} a\cos^{2}(t)\cos(2t)\cos^{n}(2t) dt \ ; \ \int_{0}^{2\pi} b\sin(t)\cos(t)\cos(2t)\cos^{n}(2t) dt.
+\end{eqnarray*}
+La primera integral es diferente de cero para cualquier valor de $n$. Si sólo tomamos el primer término, es decir, $n=0$ el valor de la integral resulta ser $\pi / 2$. La segunda integral es cero para cualquier valor de $n$.
+\begin{eqnarray}
+\dfrac{\pi}{2}(1-4\beta)a=0 \ \Longrightarrow \ \beta = \dfrac{1}{4} + \mathcal{O}(q).
+\end{eqnarray}
+Esto implíca que existe solución periódica si $a=1+\dfrac{1}{4}q+\mathcal{O}(q^{2})$. Juntando éstos dos resultados, se tiene que van a existir soluciones periódicas si $a=1\pm \dfrac{1}{4}q + \mathcal{O}(q^{2})$. Nótese que la forma de las curvas a primer orden tienen una forma muy parecida a la forma de las primeras curvas de la ecuación de Mathieu en la figura (\ref{tongues}).
+\\
+\\
+Como se dijo anteriormente, las regiones de estabilidad obtenidas en los sistemas linealizados no necesariamente corresponde a las condiciones de estabilidad del sistema original. Sin embargo, las regiones de inestabilidad de los sistemas linealizados también son regiones de estabilidad de los sistemas completos, tanto en el sentido de Lyapunov como orbital. Es de esperar que las regiones de inestabilidad de los sistemas originales es más grande ya que en la parte lineal no se considera la inestabilidad que puede provocar la parte no lineal.
+\subsection{Separación de las curvas}
+Como puede verse con las ecuaciones de las curvas, las derivadas de cada una de ellas tienen signos contrarios. Con ésto se prueba de que localmente las curvas se separan. Se puede consultar la referencia \citep{ize} donde se hace una prueba global de éste comportamiento.

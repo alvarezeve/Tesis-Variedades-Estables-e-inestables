@@ -1,0 +1,139 @@
+\begin{thebibliography}{10}
+
+\bibitem{Haro}
+Á. Haro, M.~Canadell, J.~Figueras, A.~Luque, and J.~Mondelo.
+\newblock {\em The parameterization Method for Invariant Manifolds}, volume 195
+  of {\em Applied Mathematical Sciences}.
+\newblock Springer, 1 edition, 2010.
+
+\bibitem{Mireles}
+J.D~Mireles James.
+\newblock Elementary example of the parametrization method; stable and unstable
+  manifolds of the standar map.
+\newblock 2007.
+
+\bibitem{Jung}
+B.~Rückerl and C.~Jung.
+\newblock Scaling properties of a scattering system with an incomplete
+  horseshoe.
+\newblock {\em J. Phys A: Math.}, 27:55--77, 1994.
+
+\bibitem{gerald}
+Gerald Teschl.
+\newblock {\em Ordinary Differential Equations and Dynamical Systems}.
+\newblock Graduate Studies in Mathematics. American Mathematical Society
+  Providence, Rhode Island, 1 edition, 2011.
+
+\bibitem{Friedberg}
+Stephen~H. Friedberg, A.~J. Insel, and L.E. Spence.
+\newblock {\em Algebra lineal}.
+\newblock Publicaciones Cultrales S.A., 1 edition.
+
+\bibitem{Meiss}
+James~D. Meiss.
+\newblock {\em Differential Dynamical Systems}, volume~14 of {\em Mathematical
+  modeling and computation}.
+\newblock Society for Industrial and Applied Mathematics ,Philadelphia, 1
+  edition, 2007.
+
+\bibitem{Meyer}
+Kenneth~R. Meyerb, Glen~R. Hall, and Dan Offin.
+\newblock {\em Introduction to Hamiltonian Dynamical Systems and the N-Body
+  Poblem}, volume~90 of {\em Applied Mathematical Sciences}.
+\newblock Springer, 2nd edition, 2009.
+
+\bibitem{Juergen}
+Juergen Quandt.
+\newblock On the hartman-grobman theorem for maps.
+\newblock {\em Journal of differential equations}, 64:154--164, 1986.
+
+\bibitem{Ott}
+Edward Ott.
+\newblock {\em Chaos in dynamical systems}.
+\newblock Cambridge university press, 1th edition, 1993.
+
+\bibitem{Mateo}
+Mateo Wirth.
+\newblock Invariant manifolds of dynamical systems and an application to space
+  exploration.
+
+\bibitem{Chang}
+Y.F. Chang and G.~Corliss.
+\newblock Ratio-like and recurrence relation tests for convergence of series.
+\newblock {\em J. Inst. Maths Applies}, 25:349--359, 1980.
+
+\bibitem{Mireles2}
+Jan~Bouwe van~den Berg, J.D.~Mireles James, and Christian Reinhardt.
+\newblock Computing (un)stable manifolds with validated error bounds:
+  non-resonant and resonant spectra.
+\newblock 2015.
+
+\bibitem{Jung2}
+B.~Rückerl and C.~Jung.
+\newblock Hierarchical structure in the chaotic scattering off a magnetic
+  dipole.
+\newblock {\em J. Phys A: Math.}, 27:6741--6758, 1994.
+
+\bibitem{Seligman}
+C.~Jung, C.~Lipp, and T.H. Seligman.
+\newblock The inverse scattering problem for chaotic hamiltonian systems.
+\newblock {\em Annals of Physics}, 275:151--189, 1999.
+
+\bibitem{gold}
+Herbert Goldstein, Charles~P. Poole, and John~L. Safko.
+\newblock {\em Classical mechanics}.
+\newblock Addison-Wesley, 3 edition, 2000.
+
+\bibitem{arnold}
+Vladimir~I. Arnol'd.
+\newblock {\em Mathematical Methods of Classical Mechanics}, volume~1 of {\em
+  Analytic Mechanics}.
+\newblock Springer-Verlag, 2nd edition, 1992.
+
+\bibitem{arn}
+Vladimir~I. Arnol'd and Roger Cooke.
+\newblock {\em Ordinary differential equations}.
+\newblock Springer-Verlag, 1991.
+
+\bibitem{hale}
+Jack~K. Hale.
+\newblock {\em Ordinary Differential Equations}.
+\newblock Krieger Pub Co, 1980.
+
+\bibitem{ver}
+Ferdinand Verhulst.
+\newblock {\em Nonlinear Differential Equations and Dynamical Systems}.
+\newblock Springer, 1985.
+
+\bibitem{devaney}
+Robert~L. Devaney.
+\newblock {\em An Introduction to Chaotic Dynamical Systems}.
+\newblock Adyson-Wesley, 2nd edition, 1989.
+
+\bibitem{devaney2}
+Paul Banchard, Robert~L. Devaney, and Glen~R. Hall.
+\newblock {\em Ecuaciones diferenciales}.
+\newblock Thomson, 1th edition, 1998.
+
+\bibitem{marion}
+Stephen~T. Thornton and Jerry~B. Marion.
+\newblock {\em Classical Dynamics of Particles and Systems}.
+\newblock Thomson, 5th edition, 2004.
+
+\bibitem{ramon}
+Ramon~E. More, R.Baker Kearfott, and Michael~J. Cloud.
+\newblock {\em Introduction to Interval Analysis}.
+\newblock SIAM, 2009.
+
+\bibitem{interval}
+Luis Benet and David~P. Sanders.
+\newblock Interval arithmetic(paquete julia).
+
+\bibitem{book:Calvin}
+Calvin~D. Ahlbrandt and Allan C.~Peterson (auth.).
+\newblock {\em Discrete Hamiltonian Systems: Difference Equations, Continued
+  Fractions, and Riccati Equations}.
+\newblock Kluwer Texts in the Mathematical Sciences 16. Springer US, 1 edition,
+  1996.
+
+\end{thebibliography}

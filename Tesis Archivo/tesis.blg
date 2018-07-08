@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: tesis.aux
+A level-1 auxiliary file: Agradecimientos/Dedicatoria.aux
+A level-1 auxiliary file: Declaracion/Declaracion.aux
+A level-1 auxiliary file: introduccion/introduccion.aux
+A level-1 auxiliary file: Capitulo1/preliminares.aux
+A level-1 auxiliary file: Capitulo2/parametrizacion.aux
+A level-1 auxiliary file: Capitulo3/Henon.aux
+A level-1 auxiliary file: Capitulo4/conclusiones-p.aux
+The style file: unsrt.bst
+Database file #1: referencias.bib
+Warning--empty note in Mireles
+Warning--empty year in Friedberg
+Warning--empty note in Mateo
+Warning--empty note in Mireles2
+Warning--empty note in interval
+You've used 25 entries,
+            1791 wiz_defined-function locations,
+            596 strings with 6630 characters,
+and the built_in function-call counts, 4368 in all, are:
+= -- 374
+> -- 190
+< -- 4
++ -- 75
+- -- 50
+* -- 241
+:= -- 720
+add.period$ -- 75
+call.type$ -- 25
+change.case$ -- 21
+chr.to.int$ -- 0
+cite$ -- 30
+duplicate$ -- 225
+empty$ -- 456
+format.name$ -- 50
+if$ -- 991
+int.to.chr$ -- 0
+int.to.str$ -- 25
+missing$ -- 37
+newline$ -- 126
+num.names$ -- 25
+pop$ -- 104
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 57
+stack$ -- 0
+substring$ -- 105
+swap$ -- 29
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 5
+while$ -- 30
+width$ -- 27
+write$ -- 266
+(There were 5 warnings)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Tesis FI UNAM
 =============
 
@@ -75,3 +76,10 @@ Marca varias advertencias al compilar, varias de ellas tienen que ver con que el
 Si les da una advertencia de referencias no definidas, compilen el archivo "tesis.tex" con BibTeX.
 
 Las adevrtencias de fuera de margen son de la portada.
+=======
+# Tesis-Variedades-Estables-e-inestables
+Trabajo de tesis sobre la implementación del método de parametrización para encontrar variedades estables e inestables en mapeos de dos dimensiones.
+
+La carpeta Tesis contiene los archivos necesarios para el .tex, ahí se encuentra el pdf de la tesis. 
+La carpeta Programas contiene el código del método de parametrización. Además los notebooks contienen análisis sobre los diferentes mapeos. 
+>>>>>>> 777eef325b4c3492d62953ba8176b79d771586de

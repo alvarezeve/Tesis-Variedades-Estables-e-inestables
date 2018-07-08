@@ -1,8 +1,0 @@
-Guía 
-* En la carpeta de IPM se encuentra el código de julia que tiene el método de parametrización hay que descargar los dos archivos que están ahí. 
-* fuera de esa carpeta pero dentro de TestLuis están los notebooks que tienen los ejemplos de los tres mapeos(Hénon, Estándar, Jung) algunas de las anotaciones vienen dentro de los mismos. Salvo que debes cambiar el camino hacía el archivo del "parametrizacionmetodo.jl" (o algo asi) todo lo demás debe funcionar en julia 6. 
-*En algunos de los notebooks no aparece la convergencia sin embargo puedes usarla en cualquiera de los ejemplos. 
-*El pdf de la tesis esta en la misma carpeta que los notebooks, algunas cosas que faltan(liga al código, liga a las gráficas y animaciones) pueden aparecer en rojo o enfatizadas.
-
-
-

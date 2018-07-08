@@ -10,30 +10,29 @@ En el mapeo estándar \ref{mapeo estandar} uno de los puntos fijos es el origen 
 \begin{figure}[H]
  \centering
  \includegraphics[scale=0.6]{estandark03}
- \caption{$W^{s},W^{u}$ de orden 25 en el mapeo estándar con $\kappa=0.3$ y $t_{max}=3.$}
+ \caption{$W^{s},W^{u}$ de oden $25$ en el mapeo estándar con $\kappa=0.3$ y $t_{max}=3.0$.}
  \label{estandar03}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{error_est_k03} 
-\caption{Error en las variedades de orden 25 ,$\kappa=0.3$}
+\caption{Error en las variedades de la figura \ref{estandar03}.}
 \label{error est k03}
 \end{figure}
-
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{estandark15}
-\caption{$W^{s},W^{u}$ de orden 80 en el mapeo estándar con $\kappa=1.5$}
+\caption{$W^{s},W^{u}$ de orden $80$ en el mapeo estándar con $\kappa=1.5$ y $t_{max}=13.0$.}
 \label{estandar15}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{error_est_k15} 
-\caption{Error en las variedades de orden 80 , $\kappa=1.5$}
+\caption{Error en las variedades de la figura \ref{estandar15}.}
 \label{error est k15}
 \end{figure}
 
@@ -43,19 +42,19 @@ En el mapeo estándar \ref{mapeo estandar} uno de los puntos fijos es el origen 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{estandark07}
-\caption{$W^{s},W^{u}$ de orden 70 en el mapeo estándar con $\kappa=0.7$}
+\caption{$W^{s},W^{u}$ de orden 70 en el mapeo estándar con $\kappa=0.7$ y $t_{max}=5.5$.}
 \label{estandar07}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{error_est_k07} 
-\caption{Error en las variedades , $\kappa=0.7$}
+\caption{Error en las variedades de la figura \ref{estandar07}.}
 \label{error est k07}
 \end{figure}
 
 
-En las figuras \ref{estandar03}-\ref{error est k07} se muestran los resultados de la parametrización de las variedades estable e inestable asociadas al punto fijo $\mathbf{x}=(0,0)$ para diferentes valores del parámetro $\kappa$, junto con cada una aparece su respectiva gráfica del error numérico.  Los cálculos se hicieron utilizando números de punto flotante de 64 bits(Float64). Para las figuras \ref{estandar03}, \ref{estandar07} se puede ver que las variedades se juntan de manera que parecen ser tangentes, mientras que para el caso de la figura \ref{estandar15} observamos varias intersecciones entre las variedades. En todos los casos el error se comporta de manera similar, manteniendose prácticamente constante hasta cierto valor del parámetro $t$ y creciendo de forma exponencial después del mismo. La curva será entonces confiable hasta valores del parámetro que no excedan el punto donde el error crece rápidamente.  \\
+En las figuras \ref{estandar03}-\ref{error est k07} se muestran los resultados de la parametrización de las variedades estable e inestable asociadas al punto fijo $\mathbf{x}=(0,0)$ para diferentes valores del parámetro $\kappa$, junto con cada una aparece su respectiva gráfica del error numérico.   Los cálculos se hicieron utilizando números de punto flotante de 64 bits(Float64). Para las figuras \ref{estandar03}, \ref{estandar07} se puede ver que las variedades se juntan de manera que parecen ser tangentes, mientras que para el caso de la figura \ref{estandar15} observamos varias intersecciones entre las variedades. En todos los casos el error se comporta de manera similar, manteniendose prácticamente constante hasta cierto valor del parámetro $t$ y creciendo de forma exponencial después del mismo. La curva será entonces confiable hasta valores del parámetro que no excedan el punto donde el error crece rápidamente.  \\
 
 
 Para observar como cambiaba el comportamiento del error respecto del orden de la parametrización se calcularon polinomios de diferente orden que parametrizan a la variedad inestable del mapeo con $\kappa=0.3$,el resultado se muestra en la figura \ref{erroresf64}. Observamos que mientras más grande sea el orden del polinomio mejor es la aproximación, pues podemos llegar a valores del parámetro más grandes, que se traduce en ir más lejos en la variedad inestable. \\
@@ -63,7 +62,7 @@ Para observar como cambiaba el comportamiento del error respecto del orden de la
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{error_estandar_orden}
-\caption{Curvas de error para diferentes órdenes en el mapeo estándar,$\kappa=0.3$ }
+\caption{Curvas de error para diferentes órdenes en el mapeo estándar,$\kappa=0.3$. }
 \label{erroresf64}
 \end{figure}
 A fin de mostrar que el error es de alguna manera controlable se usaron números de presición extendida para hacer cálculos análogos a los anteriores. En la figura \ref{erroresBig} se muestran los resultados para parametrizaciones de ordenes entre $10$ y $80$. Observamos un comportamiento análogo, de tal manera que para cada orden diferente de parametrización hay un valor diferente del parámetro en el cuaĺ pasa de un error que no crece significativamente a un error que crece de manera abrupta. También notamos que al usar presición extendida el error cerca del punto fijo es imperceptible pero en la parte donde crece, tiene un crecimiento más pronunciado que en el caso de números de punto flotante. 
@@ -71,22 +70,17 @@ A fin de mostrar que el error es de alguna manera controlable se usaron números
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{error_estandar_orden_big}
-\caption{Curvas de error para diferentes órdenes usando precisión extendida ,$\kappa=0.3$ }
+\caption{Curvas de error para diferentes órdenes usando precisión extendida ,$\kappa=0.3$. }
 \label{erroresBig}
 \end{figure}
 
 Como ya mencionamos antes la variedad inestable del mapeo inverso corresponde a la variedad estable del mapeo, por lo que si se usa el mismo método calculando la variedad inestable del mapeo inverso \ref{mapeo estandar inverso} podemos controlar mejor el error numérico. Para mostrar esto hicimos una comparación parametrizando la variedad estable mediante el mapeo inverso y el mapeo inicial. Los polinomios fueron del mismo orden y lo que se observó en el error se muestra en la figura \ref{erroresinverso}.
-\begin{eqnarray}
-f_{k}^{-1}(\theta,p) = \left[\begin{array}{c}
-\theta  -k\sin(p-\theta) \\
-p -\theta
-\end{array}\right] mod(2\pi) \label{mapeo estandar inverso}
-\end{eqnarray}
+
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{mapeoinver}
-\caption{Error para las parametrizaciones usando el mapeo y el mapeo inverso ,$\kappa=0.3, orden=20$ }
+\caption{Error para las parametrizaciones usando el mapeo y el mapeo inverso con polinomios de orden $20$ y $\kappa=0.3$. }
 \label{erroresinverso}
 \end{figure}
 
@@ -154,14 +148,14 @@ Al escoger $b=1$ garantizamos estar en un sistema hamiltoniano, mientras que $a$
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{henon1}
-\caption{$W^{u}$ de orden 336 y $t_{max}=43534$ ,$W^{s}$ de orden 7363 y $t_{max}=87643$ para el mapeo de Hénon con a=1.5,b=1}
+\caption{$W^{u}$ y $W^{s}$ de orden 45 con $t_{max}=1000.0$ para el mapeo de Hénon con $a=1.5$,$b=1$.}
 \label{Henon1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{ErrorHenon1}
-\caption{Error en el mapeo de Hénon asociado a las variedades de la figura \ref{Henon1}.}
+\caption{Error asociado a las variedades de la figura \ref{Henon1}.}
 \label{ErrorHenon1}
 \end{figure}
 Las variedades que aparecen en la figura \ref{Henon1} fueron calculadas con el mapeo de Hénon inicial \ref{Henon}, las variedades se observan simétricas, aún así las parametrizaciones son diferentes. Puede verse en el error, figura \ref{ErrorHenon1}, que la variedad estable tiene un mayor error que la variedad inestable, mientras en la inestable el error cambia cinco órdenes de magnitud, en todo el intervalo del parámetro, el error de la variedad estable cambia en al menos quince órdenes de magnitud. \\
@@ -172,7 +166,14 @@ En las figuras \ref{Henon2}, \ref{Henon3} se muestran las variedades calculadas 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{henon2}
-\caption{$W^{u}$ de orden 98339 y $t_{max}=664564$, $W^{s}$ de orden 6464 y $t_{max}=87t6423$ para el mapeo de Hénon con a=0.7,b=1.}
+\caption{$W^{u}$, $W^{s}$ de orden $50$ y $t_{max}=800.0$ para el mapeo de Hénon con $a=0.7$,$b=1.$.}
+\label{Henon2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{ErrorHenon2}
+\caption{Error asociado a las variedades de la figura \ref{Henon2}.}
 \label{Henon2}
 \end{figure}
 
@@ -180,9 +181,17 @@ En las figuras \ref{Henon2}, \ref{Henon3} se muestran las variedades calculadas 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{henon3}
-\caption{$W^{u}$ de orden 874873 y $t_{max}=7yt4$,$W^{s}$ de orden 2321 y $t_{max}=8764$ para el mapeo de Hénon con a=6.5,b=1.}
+\caption{$W^{u}$, $W^{s}$ de orden $78$ y $t_{max}=4000.0$ para el mapeo de Hénon con $a=6.5$,$b=1.$.}
 \label{Henon3}
 \end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{ErrorHenon3}
+\caption{Error asociado a las variedades de la figura \ref{Henon3}.}
+\label{Henon3}
+\end{figure}
+
 
 Asi que con el orden suficiente es posible observar los cruces de ambas variedades, retomaremos esto en la última sección. 
 
@@ -215,7 +224,7 @@ Aplicando el mismo mecanismo que en los casos pasados se obtuvieron las figuras 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{jung34}
-\caption{$W^{s}$ de orden 54848 con $t_{max}=7474$ , $W^{u}$ de orden 234 con $t_{max}=7484$, con $a=3.4$ en el punt fijo $x_{0}$}
+\caption{$W^{s}$ de orden 93, $W^{u}$ de orden 86 con $t_{max}=5.5$, con $a=3.4$ en el punto fijo $x_{0}$.}
 \label{jung1}
 \end{figure}
 
@@ -223,7 +232,7 @@ Aplicando el mismo mecanismo que en los casos pasados se obtuvieron las figuras 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{error_jung34}
-\caption{Error asociado a $W^{s},W^{u}$ con $a=3.4$}
+\caption{Error asociado a las variedades de la figura \ref{jung1}.}
 \label{errorjung1}
 \end{figure}
 
@@ -233,7 +242,7 @@ Aplicando el mismo mecanismo que en los casos pasados se obtuvieron las figuras 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{jung57}
-\caption{$W^{s}$ de orden 54848 con $t_{max}=7474$ , $W^{u}$ de orden 234 con $t_{max}=7484$, con $a=5.7$ en el punto fijo $x_{0}$}
+\caption{$W^{s}$ de orden 90, $W^{u}$ de orden 87 con $t_{max}=6.5$, con $a=5.7$ en el punto fijo $x_{0}$.}
 \label{jung2}
 \end{figure}
 
@@ -241,7 +250,7 @@ Aplicando el mismo mecanismo que en los casos pasados se obtuvieron las figuras 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{error_jung57}
-\caption{Error asociado a $W^{s},W^{u}$ con $a=5.7$ en $x_{0}$}
+\caption{Error asociado las variedades de la figura \ref{jung2}}
 \label{errorjung2}
 \end{figure}
 
@@ -252,7 +261,7 @@ Además de medir el error asociado a la parametrización consideramos importante
 La figura \ref{convergenciaEst15} muestra la convergencia de los polinomios de orden 25 que parametrizan la variable $\theta$ en el mapeo estádar para las variedades estable e inestable con $\kappa=1.5$ a la que correponde el espacio fase mostrado en \ref{estandar15}. En el caso de la variedad estable se ve que los coeficientes cambian de manera abrupta al principio pero después de cierta $n$ el cociente es casi cero. Para el caso de la variedad inestable los coeficientes cambian de manera suave y el cociente también se acerca a cero. En ambos casos podemos decir que los coeficientes de la parametrización convergen a cero.  
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{converEst15}
+\includegraphics[scale=0.5]{converEst15}
 \caption{Convergencia de Hadamard asociada a los polinomios para $\theta$ en las variedades del mapeo estándar con $\kappa=1.5$}
 \label{convergenciaEst15}
 \end{figure}
@@ -261,7 +270,7 @@ La figura \ref{convergenciaHenon1} muestra la convergencia de las parametrizacio
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{converHenon1}
+\includegraphics[scale=0.5]{converHenon1}
 \caption{Convergencia de Hadamard asociada a los polinomios para $x$ en las variedades del mapeo de Hénon con $a=1.5$}
 \label{convergenciaHenon1}
 \end{figure}
@@ -271,20 +280,20 @@ Para el mapeo exponencial realizamos los dos criterios de convergencia. La figur
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{convergenciaJungH}
-\caption{Convergencia de Hadamard asociada a los polinomios de orden $87$ para $x$ en las variedades del mapeo exponencial con $a=5.7$.}
+\includegraphics[scale=0.5]{convergenciaJungH57}
+\caption{Convergencia de Hadamard asociada a las variedades mostradas en la figura \ref{jung2}.}
 \label{convergenciaJH}
 \end{figure}
 
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{convergenciaJungT}
-\caption{Convergencia de tres términos asociada a los polinomios de orden $87$ para $x$ en las variedades del mapeo exponencial para $a=5.7$.}
+\includegraphics[scale=0.5]{convergenciaJungT57}
+\caption{Convergencia de tres términos asociada a las variedades en la figura \ref{jung2}}
 \label{convergenciaJ3}
 \end{figure}
 
-
+Estudiar la convergencia de las parametrizaciones puede dar una idea de cómo se va modificando el polinomio si se cambia el orden, en mapeos más sensibles puede ser determinante para saber en a qué orden es conveniente aproximar.
 
 \section{Existencia de puntos homoclínicos}
 \subsection{Estándar}

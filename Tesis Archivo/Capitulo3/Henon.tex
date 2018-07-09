@@ -276,7 +276,7 @@ La figura \ref{convergenciaHenon1} muestra la convergencia de las parametrizacio
 \end{figure}
 
 
-Para el mapeo exponencial realizamos los dos criterios de convergencia. La figura \ref{convergenciaJH} muestra el criterio de Hadamard \ref{hadamard} y se ve que el cociente de los coeficientes tiende a cero. En la figura \ref{convergenciaJ3} se usó el criterio de tres términos \ref{tres terminos} y se observa el mismo comportamiento. 
+Para el mapeo exponencial realizamos los dos criterios de convergencia. La figura \ref{convergenciaJH} muestra el criterio de Hadamard \ref{hadamard} para los polinomios que parametrizan la variable x en cada variedad, se ve que hay una convergencia clara de ls coeficientes. Lo mismo ocurre en la figura \ref{convergenciaJ3} en dónde se usó el criterio de tres términos \ref{tres terminos}.
 
 \begin{figure}[H]
 \centering
@@ -293,11 +293,15 @@ Para el mapeo exponencial realizamos los dos criterios de convergencia. La figur
 \label{convergenciaJ3}
 \end{figure}
 
-Estudiar la convergencia de las parametrizaciones puede dar una idea de cómo se va modificando el polinomio si se cambia el orden, en mapeos más sensibles puede ser determinante para saber en a qué orden es conveniente aproximar.
+Estudiar la convergencia de las parametrizaciones puede dar una idea de cómo se va modificando el polinomio si se cambia el orden, en mapeos más sensibles puede ser determinante para saber en a qué orden es conveniente aproximar. 
 
 \section{Existencia de puntos homoclínicos}
-\subsection{Estándar}
-Siendo que el resultado son polinomios se puede aplicar el método de Newton en dos dimensiones o cualquier otro para resolver $P^{u}=P^{s}$. Por surte existe un paquete en IJulia que hace aritmética de intervalos \texttt{ValidatedNumerics} \ref{interval} , dentro de este se encuentra el paquete que calcula raíces de funciones en términos de intervalos. En forma simple si $[a,b],[c,d]$ son intervalos en $\mathbb{R}$ entonces es posible definir las operaciones básicas, por ejemplo la suma $+$
+
+Siendo que el resultado son polinomios se puede aplicar el método de Newton en dos dimensiones o cualquier otro para resolver $P^{u}=P^{s}$ y encontrar puntos homoclínicos o heteroclínicos. Por suerte existe una paquetería en Julia que hace cálculos númericos validados \texttt{ValidatedNumerics}\cite{validated} dentro de la cuál se tiene un paquete para aritmética de intervalos \texttt{IntervalArithmetic}\citep{interval} y para encontrar raíces \texttt{IntervalRootFinding}\cite{root} además del paquete \texttt{Static Arrays}\cite{static} que permite manipular intervalos.\\ 
+
+El paquete \cite{validated} hace cálculos de computación rigurosa con números de punto flotante usando el paquete de aritmética de intervalos, que efectúa operaciones con intervalos en lugar de números. Mientras que \cite{root} automatiza el métodos populares como el de Newton para encontrar raíces de funciones, en este caso se garantiza que la respuesta correcta se encuentra en un intervalo. Para entender méjor cómo funcionan cada una de las paqueterías así como la teoría rigurosa detrás de éstos recomendamos revisar las lecturas \cite{ramon},\cite{Numerics}. 
+
+En forma simple si $[a,b],[c,d]$ son intervalos en $\mathbb{R}$ entonces es posible definir las operaciones básicas, por ejemplo la suma $+$
 \begin{eqnarray}
 [a,b]+[c,d]=[a+b,c+d]
 \end{eqnarray}
@@ -308,7 +312,12 @@ Para nuestro caso resulta que el programa arroja dos polinomios asociados a cada
 P:=P^{u}(t)-P^{s}(t')=0
 \label{CorteV}
 \end{eqnarray}
-podemos encontrar las intersecciones en un intervalo de 2 dimensiones que será $[a,b]\times[c,d]$ con $a,b,c,d \in \mathbb{R}$. Usando esto en el mapeo stándar con una tolerancia de $10^{-5}$ se encontraron la siguientes intersecciones para un caso específico.
+podemos encontrar las intersecciones en un intervalo de 2 dimensiones que será $[a,b]\times[c,d]$ con $a,b,c,d \in \mathbb{R}$. 
+
+
+\subsection{Estándar}
+
+Usando esto en el mapeo stándar con una tolerancia de $10^{-5}$ se encontraron la siguientes intersecciones para un caso específico.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{cruce_estandar}

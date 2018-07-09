@@ -26,8 +26,7 @@ Gerald Teschl.
 
 \bibitem{Friedberg}
 Stephen~H. Friedberg, A.~J. Insel, and L.E. Spence.
-\newblock {\em Algebra lineal}.
-\newblock Publicaciones Cultrales S.A., 1 edition.
+\newblock Algebra lineal.
 
 \bibitem{Meiss}
 James~D. Meiss.
@@ -61,6 +60,38 @@ Mateo Wirth.
 Y.F. Chang and G.~Corliss.
 \newblock Ratio-like and recurrence relation tests for convergence of series.
 \newblock {\em J. Inst. Maths Applies}, 25:349--359, 1980.
+
+\bibitem{devaney}
+Robert~L. Devaney.
+\newblock {\em An Introduction to Chaotic Dynamical Systems}.
+\newblock Adyson-Wesley, 2nd edition, 1989.
+
+\bibitem{validated}
+Validated numerics(paquete julia).
+\newblock url={https://github.com/JuliaIntervals/ValidatedNumerics.jl}.
+
+\bibitem{interval}
+Interval arithmetic(paquete julia).
+\newblock url={https://juliaintervals.github.io/IntervalArithmetic.jl/stable/}.
+
+\bibitem{root}
+Interval root finding(paquete julia).
+\newblock url={https://github.com/JuliaIntervals/IntervalRootFinding.jl}.
+
+\bibitem{static}
+Static arrays(paquete julia).
+\newblock url={https://github.com/JuliaArrays/StaticArrays.jl}.
+\newblock v0.7.2.
+
+\bibitem{ramon}
+Ramon~E. More, R.Baker Kearfott, and Michael~J. Cloud.
+\newblock {\em Introduction to Interval Analysis}.
+\newblock SIAM, 2009.
+
+\bibitem{Numerics}
+W.~Tucker.
+\newblock {\em Valdated Numerics:A short introduction to RigorousComputations}.
+\newblock Princeton University Press.
 
 \bibitem{Mireles2}
 Jan~Bouwe van~den Berg, J.D.~Mireles James, and Christian Reinhardt.
@@ -105,11 +136,6 @@ Ferdinand Verhulst.
 \newblock {\em Nonlinear Differential Equations and Dynamical Systems}.
 \newblock Springer, 1985.
 
-\bibitem{devaney}
-Robert~L. Devaney.
-\newblock {\em An Introduction to Chaotic Dynamical Systems}.
-\newblock Adyson-Wesley, 2nd edition, 1989.
-
 \bibitem{devaney2}
 Paul Banchard, Robert~L. Devaney, and Glen~R. Hall.
 \newblock {\em Ecuaciones diferenciales}.
@@ -119,15 +145,6 @@ Paul Banchard, Robert~L. Devaney, and Glen~R. Hall.
 Stephen~T. Thornton and Jerry~B. Marion.
 \newblock {\em Classical Dynamics of Particles and Systems}.
 \newblock Thomson, 5th edition, 2004.
-
-\bibitem{ramon}
-Ramon~E. More, R.Baker Kearfott, and Michael~J. Cloud.
-\newblock {\em Introduction to Interval Analysis}.
-\newblock SIAM, 2009.
-
-\bibitem{interval}
-Luis Benet and David~P. Sanders.
-\newblock Interval arithmetic(paquete julia).
 
 \bibitem{book:Calvin}
 Calvin~D. Ahlbrandt and Allan C.~Peterson (auth.).

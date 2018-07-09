@@ -9,7 +9,8 @@
 \backcite {Juergen}{{4}{1.2}{figure.caption.4}}
 \backcite {Ott}{{5}{2}{defini.2}}
 \backcite {Mateo}{{5}{1}{thm.1}}
-\backcite {Haro}{{8}{1.5}{section.1.5}}
+\backcite {Ott}{{6}{1.3}{thm.1}}
+\backcite {Haro}{{9}{1.5}{section.1.5}}
 \backcite {Haro}{{9}{1.5}{equation.1.5.18}}
 \backcite {Chang}{{10}{1.5}{equation.1.5.22}}
 \backcite {Mireles}{{11}{2}{chapter.2}}
@@ -19,3 +20,10 @@
 \backcite {devaney}{{27}{3.2}{section.3.2}}
 \backcite {Jung}{{32}{3.3}{section.3.3}}
 \backcite {Jung}{{32}{3.3}{equation.3.3.6}}
+\backcite {validated}{{37}{3.5}{section.3.5}}
+\backcite {interval}{{37}{3.5}{section.3.5}}
+\backcite {root}{{37}{3.5}{section.3.5}}
+\backcite {static}{{37}{3.5}{section.3.5}}
+\backcite {validated}{{37}{3.5}{section.3.5}}
+\backcite {root}{{37}{3.5}{section.3.5}}
+\backcite {ramon}{{37}{3.5}{section.3.5}}

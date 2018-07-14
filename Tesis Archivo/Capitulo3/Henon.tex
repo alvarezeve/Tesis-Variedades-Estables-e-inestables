@@ -310,31 +310,36 @@ que arrojará como resultado un intervalo $I_{t}$ y otro intervalo $I_{\tau}$, l
 
 
 \subsection{Estándar}
-Usando lo descrito anteriormente se calcularon las intersecciones de las variedades estable e inestable en el mapeo estándar para un valor de $\kappa=1.5$ usando polinomios de orden 983475938. Las soluciones fueron
+Usando lo descrito anteriormente se calcularon las intersecciones de las variedades estable e inestable en el mapeo estándar para un valor de $\kappa=1.5$ usando polinomios de orden $120$, además de usar el mapeo inverso \ref{mapeo estandar inverso} para calcular la variedad estable. Se encontraron cuatro raíces en el intervalo $[-20.,0.]$ para $t$  y $[-15.,0.]$ para $\tau$, con una tolerancia de $10^{-6}$ usando el método de Newton, las cuales son:
 \begin{itemize}
-\item Sol 1
-\item Sol 2
+\item Root$([-7.16826, -7.16825] \times [-4.45972, -4.45971]$, :unique)
+\item Root$([-4.21757, -4.21756] \times [-8.36029, -8.36028]$, :unique)
+\item Root$([-2.24983, -2.24982] \times [-14.2093, -14.2092]$, :unique)
+\item Root$([-13.4378, -13.4377] \times [-2.62396, -2.62395]$, :unique)
 \end{itemize}
-En la figura \ref{cruce_estandar} se muestran con puntos los cortes encontrados. Los cuales ya eran apreciables en la \ref{estandar15}. 
-
+El primer intervalo corresponde al parámetro $t$ mientras que el segundo al parámetro $\tau$, la leyenda \texttt{unique} indica que en el intervalo presentado sólo hay una raíz. Lás raíces se representan gráficamente en el espacio fase en la figura \ref{cruce_estandar}. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{cruce_estandar}
-\caption{Cruces de $W^{u},W^{s}$ para el mapeo estándar con $k=1.5$ }
+\caption{Cruces de $W^{u},W^{s}$ de orden $120$ para el mapeo estándar con $\kappa=1.5$ }
 \label{cruce_estandar}
 \end{figure}
+El error asociado al cálculo de las variedades se puede ver en la figura \ref{errorEstCruces}, en dónde se aprecia que los valores aceptables los parámetros están dentro del intervalo incial. 
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{error_cruces_estandar}
+\caption{Error en las variedades de la figura \ref{cruce_estandar}}
+\label{errorEstCruces}
+\end{figure}
 
-
-
+El cálculo numérico riguroso garantiza que la solución está en el intervalo que da como resultado, sin embargo no debemos olvidar que nuestras variedades tienen un error asociado, por lo que es impotante quedarse en aquellos intervalos del parámetro donde se tenga un error mínimo. Con las raíces obtenidas podemos asegurar que en el mapeo estándar con el valor del parámetro $\kappa=1.5$ se encuentran cuatro puntos homoclínicos. Si se quiere encontrar más puntos se debe considerar un polinomio de orden mayor o en todo caso usar números de presición extendida para llegar más lejos en las variedades. 
 
 
 
 \subsection{Hénon}
-Como mencionamos en el mapeo estándar usando el paquete de aritmética de intervalos se pueden calcular las intersecciones de las variedades estable e inestable. En este caso para el mapeo de Hénon, donde el parámetro $a=1.5$ con un polinomio de orden 45, se usó el método con una tolerancia de $10^{-6}$ además de usar el mapeo inverso \ref{HenonI}, para calcular la variedad estable. 
- 
-Lo que resultó de resolver \ref{CorteV} fueron los siguientes intervalos:
+Así como se calcularon las intersecciones en las variedades del mapeo estándar se calcularon ahora para el mapeo de Hénon. En este caso se usó un valor del parámetro $a=1.5$ con un polinomio de orden 45 y el método de Newton con una tolerancia de $10^{-6}$ además de usar el mapeo inverso \ref{HenonI}, para calcular la variedad estable. Los resultados fueron los siguientes intervalos:
 \begin{itemize}
 \item[a)] Root$([-1.36597, -1.36596] \times [166.749, 166.75]$, :unique)
 \item[b)] Root$([-5.26555, -5.26554] \times [129.577, 129.578]$, :unique)
@@ -346,31 +351,27 @@ Lo que resultó de resolver \ref{CorteV} fueron los siguientes intervalos:
 \item[h)] Root$([-166.75, -166.749] \times [1.36596, 1.36597]4$, :unique)
 \end{itemize}
 
-La leyenda \texttt{unique} concluye que hay una raíz en el intervalo y es única, mientras que \texttt{unknown} nos dice que no puede concliur si hay una o más. Si notamos el tercer intervalo contiene al cero $(t,t')=(0,0)$ en el cual se cortan las variedades pues representa el punto fijo. Para los intervalos encontrados se hizo una gráfica que representa el intervalo donde se encuentra el cruce. 
-
-
+La leyenda \texttt{unknown} nos dice que no puede concliur si hay una o más raíces en el intervalo. Si notamos el tercer intervalo contiene al cero $(t,t')=(0,0)$ en el cual se cortan las variedades pues representa el punto fijo. La figura \ref{crucesH} representa con un punto los cortes encontrados en las variedades.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{crucesL}
 \caption{Cruces de $W^{u},W^{s}$ encontrados en el intervalo $[-400.,0.] \times [0.,400.]$ }
-\label{cruces}
+\label{crucesH}
 \end{figure}
-
-Donde cada punto indica un cruce econtrado, el punto de color es sólo para indicar cuaĺes fueron encontradas. En cuanto a el intervalo real en donde se encontró la intersección podemos encontrar las siguientes gráficas.
-
+Los puntos de color son sólo para indicar cuaĺes intersecciones fueron encontradas. Para los intervalos encontrados se hizo una gráfica que representa la región en el espacio fase donde se encuentra el cruce, las figuras \ref{cruce1H}-\ref{cruce8H} muestran cada una de ellas.
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{cruce1}
 \caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo a}
-\label{cruce1}
+\label{cruce1H}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{cruce2}
 \caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo b}
-\label{cruce2}
+\label{cruce2H}
 \end{figure}
 
 
@@ -378,7 +379,7 @@ Donde cada punto indica un cruce econtrado, el punto de color es sólo para indi
 \centering
 \includegraphics[scale=0.4]{cruce3}
 \caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo c }
-\label{cruce3}
+\label{cruce3H}
 \end{figure}
 
 
@@ -386,52 +387,58 @@ Donde cada punto indica un cruce econtrado, el punto de color es sólo para indi
 \centering
 \includegraphics[scale=0.4]{cruce5}
 \caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo e }
-\label{cruce5}
+\label{cruce5H}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{cruce6}
 \caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo f }
-\label{cruce6}
+\label{cruce6H}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{cruce7}
 \caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo g }
-\label{cruce7}
+\label{cruce7H}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{cruce8}
 \caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo h }
-\label{cruce8}
+\label{cruce8H}
+\end{figure}
+
+La zona rectangular sombreada en cada gráfica representa el producto cartesiano de los intervalos donde se encuentra la solución. Podemos observar que de hecho cada zona contiene el cruce de las variedades garantizando así que en el intervalo propuesto hay un cruce lo cual representa un punto homoclínico. Algunos de los cruces como los de las figuras \ref{cruce1H}, \ref{cruce2H}, \ref{cruce7H} y \ref{cruce8H} son realmente imperceptibles. Este tipo de resultados son útiles para hablar sobre caos topológico \cite{devaney},\cite{gerald}.\\
+
+Para complementar todo este análisis se puede obtener una gráfica de las superficies que forman las variedades al cambiar el parámetro del mapeo lo que nos da una idea de como se ven las superficies y además de como se comportan las intersecciones. La figura \ref{SuperficiesH} muestra las superficies formadas por las variedades para ciertos valores del parámetro $a$.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9]{HenonV}
+\caption{Superficies en el mapeo de Hénon formadas por las variedades.}
+\label{SuperficiesH}
 \end{figure}
 
 
-La zona rectangular sombreada en cada gráfica representa el producto cruz de los intervalos donde se encuentra la solución. Podemos observar que de hecho cada zona contiene el cruce de las variedades. Garantizando así que en el intervalo propuesto hay un cruce de variedades. Este tipo de resultados son útiles para hablar sobre caos. Hay que aclarar que los intervalos en los que se encuentra la intersección son intervalos en términos de los parámetros, no de las coordenadas del espacio fase, sin embargo conociendo cómo se mapean los intervalos en cada variedad podemos definir un nuevo intervalo en el espacio fase. \\
 
-
-Para complementar todo este análisis se puede obtener una gráfica de las superficies que forman las variedades al cambiar el parámetro del mapeo lo que nos da una idea de como se ven las superficies y además de como se comportan las intersecciones. Las gráficas correspondientes a esto se encuentran en el sitio \textbf{LIGA}.
 \subsection{Mapeo exponencial}
-Además se analizaron los cruces en las variedades , usando como en los casos anteriores el mapeo inverso \ref{jungI}. Este mapeo representa un mayor reto en cuanto al orden del polinomio, la presencia de la exponencial hace que la parametrización sea sensible al orden del polinomio. Para el siguiente ejemplo se necesitó un polinomio de orden 86, en el cual se podía observar un comportamiento interesante, y se calcularon los cruces de las variedades como en los otros casos. 
-
-
-
+Las intersecciones en el caso del mapeo \ref{Jung} se calcularon usando como en los casos anteriores el mapeo inverso \ref{jungI}. Este mapeo representa un mayor reto en cuanto al orden del polinomio, pes la presencia de la exponencial hace que la parametrización sea sensible al orden del mismo. Para el siguiente ejemplo se utilizó un polinomio de orden 86 y una tolerancia en el método de Newton de $10-6$ y se calcularon los cruces de las variedades como en los otros casos. Las siguientes fueron las secciones en términos del parámetro $t,\tau$ dónde se encontraron los cortes. 
+\begin{itemize}
+\item[a)] Root$([-0.985068, -0.985067] \times [5.99488, 5.99489]$, :unique)
+\item[b)] Root$([-3.46215, -3.46214] \times [5.49229, 5.4923]$, :unique)
+\item[c)] Root$([-3.77896, -3.77895] \times [1.56269, 1.5627]$, :unique)
+\end{itemize}
+La representación de los cortes se puede ver en la figura \ref{jung_cortes}.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{cruces_jung1}
 \caption{Intersecciones en el mapeo exponencial con $a=5.7$}
 \label{jung_cortes}
 \end{figure}
-\begin{itemize}
-\item[a)] Root$([-0.985068, -0.985067] \times [5.99488, 5.99489]$, :unique)
-\item[b)] Root$([-3.46215, -3.46214] \times [5.49229, 5.4923]$, :unique)
-\item[c)] Root$([-3.77896, -3.77895] \times [1.56269, 1.5627]$, :unique)
-\end{itemize}
-Tomando los cruces a escala del intervalo resultan las siguientes gráficas.
+
+Tomando los cruces a escala del intervalo se obtuvieron las figuras \ref{jung_corte1}-\ref{jung_corte3}.
 
 \begin{figure}[H]
 \centering
@@ -455,6 +462,8 @@ Tomando los cruces a escala del intervalo resultan las siguientes gráficas.
 \caption{Intersección en el intervalo c}
 \label{jung_corte3}
 \end{figure}
+
+Las escalas en las que se observan los cortes de las variedades son pequeños comparados con la escala del mapeo, tanto que si se graficaran en el espacio fase no se podrían observar. Como ya se mencionó estos garantiza que existen tres puntos homoclínicos en el intervalo usado. 
 
 
 

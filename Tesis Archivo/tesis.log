@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.10.3)  12 JUL 2018 23:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.10.3)  14 JUL 2018 00:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1560,165 +1560,184 @@ Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
-<cruce_estandar.png, id=643, 472.6458pt x 391.7034pt>
+LaTeX Info: Redefining \. on input line 321.
+LaTeX Info: Redefining \% on input line 321.
+[38] <cruce_estandar.png, id=654, 586.8324pt x 442.2924pt>
 File: cruce_estandar.png Graphic file (type png)
- <use cruce_estandar.png>
-Package pdftex.def Info: cruce_estandar.png used on input line 323.
-(pdftex.def)             Requested size: 283.58966pt x 235.02385pt.
-LaTeX Info: Redefining \. on input line 327.
-LaTeX Info: Redefining \% on input line 327.
 
-[38]
+<use cruce_estandar.png>
+Package pdftex.def Info: cruce_estandar.png used on input line 324.
+(pdftex.def)             Requested size: 352.10216pt x 265.37749pt.
 
-LaTeX Warning: Reference `CorteV' on page 39 undefined on input line 337.
+<error_cruces_estandar.png, id=656, 586.8324pt x 442.2924pt>
+File: error_cruces_estandar.png Graphic file (type png)
 
-LaTeX Info: Redefining \. on input line 350.
-LaTeX Info: Redefining \% on input line 350.
-[39 <./cruce_estandar.png>] <crucesL.png, id=663, 684.5575pt x 537.00626pt>
+<use error_cruces_estandar.png>
+Package pdftex.def Info: error_cruces_estandar.png used on input line 332.
+(pdftex.def)             Requested size: 352.10216pt x 265.37749pt.
+LaTeX Info: Redefining \. on input line 336.
+LaTeX Info: Redefining \% on input line 336.
+ [39 <./cruce_estandar.png>]
+LaTeX Info: Redefining \. on input line 348.
+LaTeX Info: Redefining \% on input line 348.
+ [40 <./error_cruces_estandar.png>] <crucesL.png, id=674, 684.5575pt x 537.0062
+6pt>
 File: crucesL.png Graphic file (type png)
 
 <use crucesL.png>
-Package pdftex.def Info: crucesL.png used on input line 354.
+Package pdftex.def Info: crucesL.png used on input line 357.
 (pdftex.def)             Requested size: 342.27791pt x 268.50247pt.
- <cruce1.png, id=664, 1233.6489pt x 641.0349pt>
+ <cruce1.png, id=677, 1233.6489pt x 641.0349pt>
 File: cruce1.png Graphic file (type png)
 
 <use cruce1.png>
-Package pdftex.def Info: cruce1.png used on input line 364.
+Package pdftex.def Info: cruce1.png used on input line 365.
 (pdftex.def)             Requested size: 493.45082pt x 256.40941pt.
 
-Overfull \hbox (80.88586pt too wide) in paragraph at lines 364--365
+Overfull \hbox (80.88586pt too wide) in paragraph at lines 365--366
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 368.
-LaTeX Info: Redefining \% on input line 368.
-[40 <./crucesL.png>] <cruce2.png, id=670, 1233.6489pt x 641.0349pt>
+LaTeX Info: Redefining \. on input line 369.
+LaTeX Info: Redefining \% on input line 369.
+[41 <./crucesL.png>] <cruce2.png, id=685, 1233.6489pt x 641.0349pt>
 File: cruce2.png Graphic file (type png)
 
 <use cruce2.png>
-Package pdftex.def Info: cruce2.png used on input line 371.
+Package pdftex.def Info: cruce2.png used on input line 372.
 (pdftex.def)             Requested size: 493.45082pt x 256.40941pt.
 
-Overfull \hbox (80.88586pt too wide) in paragraph at lines 371--372
+Overfull \hbox (80.88586pt too wide) in paragraph at lines 372--373
  [][] 
  []
 
-<cruce3.png, id=671, 1233.6489pt x 641.0349pt>
+<cruce3.png, id=686, 1233.6489pt x 641.0349pt>
 File: cruce3.png Graphic file (type png)
  <use cruce3.png>
-Package pdftex.def Info: cruce3.png used on input line 379.
+Package pdftex.def Info: cruce3.png used on input line 380.
 (pdftex.def)             Requested size: 493.45082pt x 256.40941pt.
 
-Overfull \hbox (80.88586pt too wide) in paragraph at lines 379--380
+Overfull \hbox (80.88586pt too wide) in paragraph at lines 380--381
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 383.
-LaTeX Info: Redefining \% on input line 383.
-[41 <./cruce1.png> <./cruce2.png>]
-<cruce5.png, id=680, 1233.6489pt x 641.0349pt>
+LaTeX Info: Redefining \. on input line 384.
+LaTeX Info: Redefining \% on input line 384.
+[42 <./cruce1.png> <./cruce2.png>]
+<cruce5.png, id=694, 1233.6489pt x 641.0349pt>
 File: cruce5.png Graphic file (type png)
  <use cruce5.png>
-Package pdftex.def Info: cruce5.png used on input line 387.
+Package pdftex.def Info: cruce5.png used on input line 388.
 (pdftex.def)             Requested size: 493.45082pt x 256.40941pt.
 
-Overfull \hbox (80.88586pt too wide) in paragraph at lines 387--388
+Overfull \hbox (80.88586pt too wide) in paragraph at lines 388--389
  [][] 
  []
 
-<cruce6.png, id=681, 1233.6489pt x 641.0349pt>
+<cruce6.png, id=695, 1233.6489pt x 641.0349pt>
 File: cruce6.png Graphic file (type png)
  <use cruce6.png>
-Package pdftex.def Info: cruce6.png used on input line 394.
+Package pdftex.def Info: cruce6.png used on input line 395.
 (pdftex.def)             Requested size: 493.45082pt x 256.40941pt.
 
-Overfull \hbox (80.88586pt too wide) in paragraph at lines 394--395
+Overfull \hbox (80.88586pt too wide) in paragraph at lines 395--396
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 398.
-LaTeX Info: Redefining \% on input line 398.
-[42 <./cruce3.png> <./cruce5.png>]
-<cruce7.png, id=690, 1233.6489pt x 641.0349pt>
+LaTeX Info: Redefining \. on input line 399.
+LaTeX Info: Redefining \% on input line 399.
+[43 <./cruce3.png> <./cruce5.png>]
+<cruce7.png, id=704, 1233.6489pt x 641.0349pt>
 File: cruce7.png Graphic file (type png)
  <use cruce7.png>
-Package pdftex.def Info: cruce7.png used on input line 401.
+Package pdftex.def Info: cruce7.png used on input line 402.
 (pdftex.def)             Requested size: 493.45082pt x 256.40941pt.
 
-Overfull \hbox (80.88586pt too wide) in paragraph at lines 401--402
+Overfull \hbox (80.88586pt too wide) in paragraph at lines 402--403
  [][] 
  []
 
-<cruce8.png, id=691, 1233.6489pt x 641.0349pt>
+<cruce8.png, id=705, 1233.6489pt x 641.0349pt>
 File: cruce8.png Graphic file (type png)
  <use cruce8.png>
-Package pdftex.def Info: cruce8.png used on input line 408.
+Package pdftex.def Info: cruce8.png used on input line 409.
 (pdftex.def)             Requested size: 493.45082pt x 256.40941pt.
 
-Overfull \hbox (80.88586pt too wide) in paragraph at lines 408--409
+Overfull \hbox (80.88586pt too wide) in paragraph at lines 409--410
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 412.
-LaTeX Info: Redefining \% on input line 412.
-[43 <./cruce6.png> <./cruce7.png>]
+LaTeX Info: Redefining \. on input line 413.
+LaTeX Info: Redefining \% on input line 413.
+[44 <./cruce6.png> <./cruce7.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 414--415
 
  []
 
-<cruces_jung1.png, id=701, 691.58376pt x 536.0025pt>
-File: cruces_jung1.png Graphic file (type png)
- <use cruces_jung1.png>
-Package pdftex.def Info: cruces_jung1.png used on input line 425.
-(pdftex.def)             Requested size: 345.79103pt x 268.0006pt.
-LaTeX Info: Redefining \. on input line 428.
-LaTeX Info: Redefining \% on input line 428.
+<HenonV.png, id=721, 462.528pt x 346.896pt>
+File: HenonV.png Graphic file (type png)
+ <use HenonV.png>
+Package pdftex.def Info: HenonV.png used on input line 419.
+(pdftex.def)             Requested size: 416.27133pt x 312.2035pt.
 
-[44 <./cruce8.png>] <cruce_a.png, id=708, 1233.6489pt x 641.0349pt>
-File: cruce_a.png Graphic file (type png)
-
-<use cruce_a.png>
-Package pdftex.def Info: cruce_a.png used on input line 438.
-(pdftex.def)             Requested size: 493.45082pt x 256.40941pt.
-
-Overfull \hbox (80.88586pt too wide) in paragraph at lines 438--439
+Overfull \hbox (3.70638pt too wide) in paragraph at lines 419--420
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 442.
-LaTeX Info: Redefining \% on input line 442.
-[45 <./cruces_jung1.png>] <cruce_b.png, id=715, 1233.6489pt x 641.0349pt>
+LaTeX Info: Redefining \. on input line 423.
+LaTeX Info: Redefining \% on input line 423.
+[45 <./cruce8.png>] <cruces_jung1.png, id=733, 691.58376pt x 536.0025pt>
+File: cruces_jung1.png Graphic file (type png)
+
+<use cruces_jung1.png>
+Package pdftex.def Info: cruces_jung1.png used on input line 436.
+(pdftex.def)             Requested size: 345.79103pt x 268.0006pt.
+LaTeX Info: Redefining \. on input line 440.
+LaTeX Info: Redefining \% on input line 440.
+ [46 <./HenonV.png>]
+<cruce_a.png, id=742, 1233.6489pt x 641.0349pt>
+File: cruce_a.png Graphic file (type png)
+ <use cruce_a.png>
+Package pdftex.def Info: cruce_a.png used on input line 445.
+(pdftex.def)             Requested size: 493.45082pt x 256.40941pt.
+
+Overfull \hbox (80.88586pt too wide) in paragraph at lines 445--446
+ [][] 
+ []
+
+LaTeX Info: Redefining \. on input line 449.
+LaTeX Info: Redefining \% on input line 449.
+[47 <./cruces_jung1.png>] <cruce_b.png, id=749, 1233.6489pt x 641.0349pt>
 File: cruce_b.png Graphic file (type png)
 
 <use cruce_b.png>
-Package pdftex.def Info: cruce_b.png used on input line 446.
+Package pdftex.def Info: cruce_b.png used on input line 453.
 (pdftex.def)             Requested size: 493.45082pt x 256.40941pt.
 
-Overfull \hbox (80.88586pt too wide) in paragraph at lines 446--447
+Overfull \hbox (80.88586pt too wide) in paragraph at lines 453--454
  [][] 
  []
 
-<cruce_c.png, id=716, 1233.6489pt x 641.0349pt>
+<cruce_c.png, id=750, 1233.6489pt x 641.0349pt>
 File: cruce_c.png Graphic file (type png)
  <use cruce_c.png>
-Package pdftex.def Info: cruce_c.png used on input line 454.
+Package pdftex.def Info: cruce_c.png used on input line 461.
 (pdftex.def)             Requested size: 493.45082pt x 256.40941pt.
 
-Overfull \hbox (80.88586pt too wide) in paragraph at lines 454--455
+Overfull \hbox (80.88586pt too wide) in paragraph at lines 461--462
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 458.
-LaTeX Info: Redefining \% on input line 458.
-[46 <./cruce_a.png> <./cruce_b.png>])
+LaTeX Info: Redefining \. on input line 465.
+LaTeX Info: Redefining \% on input line 465.
+[48 <./cruce_a.png> <./cruce_b.png>])
 LaTeX Info: Redefining \. on input line 106.
 LaTeX Info: Redefining \% on input line 106.
- [47 <./cruce_c.png>]
+ [49 <./cruce_c.png>]
 \openout2 = `Capitulo4/conclusiones-p.aux'.
 
 
-(./Capitulo4/conclusiones-p.tex [48
+(./Capitulo4/conclusiones-p.tex [50
 
 
 
@@ -1739,7 +1758,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-[49]
+[51]
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
@@ -1747,11 +1766,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 )
 LaTeX Info: Redefining \. on input line 108.
 LaTeX Info: Redefining \% on input line 108.
- [50] (./tesis.bbl (./tesis.brf)
+ [52] (./tesis.bbl (./tesis.brf)
 \tf@brf=\write6
 \openout6 = `tesis.brf'.
 
- [51
+ [53
 
 
 ]
@@ -1774,11 +1793,11 @@ b.com/JuliaIntervals/IntervalRootFinding.jl.
 
 LaTeX Info: Redefining \. on input line 155.
 LaTeX Info: Redefining \% on input line 155.
-[52])
+[54])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 131.
 LaTeX Info: Redefining \. on input line 131.
 LaTeX Info: Redefining \% on input line 131.
- [53]
+ [55]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
  (./tesis.aux
 LaTeX Info: Redefining \. on input line 21.
@@ -1790,9 +1809,9 @@ LaTeX Info: Redefining \% on input line 21.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 131.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 131.
 Package rerunfilecheck Info: File `tesis.out' has not changed.
-(rerunfilecheck)             Checksum: 559D6BA3FA18C876CD358FF371077281;1451.
+(rerunfilecheck)             Checksum: D8AADA6DEAD69E2279F3F07A7933151A;1451.
 Package rerunfilecheck Info: File `tesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 8F70F5CC9A909E246AC7C6F1F7428B12;1349.
+(rerunfilecheck)             Checksum: 57DDFE637318F907CB087DE523CE3C77;1452.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1806,10 +1825,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 131.
  ) 
 Here is how much of TeX's memory you used:
- 15494 strings out of 494925
- 230101 string characters out of 6178544
- 380658 words of memory out of 5000000
- 18083 multiletter control sequences out of 15000+600000
+ 15509 strings out of 494925
+ 230380 string characters out of 6178544
+ 380861 words of memory out of 5000000
+ 18092 multiletter control sequences out of 15000+600000
  17919 words of font info for 73 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  43i,18n,46p,3237b,693s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1828,98 +1847,98 @@ kip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineski
 p\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7
 \\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update
 \040\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT
-1/cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\gdef\04010.95{10.95}\\gd
-ef\0408{8}\\gdef\0406{6}\\protect\040\\afterassignment\040\\edef\04010.95{10.95
-}\\afterassignment\040\\edef\04013.6pt{0.0pt\040plus\0401.0pt}\\edef\040{1.5}\\
-let\0401.5\\def\040\\size@update\040{\\baselineskip\04013.6pt\\relax\040\\basel
-ineskip\040\\baselineskip\040\\normalbaselineskip\040\\baselineskip\040\\setbox
-\040\\strutbox\040\\hbox\040{\\vrule\040height.7\\baselineskip\040depth.3\\base
-lineskip\040width\\z@\040}\\let\040\\size@update\040\\relax\040}\\protect\040\\
-afterassignment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{
-0.0pt\040plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\
-baselineskip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalba
-selineskip\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\04
-0height.7\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\si
-ze@update\040\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95
-\040}\\OT1/cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\protect\040\\be
-gingroup\040\\def\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040
-\040\040\040\040\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\wri
-te\040\\@unused\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr
-/m/n'\040by\040\\MessageBreak\040faked\040small\040caps\040on\040input\040line\
-04020.\012}\\endgroup\040\\uppercase\040{vi}}} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{page.\\protect\040\\unhbox\040\\voidb@x\040\\hbox\0
-40{\\protect\040\\relax\040\\protect\040\\edef\040n{sc}\\protect\040\\afterassi
-gnment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt\040
-plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\baselines
-kip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineski
-p\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7
-\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update
-\040\\relax\040}\\xdef\040\\OT1/cmr/m/sc/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT
-1/cmr/m/sc/10.95\040\\size@update\040\\enc@update\040\\protect\040\\afterassign
-ment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt\040pl
-us\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\baselineski
-p\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineskip\
-040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7\\
-baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update\0
-40\\relax\040}\\xdef\040\\OT1/cmr/m/sc/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT1/
-cmr/m/sc/10.95\040\\size@update\040\\enc@update\040\\gdef\04010.95{10.95}\\gdef
-\0408{8}\\gdef\0406{6}\\protect\040\\afterassignment\040\\edef\04010.95{10.95}\
-\afterassignment\040\\edef\04013.6pt{0.0pt\040plus\0401.0pt}\\edef\040{1.5}\\le
-t\0401.5\\def\040\\size@update\040{\\baselineskip\04013.6pt\\relax\040\\baselin
-eskip\040\\baselineskip\040\\normalbaselineskip\040\\baselineskip\040\\setbox\0
-40\\strutbox\040\\hbox\040{\\vrule\040height.7\\baselineskip\040depth.3\\baseli
-neskip\040width\\z@\040}\\let\040\\size@update\040\\relax\040}\\protect\040\\af
-terassignment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.
-0pt\040plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\ba
-selineskip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbase
-lineskip\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040h
-eight.7\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size
-@update\040\\relax\040}\\xdef\040\\OT1/cmr/m/sc/10.95\040{\\OT1/cmr/m/n/10.95\0
-40}\\OT1/cmr/m/sc/10.95\040\\size@update\040\\enc@update\040\\protect\040\\begi
-ngroup\040\\def\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\0
-40\040\040\040\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write
-\040\\@unused\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m
-/n'\040by\040\\MessageBreak\040faked\040small\040caps\040on\040input\040line\04
-014.\012}\\endgroup\040\\uppercase\040{vi}}} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{page.\\protect\040\\unhbox\040\\voidb@x\040\\hbox\0
-40{\\protect\040\\relax\040\\protect\040\\edef\040n{sc}\\protect\040\\afterassi
-gnment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt\040
-plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\baselines
-kip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineski
-p\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7
-\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update
-\040\\relax\040}\\xdef\040\\OT1/cmr/m/sc/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT
-1/cmr/m/sc/10.95\040\\size@update\040\\enc@update\040\\protect\040\\afterassign
-ment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt\040pl
-us\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\baselineski
-p\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineskip\
-040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7\\
-baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update\0
-40\\relax\040}\\xdef\040\\OT1/cmr/m/sc/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT1/
-cmr/m/sc/10.95\040\\size@update\040\\enc@update\040\\gdef\04010.95{10.95}\\gdef
-\0408{8}\\gdef\0406{6}\\protect\040\\afterassignment\040\\edef\04010.95{10.95}\
-\afterassignment\040\\edef\04013.6pt{0.0pt\040plus\0401.0pt}\\edef\040{1.5}\\le
-t\0401.5\\def\040\\size@update\040{\\baselineskip\04013.6pt\\relax\040\\baselin
-eskip\040\\baselineskip\040\\normalbaselineskip\040\\baselineskip\040\\setbox\0
-40\\strutbox\040\\hbox\040{\\vrule\040height.7\\baselineskip\040depth.3\\baseli
-neskip\040width\\z@\040}\\let\040\\size@update\040\\relax\040}\\protect\040\\af
-terassignment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.
-0pt\040plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\ba
-selineskip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbase
-lineskip\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040h
-eight.7\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size
-@update\040\\relax\040}\\xdef\040\\OT1/cmr/m/sc/10.95\040{\\OT1/cmr/m/n/10.95\0
-40}\\OT1/cmr/m/sc/10.95\040\\size@update\040\\enc@update\040\\protect\040\\begi
-ngroup\040\\def\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\0
-40\040\040\040\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write
-\040\\@unused\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m
-/n'\040by\040\\MessageBreak\040faked\040small\040caps\040on\040input\040line\04
-014.\012}\\endgroup\040\\uppercase\040{v}}} has been referenced but does not ex
+1/cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\gdef\04010{10.95}\\gdef\
+0407{8}\\gdef\0405{6}\\protect\040\\afterassignment\040\\edef\04010.95{10.95}\\
+afterassignment\040\\edef\04013.6pt{0.0pt\040plus\0401.0pt}\\edef\040{1.5}\\let
+\0401.5\\def\040\\size@update\040{\\baselineskip\04013.6pt\\relax\040\\baseline
+skip\040\\baselineskip\040\\normalbaselineskip\040\\baselineskip\040\\setbox\04
+0\\strutbox\040\\hbox\040{\\vrule\040height.7\\baselineskip\040depth.3\\baselin
+eskip\040width\\z@\040}\\let\040\\size@update\040\\relax\040}\\protect\040\\aft
+erassignment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0
+pt\040plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\bas
+elineskip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbasel
+ineskip\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040he
+ight.7\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@
+update\040\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95\04
+0}\\OT1/cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\protect\040\\begin
+group\040\\def\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\04
+0\040\040\040\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write\
+040\\@unused\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m/
+n'\040by\040\\MessageBreak\040faked\040small\040caps\040on\040input\040line\040
+20.\012}\\endgroup\040\\uppercase\040{vi}}} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{page.\\protect\040\\unhbox\040\\voidb@x\040\\hbox\0
+40{\\protect\040\\relax\040\\protect\040\\edef\040n{sc}\\protect\040\\afterassi
+gnment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt\040
+plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\baselines
+kip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineski
+p\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7
+\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update
+\040\\relax\040}\\xdef\040\\OT1/cmr/m/sc/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT
+1/cmr/m/sc/10.95\040\\size@update\040\\enc@update\040\\protect\040\\afterassign
+ment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt\040pl
+us\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\baselineski
+p\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineskip\
+040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7\\
+baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update\0
+40\\relax\040}\\xdef\040\\OT1/cmr/m/sc/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT1/
+cmr/m/sc/10.95\040\\size@update\040\\enc@update\040\\gdef\04010{10.95}\\gdef\04
+07{8}\\gdef\0405{6}\\protect\040\\afterassignment\040\\edef\04010.95{10.95}\\af
+terassignment\040\\edef\04013.6pt{0.0pt\040plus\0401.0pt}\\edef\040{1.5}\\let\0
+401.5\\def\040\\size@update\040{\\baselineskip\04013.6pt\\relax\040\\baselinesk
+ip\040\\baselineskip\040\\normalbaselineskip\040\\baselineskip\040\\setbox\040\
+\strutbox\040\\hbox\040{\\vrule\040height.7\\baselineskip\040depth.3\\baselines
+kip\040width\\z@\040}\\let\040\\size@update\040\\relax\040}\\protect\040\\after
+assignment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt
+\040plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\basel
+ineskip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselin
+eskip\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040heig
+ht.7\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@up
+date\040\\relax\040}\\xdef\040\\OT1/cmr/m/sc/10.95\040{\\OT1/cmr/m/n/10.95\040}
+\\OT1/cmr/m/sc/10.95\040\\size@update\040\\enc@update\040\\protect\040\\begingr
+oup\040\\def\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\040\
+040\040\040\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write\04
+0\\@unused\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m/n'
+\040by\040\\MessageBreak\040faked\040small\040caps\040on\040input\040line\04014
+.\012}\\endgroup\040\\uppercase\040{vi}}} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{page.\\protect\040\\unhbox\040\\voidb@x\040\\hbox\0
+40{\\protect\040\\relax\040\\protect\040\\edef\040n{sc}\\protect\040\\afterassi
+gnment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt\040
+plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\baselines
+kip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineski
+p\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7
+\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update
+\040\\relax\040}\\xdef\040\\OT1/cmr/m/sc/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT
+1/cmr/m/sc/10.95\040\\size@update\040\\enc@update\040\\protect\040\\afterassign
+ment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt\040pl
+us\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\baselineski
+p\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineskip\
+040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7\\
+baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update\0
+40\\relax\040}\\xdef\040\\OT1/cmr/m/sc/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT1/
+cmr/m/sc/10.95\040\\size@update\040\\enc@update\040\\gdef\04010{10.95}\\gdef\04
+07{8}\\gdef\0405{6}\\protect\040\\afterassignment\040\\edef\04010.95{10.95}\\af
+terassignment\040\\edef\04013.6pt{0.0pt\040plus\0401.0pt}\\edef\040{1.5}\\let\0
+401.5\\def\040\\size@update\040{\\baselineskip\04013.6pt\\relax\040\\baselinesk
+ip\040\\baselineskip\040\\normalbaselineskip\040\\baselineskip\040\\setbox\040\
+\strutbox\040\\hbox\040{\\vrule\040height.7\\baselineskip\040depth.3\\baselines
+kip\040width\\z@\040}\\let\040\\size@update\040\\relax\040}\\protect\040\\after
+assignment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt
+\040plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\basel
+ineskip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselin
+eskip\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040heig
+ht.7\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@up
+date\040\\relax\040}\\xdef\040\\OT1/cmr/m/sc/10.95\040{\\OT1/cmr/m/n/10.95\040}
+\\OT1/cmr/m/sc/10.95\040\\size@update\040\\enc@update\040\\protect\040\\begingr
+oup\040\\def\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\040\
+040\040\040\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write\04
+0\\@unused\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m/n'
+\040by\040\\MessageBreak\040faked\040small\040caps\040on\040input\040line\04014
+.\012}\\endgroup\040\\uppercase\040{v}}} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{page.\\protect\040\\unhbox\040\\voidb@x\040\\hbox\0
 40{\\protect\040\\relax\040\\protect\040\\edef\040n{sc}\\protect\040\\afterassi
@@ -1936,26 +1955,26 @@ p\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineskip\
 040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7\\
 baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update\0
 40\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT1/
-cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\gdef\04010.95{10.95}\\gdef
-\0408{8}\\gdef\0406{6}\\protect\040\\afterassignment\040\\edef\04010.95{10.95}\
-\afterassignment\040\\edef\04013.6pt{0.0pt\040plus\0401.0pt}\\edef\040{1.5}\\le
-t\0401.5\\def\040\\size@update\040{\\baselineskip\04013.6pt\\relax\040\\baselin
-eskip\040\\baselineskip\040\\normalbaselineskip\040\\baselineskip\040\\setbox\0
-40\\strutbox\040\\hbox\040{\\vrule\040height.7\\baselineskip\040depth.3\\baseli
-neskip\040width\\z@\040}\\let\040\\size@update\040\\relax\040}\\protect\040\\af
-terassignment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.
-0pt\040plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\ba
-selineskip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbase
-lineskip\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040h
-eight.7\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size
-@update\040\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95\0
-40}\\OT1/cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\protect\040\\begi
-ngroup\040\\def\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\0
-40\040\040\040\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write
-\040\\@unused\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m
-/n'\040by\040\\MessageBreak\040faked\040small\040caps\040on\040input\040line\04
-08.\012}\\endgroup\040\\uppercase\040{v}}} has been referenced but does not exi
-st, replaced by a fixed one
+cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\gdef\04010{10.95}\\gdef\04
+07{8}\\gdef\0405{6}\\protect\040\\afterassignment\040\\edef\04010.95{10.95}\\af
+terassignment\040\\edef\04013.6pt{0.0pt\040plus\0401.0pt}\\edef\040{1.5}\\let\0
+401.5\\def\040\\size@update\040{\\baselineskip\04013.6pt\\relax\040\\baselinesk
+ip\040\\baselineskip\040\\normalbaselineskip\040\\baselineskip\040\\setbox\040\
+\strutbox\040\\hbox\040{\\vrule\040height.7\\baselineskip\040depth.3\\baselines
+kip\040width\\z@\040}\\let\040\\size@update\040\\relax\040}\\protect\040\\after
+assignment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt
+\040plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\basel
+ineskip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselin
+eskip\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040heig
+ht.7\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@up
+date\040\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95\040}
+\\OT1/cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\protect\040\\begingr
+oup\040\\def\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\040\
+040\040\040\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write\04
+0\\@unused\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m/n'
+\040by\040\\MessageBreak\040faked\040small\040caps\040on\040input\040line\0408.
+\012}\\endgroup\040\\uppercase\040{v}}} has been referenced but does not exist,
+ replaced by a fixed one
 
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
@@ -1980,10 +1999,10 @@ sfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xypic/xyat
 ip10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on tesis.pdf (63 pages, 2117585 bytes).
+Output written on tesis.pdf (65 pages, 2179265 bytes).
 PDF statistics:
- 930 PDF objects out of 1000 (max. 8388607)
- 744 compressed objects within 8 object streams
- 239 named destinations out of 1000 (max. 500000)
- 364 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 964 PDF objects out of 1000 (max. 8388607)
+ 771 compressed objects within 8 object streams
+ 243 named destinations out of 1000 (max. 500000)
+ 374 words of extra memory for PDF output out of 10000 (max. 10000000)
 

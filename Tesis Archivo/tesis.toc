@@ -14,9 +14,9 @@
 \contentsline {section}{\numberline {3.2}Mapeo de H\IeC {\'e}non}{27}{section.3.2}
 \contentsline {section}{\numberline {3.3}Mapeo exponencial}{32}{section.3.3}
 \contentsline {section}{\numberline {3.4}Convergencia}{35}{section.3.4}
-\contentsline {section}{\numberline {3.5}Existencia de puntos homocl\IeC {\'\i }nicos}{38}{section.3.5}
+\contentsline {section}{\numberline {3.5}Existencia de puntos homocl\IeC {\'\i }nicos/heterocl\IeC {\'\i }nicos}{38}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Est\IeC {\'a}ndar}{38}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}H\IeC {\'e}non}{40}{subsection.3.5.2}
 \contentsline {subsection}{\numberline {3.5.3}Mapeo exponencial}{46}{subsection.3.5.3}
-\contentsline {chapter}{\numberline {4}Panorama}{51}{chapter.4}
+\contentsline {chapter}{\numberline {4}Resumen y perspectivas}{51}{chapter.4}
 \contentsline {chapter}{Bibliograf\'{\i }a}{53}{appendix*.43}

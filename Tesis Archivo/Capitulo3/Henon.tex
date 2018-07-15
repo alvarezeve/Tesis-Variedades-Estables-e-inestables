@@ -296,7 +296,7 @@ Para el mapeo exponencial realizamos los dos criterios de convergencia. La figur
 
 Estudiar la convergencia de las parametrizaciones puede dar una idea de cómo se va modificando el polinomio si se cambia el orden, en mapeos más sensibles puede ser determinante para saber en a qué orden es conveniente aproximar. 
 
-\section{Existencia de puntos homoclínicos}
+\section{Existencia de puntos homoclínicos/heteroclínicos}
 
 Siendo que el resultado son polinomios se puede aplicar el método de Newton en dos dimensiones o cualquier otro para resolver $P^{u}=P^{s}$ y encontrar puntos homoclínicos o heteroclínicos. Por suerte existe una paquetería en Julia que hace cálculos númericos validados \texttt{ValidatedNumerics}\cite{validated} dentro de la cuál se tiene un paquete para aritmética de intervalos \texttt{IntervalArithmetic}\citep{interval} y para encontrar raíces \texttt{IntervalRootFinding}\cite{root} además del paquete \texttt{Static Arrays}\cite{static} que permite manipular intervalos.\\ 
 
@@ -463,7 +463,19 @@ Tomando los cruces a escala del intervalo se obtuvieron las figuras \ref{jung_co
 \label{jung_corte3}
 \end{figure}
 
-Las escalas en las que se observan los cortes de las variedades son pequeños comparados con la escala del mapeo, tanto que si se graficaran en el espacio fase no se podrían observar. Como ya se mencionó estos garantiza que existen tres puntos homoclínicos en el intervalo usado. 
+Las escalas en las que se observan los cortes de las variedades son pequeños comparados con la escala del mapeo, tanto que si se graficaran en el espacio fase no se podrían observar. Como ya se mencionó estos garantiza que existen tres puntos homoclínicos en el intervalo usado. \\
+
+
+La implementación del método resultó ser eficiente para encontrar los polinomios que representan las variedades estable e inestable asociadas a puntos fijos hiperbólicos de los diferentes mapeos. Se tomaron estos tres mapeos para tener un poco de variedad en la forma de las variedades y también de los puntos fijos, en todos los casos el orden de la parametrización afecta de manera diferente, para el caso del mapeo exponencial resulta ser más sensible. En todos ellos un orden mayor contribuye a llegar más lejos en el valor del parámetro con un error bajo y como consecuencia graficar de mejor manera las variedades. Podemos decir que el error lo manipulamos al mover el orden pero también mostramos que se puede mejorar al usar números de precisión extendida. Una característica que se puede observar es que el error se comporta esencialmente de la misma forma para los tres mapeos, creciendo de manera lenta y luego creciendo rápido a partir de cierto valor. \\
+
+
+El análisis de la convergencia resulta congruente con lo que se puede observar en el error y en las mismas gráficas de las variedades. La convergencia también ayudó a ver que a partir de cierto orden los coeficientes no hacen un cambio significativo, por lo que no es necesariamente cierto que cada que aumentemos el orden se mejorará la parametrización.\\
+
+
+El cálculo de puntos homoclínicos resulta una de las aplicaciones de tener las variedades parametrizadas. El método junto con las otras paqueterías de Julia son indispensables para hacer este tipo de cálculos de una manera fácil. A pesar de que el aritmética de intervalos arroja resultados garantizados, no hay que olvidar que nuestros polinomios no son calculados de la misma manera, es decir se debe tener siempre en mente que al rededor de cada variedad hay un error asociado. Aún así las intersecciones pueden ser encontradas controlando bien el error en la parametrización y controlando la tolerancia en el método de Newton.
+
+
+
 
 
 

@@ -29,17 +29,17 @@ x(0)=x_{0} , \label{ec dif}
 suponiendo que $f \in C^{k}(M,\mathbb{R}^{n})$ con $k \geq 1$ y donde $M$ es un subconjunto abierto de $\mathbb{R}^{n}$. Las soluciones de este tipo de sistemas son curvas contenidas en $\mathbb{R}^{n}$ a las que llamamos trayectorias y denotamos por $\phi$.\\
 En el segundo caso  
 \begin{eqnarray}
-\pmb x_{n+1}= \pmb F (\pmb x_{n}) \quad \pmb x\in \mathbb{R}^{n}. \label{sistema discreto}
+\pmb x_{n+1}= \mathbf{f}(\pmb x_{n}) \quad \pmb x\in \mathbb{R}^{n}. \label{sistema discreto}
 \end{eqnarray}
 Para la ecuación \ref{sistema discreto} dada una condición inicial $\pmb x_{0}$ podemos obtener el estado siguiente evaluando el lado derecho con tal punto. De manera sucesiva se puede obtener el estado $\pmb x_{n+1}$ del estado $\pmb x_{n}$. La aplicación consecutiva de la función proporciona la trayectoria u órbita del punto inicial. Podemos decir que el mapeo es un isomorfismo entre la condición inicial y los puntos de la trayectoria,
 \begin{eqnarray*}
-\pmb x_{k+1}=F\circ F \circ F \circ F ... \circ F (\pmb x_{0})\quad (k \quad \textrm{veces})
+\pmb x_{k+1}=\mathbf{f}\circ\mathbf{f}\circ \mathbf{f} \circ \mathbf{f} ... \circ \mathbf{f} (\pmb x_{0})\quad (k \quad \textrm{veces})
 \end{eqnarray*}
 o
 \begin{eqnarray*}
-\pmb x_{k+1} = F^{k}(\pmb x_{0}).
+\pmb x_{k+1} = \mathbf{f}^{k}(\pmb x_{0}).
 \end{eqnarray*}
-Al conjunto $\lbrace \pmb x_{0},\pmb x_{1},...,\pmb x_{n} \rbrace$ se le llama la órbita de $\pmb x_{0}$.  En este tipo de sistemas es posible que exista un $\pmb x_{*}$ tal que $\mathbf{F}^{p}(\pmb x_{*})=\pmb x_{*}$ con $p \in \mathbb{Z}$. Es decir después de un número finito de aplicaciones se vuelve al mismo punto ($\pmb x_{*}$) al cual le llamamos un punto de periodo $p$. También es entonces posible  que exista un punto de periodo uno $\pmb x_{*}=\mathbf{F}(\pmb x_{*})$ al cual llamamos punto fijo. Los puntos fijos serán otra forma de clasificar a los sistemas dinámicos, para ello separamos las órbitas en términos de los periodos:
+Al conjunto $\lbrace \pmb x_{0},\pmb x_{1},...,\pmb x_{n} \rbrace$ se le llama la órbita de $\pmb x_{0}$.  En este tipo de sistemas es posible que exista un $\pmb x_{*}$ tal que $\mathbf{f}^{p}(\pmb x_{*})=\pmb x_{*}$ con $p \in \mathbb{Z}$. Es decir después de un número finito de aplicaciones se vuelve al mismo punto ($\pmb x_{*}$) al cual le llamamos un punto de periodo $p$. También es entonces posible  que exista un punto de periodo uno $\pmb x_{*}=\mathbf{f}(\pmb x_{*})$ al cual llamamos punto fijo. Los puntos fijos serán otra forma de clasificar a los sistemas dinámicos, para ello separamos las órbitas en términos de los periodos:
 
 \begin{itemize}
 \item  Órbitas fijas (asociadas a puntos con periodo uno).
@@ -48,7 +48,7 @@ Al conjunto $\lbrace \pmb x_{0},\pmb x_{1},...,\pmb x_{n} \rbrace$ se le llama l
 \end{itemize}
 Nos enfocaremos sobre todo en los puntos fijos, sin embargo es posible también analizar en aquellos puntos de periodo mayor a uno.
 \section{Mapeos}
-Como mencionamos en la introducción existen diferentes características de los sistemas dinámicos, la forma en la que depende un estado del estado anterior es una de ellas. Esa dependencia está determinada por $\pmb F$ en la ecuación \ref{sistema discreto}; gráficamente se describe en el espacio fase, que es el espacio de todos los posibles valores de $\pmb x$. En el mismo espacio la órbita de cualuqier punto se ve como una curva que representa la evolución de un punto $\pmb x$ bajo el mapeo hacia adelante y hacia atrás. \\
+Como mencionamos en la introducción existen diferentes características de los sistemas dinámicos, la forma en la que depende un estado del estado anterior es una de ellas. Esa dependencia está determinada por $\mathbf{f}$ en la ecuación \ref{sistema discreto}; gráficamente se describe en el espacio fase, que es el espacio de todos los posibles valores de $\pmb x$. En el mismo espacio la órbita de cualuqier punto se ve como una curva que representa la evolución de un punto $\pmb x$ bajo el mapeo hacia adelante y hacia atrás. \\
 
 Las funciones que aparecen en el mapeo pueden contener términos con potencia mayor a uno, productos entre las variables o peor aún funciones mucho más difíciles de manejar, lo que hace que la suma de soluciones no sea solución, esa característica se llama no linealidad. Una de las primeras cosas a analizar serían los puntos fijos del sistema, los cuales deberán encontrarse algebráicamente o numéricamente dependiendo de la dificultad del mapeo. Supongamos que se tiene un punto fijo de un mapeo, al rededor del punto fijo pueden presentarse diversos comportamientos de las trayectorias; como el sistema es no lineal es difícil decir qué tipo de evolución sufre el sistema visto en el espacio fase.\\
 
@@ -57,7 +57,7 @@ Si tenemos un puno fijo $\pmb x_{*}$ asociado al mapeo entonces la ecuación
 \begin{eqnarray}
 \pmb x_{n+1} =\mathbf{A}\pmb x_{n}
 \end{eqnarray}
-representa la linearización del sistema en al punto, donde $\mathbf{A}=D\pmb F(x_{*})$. Es decir el mapeo puede ser representado como una matriz de coeficientes constantes,además si el sistema dinámico es invertible se puede conocer el punto anterior $\pmb x_{n-1}$ a un cierto $\pmb x_{n}$ usando la matriz inversa de $\mathbf{A}$ que representa el mapeo inveso $\pmb F^{-1}$. Es decir las características de tal matriz nos dirán el comportamiento del sistema. \\
+representa la linearización del sistema en al punto, donde $\mathbf{A}=D\mathbf{f}(x_{*})$. Es decir el mapeo puede ser representado como una matriz de coeficientes constantes,además si el sistema dinámico es invertible se puede conocer el punto anterior $\pmb x_{n-1}$ a un cierto $\pmb x_{n}$ usando la matriz inversa de $\mathbf{A}$ que representa el mapeo inveso $\mathbf{f}^{-1}$. Es decir las características de tal matriz nos dirán el comportamiento del sistema. \\
 
 Dado que los sistemas tratados en este trabajo son de dos dimensiones entonces analizaremos sólo este caso. Los valores propios $\lambda_{1}, \lambda_{2}$, soluciones del polinomio característico de grado dos, son en general valores complejos clasificados como sigue.
 \begin{itemize}
@@ -96,7 +96,7 @@ Cuando $\mathbf{A}$ es una matriz diagonalizable y sus valores propios son puram
 %E^{u}=\lbrace (x,y) : (x,y)=\alpha \pmb v_{2}\quad \alpha\in \mathbb{R}\rbrace
 %\end{eqnarray*}
 
-En el caso hiperbólico tenemos dos comportamientos que nos interesan, marcados con las líneas azul y verde de la figura anterior, tales corresponden a los eigenespacios asociados a los vectores propios de $\mathbf{A}$. Existe un teorema importante de Hartman-Grobman que nos asegura que hay una vecindad del punto fijo hiperbólico tal que el mapeo es topológicamente conjugado con su linearización \cite{Meiss,Meyer,Juergen}. Dicho de otra manera hay vecindades $U$ de $x_{*}$, $V$ de $0 \in \mathbf{R}^{2}$ y un homeomorfismo $h:U\rightarrow V$ tal que $h$ mapea trayectorias de $\pmb F$ en trayectorias del sistema lineal. De esta manera justificamos el porque se trabaja con un sistema lineal.
+En el caso hiperbólico tenemos dos comportamientos que nos interesan, marcados con las líneas azul y verde de la figura anterior, tales corresponden a los eigenespacios asociados a los vectores propios de $\mathbf{A}$. Existe un teorema importante de Hartman-Grobman que nos asegura que hay una vecindad del punto fijo hiperbólico tal que el mapeo es topológicamente conjugado con su linearización \cite{Meiss,Meyer,Juergen}. Dicho de otra manera hay vecindades $U$ de $x_{*}$, $V$ de $0 \in \mathbf{R}^{2}$ y un homeomorfismo $h:U\rightarrow V$ tal que $h$ mapea trayectorias de $\mathbf{f}$ en trayectorias del sistema lineal. De esta manera justificamos el porque se trabaja con un sistema lineal.
 
 
 
@@ -106,19 +106,19 @@ Al rededor de un punto fijo existen ciertos conjuntos que nos dirán caracterís
 \begin{defini}[\textit{\textsc{Conjunto invariante}}\cite{Ott}]
 \textit{Un conjunto invariante es un subconjunto $\mathbf{I} \subset \mathbf{E}$ del espacio fase tal que para cualquier $\pmb x_{i}\in  \mathbf{I}$  y $ n\in\mathbb{N}$ \\
 \begin{center}
-$\mathbf{F}^{n}(\pmb x_{i}) \in \mathbf{I}$.
+$\mathbf{f}^{n}(\pmb x_{i}) \in \mathbf{I}$.
 \end{center}
 }
 \end{defini}
 Es decir que cualquier elemento tomado en el conjunto se queda en el conjunto bajo la aplicación del mapeo. \\
 Estudiaremos los conjuntos invariantes asociados a puntos fijos hiperbólicos, si $\pmb x_{*}$ es un punto fijo hiperbólico entonces definimos las variedades estable e inestable como
 \begin{eqnarray}
-W^{s}=\lbrace \pmb x : \pmb F^{n}(\pmb x)\rightarrow \pmb x_{*} \quad cuando \quad n\rightarrow \infty \rbrace
+W^{s}=\lbrace \pmb x : \mathbf{f}^{n}(\pmb x)\rightarrow \pmb x_{*} \quad cuando \quad n\rightarrow \infty \rbrace
 \label{variedad estable}
 \end{eqnarray}
 
 \begin{eqnarray}
-W^{u}=\lbrace \pmb x : \pmb F^{n}(\pmb x)\rightarrow \pmb x_{*} \quad cuando \quad n\rightarrow -\infty \rbrace.
+W^{u}=\lbrace \pmb x : \mathbf{f}^{n}(\pmb x)\rightarrow \pmb x_{*} \quad cuando \quad n\rightarrow -\infty \rbrace.
 \label{variedad inestable}
 \end{eqnarray}
 Localmente las variedades resultan ser tangentes a los subespacios generados por los vectores propios
@@ -191,12 +191,12 @@ Esto se resume en el siguiente teorema.
 
 
 \begin{thm}[\underline{\textit{De la variedad estable}} \cite{Mateo}]
-\textit{Sea un sistema de la forma $\pmb x_{n+1}=\mathbf{F}(\pmb x_{n})$ con un punto fijo en el origen. Sean $E^{s}$ y $E^{u}$ los subespacios estables e inestables de la linearización del sistema,$F(\pmb x_{n})\rightarrow\mathbb{J}\pmb x_{n}$,  donde $\mathbb{J}$ es la matriz jacobiana en el origen . Si $\mid F(\pmb x_{n})-\mathbb{J}\pmb x_{n}\mid =O(x^{2})$ entonces existen localmente variedades estables e inestables con las mismas dimensiones que $E^{s}$,$E^{u}$ y que son tangentes a estos en cero respectivamente.}
+\textit{Sea un sistema de la forma $\pmb x_{n+1}=\mathbf{f}(\pmb x_{n})$ con un punto fijo en el origen. Sean $E^{s}$ y $E^{u}$ los subespacios estables e inestables de la linearización del sistema,$\mathbf{f}(\pmb x_{n})\rightarrow\mathbb{J}\pmb x_{n}$,  donde $\mathbb{J}$ es la matriz jacobiana en el origen . Si $\mid \mathbf{f}(\pmb x_{n})-\mathbb{J}\pmb x_{n}\mid =O(x^{2})$ entonces existen localmente variedades estables e inestables con las mismas dimensiones que $E^{s}$,$E^{u}$ y que son tangentes a estos en cero respectivamente.}
 \begin{eqnarray*}
-W^{s}_{loc}(\pmb x_{*})= \lbrace \pmb x_{n} : \mathbf{F}^{k}(\pmb x_{n})\rightarrow \pmb x_{*} cuando\quad k \rightarrow \infty \rbrace
+W^{s}_{loc}(\pmb x_{*})= \lbrace \pmb x_{n} : \mathbf{f}^{k}(\pmb x_{n})\rightarrow \pmb x_{*} cuando\quad k \rightarrow \infty \rbrace
 \end{eqnarray*}
 \begin{eqnarray*}
-W^{u}_{loc}(\pmb x_{*}) = \lbrace \pmb x_{*} : \mathbb{F}^{k}(\pmb x_{n})\rightarrow \pmb x_{*} cuando\quad k \rightarrow -\infty \rbrace
+W^{u}_{loc}(\pmb x_{*}) = \lbrace \pmb x_{*} : \mathbb{f}^{k}(\pmb x_{n})\rightarrow \pmb x_{*} cuando\quad k \rightarrow -\infty \rbrace
 \end{eqnarray*}
 \end{thm}
 
@@ -215,13 +215,13 @@ Los sistemas Hamiltonianos son una clase particular de los sistemas dinámicos. 
 \end{eqnarray}
 Podemos convertir la ecuación \ref{fuerza potencial} en un sistemas de ecuaciones diferenciales.
 \begin{eqnarray}
-\frac{dx_{i}}{dt}=v_{i};   \quad m_{i}\frac{dv_{i}}{dt}=-\nabla_{i} V
+\frac{dx_{i}}{dt}=v_{i};   \quad m\frac{dv_{i}}{dt}=-\nabla_{i} V
 \label{fuerza sistema dif}
 \end{eqnarray}
 
 Aquí es donde Hamilton notó que estas ecuaciones pueden obtenerse a partir de una función muy particular.
 \begin{eqnarray}
-H(q,p)=\sum_{i=i}^{n} \frac{p_{i}^{2}}{2m_{i}}+V(q) \label{ec de hamilton}
+H(q,p)=\sum_{i=1}^{n} \frac{p_{i}^{2}}{2m}+V(q) \label{ec de hamilton}
 \end{eqnarray}
 A la función \ref{ec de hamilton} actualmente se le llama Hamiltoniana, donde $p_{i}$ denota el momento y \textbf{$q$} la colección de las posiones en forma de vector. Al comparar \ref{ec de hamilton} con \ref{fuerza sistema dif} tenemos que las ecuaciones de movimiento son
 \begin{eqnarray}
@@ -230,7 +230,36 @@ A la función \ref{ec de hamilton} actualmente se le llama Hamiltoniana, donde $
 \label{ec de mov hamilton}
 \end{eqnarray}
 
-Físicamente hablando H es la energía total del sistema, que es invariante en el tiempo, $\frac{dH}{dt}=0$.La formulación Hamiltoniana de la mecánica no está limitadad a sistemas que son de la forma "energía cinética más energía potencial". Ya que de manera más general una Hamiltoniana es cualquier funcion $C^{1}$, $H:M\rightarrow \mathbb{R}$ donde en nuestro caso $M$ es una variedad 2n-dimensional con coordenadas  $z=(q,p)$. Para escribir las ecuaciones de Hamilton de manera resumida
+
+
+Para sistemas discretos se tiene que la forma de la función hamiltoniana se divide en dos partes, la derecha y la izquierda
+\begin{eqnarray}
+H_{d}^{+}(q_{k},p_{k+1})=p_{k+1}\cdot q_{k+1}-L_{d}(q_{k},q_{k+1}),
+\label{hamiltoniano discreto derecho}
+\end{eqnarray}
+
+\begin{eqnarray}
+H_{d}^{-}(p_{k},q_{k+1})=-p_{k}\cdot q_{k}-L_{d}(q_{k},q_{k+1}),
+\label{hamiltoniano discreto izquierdo}
+\end{eqnarray}
+
+la función $L_{d}$ es la lagrangiana discreta. Si el mapeo hamiltoniano discreto es de la foma $\mathbf{f_{L_{d}}}:(q_{k},p_{k})\mapsto(q_{k+q},p_{k+1})$ es fácil ver que se define mediante las ecuaciones derechas discretas de hamilton, análogas a las ecuaciones \ref{ec de mov hamilton}.
+\begin{eqnarray}
+q_{k+1}=D_{2}H_{d}^{+}(q_{k},p_{k+1}); \quad p_{k}=D_{1}H_{d}^{+}(q_{k},p_{k+1})
+\label{ec de mov hamilton derechas}
+\end{eqnarray}
+que también puede ser expresado en términos de las ecuaciones izquierdas 
+\begin{eqnarray}
+q_{k}=-D_{1}H_{d}^{-}(p_{k},q_{k+1}); \quad p_{k+1}=-D_{2}H_{d}^{-}(p_{k},q_{k+1}).
+\end{eqnarray}
+Siendo $D_{1}F(a_{k},b_{k})=F(a_{k+1},b_{k})$ mientras que $D_{2}F(a_{k},b_{k})=F(a_{k},b_{k+1})$ una especie de propagadores del mapeo.\\
+
+
+Físicamente hablando H es la energía total del sistema, que es invariante en el tiempo, $\frac{dH}{dt}=0$.La formulación Hamiltoniana de la mecánica no está limitadad a sistemas que son de la forma "energía cinética más energía potencial". Ya que de manera más general una Hamiltoniana es cualquier funcion $C^{1}$, $H:M\rightarrow \mathbb{R}$ donde en nuestro caso $M$ es una variedad 2n-dimensional con coordenadas  $z=(q,p)$. 
+
+
+
+Para escribir las ecuaciones de Hamilton de manera resumida
 \begin{eqnarray}
 \frac{dz}{dt}=J\nabla H \label{Hamilton-poisson}
 \end{eqnarray}
@@ -281,7 +310,7 @@ Pero ¿cómo es que este tipo de sistemas se relacionan con los sistemas lineale
 \begin{eqnarray*}
 \frac{dq_{i}}{dt}=\frac{q_{i+1}-q_{i}}{\Delta t}
 \end{eqnarray*}
-donde $q_{i}=q(t)$ y $q_{i+1}=q(t+\Delta t)$. Entoncs las ecuaciones de movimiento se pueden reescribir 
+donde $q_{i}=q(t)$ y $q_{i+1}=q(t+\Delta t)$. Entonces las ecuaciones de movimiento se pueden reescribir 
 \begin{eqnarray}
 q_{i+1}=q_{i}+\Delta t p_{i} ;\quad p_{i+1}=p_{i}-\Delta t\left( \frac{\partial V}{\partial q_{i} } \right)_{q=q_{i+1}} \label{hamilton sistema dinamico}
 \end{eqnarray}
@@ -319,7 +348,7 @@ Es decir $\textbf{P}$ y $g$ son de tal forma que hacen que el siguiente diagrama
 \begin{eqnarray}
 \xymatrix{
 \Theta\subset\mathbb{R} \ar[d]^{\textbf{P}} \ar[r]^{g} & \Theta\subset\mathbb{R} \ar[d]^{\textbf{P}} \\
-M\subset\mathbb{R}^{n} \ar[r]^{\textbf{F}} & M\subset\mathbb{R}^{n}
+M\subset\mathbb{R}^{n} \ar[r]^{\textbf{f}} & M\subset\mathbb{R}^{n}
 }\label{conmutativo}
 \end{eqnarray}
 

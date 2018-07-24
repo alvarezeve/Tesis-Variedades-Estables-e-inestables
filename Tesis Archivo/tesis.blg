@@ -10,53 +10,55 @@ A level-1 auxiliary file: Capitulo3/Henon.aux
 A level-1 auxiliary file: Capitulo4/conclusiones-p.aux
 The style file: unsrt.bst
 Database file #1: referencias.bib
-"{" immediately follows a field name---line 249 of file referencias.bib
+"{" immediately follows a field name---line 265 of file referencias.bib
  :  year
  :      {2010}
 I'm skipping whatever remains of this entry
+Too many commas in name 1 of "Á. Haro, M. Canadell, J. Figueras,A. Luque y J. Mondelo" for entry Haro
+while executing---line 944 of file unsrt.bst
 Warning--empty note in Mireles
 Warning--empty note in Mateo
 Warning--empty year in Numerics
 Warning--empty note in Mireles2
-You've used 29 entries,
+You've used 30 entries,
             1791 wiz_defined-function locations,
-            611 strings with 7076 characters,
-and the built_in function-call counts, 4774 in all, are:
-= -- 405
-> -- 190
+            619 strings with 7144 characters,
+and the built_in function-call counts, 4617 in all, are:
+= -- 413
+> -- 108
 < -- 4
-+ -- 78
-- -- 49
-* -- 234
-:= -- 751
-add.period$ -- 84
-call.type$ -- 29
-change.case$ -- 24
++ -- 56
+- -- 26
+* -- 193
+:= -- 714
+add.period$ -- 87
+call.type$ -- 30
+change.case$ -- 25
 chr.to.int$ -- 0
-cite$ -- 33
-duplicate$ -- 246
-empty$ -- 538
-format.name$ -- 49
-if$ -- 1105
+cite$ -- 34
+duplicate$ -- 255
+empty$ -- 563
+format.name$ -- 26
+if$ -- 1080
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 37
-newline$ -- 143
-num.names$ -- 25
-pop$ -- 134
+int.to.str$ -- 30
+missing$ -- 38
+newline$ -- 148
+num.names$ -- 26
+pop$ -- 135
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 83
+skip$ -- 80
 stack$ -- 0
-substring$ -- 105
-swap$ -- 34
+substring$ -- 132
+swap$ -- 35
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 30
-width$ -- 31
-write$ -- 295
-(There was 1 error message)
+while$ -- 32
+width$ -- 32
+write$ -- 306
+(There were 2 error messages)

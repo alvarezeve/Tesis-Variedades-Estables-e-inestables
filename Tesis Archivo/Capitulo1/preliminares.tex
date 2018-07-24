@@ -21,7 +21,7 @@ T_{g}\circ T_{h}=T_{g\circ h} . \label{def sistema dinamico}
 \end{defini}
 
 
-Un ejemplo típico de un sistema dinámico continuo es el flujo de una ecuación diferencial autónoma , mientras que de uno discreto es por ejemplo el mapeo de un intervalo cerrado en $\mathbb{R}$ en sí mismo, o simplemente una función iterada. En el primer caso
+Un ejemplo típico de un sistema dinámico continuo es el flujo de una ecuación diferencial autónoma, mientras que de uno discreto es por ejemplo el mapeo de un intervalo cerrado en $\mathbb{R}$ en sí mismo, o simplemente una función iterada. En el primer caso
 \begin{equation}
 \dot{x} =  f(x); \quad  
 x(0)=x_{0} , \label{ec dif}
@@ -46,18 +46,18 @@ Al conjunto $\lbrace \pmb x_{0},\pmb x_{1},...,\pmb x_{n} \rbrace$ se le llama l
 \item Órbitas periódicas regulares (asociadas a puntos con periodo mayor a uno).
 \item Órbitas no cerradas (asociadas a puntos no periódicos).
 \end{itemize}
-Nos enfocaremos sobre todo en los puntos fijos, sin embargo es posible también analizar en aquellos puntos de periodo mayor a uno.
+Nos enfocaremos sobre todo en los puntos fijos, sin embargo es posible también analizar aquellos puntos de periodo mayor a uno.
 \section{Mapeos}
-Como mencionamos en la introducción existen diferentes características de los sistemas dinámicos, la forma en la que depende un estado del estado anterior es una de ellas. Esa dependencia está determinada por $\mathbf{f}$ en la ecuación \ref{sistema discreto}; gráficamente se describe en el espacio fase, que es el espacio de todos los posibles valores de $\pmb x$. En el mismo espacio la órbita de cualuqier punto se ve como una curva que representa la evolución de un punto $\pmb x$ bajo el mapeo hacia adelante y hacia atrás. \\
+Como mencionamos en la introducción existen diferentes características de los sistemas dinámicos, la forma en la que depende un estado del estado anterior es una de ellas. Esa dependencia está determinada por $\mathbf{f}$ en la ecuación \ref{sistema discreto}; gráficamente se describe en el espacio fase, que es el espacio de todos los posibles valores de $\pmb x$. En el mismo espacio la órbita de cualquier punto se ve como una curva que representa la evolución de un punto $\pmb x$ bajo el mapeo hacia adelante y hacia atrás. \\
 
 Las funciones que aparecen en el mapeo pueden contener términos con potencia mayor a uno, productos entre las variables o peor aún funciones mucho más difíciles de manejar, lo que hace que la suma de soluciones no sea solución, esa característica se llama no linealidad. Una de las primeras cosas a analizar serían los puntos fijos del sistema, los cuales deberán encontrarse algebráicamente o numéricamente dependiendo de la dificultad del mapeo. Supongamos que se tiene un punto fijo de un mapeo, al rededor del punto fijo pueden presentarse diversos comportamientos de las trayectorias; como el sistema es no lineal es difícil decir qué tipo de evolución sufre el sistema visto en el espacio fase.\\
 
 
-Si tenemos un puno fijo $\pmb x_{*}$ asociado al mapeo entonces la ecuación
+Si tenemos un puno fijo $\mathbf{x}_{*}$ asociado al mapeo entonces la ecuación
 \begin{eqnarray}
-\pmb x_{n+1} =\mathbf{A}\pmb x_{n}
+\mathbf{x}_{n+1} =\mathbf{A}\mathbf{x}_{n}
 \end{eqnarray}
-representa la linearización del sistema en al punto, donde $\mathbf{A}=D\mathbf{f}(x_{*})$. Es decir el mapeo puede ser representado como una matriz de coeficientes constantes,además si el sistema dinámico es invertible se puede conocer el punto anterior $\pmb x_{n-1}$ a un cierto $\pmb x_{n}$ usando la matriz inversa de $\mathbf{A}$ que representa el mapeo inveso $\mathbf{f}^{-1}$. Es decir las características de tal matriz nos dirán el comportamiento del sistema. \\
+representa la linearización del sistema en al punto, donde $\mathbf{A}=D\mathbf{f}(\mathbf{x}_{*})$. Es decir el mapeo puede ser representado como una matriz de coeficientes constantes,además si el sistema dinámico es invertible se puede conocer el punto anterior $\mathbf{x}_{n-1}$ a un cierto $\mathbf{x}_{n}$ usando la matriz inversa de $\mathbf{A}$ que representa el mapeo inveso $\mathbf{f}^{-1}$. Es decir las características de tal matriz nos dirán el comportamiento del sistema. \\
 
 Dado que los sistemas tratados en este trabajo son de dos dimensiones entonces analizaremos sólo este caso. Los valores propios $\lambda_{1}, \lambda_{2}$, soluciones del polinomio característico de grado dos, son en general valores complejos clasificados como sigue.
 \begin{itemize}
@@ -65,21 +65,21 @@ Dado que los sistemas tratados en este trabajo son de dos dimensiones entonces a
 \item $\vert \lambda_{i}\vert>1$
 \item $\vert \lambda_{i}\vert=1$
 \end{itemize}
-En cada uno de los casos anteriores podremos tener dos vectores propios $\pmb x_{p1}, \pmb x_{p2}$ asociados a cada valor propio
+En cada uno de los casos anteriores podremos tener dos vectores propios $\mathbf{x}_{p1}, \mathbf{x}_{p2}$ asociados a cada valor propio
 \begin{eqnarray}
-\mathbf{A}\pmb x_{p1}=\lambda_{1}\pmb x_{p1} ;\qquad \mathbf{A}\pmb x_{p2}=\lambda_{2}\pmb x_{p2}.
+\mathbf{A}\mathbf{x}_{p1}=\lambda_{1}\mathbf{x}_{p1} ;\qquad \mathbf{A}\mathbf{x}_{p2}=\lambda_{2}\mathbf{x}_{p2}.
 \end{eqnarray}
 Los vectores serán linealmente independientes si $\lambda_{1},\lambda_{2}$ son diferentes. Si además consideramos que los valores propios son reales, según \cite{Friedberg} existe una matriz $\mathbf{U}$ tal que 
 \begin{eqnarray}
 \mathbf{U}^{-1}\mathbf{A}\mathbf{U} = \begin{pmatrix}
 \lambda_{1} & 0\\
 0 & \lambda_{2}\\
-\end{pmatrix}
-\end{eqnarray}.
+\end{pmatrix}.
+\end{eqnarray}
 A partir de esto no es difícil ver que $\mathbf{U}$ tiene como columnas los vectores propios. Consecuentemente un mapeo lineal de dimensión dos es linealmente conjugado con un mapeo el cual tiene una matriz de representación diagonal. Este tipo de matrices son llamadas formas normales y
 permiten representar el sistema en su forma más simple mediante la diagonalización del mismo.\\
 
-Cuando $\mathbf{A}$ es una matriz diagonalizable y sus valores propios son puramente imaginarios entonces decimos que tiene un comportamiento elíptico. Si es el caso que ninguno de los dos valores propios tienen parte real cero entonces la matriz se dice hiperbólica y el punto fijo asociado es un punto fijo hiperbólico. El resultado de estas características visto en el espacio fase es un comportamiento muy particular que se puede muestra en la figura \ref{hiperbolic}. \\
+Cuando $\mathbf{A}$ es una matriz diagonalizable y sus valores propios son puramente imaginarios entonces decimos que tiene un comportamiento elíptico. Si es el caso que ninguno de los dos valores propios tienen parte real cero entonces la matriz se dice hiperbólica y el punto fijo asociado es un punto fijo hiperbólico. El resultado de estas características visto en el espacio fase es un comportamiento muy particular que se muestra en la figura \ref{hiperbolic}. \\
 
 \begin{figure}[h!]
 \centering
@@ -96,37 +96,40 @@ Cuando $\mathbf{A}$ es una matriz diagonalizable y sus valores propios son puram
 %E^{u}=\lbrace (x,y) : (x,y)=\alpha \pmb v_{2}\quad \alpha\in \mathbb{R}\rbrace
 %\end{eqnarray*}
 
-En el caso hiperbólico tenemos dos comportamientos que nos interesan, marcados con las líneas azul y verde de la figura anterior, tales corresponden a los eigenespacios asociados a los vectores propios de $\mathbf{A}$. Existe un teorema importante de Hartman-Grobman que nos asegura que hay una vecindad del punto fijo hiperbólico tal que el mapeo es topológicamente conjugado con su linearización \cite{Meiss,Meyer,Juergen}. Dicho de otra manera hay vecindades $U$ de $x_{*}$, $V$ de $0 \in \mathbf{R}^{2}$ y un homeomorfismo $h:U\rightarrow V$ tal que $h$ mapea trayectorias de $\mathbf{f}$ en trayectorias del sistema lineal. De esta manera justificamos el porque se trabaja con un sistema lineal.
+En el caso hiperbólico tenemos dos comportamientos que nos interesan, marcados con las líneas azul y verde de la figura anterior, tales corresponden a los eigenespacios asociados a los vectores propios de $\mathbf{A}$. Existe un teorema importante de Hartman-Grobman que nos asegura que hay una vecindad del punto fijo hiperbólico tal que el mapeo es topológicamente conjugado con su linearización \cite{Meiss,Meyer,Juergen}. Dicho de otra manera hay vecindades $U$ de $\mathbf{x}_{*}$, $V$ de $0 \in \mathbf{R}^{2}$ y un homeomorfismo $h:U\rightarrow V$ tal que $h$ mapea trayectorias de $\mathbf{f}$ en trayectorias del sistema lineal. De esta manera justificamos el porque se trabaja con un sistema lineal.
 
 
 
 \section{Conjuntos invariantes}
-Al rededor de un punto fijo existen ciertos conjuntos que nos dirán características globales del sistema, estos conjuntos tienen que ver directamente con lo que se observa en la figura \ref{hiperbolic}. Para entender su comportamiento necesitamos definir un conjunto invariante.
+Alrededor de un punto fijo existen ciertos conjuntos que nos dirán características globales del sistema, estos conjuntos tienen que ver directamente con lo que se observa en la figura \ref{hiperbolic}. Para entender su comportamiento necesitamos definir un conjunto invariante.
 
 \begin{defini}[\textit{\textsc{Conjunto invariante}}\cite{Ott}]
-\textit{Un conjunto invariante es un subconjunto $\mathbf{I} \subset \mathbf{E}$ del espacio fase tal que para cualquier $\pmb x_{i}\in  \mathbf{I}$  y $ n\in\mathbb{N}$ \\
+\textit{Un conjunto invariante es un subconjunto $\mathbf{I} \subset \mathbf{E}$ del espacio fase tal que para cualquier $\mathbf{x}_{i}\in  \mathbf{I}$  y $ n\in\mathbb{N}$ \\
 \begin{center}
-$\mathbf{f}^{n}(\pmb x_{i}) \in \mathbf{I}$.
+$\mathbf{f}^{n}(\mathbf{x}_{i}) \in \mathbf{I}$.
 \end{center}
 }
 \end{defini}
 Es decir que cualquier elemento tomado en el conjunto se queda en el conjunto bajo la aplicación del mapeo. \\
-Estudiaremos los conjuntos invariantes asociados a puntos fijos hiperbólicos, si $\pmb x_{*}$ es un punto fijo hiperbólico entonces definimos las variedades estable e inestable como
+Estudiaremos los conjuntos invariantes asociados a puntos fijos hiperbólicos, si $\mathbf{x}_{*}$ es un punto fijo hiperbólico entonces definimos las variedades estable e inestable como
 \begin{eqnarray}
-W^{s}=\lbrace \pmb x : \mathbf{f}^{n}(\pmb x)\rightarrow \pmb x_{*} \quad cuando \quad n\rightarrow \infty \rbrace
+W^{s}=\lbrace \mathbf{x} : \mathbf{f}^{n}(\mathbf{x})\rightarrow \mathbf{x}_{*} \quad cuando \quad n\rightarrow \infty \rbrace
 \label{variedad estable}
 \end{eqnarray}
 
 \begin{eqnarray}
-W^{u}=\lbrace \pmb x : \mathbf{f}^{n}(\pmb x)\rightarrow \pmb x_{*} \quad cuando \quad n\rightarrow -\infty \rbrace.
+W^{u}=\lbrace \mathbf{x} : \mathbf{f}^{n}(\mathbf{x})\rightarrow \mathbf{x}_{*} \quad cuando \quad n\rightarrow -\infty \rbrace.
 \label{variedad inestable}
 \end{eqnarray}
+
+
 Localmente las variedades resultan ser tangentes a los subespacios generados por los vectores propios
+
 \begin{eqnarray*}
-E^{s}=\lbrace (x,y) : (x,y)=\beta \pmb v_{1} \quad \beta\in \mathbb{R}\rbrace
+E^{s}=\lbrace (x,y) : (x,y)=\beta \pmb v_{1} \quad \beta\in \mathbb{R}\rbrace,
 \end{eqnarray*}
 \begin{eqnarray*}
-E^{u}=\lbrace (x,y) : (x,y)=\alpha \pmb v_{2}\quad \alpha\in \mathbb{R}\rbrace
+E^{u}=\lbrace (x,y) : (x,y)=\alpha \pmb v_{2}\quad \alpha\in \mathbb{R}\rbrace .
 \end{eqnarray*}
 Esto se resume en el siguiente teorema.
 
@@ -191,16 +194,16 @@ Esto se resume en el siguiente teorema.
 
 
 \begin{thm}[\underline{\textit{De la variedad estable}} \cite{Mateo}]
-\textit{Sea un sistema de la forma $\pmb x_{n+1}=\mathbf{f}(\pmb x_{n})$ con un punto fijo en el origen. Sean $E^{s}$ y $E^{u}$ los subespacios estables e inestables de la linearización del sistema,$\mathbf{f}(\pmb x_{n})\rightarrow\mathbb{J}\pmb x_{n}$,  donde $\mathbb{J}$ es la matriz jacobiana en el origen . Si $\mid \mathbf{f}(\pmb x_{n})-\mathbb{J}\pmb x_{n}\mid =O(x^{2})$ entonces existen localmente variedades estables e inestables con las mismas dimensiones que $E^{s}$,$E^{u}$ y que son tangentes a estos en cero respectivamente.}
+\textit{Sea un sistema de la forma $\mathbf{x}_{n+1}=\mathbf{f}(\mathbf{x}_{n})$ con un punto fijo en el origen. Sean $E^{s}$ y $E^{u}$ los subespacios estables e inestables de la linearización del sistema,$\mathbf{f}(\mathbf{x}_{n})\rightarrow\mathbb{J}\mathbf{x}_{n}$,  donde $\mathbb{J}$ es la matriz jacobiana en el origen . Si $\mid \mathbf{f}(\mathbf{x}_{n})-\mathbb{J}\mathbf{x}_{n}\mid =O(x^{2})$ entonces existen localmente variedades estables e inestables con las mismas dimensiones que $E^{s}$,$E^{u}$ y que son tangentes a estos en cero respectivamente.}
 \begin{eqnarray*}
-W^{s}_{loc}(\pmb x_{*})= \lbrace \pmb x_{n} : \mathbf{f}^{k}(\pmb x_{n})\rightarrow \pmb x_{*} cuando\quad k \rightarrow \infty \rbrace
+W^{s}_{loc}(\mathbf{x}_{*})= \lbrace \mathbf{x}_{*} : \mathbf{f}^{k}(\mathbf{x}_{n})\rightarrow \mathbf{x}_{*} cuando\quad k \rightarrow \infty \rbrace,
 \end{eqnarray*}
 \begin{eqnarray*}
-W^{u}_{loc}(\pmb x_{*}) = \lbrace \pmb x_{*} : \mathbb{f}^{k}(\pmb x_{n})\rightarrow \pmb x_{*} cuando\quad k \rightarrow -\infty \rbrace
+W^{u}_{loc}(\mathbf{x}_{*}) = \lbrace \mathbf{x}_{*} : \mathbf{f}^{k}(\mathbf{x}_{n})\rightarrow \mathbf{x}_{*} cuando\quad k \rightarrow -\infty \rbrace.
 \end{eqnarray*}
 \end{thm}
 
-Es necesario mencionar que una variedad estable no puede cruzarse con otra variedad estable, lo mismo sucede con las inestables, así como con la intersección de una variedad con sí misma. Para entender esto consideremos que se tienen dos puntos fijos diferentes con sus respectivas variedades inestables asociadas. Supongamos que las variedades se cruzan en algún punto, si esto pasa la órbita hacia atrás de cualquiera de los dos puntos empezando en la intersección debería aproximarse a ambos puntos fijos, lo cual es imposible pues eran diferentes. Los argumentos para la intersección de las estables son similares. Lo que sí puede suceder es la intersección de una variedad estable con una inestable, a esto se le llama una intersección homoclínica. Si la intersección se da en otro punto fijo entonces se llama heteroclínica \cite{Ott}. Resulta además que si dos variedades , estable e inestable, se cortan en un punto se cortarán una infinidad de veces más. \\
+Es necesario mencionar que una variedad estable no puede cruzarse con otra variedad estable, lo mismo sucede con las inestables, así como con la intersección de una variedad con sigo misma. Para entender esto consideremos que se tienen dos puntos fijos diferentes con sus respectivas variedades inestables asociadas. Supongamos que las variedades se cruzan en algún punto, si esto pasa la órbita hacia atrás de cualquiera de los dos puntos empezando en la intersección debería aproximarse a ambos puntos fijos, lo cual es imposible pues eran diferentes. Los argumentos para la intersección de las estables son similares. Lo que sí puede suceder es la intersección de una variedad estable con una inestable, a esto se le llama una intersección homoclínica. Si la intersección se da en otro punto fijo entonces se llama heteroclínica \cite{Ott}. Resulta además que si dos variedades, estable e inestable, se cortan en un punto se cortarán una infinidad de veces más. \\
 
 
 El cálculo de variedades alrededor de un punto fijo es un problema difícil de atacar analíticamente, pues su comportamiento puede ser muy complejo, por ello es necesario explotar al máximo la linearización que se hace del sistema para poder, con métodos numéricos o semianalíticos, calcular las variedades. Es justo esto lo que nos lleva a la siguiente sección.
@@ -209,30 +212,27 @@ El cálculo de variedades alrededor de un punto fijo es un problema difícil de 
 
 
 \section{Sistemas Hamiltonianos}
-Los sistemas Hamiltonianos son una clase particular de los sistemas dinámicos. En 1834 William R. Hamilton reformuló la ecuación de Newton ($F=ma$) para un conjunto de partículas puntuales en un campo de fuerzas. Cuando la fuerza $\mathbf{F}$ es conservativa es posible escribir a la fuerza como  menos el gradiente de una función potencial. 
+Los sistemas Hamiltonianos son una clase particular de los sistemas dinámicos. En 1834 William R. Hamilton reformuló la ecuación de Newton ($F=ma$) para un conjunto de partículas puntuales en un campo de fuerzas. Cuando la fuerza $\mathbf{F}$ es conservativa es posible escribir a la fuerza como  menos el gradiente de una función potencial
 \begin{eqnarray}
-\mathbf{F}=-\nabla V \label{fuerza potencial}
+\mathbf{F}=-\nabla V. \label{fuerza potencial}
 \end{eqnarray}
-Podemos convertir la ecuación \ref{fuerza potencial} en un sistemas de ecuaciones diferenciales.
+Podemos convertir la ecuación \ref{fuerza potencial} en un sistemas de ecuaciones diferenciales
 \begin{eqnarray}
-\frac{dx_{i}}{dt}=v_{i};   \quad m\frac{dv_{i}}{dt}=-\nabla_{i} V
+\frac{dx_{i}}{dt}=v_{i};   \quad m\frac{dv_{i}}{dt}=-\nabla_{i} V,
 \label{fuerza sistema dif}
 \end{eqnarray}
-
-Aquí es donde Hamilton notó que estas ecuaciones pueden obtenerse a partir de una función muy particular.
+las ecuaciones \ref{fuerza sistema dif} pueden obtenerse a partir de una función muy particular
 \begin{eqnarray}
-H(q,p)=\sum_{i=1}^{n} \frac{p_{i}^{2}}{2m}+V(q) \label{ec de hamilton}
+H(q,p)=\sum_{i=1}^{n} \frac{p_{i}^{2}}{2m}+V(q), \label{ec de hamilton} 
 \end{eqnarray}
-A la función \ref{ec de hamilton} actualmente se le llama Hamiltoniana, donde $p_{i}$ denota el momento y \textbf{$q$} la colección de las posiones en forma de vector. Al comparar \ref{ec de hamilton} con \ref{fuerza sistema dif} tenemos que las ecuaciones de movimiento son
+llamada Hamiltoniana, donde $p_{i}$ denota el momento y \textbf{$q$} la colección de las posiciones en forma de vector. Al observar \ref{ec de hamilton} y \ref{fuerza sistema dif} podemos notar que las ecuaciones de movimiento resultan
 \begin{eqnarray}
 \frac{dq_{i}}{dt}=\frac{\partial H}{\partial p_{i}}; \quad
-\frac{dp_{i}}{dt}=-\frac{\partial H}{\partial q_{i}}
+\frac{dp_{i}}{dt}=-\frac{\partial H}{\partial q_{i}}.
 \label{ec de mov hamilton}
 \end{eqnarray}
 
-
-
-Para sistemas discretos se tiene que la forma de la función hamiltoniana se divide en dos partes, la derecha y la izquierda
+Algo análogo existe para sistemas discretos en donde la forma de la función hamiltoniana se divide en dos partes, la derecha y la izquierda \cite{Tomoki}
 \begin{eqnarray}
 H_{d}^{+}(q_{k},p_{k+1})=p_{k+1}\cdot q_{k+1}-L_{d}(q_{k},q_{k+1}),
 \label{hamiltoniano discreto derecho}
@@ -243,90 +243,88 @@ H_{d}^{-}(p_{k},q_{k+1})=-p_{k}\cdot q_{k}-L_{d}(q_{k},q_{k+1}),
 \label{hamiltoniano discreto izquierdo}
 \end{eqnarray}
 
-la función $L_{d}$ es la lagrangiana discreta. Si el mapeo hamiltoniano discreto es de la foma $\mathbf{f_{L_{d}}}:(q_{k},p_{k})\mapsto(q_{k+q},p_{k+1})$ es fácil ver que se define mediante las ecuaciones derechas discretas de hamilton, análogas a las ecuaciones \ref{ec de mov hamilton}.
+la función $L_{d}$ es la lagrangiana discreta que proviene del mismo principio variacional que en el caso contínuo. Al definir $D_{1}F(a_{k},b_{k})=F(a_{k+1},b_{k})$ y  $D_{2}F(a_{k},b_{k})=F(a_{k},b_{k+1})$, como aplicaciones análogas a las derivadas de manera discreta  es fácil ver que las ecuaciones de movimiento análogas a las ecuaciones \ref{ec de mov hamilton} son ahora
 \begin{eqnarray}
-q_{k+1}=D_{2}H_{d}^{+}(q_{k},p_{k+1}); \quad p_{k}=D_{1}H_{d}^{+}(q_{k},p_{k+1})
+q_{k+1}=D_{2}H_{d}^{+}(q_{k},p_{k+1}); \quad p_{k}=D_{1}H_{d}^{+}(q_{k},p_{k+1}),
 \label{ec de mov hamilton derechas}
 \end{eqnarray}
-que también puede ser expresado en términos de las ecuaciones izquierdas 
+que también pueden ser expresadas en términos de las ecuaciones izquierdas 
 \begin{eqnarray}
 q_{k}=-D_{1}H_{d}^{-}(p_{k},q_{k+1}); \quad p_{k+1}=-D_{2}H_{d}^{-}(p_{k},q_{k+1}).
+\label{ec de mov hamilton izquierdas}
 \end{eqnarray}
-Siendo $D_{1}F(a_{k},b_{k})=F(a_{k+1},b_{k})$ mientras que $D_{2}F(a_{k},b_{k})=F(a_{k},b_{k+1})$ una especie de propagadores del mapeo.\\
+El mapeo se define de manera implícita a partir de las ecuaciones \ref{ec de mov hamilton derechas},\ref{ec de mov hamilton izquierdas} como $\mathbf{f}_{L_{d}}:(q_{k},p_{k})\mapsto(q_{k+1},p_{k+1})$.\\
+
+Físicamente hablando H es la energía total del sistema, que es invariante en el tiempo, $\frac{dH}{dt}=0$. La formulación Hamiltoniana de la mecánica no está limitadad a sistemas que son de la forma  ``energía cinética más energía potencial'', ya que de manera más general una Hamiltoniana es cualquier función $C^{1}$, $H:M\rightarrow \mathbb{R}$ donde en nuestro caso $M$ es una variedad 2n-dimensional con coordenadas  $z=(q,p)$. 
 
 
-Físicamente hablando H es la energía total del sistema, que es invariante en el tiempo, $\frac{dH}{dt}=0$.La formulación Hamiltoniana de la mecánica no está limitadad a sistemas que son de la forma "energía cinética más energía potencial". Ya que de manera más general una Hamiltoniana es cualquier funcion $C^{1}$, $H:M\rightarrow \mathbb{R}$ donde en nuestro caso $M$ es una variedad 2n-dimensional con coordenadas  $z=(q,p)$. 
 
+%Para escribir las ecuaciones de Hamilton de manera resumida
+%\begin{eqnarray}
+%\frac{dz}{dt}=J\nabla H \label{Hamilton-poisson}
+%\end{eqnarray}
 
+%Donde $I$ es la matriz identidad de $n\times n$ por lo que $J$ es de $2n\times 2n$ antisimétrica, %llamada matriz de Poisson. 
+%\begin{eqnarray*}
+%J=  \begin{pmatrix}
+%0 & I\\
+%-I & 0
+%\end{pmatrix}
+%\end{eqnarray*}
+%Si por otro lado pensamos que el cambio de una función escalar $F$ que depende del tiempo se puede calcular usando la ecuacion \ref{Hamilton-poisson} mediante la regla de la cadena 
+%\begin{eqnarray*}
+%\frac{dF}{dt}=\frac{\partial F}{\partial t}+ \lbrace F,h\rbrace
+%\end{eqnarray*}
+%Aquí la expresión $\lbrace F,H \rbrace$ es llamada el paréntesis de Poisson definido como:
+%\begin{eqnarray}
+%\lbrace F,H \rbrace=\nabla F^{T}J\nabla H \label{Parentesis Poisson}
+%\end{eqnarray}
+%que nos sirve para escribir las ecuaciones de movimiento \ref{ec de mov hamilton}
+%\begin{eqnarray}
+%\dot{z}=\lbrace z,H\rbrace \label{ec. de movimiento 2}
+%\end{eqnarray}
+%Algunas de las cosas que nos interesan en este tipo de sistemas son las cantidades conservadas. La %primera de ellas que nos interesa es la energía.\\
 
-Para escribir las ecuaciones de Hamilton de manera resumida
+%\begin{lem}(\emph{\textit{Conservación de energía}})
+%\textit{Si $H$ es independiente del tiempo entonces la energía se conserva a lo largo de trayectorias. $H(q(t),p(t))=E$.}
+%\end{lem}
+%\textit{\textbf{Demostración:}}
+%\begin{equation*}
+%\frac{dH}{dt}=\lbrace H, H \rbrace = \nabla H^{T} J \nabla H=0  
+%\end{equation*}
+%ya que J es antisimétrica. $\blacksquare$ \\
+
+%La otra cantidad que nos interesa es el volumen, Joseph Liouville mostró que los flujos Hamiltonianos preservan el volumen.
+
+%\begin{lem}(\emph{\textit{Liouville}})
+%\textit{Si $H$ es $C^{2}$ entonces su flujo preserva el volumen.}
+%\end{lem}
+
+%Una carcaterística más de los sistemas Hamiltonianos es que sus puntos criticos son equivalentemente sus puntos fijos.Lo cual se enuncia en el siguiente lema. 
+%\begin{lem}(\emph{Equilibrio})
+%\textit{Un punto $z^{*}$ es un punto fijo del flujo autónomo Hamiltoniano si y sólo si es un punto crítico de $H$}.
+%\end{lem}
+
+%=Consecuentemente de eso tenemos que al ser iguales sus puntos críticos y fijos entonces la estabilidad de los mismos se puede estudiar a partir de la matriz Hessiana de $H$. Lo cuál analizaremos en una sección posterior. Mientras podemos pensar que una consecuencia de este lema es que cualquier máximo o mínimo no degenerdado de $H$ es Lyapunov estable. \\
+%Pero ¿cómo es que este tipo de sistemas se relacionan con los sistemas lineales que analizamos antes?. La clave está en escribir a nuestro sistema de manera linearizada mediante la matriz $\mathbb{J}$. Si escribimos \ref{ec de mov hamilton} como
+%\begin{eqnarray*}
+%\frac{dq_{i}}{dt}=\frac{q_{i+1}-q_{i}}{\Delta t}
+%\end{eqnarray*}
+%donde $q_{i}=q(t)$ y $q_{i+1}=q(t+\Delta t)$. Entonces las ecuaciones de movimiento se pueden %reescribir 
+%\begin{eqnarray}
+%q_{i+1}=q_{i}+\Delta t p_{i} ;\quad p_{i+1}=p_{i}-\Delta t\left( \frac{\partial V}{\partial q_{i} } \right)_{q=q_{i+1}} \label{hamilton sistema dinamico}
+%\end{eqnarray}
+Las ecuaciones \ref{ec de mov hamilton derechas},\ref{ec de mov hamilton izquierdas} ya está en forma de un sistema de los que estudiamos anteriormente. Para linearizar el sistema calculamos el jacobiano
 \begin{eqnarray}
-\frac{dz}{dt}=J\nabla H \label{Hamilton-poisson}
+\mathbf{J}=\frac{\partial(q_{k+1},p_{k+1})}{\partial(q_{k},p_{k})}
 \end{eqnarray}
 
-Donde $I$ es la matriz identidad de $n\times n$ por lo que $J$ es de $2n\times 2n$ antisimétrica, llamada matriz de Poisson. 
-\begin{eqnarray*}
-J=  \begin{pmatrix}
-0 & I\\
--I & 0
-\end{pmatrix}
-\end{eqnarray*}
-Si por otro lado pensamos que el cambio de una función escalar $F$ que depende del tiempo se puede calcular usando la ecuacion \ref{Hamilton-poisson} mediante la regla de la cadena 
-\begin{eqnarray*}
-\frac{dF}{dt}=\frac{\partial F}{\partial t}+ \lbrace F,h\rbrace
-\end{eqnarray*}
-Aquí la expresión $\lbrace F,H \rbrace$ es llamada el paréntesis de Poisson definido como:
-\begin{eqnarray}
-\lbrace F,H \rbrace=\nabla F^{T}J\nabla H \label{Parentesis Poisson}
-\end{eqnarray}
-que nos sirve para escribir las ecuaciones de movimiento \ref{ec de mov hamilton}
-\begin{eqnarray}
-\dot{z}=\lbrace z,H\rbrace \label{ec. de movimiento 2}
-\end{eqnarray}
-Algunas de las cosas que nos interesan en este tipo de sistemas son las cantidades conservadas. La primera de ellas que nos interesa es la energía.\\
-
-\begin{lem}(\emph{\textit{Conservación de energía}})
-\textit{Si $H$ es independiente del tiempo entonces la energía se conserva a lo largo de trayectorias. $H(q(t),p(t))=E$.}
-\end{lem}
-\textit{\textbf{Demostración:}}
-\begin{equation*}
-\frac{dH}{dt}=\lbrace H, H \rbrace = \nabla H^{T} J \nabla H=0  
-\end{equation*}
-ya que J es antisimétrica. $\blacksquare$ \\
-
-La otra cantidad que nos interesa es el volumen, Joseph Liouville mostró que los flujos Hamiltonianos preservan el volumen.
-
-\begin{lem}(\emph{\textit{Liouville}})
-\textit{Si $H$ es $C^{2}$ entonces su flujo preserva el volumen.}
-\end{lem}
-
-Una carcaterística más de los sistemas Hamiltonianos es que sus puntos criticos son equivalentemente sus puntos fijos.Lo cual se enuncia en el siguiente lema. 
-\begin{lem}(\emph{Equilibrio})
-\textit{Un punto $z^{*}$ es un punto fijo del flujo autónomo Hamiltoniano si y sólo si es un punto crítico de $H$}.
-\end{lem}
-
-Consecuentemente de eso tenemos que al ser iguales sus puntos críticos y fijos entonces la estabilidad de los mismos se puede estudiar a partir de la matriz Hessiana de $H$. Lo cuál analizaremos en una sección posterior. Mientras podemos pensar que una consecuencia de este lema es que cualquier máximo o mínimo no degenerdado de $H$ es Lyapunov estable. \\
-Pero ¿cómo es que este tipo de sistemas se relacionan con los sistemas lineales que analizamos antes?. La clave está en escribir a nuestro sistema de manera linearizada mediante la matriz $\mathbb{J}$. Si escribimos \ref{ec de mov hamilton} como
-\begin{eqnarray*}
-\frac{dq_{i}}{dt}=\frac{q_{i+1}-q_{i}}{\Delta t}
-\end{eqnarray*}
-donde $q_{i}=q(t)$ y $q_{i+1}=q(t+\Delta t)$. Entonces las ecuaciones de movimiento se pueden reescribir 
-\begin{eqnarray}
-q_{i+1}=q_{i}+\Delta t p_{i} ;\quad p_{i+1}=p_{i}-\Delta t\left( \frac{\partial V}{\partial q_{i} } \right)_{q=q_{i+1}} \label{hamilton sistema dinamico}
-\end{eqnarray}
-lo cual ya está en forma de un sistema de los que estudiamos anteriormente. Para linearizar el sistema calculamos el jacobiano
-\begin{eqnarray}
-\mathbf{J}=\frac{\partial(q_{i+1},p_{i+1})}{\partial(q_{i},p_{i})}=
-det \begin{pmatrix} 
-1 & -\Delta t \left( \frac{\partial^{2} V}{\partial q_{i}^{2} } \right)\\
-\Delta t & 1 \\
-\end{pmatrix}
-\end{eqnarray}
-Es justo de este sistema linearizado de donde obtendremos información a partir de aplicar los teoremas y resultados de las secciones anteriores. Pero antes, notemos que el determinante es uno
-\begin{eqnarray*}
-det(\mathbf{J})=1+(\Delta t)^{2}\left( \frac{\partial^{2} V}{\partial q^{2} } \right)_{q=q_{i+1}}
-\end{eqnarray*}
- ya que la segunda parcial del potencial vale cero . Por lo que es un sistema que preserva áreas.
+Es justo de este sistema linearizado de donde obtendremos información a partir de aplicar los teoremas y resultados de las secciones anteriores. 
+%Pero antes, notemos que el determinante es uno
+%\begin{eqnarray*}
+%det(\mathbf{J})=1+(\Delta t)^{2}\left( \frac{\partial^{2} V}{\partial q^{2} } \right)_{q=q_{i+1}}
+%\end{eqnarray*}
+% ya que la segunda parcial del potencial vale cero . Por lo que es un sistema que preserva áreas.
 
 
 
@@ -339,20 +337,20 @@ det(\mathbf{J})=1+(\Delta t)^{2}\left( \frac{\partial^{2} V}{\partial q^{2} } \r
 \section{Método de parametrización}
 Como ya observamos en la sección anterior encontrar las variedades asociadas a un punto fijo no es trivial. Los métodos analíticos se vuelven no sólo tediosos si no que hacen necesario que el análisis de un sistema se haga de forma personalizada. Y para encontrar tales variedades debemos explotar los conocimientos que tenemos sobre los sistemas. Algunas de estas características son realmente simples, por ejemplo sabemos que en un punto hiperbólico resultarán dos variedades asociadas a los valores propios de la matriz que representa el sistema linearizado. Para este trabajo nos concentraremos en los sistemas Hamiltonianos ya que estos preservan el área y son importantes en la física, sin embargo el método funciona también para sistemas no Hamiltonianos. El objetivo de esta sección es hablar sobre el método de parametrización el cual fue desarrollado por X.Cabré, E. Fontich y R. de la Llave \cite{Haro}. El método fue desarrollado de manera general para conjuntos invariantes, se trata de un método semianalítico, es decir parte computacional y parte analítica.\\
 
-Para ahondar en el método recordemos que anteriormente mencionamos que los conjuntos \ref{omega s}, \ref{omega u} son conjuntos invariantes. Por otro lado también recordemos la definición de sistema dinámico que nos dice que se trata de un semigrupo actuando sobre un espacio $M$, la manera en la que se genera el sistema es con un difeomorfismo $F:M \rightarrow M$. En este mismo espacio $M$ definamos una inmersión inyectiva $P:\Theta \rightarrow M$  lo cual nos define una subvariedad $\textbf{P}$  parametrizada por medio de las variables locales en $\theta \in \Theta$. La variedad invariante parametrizada por $\textbf{P}$  junto con $g:\Theta \rightarrow \Theta$ deben cumplir 
+Para ahondar en el método recordemos que anteriormente mencionamos que los conjuntos \ref{variedad estable}, \ref{variedad inestable} son conjuntos invariantes. Por otro lado también recordemos la definición de sistema dinámico que nos dice que se trata de un semigrupo actuando sobre un espacio $M$, la manera en la que se genera el sistema es con un difeomorfismo $\mathbf{f}:M \rightarrow M$. En este mismo espacio $M$ definamos una inmersión inyectiva $P:\Theta \rightarrow M$  lo cual nos define una subvariedad $P$  parametrizada por medio de las variables locales en $\theta \in \Theta$. La variedad invariante parametrizada por $P$  junto con $g:\Theta \rightarrow \Theta$ deben cumplir 
 \begin{eqnarray}
-F \circ P = P \circ g,  \label{Ecua de invariancia}
+\mathbf{f} \circ P = P \circ g,  \label{Ecua de invariancia}
 \end{eqnarray}
 llamada ecuación de invariancia \cite{Haro}.
-Es decir $\textbf{P}$ y $g$ son de tal forma que hacen que el siguiente diagrama conmute
+Es decir $P$ y $g$ son de tal forma que hacen que el siguiente diagrama conmute
 \begin{eqnarray}
 \xymatrix{
-\Theta\subset\mathbb{R} \ar[d]^{\textbf{P}} \ar[r]^{g} & \Theta\subset\mathbb{R} \ar[d]^{\textbf{P}} \\
-M\subset\mathbb{R}^{n} \ar[r]^{\textbf{f}} & M\subset\mathbb{R}^{n}
+\Theta\subset\mathbb{R} \ar[d]^{P} \ar[r]^{g} & \Theta\subset\mathbb{R} \ar[d]^{P} \\
+M\subset\mathbb{R}^{n} \ar[r]^{\mathbf{f}} & M\subset\mathbb{R}^{n}
 }\label{conmutativo}
 \end{eqnarray}
 
-En este sentido $g$ representa un subsistema de $F$ , en otras palabras $g$ contiene la dinámica del mapeo pero sobre $\Theta$. El objetivo del método de parametrización es encontrar $P$ y $g$ que cumplan la ecuación de invariancia \ref{Ecua de invariancia}. Aunque no conozcamos la dinámica interna de $g$ sabemos que $P,g$ son soluciones de \ref{Ecua de invariancia}, si observamos el diagrama \ref{conmutativo} es claro que la composición también lo es y eso nos dará una libertad para resolver la ecuación. El obstáculo, de no conocer $g$, se puede pasar si se escoge una forma de parametrización que dependa del sistema; en el método de parametrización se tienen descritas dos formas: la forma gráfica y la forma normal. Usaremos el método de la forma gráfica, que es la forma más simple de parametrización. Consiste en adaptar la forma de la parametrización $P$ a la forma de las variedades, la cual esta relacionada con la dirección que proporcionan los vectores propios. Para el caso de una matriz hiperbólica de $2\times 2$ sus vectores propios nos indicarán, suficientemente cerca del punto fijo, la dirección de cada variedad. \\
+En este sentido $g$ representa un subsistema de $\mathbf{f}$, en otras palabras $g$ contiene la dinámica del mapeo pero sobre $\Theta$. El objetivo del método de parametrización es encontrar $P$ y $g$ que cumplan la ecuación de invariancia \ref{Ecua de invariancia}. Aunque no conozcamos la dinámica interna de $g$ sabemos que $P,g$ son soluciones de \ref{Ecua de invariancia}, si observamos el diagrama \ref{conmutativo} es claro que la composición también lo es y eso nos dará una libertad para resolver la ecuación. El obstáculo, de no conocer $g$, se puede pasar si se escoge una forma de parametrización que dependa del sistema; en el método de parametrización se tienen descritas dos formas: la forma gráfica y la forma normal. Usaremos el método de la forma gráfica, que es la forma más simple de parametrización. Consiste en adaptar la forma de la parametrización $P$ a la forma de las variedades, la cual esta relacionada con la dirección que proporcionan los vectores propios. Para el caso de una matriz hiperbólica de $2\times 2$ sus vectores propios nos indicarán, suficientemente cerca del punto fijo, la dirección de cada variedad. \\
 
 
 La forma en la que se escoge $g$, en la mayoría de las veces, es polinomial de tal manera que se adapte a la forma del mapeo. Sin embargo la elección puede ser diferente dependiendo del sistema. En este caso escogimos la dependencia más sencilla para $x,y$ \ref{fun g} que resulta ser suficiente en el caso hiperbólico
@@ -362,16 +360,17 @@ g(t) = (\lambda t,\lambda t).
 \end{eqnarray}
 Con esto tendremos del lado derecho de la ecuación \ref{Ecua de invariancia} un polinomio. \\
 
-Supongamos ahora que tenemos ya las variedades parametrizadas,para este punto es importante tener una función que nos indique que tan acertada es nuestra parametrización. La primera y más fácil forma de calcular el error es a partir de la ecuación \ref{Ecua de invariancia}, mediante la resta
+Supongamos ahora que tenemos ya las variedades parametrizadas, para este punto es importante tener una función que nos indique que tan acertada es nuestra parametrización. La primera y más fácil forma de calcular el error es a partir de la ecuación \ref{Ecua de invariancia}, mediante la resta
 \begin{eqnarray}
-E_{n}(t) = \parallel F \circ P_{n} - P_{n} \circ g \parallel_{\infty}.  \label{Ecua de invariancia resta}
+E_{n}(t) = \parallel \mathbf{f} \circ P_{n} - P_{n} \circ g \parallel_{\infty}.  \label{Ecua de invariancia resta}
 \end{eqnarray}
-Este error será el asociado a la variación con respecto a la ecuación cohomológica. Dado que depende del parámetro esperamos que el error vaya creciendo conforme se evalúa en valores de $t$ lejos del punto fijo. La otra forma de evaluar qué tan lejos podemos llegar con la parametrización es ver la convergencia de los polinomios asociados. Al tener los polinomios de la variedad podemos evaluar el cociente entre los coeficientes de cada término.
+Este error será el asociado a la variación con respecto a la ecuación de invariancia. Dado que depende del parámetro esperamos que el error vaya creciendo conforme se evalúa en valores de $t$ lejos del punto fijo. La otra forma de evaluar qué tan lejos podemos llegar con la parametrización es ver la convergencia de los polinomios asociados. Al tener los polinomios de la variedad podemos evaluar el cociente entre los coeficientes de cada término
 \begin{eqnarray}
-\lim_{n\rightarrow\infty}\frac{a_{n}}{a_{n+1}}\label{hadamard}
+\lim_{n\rightarrow\infty}\frac{a_{n}}{a_{n+1}},\label{hadamard}
 \end{eqnarray} 
-donde $(a_{0},b_{0})=x_{*}$ son los coeficientes de orden cero y $a_{n}$ el de orden $n$. Lo que prácticamente estamos haciendo con este cociente es lo que se llama estudiar la convergencia según Hadamard. Si el límite anterior tiende a cero entonces la serie $a_{n}$ converge. Otra forma de evaluarlo es usando tres términos \citep{Chang}.
+con $(a_{0},b_{0})=\mathbf{x}_{*}$ los coeficientes de orden cero y $a_{n}$ el de orden $n$. Lo que prácticamente estamos haciendo con este cociente es lo que se llama estudiar la convergencia según Hadamard. Si el límite anterior tiende a cero entonces la serie $a_{n}$ converge. Otra forma de evaluarlo es usando tres términos \citep{Chang}.
 \begin{eqnarray}
-\lim_{i\rightarrow\infty} \left[ i\left(\frac{a_{i+1}}{a_{i}}\right)-(i-1)\left(\frac{a_{i}}{a_{i-1}}\right) \right] \label{tres terminos}
+\lim_{i\rightarrow\infty} \left[ i\left(\frac{a_{i+1}}{a_{i}}\right)-(i-1)\left(\frac{a_{i}}{a_{i-1}}\right) \right].
+\label{tres terminos}
 \end{eqnarray}
-Aunque el método se aplica de la misma manera para los mapeos analizados, es obvio que la parametrización será diferente, por lo que la convergencia de cada parametrización es distinta. 
+Aunque el método se aplica de la misma manera para los mapeos analizados la parametrización será diferente, por lo que la convergencia de cada parametrización es distinta. 

@@ -267,7 +267,9 @@ a_{n+1}=\frac{\kappa}{(n+1)[(1-\lambda^{n+1})(1-\lambda^{n+1}+\kappa)-\kappa]}\s
 \begin{eqnarray}
 b_{n+1}=\frac{-\kappa(1-\lambda^{n+1})}{(n+1)[(1-\lambda^{n+1})(1-\lambda^{n+1}+\kappa)-\kappa]}\sum_{l=0}^{n-1}\alpha_{n-l}(l+1)(a_{l+1}+b_{l+1}).
 \end{eqnarray}
-Usando el cada uno de los valores propios y las anteriores ecuaciones de recurrencia obtendremos los coeficientes de los polinomios $\theta(t),p(t)$ a cualquier orden. Dependiendo de qué valor de $\lambda$ se tome tendremos la parametrización de la variedad estable o de la inestable.
+Usando el cada uno de los valores propios y las anteriores ecuaciones de recurrencia obtendremos los coeficientes de los polinomios $\theta(t),p(t)$ a cualquier orden. Dependiendo de qué valor de $\lambda$ se tome tendremos la parametrización de la variedad estable o de la inestable.\\
+
+El ejemplo del cálculo de los polinomios mediante las relaciones de recurrencia se encuenta en la siguiente liga \url{liga a parametrización con relaciones de recurrencia}
 
 
 
@@ -275,7 +277,7 @@ Usando el cada uno de los valores propios y las anteriores ecuaciones de recurre
 
 
 \section{Implementación del método}
-En esta sección explicaremos paso a paso la implementación del método. Supondremos que se tiene un mapeo hamiltoniano $\mathbf{f}_{k}(\mathbf{x})$ donde $\kappa$  es un parámetro, del cual tenemos un punto fijo $\mathbf{x}_{*}=(\theta_{*},p_{*})$.\\
+En esta sección explicaremos paso a paso la implementación del método. Supondremos que se tiene un mapeo hamiltoniano $\mathbf{f}_{k}(\mathbf{x})$ donde $\kappa$  es un parámetro, del cual tenemos un punto fijo $\mathbf{x}_{*}=(\theta_{*},p_{*})$. En la siguiente liga se encuentra un ejemplo de cómo se aplica el método paso a paso para el mapeo estándar, lo cual dio una idea clara para implementar el método de parametrización, \url{liga a notebook5}. 
 \linebreak
 
 

@@ -3,9 +3,9 @@
 %           Capítulo 2: MARCO TEÓRICO - REVISIÓN DE LITERATURA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Método de parametrización}
-En este capítulo describimos cómo se realizó el método de parametrización aplicado a sistemas hamiltonianos. Se comienza explicando el análisis del mapeo estándar siguiendo el trabajo de Mireles James \cite{Mireles}. A partir de este trabajo se generalizó el método para los sistemas hamiltonianos de dos dimensiones de manera que dado un mapeo el método programado en Julia pudiera calcular de manera recurrente los polinomios asociados a las variedades.
+En este capítulo describimos cómo se realizó el método de parametrización aplicado a sistemas Hamiltonianos. Se comienza explicando el análisis del mapeo estándar siguiendo el trabajo de Mireles James \cite{Mireles}. A partir de este trabajo se generalizó el método para los sistemas Hamiltonianos de dos dimensiones de manera que dado un mapeo el método programado en Julia pudiera calcular de manera recurrente los polinomios asociados a las variedades.
 \section{Desarrollo explícito del mapeo estándar}
-Para desarrollar el método de parametrización de manera automática se usó como base el desarrollo que aparece en las notas \cite{Mireles}. En este trabajo se expone de manera explícita cómo se calculan las variedades estables e inestables para el mapeo estándar. La razón por la que se usa este mapeo es dado que preserva área y que puede ser pensado como una perturbación de un mapeo integrable en el toro, además de que exhibe la dinámica asociada a mapeos hamiltonianos. El mapeo estándar tiene la forma\\
+Para desarrollar el método de parametrización de manera automática se usó como base el desarrollo que aparece en las notas \cite{Mireles}. En este trabajo se expone de manera explícita cómo se calculan las variedades estables e inestables para el mapeo estándar. La razón por la que se usa este mapeo es dado que preserva área y que puede ser pensado como una perturbación de un mapeo integrable en el toro, además de que exhibe la dinámica asociada a mapeos Hamiltonianos. El mapeo estándar tiene la forma\\
 \begin{eqnarray}
 \mathbf{f}_{k}(\theta,p) = \left[\begin{array}{c}
 \theta + p \\
@@ -277,7 +277,7 @@ El ejemplo del cálculo de los polinomios mediante las relaciones de recurrencia
 
 
 \section{Implementación del método}
-En esta sección explicaremos paso a paso la implementación del método. Supondremos que se tiene un mapeo hamiltoniano $\mathbf{f}_{k}(\mathbf{x})$ donde $\kappa$  es un parámetro, del cual tenemos un punto fijo $\mathbf{x}_{*}=(\theta_{*},p_{*})$. En la siguiente liga se encuentra un ejemplo de cómo se aplica el método paso a paso para el mapeo estándar, lo cual dio una idea clara para implementar el método de parametrización, \url{liga a notebook5}. 
+En esta sección explicaremos paso a paso la implementación del método. Supondremos que se tiene un mapeo Hamiltoniano $\mathbf{f}_{k}(\mathbf{x})$ donde $\kappa$  es un parámetro, del cual tenemos un punto fijo $\mathbf{x}_{*}=(\theta_{*},p_{*})$. En la siguiente liga se encuentra un ejemplo de cómo se aplica el método paso a paso para el mapeo estándar, lo cual dio una idea clara para implementar el método de parametrización, \url{liga a notebook5}. 
 \linebreak
 
 

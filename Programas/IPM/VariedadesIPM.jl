@@ -389,19 +389,19 @@ Argumentos:
 
 """
 function Invariancia{T<:Real}(Mapeo, Pol_vec::Array{Taylor1{T},1}, λvec::Array{Taylor1{T},1} ,modulo::T)
-    @show(Pol_vec)
+    #@show(Pol_vec)
     Map_vec = Mapeo(Pol_vec[1],Pol_vec[2])
-    @show(Map_vec)
+    #@show(Map_vec)
     Ec_Invariancia = mod(Map_vec-λvec, modulo)
 
     return Ec_Invariancia
 end
 
 function Invariancia{T<:Real}(Mapeo, Pol_vec::Array{Taylor1{T},1}, λvec::Array{Taylor1{T},1} )
-    @show(Pol_vec)
+    #@show(Pol_vec)
     #@show(λvec)
     Map_vec = Mapeo(Pol_vec[1],Pol_vec[2])
-    @show(Map_vec)
+    #@show(Map_vec)
 
     Ec_Invariancia = Map_vec-λvec
     return Ec_Invariancia

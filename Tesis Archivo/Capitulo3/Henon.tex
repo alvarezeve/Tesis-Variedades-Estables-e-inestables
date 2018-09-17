@@ -104,8 +104,8 @@ siendo el mapeo inverso
 \mathbf{f}^{-1}_{a,b}(x,y)=\left( \begin{array}{lcc}
              y\\
              \\ (x+y^{2}-a)/-b
-             \end{array}.
-             \right) \label{HenonI}
+             \end{array}
+             \right). \label{HenonI}
 \end{eqnarray} 
 
        
@@ -203,7 +203,7 @@ El último mapeo que se estudió fue uno presentado en el artículo \citep{Jung}
 \mathbf{j}_{a}(x,y)=\left(\begin{array}{lcc}
              x+y\\
              \\ y+af(x+y)
-             \end{array}\right)
+             \end{array}\right),
 \label{Jung}
 \end{eqnarray}
 
@@ -304,9 +304,9 @@ Siendo que el resultado son polinomios se puede aplicar el método de Newton en 
 
 El paquete \cite{validated} hace cálculos de computación rigurosa con números de punto flotante usando el paquete de aritmética de intervalos, que efectúa operaciones con intervalos en lugar de números. Mientras que \cite{root} automatiza el métodos populares como el de Newton para encontrar raíces de funciones, en este caso se garantiza que la respuesta correcta se encuentra en un intervalo. Para entender mejor cómo funcionan cada una de las paqueterías así como la teoría rigurosa detrás de éstos recomendamos revisar las lecturas \cite{ramon},\cite{Numerics}. De manera breve podemos decir que los paquetes ya mencionados generalizan las operaciones y funciones ahora en términos de conjuntos, de tal manera que que la solución contenga la respuesta correcta. \\
 
-Las variedades parametrizadas que resultan del método son polinomios, por lo que con las paqueterías  mencionadas se puede analizar cuando dos de ellas se cruzan. Concretamente se tienen  $W^{s}(t)=(P_{x}(t),P_{y}(t))$ y $W^{u}(\tau)=(P_{x}(\tau),P_{y}(\tau))$ de órdenes no necesariamente iguales, y lo que se busca es :
+Las variedades parametrizadas que resultan del método son polinomios, por lo que con las paqueterías  mencionadas se puede analizar cuando dos de ellas se cruzan. Concretamente se tienen  $W^{s}(t)=(P_{x}(t),P_{y}(t))$ y $W^{u}(\tau)=(P_{x}(\tau),P_{y}(\tau))$ de órdenes no necesariamente iguales, y lo que se busca es:
 \begin{eqnarray}
-W^{s}(t)=W^{u}(\tau)
+W^{s}(t)=W^{u}(\tau),
 \end{eqnarray}
 que arrojará como resultado un intervalo $I_{t}$ y otro intervalo $I_{\tau}$, la intersección se encontrará en $I_{t}\times I_{\tau}$. En el espacio fase la intersección se verá como el producto cartesiano de $W^{s}(I_{t})\times W^{u}(I_{\tau})$ formando una sección en la que se garantiza hay un punto homoclínico o heteroclínico. 
 

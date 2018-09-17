@@ -28,8 +28,8 @@ con $\mathbf{x}=(\theta,p)$. El resultado de esta condición son los puntos $\ma
 \begin{eqnarray}
 D\mathbf{f}_{k}(\theta,p)=\begin{pmatrix}
 1 & 1 \\
-k\cos(\theta+p)& 1+k\cos(\theta+p).\\ 
-\end{pmatrix}\label{mapeo linearizado}
+k\cos(\theta+p)& 1+k\cos(\theta+p)\\ 
+\end{pmatrix}.\label{mapeo linearizado}
 \end{eqnarray}
 Al evaluar $\mathbf{x_{1}},\mathbf{x_{2}}$ en \ref{mapeo linearizado} resulta 
 \begin{eqnarray}
@@ -37,10 +37,10 @@ D\mathbf{f}_{k}(0,0)=
 \begin{pmatrix}
 1 & 1\\
 k & 1+k\\
-\end{pmatrix} \qquad D\mathbf{f}_{k}(0,\pi)= \begin{pmatrix}
+\end{pmatrix}, \qquad D\mathbf{f}_{k}(0,\pi)= \begin{pmatrix}
 1 & 1\\
 -k & 1-k\\
-\end{pmatrix}
+\end{pmatrix}.
 \end{eqnarray}
 A partir de esto podemos obtener los valores propios para $\mathbf{x_{1}}$ que resultan
 \begin{eqnarray}
@@ -115,8 +115,9 @@ e igualamos los términos de orden cero
 \end{eqnarray}
 por lo que $a_{0}=0$. Si ahora usamos los de orden uno en la ecuación \ref{primer renglon}, \ref{segundo renglon} respectivamente
 \begin{eqnarray}
-(a_{1}+b_{1})t=a_{1}\lambda t
+(a_{1}+b_{1})t=a_{1}\lambda t,
 \end{eqnarray}
+
 \begin{eqnarray}
 b_{1}t+\kappa(a_{1}+b_{1})t=b_{1}\lambda t.
 \end{eqnarray}
@@ -147,7 +148,7 @@ es decir la parte que aparece en el mapeo $\sin(\theta+p)$ se puede ver como un 
 \end{eqnarray}
 y calculando la derivada de la ecuación \ref{W compleja} resulta
 \begin{eqnarray}
-\overline{W}'=i\overline{W}(\theta '(t)+p'(t))
+\overline{W}'=i\overline{W}(\theta '(t)+p'(t)).
 \label{W compleja deriv}
 \end{eqnarray}
 Al desarrollar en potencias de $t$ y usando convolución en \ref{W compleja deriv}
@@ -186,7 +187,7 @@ Para obtener las relaciones de recurrencia de $a_{n},b_{n}$ usaremos el caso $t=
 \end{eqnarray}
 entonces $\alpha_{0}=1,\beta_{0}=0$, tenemos entonces los valores iniciales de la recursión y por tanto podemos calcular los otros valores. Para encontrar los demás usemos la ecuación \ref{expandida} pero tomando en cuenta la forma en la que escribimos al seno
 \begin{eqnarray}
-\sum_{n=1}^{\infty}a_{n}t^{n}+\sum_{n=1}^{\infty}b_{n}t^{n}=\sum_{n=1}^{\infty}a_{n}\lambda^{n}t^{n}
+\sum_{n=1}^{\infty}a_{n}t^{n}+\sum_{n=1}^{\infty}b_{n}t^{n}=\sum_{n=1}^{\infty}a_{n}\lambda^{n}t^{n},
 \end{eqnarray}
 \begin{eqnarray}
 \sum_{n=1}^{\infty}b_{n}t^{n}+\kappa\sum_{n=1}^{\infty}\beta_{n}t^{n}=\sum_{n=1}^{\infty}b_{n}
@@ -194,14 +195,14 @@ entonces $\alpha_{0}=1,\beta_{0}=0$, tenemos entonces los valores iniciales de l
 \end{eqnarray}
 Reescribimos las ecuaciones anteriores de manera que nos permita comparar términos de la misma potencia
 \begin{eqnarray}
-\sum_{n=1}^{\infty}(1-\lambda^{n})a_{n}t^{n}=-\sum_{n=1}^{\infty}b_{n}t^{n}
+\sum_{n=1}^{\infty}(1-\lambda^{n})a_{n}t^{n}=-\sum_{n=1}^{\infty}b_{n}t^{n},
 \end{eqnarray}
 \begin{eqnarray}
 \sum_{n=1}^{\infty}(1-\lambda^{n})b_{n}t^{n}=-\kappa\sum_{n=1}^{\infty}\beta_{n}t^{n},
 \end{eqnarray}
 entonces los coeficientes de $t^{n+1}$ son
 \begin{eqnarray}
-(1-\lambda^{n+1})a_{n+1}=-b_{n+1}
+(1-\lambda^{n+1})a_{n+1}=-b_{n+1},
 \label{coeficiente recursion 1}
 \end{eqnarray}
 \begin{eqnarray}

@@ -135,7 +135,7 @@ a_{1}\\
 b_{1}
 \end{pmatrix}.
 \end{eqnarray}
-Es posible obtener las soluciones para $a_{1}$ en términos de $b_{1}$ y de $\lambda$ en términos de $\kappa$. Analogamente se pueden obtener los coeficientes $a_{2},b_{2}$ al comparar los términos cuadráticos. Sin embargo es claro que obtener los términos de esta manera es un camino tedioso, por lo que recurrimos al método de parametrización para poder encontrar relaciones de recurrencia que calculen los coeficientes de los polinomios. Usando de nuevo las ecuaciones \ref{theta}, \ref{p} proponemos que 
+Es posible obtener las soluciones para $a_{1}$ en términos de $b_{1}$ y de $\lambda$ en términos de $\kappa$. Análogamente se pueden obtener los coeficientes $a_{2},b_{2}$ al comparar los términos cuadráticos. Sin embargo es claro que obtener los términos de esta manera es un camino tedioso, por lo que recurrimos al método de parametrización para poder encontrar relaciones de recurrencia que calculen los coeficientes de los polinomios. Usando de nuevo las ecuaciones \ref{theta}, \ref{p} proponemos que 
 \begin{eqnarray}
 W(t)=\sum_{n=0}^{\infty}\beta_{n}t^{n}=\sin\left(\sum_{n=0}^{\infty}a_{n}t^{n}+\sum_{n=0}^{\infty}
 b_{n}t^{n}\right),
@@ -178,7 +178,7 @@ Podemos volver a igualar potencias de $t$ en \ref{parte real}, \ref{parte comple
 \beta_{n+1}=\frac{1}{n+1}\sum_{l=0}^{n}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1}),
 \label{recurrencia beta}
 \end{eqnarray}
-que son las relaciones de recurrencia para $\alpha,\beta$ en términos de los coeficientes del polinomio, con las que podemos calcular $\sin(\theta+p)$. Acabamos de usar un truco en el que fue muy importante la forma del mapeo en el que sólo tuvimos que usar una expansion en serie de Taylor, sin embago si resultara que en el mapeo aparecieran productos de funciones no podemos garantizar que se puedan encontrar las relaciones de recurrencia de manera fácil. \\
+que son las relaciones de recurrencia para $\alpha,\beta$ en términos de los coeficientes del polinomio, con las que podemos calcular $\sin(\theta+p)$. Acabamos de usar un truco en el que fue muy importante la forma del mapeo en el que sólo tuvimos que usar una expansión en serie de Taylor, sin embargo si resultara que en el mapeo aparecieran productos de funciones no podemos garantizar que se puedan encontrar las relaciones de recurrencia de manera fácil. \\
 
 Para obtener las relaciones de recurrencia de $a_{n},b_{n}$ usaremos el caso $t=0$ pues ya sabemos los primeros valores de las constantes $\alpha_{0}, \beta_{0}, a_{0}, b_{0}$, entonces al sustituir $t=0$ en la ecuación \ref{W compleja} resulta
 \begin{eqnarray}
@@ -276,7 +276,7 @@ Usando el cada uno de los valores propios y las anteriores ecuaciones de recurre
 
 
 \section{Implementación del método}
-En esta sección explicaremos paso a paso la implementación del método. Supondremos que se tiene un mapeo Hamiltoniano $\mathbf{f}_{k}(\mathbf{x})$ donde $\kappa$  es un parámetro, del cual tenemos un punto fijo $\mathbf{x}_{*}=(\theta_{*},p_{*})$. En la siguiente liga se encuentra un ejemplo de cómo se aplica el método paso a paso para el mapeo estándar, lo cual dio una idea clara para implementar el método de parametrización, \url{https://github.com/alvarezeve/Tesis-Variedades-Estables-e-inestables/blob/master/N5(Implementaci%C3%B3n).ipynb}. 
+En esta sección explicaremos paso a paso la cómo se implementó el modo. Supondremos que se tiene un mapeo Hamiltoniano $\mathbf{f}_{k}(\mathbf{x})$ donde $\kappa$  es un parámetro, del cual tenemos un punto fijo $\mathbf{x}_{*}=(\theta_{*},p_{*})$. En la siguiente liga se encuentra un ejemplo de cómo se aplica el método paso a paso para el mapeo estándar, lo cual dio una idea clara para implementar el método de parametrización, \url{https://github.com/alvarezeve/Tesis-Variedades-Estables-e-inestables/blob/master/N5(Implementaci%C3%B3n).ipynb}. 
 \linebreak
 
 
@@ -304,7 +304,7 @@ Primer orden
 
 
 \end{center}
-Hasta este momento hemos calculado la parte izquierda de la ecuación de invarianza, nos ocuparemos del lado derecho más adelante. La razón por la que se escriben los coeficientes de $P=(P_{\theta},P_{p})$ a su vez como polinomios es que al escribir un polinomio en el coeficiente es posible tratarlo como una variable. Es decir la $\theta$ en $P_{\theta}=\theta_{*}+(\theta+\Delta \theta)t$ representa la incógnita del coeficiente de orden uno. Para encontrar el primer orden de los polinomios $P_{\theta},P_{p}$ escribimos todo en forma matricial.
+Hasta este momento hemos calculado la parte izquierda de la ecuación de invariancia, nos ocuparemos del lado derecho más adelante. La razón por la que se escriben los coeficientes de $P=(P_{\theta},P_{p})$ a su vez como polinomios es que al escribir un polinomio en el coeficiente es posible tratarlo como una variable. Es decir la $\theta$ en $P_{\theta}=\theta_{*}+(\theta+\Delta \theta)t$ representa la incógnita del coeficiente de orden uno. Para encontrar el primer orden de los polinomios $P_{\theta},P_{p}$ escribimos todo en forma matricial.
 \begin{eqnarray}
 \mathbf{A}\mathbf{v}=\mathbf{w}
 \label{lineal A}

@@ -20,45 +20,45 @@ Warning--empty note in Mireles
 Warning--empty note in Mateo
 Warning--empty year in Numerics
 Warning--empty note in Mireles2
-You've used 30 entries,
+You've used 31 entries,
             1791 wiz_defined-function locations,
-            619 strings with 7144 characters,
-and the built_in function-call counts, 4617 in all, are:
-= -- 413
-> -- 108
-< -- 4
-+ -- 56
-- -- 26
-* -- 193
-:= -- 714
-add.period$ -- 87
-call.type$ -- 30
-change.case$ -- 25
+            624 strings with 7197 characters,
+and the built_in function-call counts, 4789 in all, are:
+= -- 428
+> -- 112
+< -- 5
++ -- 58
+- -- 27
+* -- 205
+:= -- 739
+add.period$ -- 90
+call.type$ -- 31
+change.case$ -- 26
 chr.to.int$ -- 0
-cite$ -- 34
-duplicate$ -- 255
-empty$ -- 563
-format.name$ -- 26
-if$ -- 1080
+cite$ -- 35
+duplicate$ -- 266
+empty$ -- 583
+format.name$ -- 27
+if$ -- 1120
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 38
-newline$ -- 148
-num.names$ -- 26
-pop$ -- 135
+int.to.str$ -- 31
+missing$ -- 40
+newline$ -- 153
+num.names$ -- 27
+pop$ -- 140
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 80
+skip$ -- 82
 stack$ -- 0
 substring$ -- 132
-swap$ -- 35
-text.length$ -- 4
+swap$ -- 38
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 32
-width$ -- 32
-write$ -- 306
+while$ -- 33
+width$ -- 33
+write$ -- 318
 (There were 2 error messages)

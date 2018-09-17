@@ -18,5 +18,6 @@
 \contentsline {subsection}{\numberline {3.5.1}Est\IeC {\'a}ndar}{38}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}H\IeC {\'e}non}{40}{subsection.3.5.2}
 \contentsline {subsection}{\numberline {3.5.3}Mapeo exponencial}{46}{subsection.3.5.3}
-\contentsline {chapter}{\numberline {4}Resumen y perspectivas}{51}{chapter.4}
-\contentsline {chapter}{Bibliograf\'{\i }a}{53}{appendix*.43}
+\contentsline {section}{\numberline {3.6}Rect\IeC {\'a}ngulo fundamental}{50}{section.3.6}
+\contentsline {chapter}{\numberline {4}Resumen y perspectivas}{57}{chapter.4}
+\contentsline {chapter}{Bibliograf\'{\i }a}{59}{appendix*.51}

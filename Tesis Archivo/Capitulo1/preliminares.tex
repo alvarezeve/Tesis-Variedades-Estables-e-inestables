@@ -55,9 +55,9 @@ Las funciones que aparecen en el mapeo pueden contener términos con potencia ma
 
 Si tenemos un puno fijo $\mathbf{x}_{*}$ asociado al mapeo entonces la ecuación
 \begin{eqnarray}
-\mathbf{x}_{n+1} =\mathbf{A}\mathbf{x}_{n}
+\mathbf{x}_{n+1} =\mathbf{A}\mathbf{x}_{n},
 \end{eqnarray}
-representa la linearización del sistema en al punto, donde $\mathbf{A}=D\mathbf{f}(\mathbf{x}_{*})$. Es decir el mapeo puede ser representado como una matriz de coeficientes constantes,además si el sistema dinámico es invertible se puede conocer el punto anterior $\mathbf{x}_{n-1}$ a un cierto $\mathbf{x}_{n}$ usando la matriz inversa de $\mathbf{A}$ que representa el mapeo inveso $\mathbf{f}^{-1}$. Es decir las características de tal matriz nos dirán el comportamiento del sistema. \\
+representa el sistema linearizado en el punto, donde $\mathbf{A}=D\mathbf{f}(\mathbf{x}_{*})$. Es decir el mapeo puede ser representado como una matriz de coeficientes constantes,además si el sistema dinámico es invertible se puede conocer el punto anterior $\mathbf{x}_{n-1}$ a un cierto $\mathbf{x}_{n}$ usando la matriz inversa de $\mathbf{A}$ que representa el mapeo inverso $\mathbf{f}^{-1}$. Es decir las características de tal matriz nos dirán el comportamiento del sistema. \\
 
 Dado que los sistemas tratados en este trabajo son de dos dimensiones entonces analizaremos sólo este caso. Los valores propios $\lambda_{1}, \lambda_{2}$, soluciones del polinomio característico de grado dos, son en general valores complejos clasificados como sigue.
 \begin{itemize}
@@ -233,7 +233,7 @@ llamada Hamiltoniana, donde $p_{i}$ denota el momento y \textbf{$q$} la colecci�
 \label{ec de mov hamilton}
 \end{eqnarray}
 
-Algo análogo existe para sistemas discretos en donde la forma de la función hamiltoniana se divide en dos partes, la derecha y la izquierda \cite{Tomoki}
+Algo análogo existe para sistemas discretos en donde la forma de la función Hamiltoniana se divide en dos partes, la derecha y la izquierda \cite{Tomoki}
 \begin{eqnarray}
 H_{d}^{+}(q_{k},p_{k+1})=p_{k+1}\cdot q_{k+1}-L_{d}(q_{k},q_{k+1}),
 \label{hamiltoniano discreto derecho}
@@ -244,7 +244,7 @@ H_{d}^{-}(p_{k},q_{k+1})=-p_{k}\cdot q_{k}-L_{d}(q_{k},q_{k+1}),
 \label{hamiltoniano discreto izquierdo}
 \end{eqnarray}
 
-la función $L_{d}$ es la lagrangiana discreta que proviene del mismo principio variacional que en el caso contínuo. Al definir $D_{1}F(a_{k},b_{k})=F(a_{k+1},b_{k})$ y  $D_{2}F(a_{k},b_{k})=F(a_{k},b_{k+1})$, como aplicaciones análogas a las derivadas de manera discreta  es fácil ver que las ecuaciones de movimiento análogas a las ecuaciones \ref{ec de mov hamilton} son ahora
+la función $L_{d}$ es la Lagrangiana discreta que proviene del mismo principio variacional que en el caso continuo. Al definir $D_{1}F(a_{k},b_{k})=F(a_{k+1},b_{k})$ y  $D_{2}F(a_{k},b_{k})=F(a_{k},b_{k+1})$, como aplicaciones análogas a las derivadas de manera discreta  es fácil ver que las ecuaciones de movimiento análogas a las ecuaciones \ref{ec de mov hamilton} son ahora
 \begin{eqnarray}
 q_{k+1}=D_{2}H_{d}^{+}(q_{k},p_{k+1}); \quad p_{k}=D_{1}H_{d}^{+}(q_{k},p_{k+1}),
 \label{ec de mov hamilton derechas}
@@ -256,7 +256,7 @@ q_{k}=-D_{1}H_{d}^{-}(p_{k},q_{k+1}); \quad p_{k+1}=-D_{2}H_{d}^{-}(p_{k},q_{k+1
 \end{eqnarray}
 El mapeo se define de manera implícita a partir de las ecuaciones \ref{ec de mov hamilton derechas},\ref{ec de mov hamilton izquierdas} como $\mathbf{f}_{L_{d}}:(q_{k},p_{k})\mapsto(q_{k+1},p_{k+1})$.\\
 
-Físicamente hablando H es la energía total del sistema, que es invariante en el tiempo, $\frac{dH}{dt}=0$. La formulación Hamiltoniana de la mecánica no está limitadad a sistemas que son de la forma  ``energía cinética más energía potencial'', ya que de manera más general una Hamiltoniana es cualquier función $C^{1}$, $H:M\rightarrow \mathbb{R}$ donde en nuestro caso $M$ es una variedad 2n-dimensional con coordenadas  $z=(q,p)$. 
+Físicamente hablando H es la energía total del sistema, que es invariante en el tiempo, $\frac{dH}{dt}=0$. La formulación Hamiltoniana de la mecánica no está limitada a sistemas que son de la forma  ``energía cinética más energía potencial'', ya que de manera más general una Hamiltoniana es cualquier función $C^{1}$, $H:M\rightarrow \mathbb{R}$ donde en nuestro caso $M$ es una variedad 2n-dimensional con coordenadas  $z=(q,p)$. 
 
 
 
@@ -317,7 +317,7 @@ Físicamente hablando H es la energía total del sistema, que es invariante en e
 %\end{eqnarray}
 Las ecuaciones \ref{ec de mov hamilton derechas},\ref{ec de mov hamilton izquierdas} ya está en forma de un sistema de los que estudiamos anteriormente. Para linearizar el sistema calculamos el jacobiano
 \begin{eqnarray}
-\mathbf{J}=\frac{\partial(q_{k+1},p_{k+1})}{\partial(q_{k},p_{k})}
+\mathbf{J}=\frac{\partial(q_{k+1},p_{k+1})}{\partial(q_{k},p_{k})}.
 \end{eqnarray}
 
 Es justo de este sistema linearizado de donde obtendremos información a partir de aplicar los teoremas y resultados de las secciones anteriores. 

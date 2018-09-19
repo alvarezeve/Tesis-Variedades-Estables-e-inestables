@@ -6,7 +6,7 @@
 \label{SeccionEstandar}\section{Mapeo Estándar}
 En el capítulo anterior ya mostramos cómo se aplica el método de manera algebráica para el caso de este mapeo. Utilizando el método ya programado se hicieron diferentes cálculos para comparar con los resultados presentados en \citep{Mireles}. Una de las razones de estudiar el mapeo estándar, además de usarlo como una forma de validación, es porque del mapeo conocemos muchas cosas. Por otro lado queremos mostrar lo importante que es tener una parametrización analítica. Aunque el estudio cualitativo del mapeo puede darnos información útil, tener una parametrización de las variedades relacionadas a sus puntos fijos convierte el análisis en algo cuantitativo y semianalítico. El objetivo de esta sección es mostrar algunas de las cosas que son posibles alcanzar en términos de este análisis, además de la forma en la que se usa el método desde Julia.\\
 
-En el mapeo estándar \ref{mapeo estandar} uno de los puntos fijos es el origen de coordenadas $\mathbf{x}_{1}=(0,0)$. Utilizando el método programado se calcularon las variedades estables e inestables para diferentes valores del parámetro en el mapeo. El objetivo de hacer éstas fue reproducir los resultados de J.D. Mireles que presenta en sus notas \cite{Mireles}. En tales notas no aparece el orden del polinomio ni el error específico, sin embargo se intentó reproducir al menos gráficamente los resultados. Dependiendo del orden del polinomio que se calcule y del parámetro del mapeo se podrá llegar más lejos del punto fijo.  
+En el mapeo estándar \eqref{mapeo estandar} uno de los puntos fijos es el origen de coordenadas $\mathbf{x}_{1}=(0,0)$. Utilizando el método programado se calcularon las variedades estables e inestables para diferentes valores del parámetro en el mapeo. El objetivo de hacer éstas fue reproducir los resultados de J.D. Mireles que presenta en sus notas \cite{Mireles}. En tales notas no aparece el orden del polinomio ni el error específico, sin embargo se intentó reproducir al menos gráficamente los resultados. Dependiendo del orden del polinomio que se calcule y del parámetro del mapeo se podrá llegar más lejos del punto fijo.  
 \begin{figure}[H]
  \centering
  \includegraphics[scale=0.6]{estandark03}
@@ -74,7 +74,7 @@ A fin de mostrar que el error es de alguna manera controlable se usaron números
 \label{erroresBig}
 \end{figure}
 
-Como ya mencionamos antes la variedad inestable del mapeo inverso corresponde a la variedad estable del mapeo, si se usa el mismo método calculando la variedad inestable del mapeo inverso \ref{mapeo estandar inverso} podemos controlar mejor el error numérico. Para mostrar esto hicimos una comparación parametrizando la variedad estable mediante el mapeo inverso y el mapeo inicial. Los polinomios fueron del mismo orden y lo que se observó en el error se muestra en la figura \ref{erroresinverso}.
+Como ya mencionamos antes la variedad inestable del mapeo inverso corresponde a la variedad estable del mapeo, si se usa el mismo método calculando la variedad inestable del mapeo inverso \eqref{mapeo estandar inverso} podemos controlar mejor el error numérico. Para mostrar esto hicimos una comparación parametrizando la variedad estable mediante el mapeo inverso y el mapeo inicial. Los polinomios fueron del mismo orden y lo que se observó en el error se muestra en la figura \ref{erroresinverso}.
 
 
 \begin{figure}[H]
@@ -160,7 +160,7 @@ Al escoger $b=1$ garantizamos estar en un sistema Hamiltoniano, mientras que $a$
 \caption{Error asociado a las variedades de la figura \ref{Henon1}.}
 \label{ErrorHenon1}
 \end{figure}
-Las variedades que aparecen en la figura \ref{Henon1} fueron calculadas con el mapeo de Hénon inicial \ref{Henon}, las variedades se observan simétricas, aún así las parametrizaciones son diferentes. Puede verse en el error, figura \ref{ErrorHenon1}, que la variedad estable tiene un mayor error que la variedad inestable, mientras en la inestable el error cambia cinco órdenes de magnitud, en todo el intervalo del parámetro, el error de la variedad estable cambia en al menos quince órdenes de magnitud. \\
+Las variedades que aparecen en la figura \ref{Henon1} fueron calculadas con el mapeo de Hénon inicial \eqref{Henon}, las variedades se observan simétricas, aún así las parametrizaciones son diferentes. Puede verse en el error, figura \ref{ErrorHenon1}, que la variedad estable tiene un mayor error que la variedad inestable, mientras en la inestable el error cambia cinco órdenes de magnitud, en todo el intervalo del parámetro, el error de la variedad estable cambia en al menos quince órdenes de magnitud. \\
 
 A diferencia del mapeo estándar en éste mapeo las órbitas pueden irse al infinito, es decir no están  constreñidas en una sección fija, lo que representa un mayor reto en cuanto a la parametrización ya que el polinomio debe ser tal que pueda regresar varias veces. De hecho podemos observar que se necesitan valores realmente grandes, comparados con los del mapeo estándar, para observar los cruces de las variedades. También esta situación hace que el error numérico sea mayor que para el estándar. \\
 
@@ -259,7 +259,7 @@ Se puede observar en las figuras \ref{errorjung1}, \ref{errorjung2} que en la va
 
 
 \section{Convergencia}
-Además de medir el error asociado a la parametrización consideramos importante tomar en cuenta la convergencia de los coeficientes de los polinomios. En casos como el mapeo exponencial en que las variedades se acercan a puntos fijos de diferente naturaleza puede ocurrir que tal cercanía afecte la forma de parametrización. Para ello se implementaron dos formas de revisar la convergencia, la de Hadamard \ref{hadamard} y la de tres términos \ref{tres terminos}. \\
+Además de medir el error asociado a la parametrización consideramos importante tomar en cuenta la convergencia de los coeficientes de los polinomios. En casos como el mapeo exponencial en que las variedades se acercan a puntos fijos de diferente naturaleza puede ocurrir que tal cercanía afecte la forma de parametrización. Para ello se implementaron dos formas de revisar la convergencia, la de Hadamard \eqref{hadamard} y la de tres términos \eqref{tres terminos}. \\
 
 La figura \ref{convergenciaEst15} muestra la convergencia de los polinomios de orden 25 que parametrizan la variable $\theta$ en el mapeo estándar para las variedades estable e inestable con $\kappa=1.5$ a la que corresponde el espacio fase mostrado en \ref{estandar15}. En el caso de la variedad estable se ve que los coeficientes cambian de manera abrupta al principio pero después de cierta $n$ el cociente es casi cero. Para el caso de la variedad inestable los coeficientes cambian de manera suave y el cociente también se acerca a cero. En ambos casos podemos decir que los coeficientes de la parametrización convergen a cero.  
 \begin{figure}[H]
@@ -279,7 +279,7 @@ La figura \ref{convergenciaHenon1} muestra la convergencia de las parametrizacio
 \end{figure}
 
 
-Para el mapeo exponencial realizamos los dos criterios de convergencia. La figura \ref{convergenciaJH} muestra el criterio de Hadamard \ref{hadamard}, para los polinomios que parametrizan la variable x en cada variedad, se ve que hay una convergencia clara de los coeficientes. Lo mismo ocurre en la figura \ref{convergenciaJ3} en dónde se usó el criterio de tres términos, \ref{tres terminos}.
+Para el mapeo exponencial realizamos los dos criterios de convergencia. La figura \ref{convergenciaJH} muestra el criterio de Hadamard \eqref{hadamard}, para los polinomios que parametrizan la variable x en cada variedad, se ve que hay una convergencia clara de los coeficientes. Lo mismo ocurre en la figura \ref{convergenciaJ3} en dónde se usó el criterio de tres términos, \eqref{tres terminos}.
 
 \begin{figure}[H]
 \centering
@@ -312,7 +312,7 @@ que arrojará como resultado un intervalo $I_{t}$ y otro intervalo $I_{\tau}$, l
 
 
 \subsection{Estándar}
-Usando lo descrito anteriormente se calcularon las intersecciones de las variedades estable e inestable en el mapeo estándar para un valor de $\kappa=1.5$ usando polinomios de orden $120$, además de usar el mapeo inverso \ref{mapeo estandar inverso} para calcular la variedad estable. Se encontraron cuatro raíces en el intervalo $[-20.,0.]$ para $t$  y $[-15.,0.]$ para $\tau$, con una tolerancia de $10^{-6}$ usando el método de Newton, las cuales son:
+Usando lo descrito anteriormente se calcularon las intersecciones de las variedades estable e inestable en el mapeo estándar para un valor de $\kappa=1.5$ usando polinomios de orden $120$, además de usar el mapeo inverso \eqref{mapeo estandar inverso} para calcular la variedad estable. Se encontraron cuatro raíces en el intervalo $[-20.,0.]$ para $t$  y $[-15.,0.]$ para $\tau$, con una tolerancia de $10^{-6}$ usando el método de Newton, las cuales son:
 \begin{itemize}
 \item Root$([-7.16826, -7.16825] \times [-4.45972, -4.45971]$, :unique)
 \item Root$([-4.21757, -4.21756] \times [-8.36029, -8.36028]$, :unique)
@@ -341,7 +341,7 @@ El cálculo numérico riguroso garantiza que la solución está en el intervalo 
 
 
 \subsection{Hénon}
-Así como se calcularon las intersecciones en las variedades del mapeo estándar se calcularon ahora para el mapeo de Hénon. En este caso se usó un valor del parámetro $a=1.5$ con un polinomio de orden 45 y el método de Newton con una tolerancia de $10^{-6}$ además de usar el mapeo inverso \ref{HenonI}, para calcular la variedad estable. Los resultados fueron los siguientes intervalos:
+Así como se calcularon las intersecciones en las variedades del mapeo estándar se calcularon ahora para el mapeo de Hénon. En este caso se usó un valor del parámetro $a=1.5$ con un polinomio de orden 45 y el método de Newton con una tolerancia de $10^{-6}$ además de usar el mapeo inverso \eqref{HenonI}, para calcular la variedad estable. Los resultados fueron los siguientes intervalos:
 \begin{itemize}
 \item[a)] Root$([-1.36597, -1.36596] \times [166.749, 166.75]$, :unique)
 \item[b)] Root$([-5.26555, -5.26554] \times [129.577, 129.578]$, :unique)
@@ -426,7 +426,7 @@ Para complementar todo este análisis se puede obtener una gráfica de las super
 
 
 \subsection{Mapeo exponencial}
-Las intersecciones en el caso del mapeo \ref{Jung} se calcularon usando como en los casos anteriores el mapeo inverso \ref{jungI}. Este mapeo representa un mayor reto en cuanto al orden del polinomio, pes la presencia de la exponencial hace que la parametrización sea sensible al orden del mismo. Para el siguiente ejemplo se utilizó un polinomio de orden 86 y una tolerancia en el método de Newton de $10-6$ y se calcularon los cruces de las variedades como en los otros casos. Las siguientes fueron las secciones en términos del parámetro $t,\tau$ dónde se encontraron los cortes. 
+Las intersecciones en el caso del mapeo \eqref{Jung} se calcularon usando como en los casos anteriores el mapeo inverso \eqref{jungI}. Este mapeo representa un mayor reto en cuanto al orden del polinomio, pes la presencia de la exponencial hace que la parametrización sea sensible al orden del mismo. Para el siguiente ejemplo se utilizó un polinomio de orden 86 y una tolerancia en el método de Newton de $10-6$ y se calcularon los cruces de las variedades como en los otros casos. Las siguientes fueron las secciones en términos del parámetro $t,\tau$ dónde se encontraron los cortes. 
 \begin{itemize}
 \item[a)] Root$([-0.985068, -0.985067] \times [5.99488, 5.99489]$, :unique)
 \item[b)] Root$([-3.46215, -3.46214] \times [5.49229, 5.4923]$, :unique)
@@ -476,8 +476,8 @@ El análisis de la convergencia resulta congruente con lo que se puede observar 
 
 El cálculo de puntos homoclínicos resulta una de las aplicaciones de tener las variedades parametrizadas. El método junto con las otras paqueterías de Julia son indispensables para hacer este tipo de cálculos de una manera fácil. A pesar de que la aritmética de intervalos arroja resultados garantizados, no hay que olvidar que nuestros polinomios no son calculados de la misma manera, es decir se debe tener siempre en mente que al rededor de cada variedad hay un error asociado. Aún así las intersecciones pueden ser encontradas controlando bien el error en la parametrización y controlando la tolerancia en el método de Newton.
 
-\section{Rectángulo fundamental}
-Para los mapeos abiertos como lo son Hénon y el mapeo de la sección anterior \ref{Jung} se puede tener el conjunto fundamental a partir de los polinomios que se obtienen en el método de parametrización. El conjunto fundamental constituye una parte de las variedades mediante la cual se puede obtener toda la dinámica fuera del mismo, llamado también rectángulo fundamental puesto que forma un polígono de cuatro lados que tiene como vértices el punto fijo hiperbólico y las intersecciones de las variedades, como aristas las secciones de las variedades entre estos puntos. Lo que pasa dentro del área del rectángulo fundamental con las variedades estables e inestables es una ventana a escala de lo que pasa si se extienden las variedades. A partir de esto podemos observar lo que se llaman tentáculos o herraduras en la dinámica del mapeo, en la figura \ref{herradura} se muestra un diagrama de este tipo de comportamiento.
+\label{SeccionRectanguloFundamental}\section{Rectángulo fundamental}
+Para los mapeos abiertos como lo son Hénon y el mapeo de la sección anterior \eqref{Jung} se puede tener el conjunto fundamental a partir de los polinomios que se obtienen en el método de parametrización. El conjunto fundamental constituye una parte de las variedades mediante la cual se puede obtener toda la dinámica fuera del mismo, llamado también rectángulo fundamental puesto que forma un polígono de cuatro lados que tiene como vértices el punto fijo hiperbólico y las intersecciones de las variedades, como aristas las secciones de las variedades entre estos puntos. Lo que pasa dentro del área del rectángulo fundamental con las variedades estables e inestables es una ventana a escala de lo que pasa si se extienden las variedades. A partir de esto podemos observar lo que se llaman tentáculos o herraduras en la dinámica del mapeo, en la figura \ref{herradura} se muestra un diagrama de este tipo de comportamiento.
 
 \begin{figure}[H]
 \centering
@@ -486,10 +486,10 @@ Para los mapeos abiertos como lo son Hénon y el mapeo de la sección anterior \
 \label{herradura}
 \end{figure}
 
-Una manera de llegar a observar estas estructuras con los polinomios de la parametrización sería usando polinomios de ordenes grandes, pero como hemos visto en la sección \ref{SeccionEstandar} el error no cambia mucho cuando pasamos de cierto grado en el polinomio. Sin embargo si notamos que nuestra parametrización representa, con cierto error, una sección de la variedad estable o inestable, entonces podemos aplicar el mapeo a la parametrización de manera que iteramos, análogamente a iterar puntos. Con esta idea se pudo encontrar parte de las estructuras mostradas en la figura \ref{herradura}, para los mapeos \ref{Henon}, \ref{Jung}.
+Una manera de llegar a observar estas estructuras con los polinomios de la parametrización sería usando polinomios de ordenes grandes, pero como hemos visto en la sección \ref{SeccionEstandar} el error no cambia mucho cuando pasamos de cierto grado en el polinomio. Sin embargo si notamos que nuestra parametrización representa, con cierto error, una sección de la variedad estable o inestable, entonces podemos aplicar el mapeo a la parametrización de manera que iteramos, análogamente a iterar puntos. Con esta idea se pudo encontrar parte de las estructuras mostradas en la figura \ref{herradura}, para los mapeos \eqref{Henon}, \eqref{Jung}.
 
 
-En el caso del mapeo de Hénon con $a=6.5$ se calcularon polinomios de orden 250 usando números de precisión extendida ($W_{0}^{s},W_{0}^{u}$), además calcular la variedad estable usando el mapeo de Hénon inverso \ref{HenonI}. En este caso se necesitó un valor máximo del parámetro $t=100$ para obtener el rectángulo fundamental, que se muestra en la figura \ref{rectangulo0}, para éstas condiciones el error es menor a $10^{-73}$.
+En el caso del mapeo de Hénon con $a=6.5$ se calcularon polinomios de orden 250 usando números de precisión extendida ($W_{0}^{s},W_{0}^{u}$), además calcular la variedad estable usando el mapeo de Hénon inverso \eqref{HenonI}. En este caso se necesitó un valor máximo del parámetro $t=100$ para obtener el rectángulo fundamental, que se muestra en la figura \ref{rectangulo0}, para éstas condiciones el error es menor a $10^{-73}$.
 
 \begin{figure}[H]
 \centering
@@ -505,7 +505,7 @@ En el caso del mapeo de Hénon con $a=6.5$ se calcularon polinomios de orden 250
 \label{ErrorRectangulo0}
 \end{figure} 
 
-Reescribiendo la ecuación de invariancia \ref{Ecua de invariancia} para el caso de la variedad estable, tenemos que:
+Reescribiendo la ecuación de invariancia \eqref{Ecua de invariancia} para el caso de la variedad estable, tenemos que:
 \begin{eqnarray}
 f_{a,b}^{-1}(W_{0}^{s}(t))=W_{0}^{s}(\lambda^{s}t).
 \label{InvarianciaEstable1}
@@ -514,7 +514,7 @@ f_{a,b}^{-1}(W_{0}^{s}(t))=W_{0}^{s}(\lambda^{s}t).
 %f_{a,b}(W_{0}^{u}(t))=W_{0}^{u}(\lambda^{u}t)
 %\label{InvarianciaInestable1}
 %\end{eqnarray}
-Si aplicamos el mapeo de Hénon inverso \ref{HenonI} a la ecuación \ref{InvarianciaEstable1} resulta
+Si aplicamos el mapeo de Hénon inverso \eqref{HenonI} a la ecuación \eqref{InvarianciaEstable1} resulta
 \begin{eqnarray}
 W_{0}^{s}(t)=f_{a,b}(W_{0}^{s}(\lambda^{s}t)),
 \label{InvarianciaEstable2}
@@ -524,7 +524,7 @@ W_{0}^{s}(t)=f_{a,b}(W_{0}^{s}(\lambda^{s}t)),
 %W_{0}^{u}(t)=f_{a,b}^{-1}(W_{0}^{u}(\lambda^{u}t))
 %\label{InvarianciaInestable2}
 %\end{eqnarray}
-como el parámetro es una variable muda podemos reescribir \ref{InvarianciaEstable2}, 
+como el parámetro es una variable muda podemos reescribir \eqref{InvarianciaEstable2}, 
 \begin{eqnarray}
 W_{0}^{s}(\frac{t}{\lambda^{s}})=f_{a,b}(W_{0}^{s}(t)).
 \label{InvarianciaEstable3}
@@ -534,7 +534,7 @@ W_{0}^{s}(\frac{t}{\lambda^{s}})=f_{a,b}(W_{0}^{s}(t)).
 %W_{0}^{u}(\frac{t}{\lambda^{u}})=f_{a,b}^{-1}(W_{0}^{u}(t)).
 %\label{InvarianciaInestable3}
 %\end{eqnarray}
-Siendo que $\vert \lambda^{s} \vert < 1 $ la ecuación \ref{InvarianciaEstable3} muestra que aplicar el mapeo es análogo a tener la variedad estable evaluada en un valor mayor del parámetro, puesto que $1/\lambda^{s}>1$. Este resultado es análogo para la variedad inestable. Usando esto se obtuvo la figura \ref{Rectangulo1}, que muestra el resultado de la iterar una vez, $(W_{x1}^{s},W_{y1}^{s})=f_{a,b}(W_{x}^{s},W_{y}^{s})$, análogamente para las inestables, evaluando los nuevos polinomios exactamente en los mismos intervalos que en el caso de la figura \ref{rectangulo0}.
+Siendo que $\vert \lambda^{s} \vert < 1 $ la ecuación \eqref{InvarianciaEstable3} muestra que aplicar el mapeo es análogo a tener la variedad estable evaluada en un valor mayor del parámetro, puesto que $1/\lambda^{s}>1$. Este resultado es análogo para la variedad inestable. Usando esto se obtuvo la figura \ref{Rectangulo1}, que muestra el resultado de la iterar una vez, $(W_{x1}^{s},W_{y1}^{s})=f_{a,b}(W_{x}^{s},W_{y}^{s})$, análogamente para las inestables, evaluando los nuevos polinomios exactamente en los mismos intervalos que en el caso de la figura \ref{rectangulo0}.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{rectangulo1}

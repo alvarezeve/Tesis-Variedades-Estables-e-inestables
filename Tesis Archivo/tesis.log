@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.10.3)  17 SEP 2018 10:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.10.3)  18 SEP 2018 23:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1198,29 +1198,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 207--208
 
  []
 
-LaTeX Info: Redefining \. on input line 234.
-LaTeX Info: Redefining \% on input line 234.
+LaTeX Info: Redefining \. on input line 233.
+LaTeX Info: Redefining \% on input line 233.
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 256--258
+LaTeX Info: Redefining \. on input line 375.
+LaTeX Info: Redefining \% on input line 375.
+ [7]
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
-
- []
-
-LaTeX Info: Redefining \. on input line 340.
-LaTeX Info: Redefining \% on input line 340.
-[7] <xymatrix 2x2 182>
-Underfull \hbox (badness 10000) in paragraph at lines 354--355
+<xymatrix 2x2 182>
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
 
  []
 
-LaTeX Info: Redefining \. on input line 355.
-LaTeX Info: Redefining \% on input line 355.
+LaTeX Info: Redefining \. on input line 401.
+LaTeX Info: Redefining \% on input line 401.
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 361--363
+Underfull \hbox (badness 10000) in paragraph at lines 407--409
 
  []
 
@@ -1228,26 +1224,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 361--363
 LaTeX Info: Redefining \. on input line 105.
 LaTeX Info: Redefining \% on input line 105.
  [9]
+LaTeX Info: Redefining \. on input line 105.
+LaTeX Info: Redefining \% on input line 105.
+ [10]
 \openout2 = `Capitulo2/parametrizacion.aux'.
 
- (./Capitulo2/parametrizacion.tex [10
-
-
-
-]
+ (./Capitulo2/parametrizacion.tex
 Cap\'{\i }tulo 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-[11]
+[11
+
+
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 57--59
 
  []
 
-LaTeX Info: Redefining \. on input line 100.
-LaTeX Info: Redefining \% on input line 100.
+LaTeX Info: Redefining \. on input line 106.
+LaTeX Info: Redefining \% on input line 106.
 [12]
 LaTeX Info: Redefining \. on input line 157.
 LaTeX Info: Redefining \% on input line 157.
@@ -1256,12 +1255,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 181--183
 
  []
 
-LaTeX Info: Redefining \. on input line 187.
-LaTeX Info: Redefining \% on input line 187.
+LaTeX Info: Redefining \. on input line 191.
+LaTeX Info: Redefining \% on input line 191.
 [14]
-LaTeX Info: Redefining \. on input line 238.
-LaTeX Info: Redefining \% on input line 238.
- [15]
+Overfull \hbox (4.56827pt too wide) in paragraph at lines 227--229
+\OT1/cmr/m/n/10.95 Usando las ecua-cio-nes [] y [] es-cri-bi-mos un sis-te-ma d
+e ecua-cio-nes pa-ra $\OML/cmm/m/it/10.95 a[]; b[]$
+ []
+
+LaTeX Info: Redefining \. on input line 245.
+LaTeX Info: Redefining \% on input line 245.
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 270--272
 
  []
@@ -1282,11 +1286,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 280--282
 
  []
 
-LaTeX Info: Redefining \. on input line 282.
-LaTeX Info: Redefining \% on input line 282.
+LaTeX Info: Redefining \. on input line 286.
+LaTeX Info: Redefining \% on input line 286.
 [16]
-LaTeX Info: Redefining \. on input line 325.
-LaTeX Info: Redefining \% on input line 325.
+LaTeX Info: Redefining \. on input line 333.
+LaTeX Info: Redefining \% on input line 333.
  [17]
 Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
@@ -1297,8 +1301,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 337--338
 
  []
 
-LaTeX Info: Redefining \. on input line 368.
-LaTeX Info: Redefining \% on input line 368.
+LaTeX Info: Redefining \. on input line 377.
+LaTeX Info: Redefining \% on input line 377.
 [18]
 Underfull \hbox (badness 10000) in paragraph at lines 395--396
 
@@ -1309,8 +1313,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 397--398
 
  []
 
-LaTeX Info: Redefining \. on input line 400.
-LaTeX Info: Redefining \% on input line 400.
+LaTeX Info: Redefining \. on input line 406.
+LaTeX Info: Redefining \% on input line 406.
 [19]
 Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
@@ -1334,7 +1338,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<estandark03.png, id=442, 488.5452pt x 408.3255pt>
+<estandark03.png, id=450, 488.5452pt x 408.3255pt>
 File: estandark03.png Graphic file (type png)
  <use estandark03.png>
 Package pdftex.def Info: estandark03.png used on input line 12.
@@ -1344,13 +1348,13 @@ Package pdftex.def Info: estandark03.png used on input line 12.
 
 
 
-] <error_est_k03.png, id=449, 513.8397pt x 407.6028pt>
+] <error_est_k03.png, id=457, 513.8397pt x 407.6028pt>
 File: error_est_k03.png Graphic file (type png)
 
 <use error_est_k03.png>
 Package pdftex.def Info: error_est_k03.png used on input line 19.
 (pdftex.def)             Requested size: 308.3062pt x 244.56355pt.
- <estandark15.png, id=452, 488.5452pt x 408.3255pt>
+ <estandark15.png, id=460, 488.5452pt x 408.3255pt>
 File: estandark15.png Graphic file (type png)
 
 <use estandark15.png>
@@ -1359,13 +1363,13 @@ Package pdftex.def Info: estandark15.png used on input line 27.
 LaTeX Info: Redefining \. on input line 31.
 LaTeX Info: Redefining \% on input line 31.
  [22 <./estandark03.png> <./error_est_k03.png>]
-<error_est_k15.png, id=462, 517.4532pt x 407.6028pt>
+<error_est_k15.png, id=470, 517.4532pt x 407.6028pt>
 File: error_est_k15.png Graphic file (type png)
  <use error_est_k15.png>
 Package pdftex.def Info: error_est_k15.png used on input line 34.
 (pdftex.def)             Requested size: 310.4743pt x 244.56355pt.
 
-<estandark07.png, id=465, 488.5452pt x 408.3255pt>
+<estandark07.png, id=473, 488.5452pt x 408.3255pt>
 File: estandark07.png Graphic file (type png)
  <use estandark07.png>
 Package pdftex.def Info: estandark07.png used on input line 44.
@@ -1374,7 +1378,7 @@ LaTeX Info: Redefining \. on input line 48.
 LaTeX Info: Redefining \% on input line 48.
 
 [23 <./estandark15.png> <./error_est_k15.png>]
-<error_est_k07.png, id=474, 513.8397pt x 407.6028pt>
+<error_est_k07.png, id=482, 513.8397pt x 407.6028pt>
 File: error_est_k07.png Graphic file (type png)
  <use error_est_k07.png>
 Package pdftex.def Info: error_est_k07.png used on input line 51.
@@ -1391,7 +1395,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-<error_estandar_orden.png, id=491, 513.8397pt x 391.7034pt>
+<error_estandar_orden.png, id=499, 513.8397pt x 391.7034pt>
 File: error_estandar_orden.png Graphic file (type png)
 
 <use error_estandar_orden.png>
@@ -1400,14 +1404,14 @@ Package pdftex.def Info: error_estandar_orden.png used on input line 64.
 LaTeX Info: Redefining \. on input line 69.
 LaTeX Info: Redefining \% on input line 69.
  [25 <./error_estandar_orden.png>]
-<error_estandar_orden_big.png, id=500, 521.0667pt x 407.6028pt>
+<error_estandar_orden_big.png, id=508, 521.0667pt x 407.6028pt>
 File: error_estandar_orden_big.png Graphic file (type png)
 
 <use error_estandar_orden_big.png>
 Package pdftex.def Info: error_estandar_orden_big.png used on input line 72.
 (pdftex.def)             Requested size: 312.64243pt x 244.56355pt.
 
-<mapeoinver.png, id=503, 519.6213pt x 407.6028pt>
+<mapeoinver.png, id=511, 519.6213pt x 407.6028pt>
 File: mapeoinver.png Graphic file (type png)
  <use mapeoinver.png>
 Package pdftex.def Info: mapeoinver.png used on input line 82.
@@ -1418,13 +1422,13 @@ LaTeX Info: Redefining \% on input line 86.
 LaTeX Info: Redefining \. on input line 125.
 LaTeX Info: Redefining \% on input line 125.
  [27 <./mapeoinver.png>]
-<henon1.png, id=522, 512.3943pt x 407.6028pt>
+<henon1.png, id=530, 512.3943pt x 407.6028pt>
 File: henon1.png Graphic file (type png)
  <use henon1.png>
 Package pdftex.def Info: henon1.png used on input line 152.
 (pdftex.def)             Requested size: 307.43895pt x 244.56355pt.
 
-<ErrorHenon1.png, id=523, 524.6802pt x 407.6028pt>
+<ErrorHenon1.png, id=531, 524.6802pt x 407.6028pt>
 File: ErrorHenon1.png Graphic file (type png)
  <use ErrorHenon1.png>
 Package pdftex.def Info: ErrorHenon1.png used on input line 159.
@@ -1442,20 +1446,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
-<henon2.png, id=542, 512.3943pt x 407.6028pt>
+<henon2.png, id=550, 512.3943pt x 407.6028pt>
 File: henon2.png Graphic file (type png)
  <use henon2.png>
 Package pdftex.def Info: henon2.png used on input line 170.
 (pdftex.def)             Requested size: 307.43895pt x 244.56355pt.
 LaTeX Info: Redefining \. on input line 174.
 LaTeX Info: Redefining \% on input line 174.
- [29 <./ErrorHenon1.png>] <ErrorHenon2.png, id=551, 524.6802pt x 407.6028pt>
+ [29 <./ErrorHenon1.png>] <ErrorHenon2.png, id=560, 524.6802pt x 407.6028pt>
 File: ErrorHenon2.png Graphic file (type png)
 
 <use ErrorHenon2.png>
 Package pdftex.def Info: ErrorHenon2.png used on input line 177.
 (pdftex.def)             Requested size: 314.81055pt x 244.56355pt.
- <henon3.png, id=554, 512.3943pt x 407.6028pt>
+ <henon3.png, id=563, 512.3943pt x 407.6028pt>
 File: henon3.png Graphic file (type png)
 
 <use henon3.png>
@@ -1464,7 +1468,7 @@ Package pdftex.def Info: henon3.png used on input line 185.
 LaTeX Info: Redefining \. on input line 189.
 LaTeX Info: Redefining \% on input line 189.
  [30 <./henon2.png> <./ErrorHenon2.png>]
-<ErrorHenon3.png, id=563, 525.4029pt x 407.6028pt>
+<ErrorHenon3.png, id=571, 525.4029pt x 407.6028pt>
 File: ErrorHenon3.png Graphic file (type png)
  <use ErrorHenon3.png>
 Package pdftex.def Info: ErrorHenon3.png used on input line 192.
@@ -1477,7 +1481,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 221--223
 
  []
 
-<jung34.png, id=577, 517.4532pt x 407.6028pt>
+<jung34.png, id=585, 517.4532pt x 407.6028pt>
 File: jung34.png Graphic file (type png)
  <use jung34.png>
 Package pdftex.def Info: jung34.png used on input line 228.
@@ -1485,20 +1489,20 @@ Package pdftex.def Info: jung34.png used on input line 228.
 LaTeX Info: Redefining \. on input line 232.
 LaTeX Info: Redefining \% on input line 232.
  [32]
-<error_jung34.png, id=586, 517.4532pt x 407.6028pt>
+<error_jung34.png, id=594, 517.4532pt x 407.6028pt>
 File: error_jung34.png Graphic file (type png)
  <use error_jung34.png>
 Package pdftex.def Info: error_jung34.png used on input line 236.
 (pdftex.def)             Requested size: 310.4743pt x 244.56355pt.
 
-<jung57.png, id=589, 518.1759pt x 407.6028pt>
+<jung57.png, id=597, 518.1759pt x 407.6028pt>
 File: jung57.png Graphic file (type png)
  <use jung57.png>
 Package pdftex.def Info: jung57.png used on input line 246.
 (pdftex.def)             Requested size: 310.90793pt x 244.56355pt.
 LaTeX Info: Redefining \. on input line 250.
 LaTeX Info: Redefining \% on input line 250.
- [33 <./jung34.png> <./error_jung34.png>] <error_jung57.png, id=599, 517.4532pt
+ [33 <./jung34.png> <./error_jung34.png>] <error_jung57.png, id=607, 517.4532pt
  x 407.6028pt>
 File: error_jung57.png Graphic file (type png)
 
@@ -1512,7 +1516,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--263
 
  []
 
-<converEst15.png, id=615, 540.5796pt x 403.2666pt>
+<converEst15.png, id=623, 540.5796pt x 403.2666pt>
 File: converEst15.png Graphic file (type png)
  <use converEst15.png>
 Package pdftex.def Info: converEst15.png used on input line 267.
@@ -1520,14 +1524,14 @@ Package pdftex.def Info: converEst15.png used on input line 267.
 LaTeX Info: Redefining \. on input line 273.
 LaTeX Info: Redefining \% on input line 273.
 
-[35 <./converEst15.png>] <converHenon1.png, id=623, 529.0164pt x 397.485pt>
+[35 <./converEst15.png>] <converHenon1.png, id=631, 529.0164pt x 397.485pt>
 File: converHenon1.png Graphic file (type png)
 
 <use converHenon1.png>
 Package pdftex.def Info: converHenon1.png used on input line 276.
 (pdftex.def)             Requested size: 264.50755pt x 198.742pt.
 
-<convergenciaJungH57.png, id=628, 523.2348pt x 403.2666pt>
+<convergenciaJungH57.png, id=636, 523.2348pt x 403.2666pt>
 File: convergenciaJungH57.png Graphic file (type png)
 
 <use convergenciaJungH57.png>
@@ -1536,7 +1540,7 @@ Package pdftex.def Info: convergenciaJungH57.png used on input line 286.
 LaTeX Info: Redefining \. on input line 290.
 LaTeX Info: Redefining \% on input line 290.
  [36 <./converHenon1.png>]
-<convergenciaJungT57.png, id=639, 513.8397pt x 403.2666pt>
+<convergenciaJungT57.png, id=647, 513.8397pt x 403.2666pt>
 File: convergenciaJungT57.png Graphic file (type png)
 
 <use convergenciaJungT57.png>
@@ -1556,14 +1560,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 305--306
 
 LaTeX Info: Redefining \. on input line 323.
 LaTeX Info: Redefining \% on input line 323.
-[38] <cruce_estandar.png, id=669, 586.8324pt x 442.2924pt>
+[38] <cruce_estandar.png, id=677, 586.8324pt x 442.2924pt>
 File: cruce_estandar.png Graphic file (type png)
 
 <use cruce_estandar.png>
 Package pdftex.def Info: cruce_estandar.png used on input line 326.
 (pdftex.def)             Requested size: 352.10216pt x 265.37749pt.
 
-<error_cruces_estandar.png, id=671, 586.8324pt x 442.2924pt>
+<error_cruces_estandar.png, id=679, 586.8324pt x 442.2924pt>
 File: error_cruces_estandar.png Graphic file (type png)
 
 <use error_cruces_estandar.png>
@@ -1574,14 +1578,14 @@ LaTeX Info: Redefining \% on input line 338.
  [39 <./cruce_estandar.png>]
 LaTeX Info: Redefining \. on input line 350.
 LaTeX Info: Redefining \% on input line 350.
- [40 <./error_cruces_estandar.png>] <crucesL.png, id=689, 684.5575pt x 537.0062
+ [40 <./error_cruces_estandar.png>] <crucesL.png, id=697, 684.5575pt x 537.0062
 6pt>
 File: crucesL.png Graphic file (type png)
 
 <use crucesL.png>
 Package pdftex.def Info: crucesL.png used on input line 359.
 (pdftex.def)             Requested size: 342.27791pt x 268.50247pt.
- <cruce1.png, id=692, 1233.6489pt x 641.0349pt>
+ <cruce1.png, id=700, 1233.6489pt x 641.0349pt>
 File: cruce1.png Graphic file (type png)
 
 <use cruce1.png>
@@ -1594,7 +1598,7 @@ Overfull \hbox (80.88586pt too wide) in paragraph at lines 367--368
 
 LaTeX Info: Redefining \. on input line 371.
 LaTeX Info: Redefining \% on input line 371.
-[41 <./crucesL.png>] <cruce2.png, id=700, 1233.6489pt x 641.0349pt>
+[41 <./crucesL.png>] <cruce2.png, id=709, 1233.6489pt x 641.0349pt>
 File: cruce2.png Graphic file (type png)
 
 <use cruce2.png>
@@ -1605,7 +1609,7 @@ Overfull \hbox (80.88586pt too wide) in paragraph at lines 374--375
  [][] 
  []
 
-<cruce3.png, id=701, 1233.6489pt x 641.0349pt>
+<cruce3.png, id=710, 1233.6489pt x 641.0349pt>
 File: cruce3.png Graphic file (type png)
  <use cruce3.png>
 Package pdftex.def Info: cruce3.png used on input line 382.
@@ -1618,7 +1622,7 @@ Overfull \hbox (80.88586pt too wide) in paragraph at lines 382--383
 LaTeX Info: Redefining \. on input line 386.
 LaTeX Info: Redefining \% on input line 386.
 [42 <./cruce1.png> <./cruce2.png>]
-<cruce5.png, id=709, 1233.6489pt x 641.0349pt>
+<cruce5.png, id=718, 1233.6489pt x 641.0349pt>
 File: cruce5.png Graphic file (type png)
  <use cruce5.png>
 Package pdftex.def Info: cruce5.png used on input line 390.
@@ -1628,7 +1632,7 @@ Overfull \hbox (80.88586pt too wide) in paragraph at lines 390--391
  [][] 
  []
 
-<cruce6.png, id=710, 1233.6489pt x 641.0349pt>
+<cruce6.png, id=719, 1233.6489pt x 641.0349pt>
 File: cruce6.png Graphic file (type png)
  <use cruce6.png>
 Package pdftex.def Info: cruce6.png used on input line 397.
@@ -1641,7 +1645,7 @@ Overfull \hbox (80.88586pt too wide) in paragraph at lines 397--398
 LaTeX Info: Redefining \. on input line 401.
 LaTeX Info: Redefining \% on input line 401.
 [43 <./cruce3.png> <./cruce5.png>]
-<cruce7.png, id=720, 1233.6489pt x 641.0349pt>
+<cruce7.png, id=728, 1233.6489pt x 641.0349pt>
 File: cruce7.png Graphic file (type png)
  <use cruce7.png>
 Package pdftex.def Info: cruce7.png used on input line 404.
@@ -1651,7 +1655,7 @@ Overfull \hbox (80.88586pt too wide) in paragraph at lines 404--405
  [][] 
  []
 
-<cruce8.png, id=721, 1233.6489pt x 641.0349pt>
+<cruce8.png, id=729, 1233.6489pt x 641.0349pt>
 File: cruce8.png Graphic file (type png)
  <use cruce8.png>
 Package pdftex.def Info: cruce8.png used on input line 411.
@@ -1668,7 +1672,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 416--417
 
  []
 
-<HenonV.png, id=738, 586.8324pt x 442.2924pt>
+<HenonV.png, id=746, 586.8324pt x 442.2924pt>
 File: HenonV.png Graphic file (type png)
  <use HenonV.png>
 Package pdftex.def Info: HenonV.png used on input line 421.
@@ -1690,13 +1694,13 @@ LaTeX Info: Redefining \% on input line 425.
 LaTeX Info: Redefining \. on input line 433.
 LaTeX Info: Redefining \% on input line 433.
  [46 <./HenonV.png>]
-<cruces_jung1.png, id=756, 691.58376pt x 536.0025pt>
+<cruces_jung1.png, id=764, 691.58376pt x 536.0025pt>
 File: cruces_jung1.png Graphic file (type png)
  <use cruces_jung1.png>
 Package pdftex.def Info: cruces_jung1.png used on input line 438.
 (pdftex.def)             Requested size: 345.79103pt x 268.0006pt.
 
-<cruce_a.png, id=759, 1233.6489pt x 641.0349pt>
+<cruce_a.png, id=767, 1233.6489pt x 641.0349pt>
 File: cruce_a.png Graphic file (type png)
  <use cruce_a.png>
 Package pdftex.def Info: cruce_a.png used on input line 447.
@@ -1708,7 +1712,7 @@ Overfull \hbox (80.88586pt too wide) in paragraph at lines 447--448
 
 LaTeX Info: Redefining \. on input line 451.
 LaTeX Info: Redefining \% on input line 451.
-[47 <./cruces_jung1.png>] <cruce_b.png, id=767, 1233.6489pt x 641.0349pt>
+[47 <./cruces_jung1.png>] <cruce_b.png, id=775, 1233.6489pt x 641.0349pt>
 File: cruce_b.png Graphic file (type png)
 
 <use cruce_b.png>
@@ -1719,7 +1723,7 @@ Overfull \hbox (80.88586pt too wide) in paragraph at lines 455--456
  [][] 
  []
 
-<cruce_c.png, id=768, 1233.6489pt x 641.0349pt>
+<cruce_c.png, id=776, 1233.6489pt x 641.0349pt>
 File: cruce_c.png Graphic file (type png)
  <use cruce_c.png>
 Package pdftex.def Info: cruce_c.png used on input line 463.
@@ -1748,7 +1752,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 474--475
 
 LaTeX Info: Redefining \. on input line 475.
 LaTeX Info: Redefining \% on input line 475.
-[49 <./cruce_c.png>] <herradura.png, id=783, 561.09625pt x 542.025pt>
+[49 <./cruce_c.png>] <herradura.png, id=791, 561.09625pt x 542.025pt>
 File: herradura.png Graphic file (type png)
 
 <use herradura.png>
@@ -1757,14 +1761,14 @@ Package pdftex.def Info: herradura.png used on input line 484.
 LaTeX Info: Redefining \. on input line 490.
 LaTeX Info: Redefining \% on input line 490.
  [50 <./herradura.png>]
-<rectangulo-fundamental.jpg, id=798, 711.65875pt x 566.115pt>
+<rectangulo-fundamental.jpg, id=806, 711.65875pt x 566.115pt>
 File: rectangulo-fundamental.jpg Graphic file (type jpg)
 
 <use rectangulo-fundamental.jpg>
 Package pdftex.def Info: rectangulo-fundamental.jpg used on input line 496.
 (pdftex.def)             Requested size: 355.8285pt x 283.05681pt.
 
-<error-rectangulo.png, id=799, 532.6299pt x 407.6028pt>
+<error-rectangulo.png, id=807, 532.6299pt x 407.6028pt>
 File: error-rectangulo.png Graphic file (type png)
 
 <use error-rectangulo.png>
@@ -1773,7 +1777,7 @@ Package pdftex.def Info: error-rectangulo.png used on input line 503.
 LaTeX Info: Redefining \. on input line 507.
 LaTeX Info: Redefining \% on input line 507.
  [51 <./rectangulo-fundamental.jpg>]
-<rectangulo1.png, id=815, 512.3943pt x 407.6028pt>
+<rectangulo1.png, id=823, 512.3943pt x 407.6028pt>
 File: rectangulo1.png Graphic file (type png)
  <use rectangulo1.png>
 Package pdftex.def Info: rectangulo1.png used on input line 540.
@@ -1782,13 +1786,13 @@ LaTeX Info: Redefining \. on input line 544.
 LaTeX Info: Redefining \% on input line 544.
 
 [52 <./error-rectangulo.png>]
-<rectangulo2.png, id=827, 512.3943pt x 407.6028pt>
+<rectangulo2.png, id=835, 512.3943pt x 407.6028pt>
 File: rectangulo2.png Graphic file (type png)
  <use rectangulo2.png>
 Package pdftex.def Info: rectangulo2.png used on input line 547.
 (pdftex.def)             Requested size: 256.19652pt x 203.80089pt.
 
-<rectangulo3.png, id=828, 512.3943pt x 407.6028pt>
+<rectangulo3.png, id=836, 512.3943pt x 407.6028pt>
 File: rectangulo3.png Graphic file (type png)
  <use rectangulo3.png>
 Package pdftex.def Info: rectangulo3.png used on input line 555.
@@ -1797,13 +1801,13 @@ LaTeX Info: Redefining \. on input line 559.
 LaTeX Info: Redefining \% on input line 559.
 
 [53 <./rectangulo1.png> <./rectangulo2.png>]
-<rectangulo4A.png, id=836, 512.3943pt x 407.6028pt>
+<rectangulo4A.png, id=844, 512.3943pt x 407.6028pt>
 File: rectangulo4A.png Graphic file (type png)
  <use rectangulo4A.png>
 Package pdftex.def Info: rectangulo4A.png used on input line 562.
 (pdftex.def)             Requested size: 256.19652pt x 203.80089pt.
 
-<rectangulo5.png, id=837, 512.3943pt x 407.6028pt>
+<rectangulo5.png, id=845, 512.3943pt x 407.6028pt>
 File: rectangulo5.png Graphic file (type png)
  <use rectangulo5.png>
 Package pdftex.def Info: rectangulo5.png used on input line 569.
@@ -1843,10 +1847,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
-
-
-LaTeX Warning: Reference `RectanguloFundamental' on page 58 undefined on input 
-line 11.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 11--12
@@ -1901,13 +1901,10 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
 Package rerunfilecheck Info: File `tesis.out' has not changed.
 (rerunfilecheck)             Checksum: 63498B69E50804959D189AFD8B754693;1558.
 Package rerunfilecheck Info: File `tesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 58A42AAEB16F4870259E7D72805E84FB;1545.
+(rerunfilecheck)             Checksum: E38E1D7171914FFCFC889B60F01B6225;1499.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1915,10 +1912,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
- 15589 strings out of 494925
- 231846 string characters out of 6178544
- 382500 words of memory out of 5000000
- 18147 multiletter control sequences out of 15000+600000
+ 15601 strings out of 494925
+ 231953 string characters out of 6178544
+ 382877 words of memory out of 5000000
+ 18153 multiletter control sequences out of 15000+600000
  17919 words of font info for 73 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  43i,18n,46p,3237b,697s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2078,20 +2075,20 @@ ic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/x
-ypic/xyatip10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xypic/xybti
-p10.pfb>
-Output written on tesis.pdf (71 pages, 2646261 bytes).
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xypic/xya
+tip10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
+Output written on tesis.pdf (71 pages, 2652059 bytes).
 PDF statistics:
- 1055 PDF objects out of 1200 (max. 8388607)
- 841 compressed objects within 9 object streams
- 260 named destinations out of 1000 (max. 500000)
+ 1068 PDF objects out of 1200 (max. 8388607)
+ 853 compressed objects within 9 object streams
+ 266 named destinations out of 1000 (max. 500000)
  422 words of extra memory for PDF output out of 10000 (max. 10000000)
 

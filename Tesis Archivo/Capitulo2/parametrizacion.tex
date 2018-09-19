@@ -31,7 +31,7 @@ D\mathbf{f}_{k}(\theta,p)=\begin{pmatrix}
 k\cos(\theta+p)& 1+k\cos(\theta+p)\\ 
 \end{pmatrix}.\label{mapeo linearizado}
 \end{eqnarray}
-Al evaluar $\mathbf{x_{1}},\mathbf{x_{2}}$ en \ref{mapeo linearizado} resulta 
+Al evaluar $\mathbf{x_{1}},\mathbf{x_{2}}$ en \eqref{mapeo linearizado} resulta 
 \begin{eqnarray}
 D\mathbf{f}_{k}(0,0)=
 \begin{pmatrix}
@@ -67,7 +67,7 @@ y
 p(t)=\sum_{n=0}^{\infty}b_{n}t^{n},
 \label{p}
 \end{eqnarray}
-tal que $P(t):=(\theta(t),p(t))$. Necesitamos la parametrización también de la dinámica interna $g$, para la cual proponemos que $g(t)=\lambda t$ con $\lambda$ una constante. Después de sustituir esto en la \ref{Ecua de invariancia} para el mapeo estándar obtenemos
+tal que $P(t):=(\theta(t),p(t))$. Necesitamos la parametrización también de la dinámica interna $g$, para la cual proponemos que $g(t)=\lambda t$ con $\lambda$ una constante. Después de sustituir esto en la \eqref{Ecua de invariancia} para el mapeo estándar obtenemos
 \begin{eqnarray}
 \mathbf{f}_{k}(\theta,p) = \left[\begin{array}{c}
 \theta(t) + p(t) \\
@@ -89,7 +89,7 @@ que en forma explícita es
 \end{array}\right].
 \label{expandida}
 \end{eqnarray}
-Desarrollando el primer renglón de la ecuación \ref{expandida}
+Desarrollando el primer renglón de la ecuación \eqref{expandida}
 \begin{eqnarray}
 a_{0}+a_{1}t+a_{2}t^{2}+... +b_{0}+b_{1}t+b_{2}t^{2}+ ...=a_{0}+a_{1}\lambda t+...
 \label{primer renglon}
@@ -98,7 +98,7 @@ agrupamos términos del mismo orden y comparamos los de orden cero
 \begin{eqnarray}
 a_{0}+b_{0}=a_{0},
 \end{eqnarray}
-que implica $b_{0}=0$. Hacemos lo mismo pero ahora con el renglón dos de \ref{expandida} 
+que implica $b_{0}=0$. Hacemos lo mismo pero ahora con el renglón dos de \eqref{expandida} 
 usando la serie de Taylor del seno
 \begin{eqnarray}
 \sum_{n=0}^{\infty}b_{n}t^{n} +k\sum_{j=0}^{\infty}\frac{(-1)^{j}}{(2j+1)!}\left[ \sum_{n=0}^{\infty}a_{n}t^{n} +\sum_{n=0}^{\infty}b_{n}t^{n}\right]^{2j+1}=\sum_{n=0}^{\infty}b_{n}\lambda^{n}t^{n},
@@ -113,7 +113,7 @@ e igualamos los términos de orden cero
 \begin{eqnarray}
 \kappa a_{0}+\frac{\kappa}{3!}a_{0}^{3}+...=0, 
 \end{eqnarray}
-por lo que $a_{0}=0$. Si ahora usamos los de orden uno en la ecuación \ref{primer renglon}, \ref{segundo renglon} respectivamente
+por lo que $a_{0}=0$. Si ahora usamos los de orden uno en la ecuación \eqref{primer renglon}, \eqref{segundo renglon} respectivamente
 \begin{eqnarray}
 (a_{1}+b_{1})t=a_{1}\lambda t,
 \end{eqnarray}
@@ -136,7 +136,7 @@ a_{1}\\
 b_{1}
 \end{pmatrix}.
 \end{eqnarray}
-Es posible obtener las soluciones para $a_{1}$ en términos de $b_{1}$ y de $\lambda$ en términos de $\kappa$. Análogamente se pueden obtener los coeficientes $a_{2},b_{2}$ al comparar los términos cuadráticos. Sin embargo es claro que obtener los términos de esta manera es un camino tedioso, por lo que recurrimos al método de parametrización para poder encontrar relaciones de recurrencia que calculen los coeficientes de los polinomios. Usando de nuevo las ecuaciones \ref{theta}, \ref{p} proponemos que 
+Es posible obtener las soluciones para $a_{1}$ en términos de $b_{1}$ y de $\lambda$ en términos de $\kappa$. Análogamente se pueden obtener los coeficientes $a_{2},b_{2}$ al comparar los términos cuadráticos. Sin embargo es claro que obtener los términos de esta manera es un camino tedioso, por lo que recurrimos al método de parametrización para poder encontrar relaciones de recurrencia que calculen los coeficientes de los polinomios. Usando de nuevo las ecuaciones \eqref{theta}, \eqref{p} proponemos que 
 \begin{eqnarray}
 W(t)=\sum_{n=0}^{\infty}\beta_{n}t^{n}=\sin\left(\sum_{n=0}^{\infty}a_{n}t^{n}+\sum_{n=0}^{\infty}
 b_{n}t^{n}\right),
@@ -146,12 +146,12 @@ es decir la parte que aparece en el mapeo $\sin(\theta+p)$ se puede ver como un 
 \overline{W}=\sum_{n=0}^{\infty}(\alpha_{n}+i\beta_{n})t^{n}=\exp(i(\theta(t)+p(t))),
 \label{W compleja}
 \end{eqnarray}
-y calculando la derivada de la ecuación \ref{W compleja} resulta
+y calculando la derivada de la ecuación \eqref{W compleja} resulta
 \begin{eqnarray}
 \overline{W}'=i\overline{W}(\theta '(t)+p'(t)).
 \label{W compleja deriv}
 \end{eqnarray}
-Al desarrollar en potencias de $t$ y usando convolución en \ref{W compleja deriv}
+Al desarrollar en potencias de $t$ y usando convolución en \eqref{W compleja deriv}
 \begin{eqnarray}
 \sum_{n=0}^{\infty}(n+1)(\alpha_{n+1}+i\beta_{n+1})t^{n}=i\sum_{n=0}^{\infty}c_{n}t^{n}+i\sum_{n=0}^{\infty}d_{n}t^{n},
 \end{eqnarray}
@@ -170,7 +170,7 @@ mientras que la compleja
 \sum_{n=0}^{\infty}(n+1)\beta_{n+1}t^{n}=\sum_{n=0}^{\infty}\left[\sum_{l=0}^{n}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1})\right]t^{n}.
 \label{parte compleja}
 \end{eqnarray}
-Podemos volver a igualar potencias de $t$ en \ref{parte real}, \ref{parte compleja} y despejando $\alpha_{n+1},\beta_{n+1}$ obtenemos
+Podemos volver a igualar potencias de $t$ en \eqref{parte real}, \eqref{parte compleja} y despejando $\alpha_{n+1},\beta_{n+1}$ obtenemos
 \begin{eqnarray}
 \alpha_{n+1}=\frac{-1}{n+1}\sum_{l=0}^{n}(l+1)\beta_{n-l}(a_{l+1}+b_{l+1}),
 \label{recurrencia alpha}
@@ -181,11 +181,11 @@ Podemos volver a igualar potencias de $t$ en \ref{parte real}, \ref{parte comple
 \end{eqnarray}
 que son las relaciones de recurrencia para $\alpha,\beta$ en términos de los coeficientes del polinomio, con las que podemos calcular $\sin(\theta+p)$. Acabamos de usar un truco en el que fue muy importante la forma del mapeo en el que sólo tuvimos que usar una expansión en serie de Taylor, sin embargo si resultara que en el mapeo aparecieran productos de funciones no podemos garantizar que se puedan encontrar las relaciones de recurrencia de manera fácil. \\
 
-Para obtener las relaciones de recurrencia de $a_{n},b_{n}$ usaremos el caso $t=0$ pues ya sabemos los primeros valores de las constantes $\alpha_{0}, \beta_{0}, a_{0}, b_{0}$, entonces al sustituir $t=0$ en la ecuación \ref{W compleja} resulta
+Para obtener las relaciones de recurrencia de $a_{n},b_{n}$ usaremos el caso $t=0$ pues ya sabemos los primeros valores de las constantes $\alpha_{0}, \beta_{0}, a_{0}, b_{0}$, entonces al sustituir $t=0$ en la ecuación \eqref{W compleja} resulta
 \begin{eqnarray}
 \overline{W}(0)=\alpha_{0}+i\beta_{0}=\cos(\theta(0)+p(0))+i\sin(\theta(0)+p(0))=1,
 \end{eqnarray}
-entonces $\alpha_{0}=1,\beta_{0}=0$, tenemos entonces los valores iniciales de la recursión y por tanto podemos calcular los otros valores. Para encontrar los demás usemos la ecuación \ref{expandida} pero tomando en cuenta la forma en la que escribimos al seno
+entonces $\alpha_{0}=1,\beta_{0}=0$, tenemos entonces los valores iniciales de la recursión y por tanto podemos calcular los otros valores. Para encontrar los demás usemos la ecuación \eqref{expandida} pero tomando en cuenta la forma en la que escribimos al seno
 \begin{eqnarray}
 \sum_{n=1}^{\infty}a_{n}t^{n}+\sum_{n=1}^{\infty}b_{n}t^{n}=\sum_{n=1}^{\infty}a_{n}\lambda^{n}t^{n},
 \end{eqnarray}
@@ -209,12 +209,12 @@ entonces los coeficientes de $t^{n+1}$ son
 (1-\lambda^{n+1})b_{n+1}=-\kappa\beta_{n+1}.
 \label{coeficiente recursion 2}
 \end{eqnarray}
-Sustituyendo \ref{recurrencia beta} en  \ref{coeficiente recursion 2}
+Sustituyendo \eqref{recurrencia beta} en  \eqref{coeficiente recursion 2}
 \begin{eqnarray}
 (1-\lambda^{n+1})b_{n+1}=\frac{-\kappa}{n+1}\sum_{l=0}^{n}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1}).
 \label{triangulo}
 \end{eqnarray}
-Como buscamos una ecuación para la recurrencia separaremos el término $l=n$ del lado derecho de \ref{triangulo}
+Como buscamos una ecuación para la recurrencia separaremos el término $l=n$ del lado derecho de \eqref{triangulo}
 \begin{eqnarray}
 (1-\lambda^{n+1})b_{n+1}=-\frac{\kappa}{n+1}\sum_{l=0}^{n-1}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1})-\kappa(a_{n+1}+b_{n+1}),
 \label{triangulo1}
@@ -225,7 +225,7 @@ y agrupamos de manera que los coeficientes $a_{n+1},b_{n+1}$ queden en el mismo 
 (a_{l+1}+b_{l+1}).
 \label{triangulo2}
 \end{eqnarray}
-Usando las ecuaciones \ref{coeficiente recursion 1} y \ref{triangulo2} escribimos un sistema de ecuaciones para $a_{n+1},b_{n+1}$ en forma matricial
+Usando las ecuaciones \eqref{coeficiente recursion 1} y \eqref{triangulo2} escribimos un sistema de ecuaciones para $a_{n+1},b_{n+1}$ en forma matricial
 \begin{eqnarray}
 \mathbf{A}\begin{pmatrix}
 a_{n+1}\\
@@ -261,7 +261,7 @@ siendo
 -\kappa & 1-\lambda^{n+1}
 \end{pmatrix}.
 \end{eqnarray}
-Al escribir de manera separada la ecuación \ref{Sistema recurrencia} obtenemos las relaciones de recurrencia para los coeficientes de la parametrización
+Al escribir de manera separada la ecuación \eqref{Sistema recurrencia} obtenemos las relaciones de recurrencia para los coeficientes de la parametrización
 \begin{eqnarray}
 a_{n+1}=\frac{\kappa}{(n+1)[(1-\lambda^{n+1})(1-\lambda^{n+1}+\kappa)-\kappa]}\sum_{l=0}^{n-1}\alpha_{n-l}(l+1)(a_{l+1}+b_{l+1}),
 \end{eqnarray}
@@ -288,7 +288,7 @@ Primer orden
 \>............................................................  \>..................................................\\
 \>\textsl{Primero se crean dos variables $\theta,p$ del} \> \\
 \>\textsl{mapeo, como dos polinomios de grado} \>$\mathbf{x}_{1}=(\theta+... ,p+...)$  \\
-\>\textsl{mayor a uno que corresponden a $\mathbf{x}_{1}$ en \ref{sistema discreto}.}\>   \\
+\>\textsl{mayor a uno que corresponden a $\mathbf{x}_{1}$ en \eqref{sistema discreto}.}\>   \\
 \>\textsl{Se escogen de esta manera para }\>   \\
 \>\textsl{obtener una ecuación lineal. }\>   \\
 \>............................................................  \>..................................................\\
@@ -299,7 +299,7 @@ Primer orden
 \>............................................................  \>..................................................\\
 \>\textsl{Aplicamos el mapeo $\mathbf{f}_{\kappa}$ a los polinomios  }\> \\
 \>\textsl{anteriores lo cual corresponde al lado } \>$C_{1}=\mathbf{f}_{\kappa}(P_{\theta},P_{p})$  \\
-\>\textsl{izquierdo de \ref{Ecua de invariancia}.} \> \\
+\>\textsl{izquierdo de \eqref{Ecua de invariancia}.} \> \\
 \>............................................................  \>..................................................\\
 \end{tabbing} 
 
@@ -351,7 +351,7 @@ Segundo orden
 \>............................................................  \>..................................................\\
 \end{tabbing}
 \end{center}
-Necesitamos retomar el lado derecho de la ecuación de invariancia \ref{Ecua de invariancia} para el cual tenemos un polinomio que tiene como coeficientes los valores de $a_{i}$ multiplicados  con una potencia del valor propio.
+Necesitamos retomar el lado derecho de la ecuación de invariancia \eqref{Ecua de invariancia} para el cual tenemos un polinomio que tiene como coeficientes los valores de $a_{i}$ multiplicados  con una potencia del valor propio.
 \begin{eqnarray}
 \sum_{n=1}^{\infty}a_{n}\lambda^{n}t^{n}\\
 \sum_{n=1}^{\infty}b_{n}\lambda^{n}t^{n}
@@ -363,18 +363,18 @@ Necesitamos retomar el lado derecho de la ecuación de invariancia \ref{Ecua de 
 12\=34567890123456789012345678901234567890123456\=7890123456789012345678901234567890\kill%
 \>............................................................  \>..................................................\\
 \>\textsl{Escribimos el lado derecho de la} \> $P_{\theta\lambda} = \theta_{*}+a_{1}\lambda t +\theta\lambda^{2}t^{2}+O(t^{3}) $\\
-\>\textsl{ecuación \ref{Ecua de invariancia} como polinomios en $t$ }\>$ P_{p\lambda} = p_{*}+b_{1}\lambda t +p\lambda^{2}t^{2}+O(t^{3}) $\\ 
+\>\textsl{ecuación \eqref{Ecua de invariancia} como polinomios en $t$ }\>$ P_{p\lambda} = p_{*}+b_{1}\lambda t +p\lambda^{2}t^{2}+O(t^{3}) $\\ 
 \>............................................................  \>..................................................\\
 \end{tabbing}
 \end{center}
 
-Ahora que tenemos las dos partes de la ecuación \ref{Ecua de invariancia} para el orden 2 podemos resolverla.
+Ahora que tenemos las dos partes de la ecuación \eqref{Ecua de invariancia} para el orden 2 podemos resolverla.
 \begin{tabbing}
 12\=34567890123456789012345678901234567890123456\=7890123456789012345678901234567890\kill%
 \>............................................................  \>..................................................\\
 \>\textsl{Definimos una ecuación que será la } \> \\
 \>\textsl{resta de ambos lados de la expresión} \> $R :=C_{2}-P_{\lambda}=\mathbf{0} $\\
-\>\textsl{\ref{Ecua de invariancia} igualada a cero. Con tal condición} \> $h_{\theta}(\theta,p)t^{2}=(C_{2\theta}-\theta\lambda^{2})t^{2} $\\
+\>\textsl{\eqref{Ecua de invariancia} igualada a cero. Con tal condición} \> $h_{\theta}(\theta,p)t^{2}=(C_{2\theta}-\theta\lambda^{2})t^{2} $\\
 \>\textsl{el término de orden dos cumple una} \> $h_{p}(\theta,p)t^{2}=(C_{2p}-p\lambda^{2})t^{2}$\\
 \>\textsl{ecuación lineal inhomogénea, en donde}\> \\
 \>\textsl{la matriz se obtiene con el jacobiano. }\> $\mathbf{A_{2}}=\mathbf{J}(h_{\theta},h_{p})$\\ 
@@ -383,7 +383,7 @@ Ahora que tenemos las dos partes de la ecuación \ref{Ecua de invariancia} para 
 \>\textsl{ de $h_{\theta},h_{p}$ en $\mathbf{w}_{2}$.} \> \\
 \>............................................................  \>..................................................\\
 \>\textsl{Escribimos el sistema en forma} \> \\
-\>\textsl{matricial \ref{lineal A} y resolvemos multiplicando} \> $\mathbf{v}_{2}=\mathbf{A}_{2}^{-1}\mathbf{w}_{2}$\\ 
+\>\textsl{matricial \eqref{lineal A} y resolvemos multiplicando} \> $\mathbf{v}_{2}=\mathbf{A}_{2}^{-1}\mathbf{w}_{2}$\\ 
 \>\textsl{por la inversa del lado izquierdo}  \>\\
 \>............................................................  \>..................................................\\
 \>\textsl{El resultado de esta ecuación serán los} \> $\mathbf{v}_{2}=(a_{2},b_{2})$ \\
@@ -392,11 +392,11 @@ Ahora que tenemos las dos partes de la ecuación \ref{Ecua de invariancia} para 
 \>............................................................  \>..................................................\\
 \end{tabbing}
 
-La manera de proceder con el cálculo de los coeficientes de orden cúbico es la misma que la de orden cuadrático, en cada orden aparecerá la dependencia de $\lambda^{n}$ debida a lado derecho de la ecuación de invariancia y a la forma de la función $g$. En general una vez actualizados los valores $a_{n},b_{n}$ se agrega un orden más a los polinomios $P_{\theta},P_{p}$ así como a los de $P_{\theta\lambda},P_{p\lambda}$ en términos de las variables $\theta$ y $p$, se aplica el mapeo a los primeros y se escribe la resta igualada a cero de la ecuación \ref{Ecua de invariancia}. Con el jacobiano se obtiene la matriz del sistema $\mathbf{A}_{n+1}$ y con los términos independientes $\mathbf{w}_{n+1}$. Se resuelve el sistema mediante la inversa de $\mathbf{A}_{n}$ y se obtienen ahora los términos $a_{n+1},b_{n+1}$.\\
+La manera de proceder con el cálculo de los coeficientes de orden cúbico es la misma que la de orden cuadrático, en cada orden aparecerá la dependencia de $\lambda^{n}$ debida a lado derecho de la ecuación de invariancia y a la forma de la función $g$. En general una vez actualizados los valores $a_{n},b_{n}$ se agrega un orden más a los polinomios $P_{\theta},P_{p}$ así como a los de $P_{\theta\lambda},P_{p\lambda}$ en términos de las variables $\theta$ y $p$, se aplica el mapeo a los primeros y se escribe la resta igualada a cero de la ecuación \eqref{Ecua de invariancia}. Con el jacobiano se obtiene la matriz del sistema $\mathbf{A}_{n+1}$ y con los términos independientes $\mathbf{w}_{n+1}$. Se resuelve el sistema mediante la inversa de $\mathbf{A}_{n}$ y se obtienen ahora los términos $a_{n+1},b_{n+1}$.\\
 
 Notemos que es sólo el primer orden el que difiere en la forma del cálculo ya que en el primer paso se necesitan los valores y vectores propios. Salvo esos primeros términos los otros se pueden resumir en un sólo procedimiento. Tales características fuero las que permitieron automatizar el método. Las diferencias que surgen al resolver la ecuación lineal se toman en cuenta en el cálculo así como el error que se va acumulando en cada paso. \\
 
-Al tener la parametrización $P$ hasta un cierto orden $n$ es necesario calcular el error cometido al evaluar $t$. Tengamos en mente que los polinomios son desarrollos en series de Taylor al rededor del punto fijo por lo que nuestra parametrización es válida sólo en una vecindad cercana. Cómo ya vimos el error se calcula mediante \ref{Ecua de invariancia resta}. Si tenemos a $P=(P_{\theta},P_{p})$ entonces podemos proceder como se muestra a continuación.
+Al tener la parametrización $P$ hasta un cierto orden $n$ es necesario calcular el error cometido al evaluar $t$. Tengamos en mente que los polinomios son desarrollos en series de Taylor al rededor del punto fijo por lo que nuestra parametrización es válida sólo en una vecindad cercana. Cómo ya vimos el error se calcula mediante \eqref{Ecua de invariancia resta}. Si tenemos a $P=(P_{\theta},P_{p})$ entonces podemos proceder como se muestra a continuación.
 
 \begin{tabbing}
 12\=34567890123456789012345678901234567890123456\=7890123456789012345678901234567890\kill%
@@ -405,11 +405,11 @@ Al tener la parametrización $P$ hasta un cierto orden $n$ es necesario calcular
 \> ............................................................ \>............................................\\
 \>\textsl{Extraemos también los polinomios $P_{\lambda}$.}\> $P_{\lambda}=(P_{\theta\lambda},P_{p\lambda})$\\
 \> ............................................................ \>............................................\\
-\> \textsl{Usando la ecuación \ref{Ecua de invariancia resta}.}\> $\mathbf{E} =\mathbf{S}-P_{\lambda}$\\
+\> \textsl{Usando la ecuación \eqref{Ecua de invariancia resta}.}\> $\mathbf{E} =\mathbf{S}-P_{\lambda}$\\
 \> ............................................................ \>............................................\\
 
 \end{tabbing}
-El error será un conjunto de valores que resulten de evaluar la función \ref{Ecua de invariancia resta} para un conjunto $\tau = \lbrace t_{0},t_{1},..., t_{n} \rbrace$. \\
+El error será un conjunto de valores que resulten de evaluar la función \eqref{Ecua de invariancia resta} para un conjunto $\tau = \lbrace t_{0},t_{1},..., t_{n} \rbrace$. \\
 
 Usando este procedimiento se automatizó el método sin necesitar las ecuaciones de recurrencia, ya que mediante la manipulación algebraica de las series de Taylor se calcula fácilmente los nuevos términos de la parametrización. En general el método se desarrolló para las variedades inestables, ya que la misma dinámica de tal variedad permite llegar más lejos en la evaluación tanto de los coeficientes como del parámetro $t$ garantizando una mejor aproximación. Sin embargo la manera en la que se calculan las variedades estables es en esencia la misma, escogiendo el vector y valor propio adecuado se puede hacer el mismo análisis para la inestable. Hacerlo de ésta forma no será lo más conveniente pues la dinámica de la variedad provoca que mantenerse en la variedad estable sea numéricamente inestable. La forma más adecuada será calcular la variedad estable usando el mismo método para la variedad inestable del mapeo inverso. \\
 

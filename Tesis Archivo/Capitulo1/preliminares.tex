@@ -31,7 +31,7 @@ En el segundo caso
 \begin{eqnarray}
 \pmb x_{n+1}= \mathbf{f}(\pmb x_{n}) \quad \pmb x\in \mathbb{R}^{n}. \label{sistema discreto}
 \end{eqnarray}
-Para la ecuación \ref{sistema discreto} dada una condición inicial $\pmb x_{0}$ podemos obtener el estado siguiente evaluando el lado derecho con tal punto. De manera sucesiva se puede obtener el estado $\pmb x_{n+1}$ del estado $\pmb x_{n}$. La aplicación consecutiva de la función proporciona la trayectoria u órbita del punto inicial. Podemos decir que el mapeo es un isomorfismo entre la condición inicial y los puntos de la trayectoria,
+Para la ecuación \eqref{sistema discreto} dada una condición inicial $\pmb x_{0}$ podemos obtener el estado siguiente evaluando el lado derecho con tal punto. De manera sucesiva se puede obtener el estado $\pmb x_{n+1}$ del estado $\pmb x_{n}$. La aplicación consecutiva de la función proporciona la trayectoria u órbita del punto inicial. Podemos decir que el mapeo es un isomorfismo entre la condición inicial y los puntos de la trayectoria,
 \begin{eqnarray*}
 \pmb x_{k+1}=\mathbf{f}\circ\mathbf{f}\circ \mathbf{f} \circ \mathbf{f} ... \circ \mathbf{f} (\pmb x_{0})\quad (k \quad \textrm{veces})
 \end{eqnarray*}
@@ -48,7 +48,7 @@ Al conjunto $\lbrace \pmb x_{0},\pmb x_{1},...,\pmb x_{n} \rbrace$ se le llama l
 \end{itemize}
 Nos enfocaremos sobre todo en los puntos fijos, sin embargo es posible también analizar aquellos puntos de periodo mayor a uno.
 \section{Mapeos}
-Como mencionamos en la introducción existen diferentes características de los sistemas dinámicos, la forma en la que depende un estado del estado anterior es una de ellas. Esa dependencia está determinada por $\mathbf{f}$ en la ecuación \ref{sistema discreto}; gráficamente se describe en el espacio fase, que es el espacio de todos los posibles valores de $\pmb x$. En el mismo espacio la órbita de cualquier punto se ve como una curva que representa la evolución de un punto $\pmb x$ bajo el mapeo hacia adelante y hacia atrás. \\
+Como mencionamos en la introducción existen diferentes características de los sistemas dinámicos, la forma en la que depende un estado del estado anterior es una de ellas. Esa dependencia está determinada por $\mathbf{f}$ en la ecuación \eqref{sistema discreto}; gráficamente se describe en el espacio fase, que es el espacio de todos los posibles valores de $\pmb x$. En el mismo espacio la órbita de cualquier punto se ve como una curva que representa la evolución de un punto $\pmb x$ bajo el mapeo hacia adelante y hacia atrás. \\
 
 Las funciones que aparecen en el mapeo pueden contener términos con potencia mayor a uno, productos entre las variables o peor aún funciones mucho más difíciles de manejar, lo que hace que la suma de soluciones no sea solución, esa característica se llama no linealidad. Una de las primeras cosas a analizar serían los puntos fijos del sistema, los cuales deberán encontrarse algebráicamente o numéricamente dependiendo de la dificultad del mapeo. Supongamos que se tiene un punto fijo de un mapeo, al rededor del punto fijo pueden presentarse diversos comportamientos de las trayectorias; como el sistema es no lineal es difícil decir qué tipo de evolución sufre el sistema visto en el espacio fase.\\
 
@@ -217,46 +217,93 @@ Los sistemas Hamiltonianos son una clase particular de los sistemas dinámicos. 
 \begin{eqnarray}
 \mathbf{F}=-\nabla V. \label{fuerza potencial}
 \end{eqnarray}
-Podemos convertir la ecuación \ref{fuerza potencial} en un sistemas de ecuaciones diferenciales
+Podemos convertir la ecuación \eqref{fuerza potencial} en un sistemas de ecuaciones diferenciales
 \begin{eqnarray}
-\frac{dx_{i}}{dt}=v_{i};   \quad m\frac{dv_{i}}{dt}=-\nabla_{i} V,
-\label{fuerza sistema dif}
+\frac{dx_{i}}{dt}=v_{i}
+\label{fuerza sistema dif a}
 \end{eqnarray}
-las ecuaciones \ref{fuerza sistema dif} pueden obtenerse a partir de una función muy particular
 \begin{eqnarray}
-H(q,p)=\sum_{i=1}^{n} \frac{p_{i}^{2}}{2m}+V(q), \label{ec de hamilton} 
+m\frac{dv_{i}}{dt}=-\nabla_{i} V,
+\label{fuerza sistema dif b}
 \end{eqnarray}
-llamada Hamiltoniana, donde $p_{i}$ denota el momento y \textbf{$q$} la colección de las posiciones en forma de vector. Al observar \ref{ec de hamilton} y \ref{fuerza sistema dif} podemos notar que las ecuaciones de movimiento resultan
+las ecuaciones \eqref{fuerza sistema dif a}\eqref{fuerza sistema dif b} pueden obtenerse a partir de una función muy particular
 \begin{eqnarray}
-\frac{dq_{i}}{dt}=\frac{\partial H}{\partial p_{i}}; \quad
-\frac{dp_{i}}{dt}=-\frac{\partial H}{\partial q_{i}}.
-\label{ec de mov hamilton}
+H(q,p)=\frac{p^{2}}{2}+V(q)\sum_{n=-\infty}^{\infty}\delta(t-nT), 
+\label{ec de hamilton} 
+\end{eqnarray}
+llamada Hamiltoniana, donde $p$ denota el momento y $q$ la posición. Al observar \eqref{ec de hamilton} y \eqref{fuerza sistema dif a}\eqref{fuerza sistema dif b} podemos notar que las ecuaciones de movimiento resultan
+\begin{eqnarray}
+\frac{dq}{dt}=\frac{\partial H}{\partial p}
+\label{1ec de mov}
+\end{eqnarray}
+\begin{eqnarray}
+\frac{dp}{dt}=-\frac{\partial H}{\partial q},
+\label{2ec de mov}
+\end{eqnarray}
+de las cuales obtenemos 
+\begin{eqnarray}
+\frac{dq}{dt}=p\quad
+\label{SistemaH1}
+\end{eqnarray}
+\begin{eqnarray}
+\frac{dp}{dt}=-\frac{dV(q)}{dq}\sum_{n=-\infty}^{\infty}\delta(t-nT),
+\label{SistemaH2}
+\end{eqnarray}
+sin pérdida de generalidad podemos tomar $T=1$ e integrar la ecuación \eqref{SistemaH1} en el intervalo $[t_{n}-\epsilon,t_{n+1}-\epsilon]$ con $\epsilon>0$
+\begin{eqnarray}
+\int_{t_{n}-\epsilon}^{t_{n+1}-\epsilon}\frac{dq}{dt}dt=\int_{t_{n}-\epsilon}^{t_{n+1}-\epsilon}pdt,
+\label{integral1}
+\end{eqnarray}
+usando el teorema fundamental del cálculo
+\begin{eqnarray}
+q(t_{n+1}-\epsilon)-q(t_{n}-\epsilon)=\epsilon p(t_{n}-\epsilon)+(1-\epsilon)p(t_{n+1}-\epsilon).
+\label{integral2}
+\end{eqnarray}
+Hacemos lo mismo para la ecuación \eqref{SistemaH2}
+\begin{eqnarray}
+\int_{t_{n}-\epsilon}^{t_{n+1}-\epsilon}\frac{dp}{dt}dt=\int_{t_{n}-\epsilon}^{t_{n+1}-\epsilon}-\frac{dV(q)}{dq}\sum_{n=-\infty}^{\infty}\delta(t-n),
+\label{integral3}
+\end{eqnarray}
+resultando
+\begin{eqnarray}
+p(t_{n+1}-\epsilon)-p(t_{n}-\epsilon)=-\frac{dV(q)}{dq}.
+\label{integral4}
+\end{eqnarray}
+Tomando el límite cuando $\epsilon\rightarrow 0$ en las ecuaciones \eqref{integral2},\eqref{integral4} 
+\begin{eqnarray}
+q(t_{n+1})=p(t_{n+1})+q(t_{n}),
+\label{sistema hamilton a}
+\end{eqnarray}
+\begin{eqnarray}
+p(t_{n+1})=p(t_{n})-\frac{dV(q)}{dt}.
+\label{sistema hamilton b}
 \end{eqnarray}
 
-Algo análogo existe para sistemas discretos en donde la forma de la función Hamiltoniana se divide en dos partes, la derecha y la izquierda \cite{Tomoki}
-\begin{eqnarray}
-H_{d}^{+}(q_{k},p_{k+1})=p_{k+1}\cdot q_{k+1}-L_{d}(q_{k},q_{k+1}),
-\label{hamiltoniano discreto derecho}
-\end{eqnarray}
 
-\begin{eqnarray}
-H_{d}^{-}(p_{k},q_{k+1})=-p_{k}\cdot q_{k}-L_{d}(q_{k},q_{k+1}),
-\label{hamiltoniano discreto izquierdo}
-\end{eqnarray}
+%Algo análogo existe para sistemas discretos en donde la forma de la función Hamiltoniana se divide en dos partes, la derecha y la izquierda \cite{Tomoki}
+%\begin{eqnarray}
+%H_{d}^{+}(q_{k},p_{k+1})=p_{k+1}\cdot q_{k+1}-L_{d}(q_{k},q_{k+1}),
+%\label{hamiltoniano discreto derecho}
+%\end{eqnarray}
 
-la función $L_{d}$ es la Lagrangiana discreta que proviene del mismo principio variacional que en el caso continuo. Al definir $D_{1}F(a_{k},b_{k})=F(a_{k+1},b_{k})$ y  $D_{2}F(a_{k},b_{k})=F(a_{k},b_{k+1})$, como aplicaciones análogas a las derivadas de manera discreta  es fácil ver que las ecuaciones de movimiento análogas a las ecuaciones \ref{ec de mov hamilton} son ahora
-\begin{eqnarray}
-q_{k+1}=D_{2}H_{d}^{+}(q_{k},p_{k+1}); \quad p_{k}=D_{1}H_{d}^{+}(q_{k},p_{k+1}),
-\label{ec de mov hamilton derechas}
-\end{eqnarray}
-que también pueden ser expresadas en términos de las ecuaciones izquierdas 
-\begin{eqnarray}
-q_{k}=-D_{1}H_{d}^{-}(p_{k},q_{k+1}); \quad p_{k+1}=-D_{2}H_{d}^{-}(p_{k},q_{k+1}).
-\label{ec de mov hamilton izquierdas}
-\end{eqnarray}
-El mapeo se define de manera implícita a partir de las ecuaciones \ref{ec de mov hamilton derechas},\ref{ec de mov hamilton izquierdas} como $\mathbf{f}_{L_{d}}:(q_{k},p_{k})\mapsto(q_{k+1},p_{k+1})$.\\
+%\begin{eqnarray}
+%H_{d}^{-}(p_{k},q_{k+1})=-p_{k}\cdot q_{k}-L_{d}(q_{k},q_{k+1}),
+%\label{hamiltoniano discreto izquierdo}
+%\end{eqnarray}
 
-Físicamente hablando H es la energía total del sistema, que es invariante en el tiempo, $\frac{dH}{dt}=0$. La formulación Hamiltoniana de la mecánica no está limitada a sistemas que son de la forma  ``energía cinética más energía potencial'', ya que de manera más general una Hamiltoniana es cualquier función $C^{1}$, $H:M\rightarrow \mathbb{R}$ donde en nuestro caso $M$ es una variedad 2n-dimensional con coordenadas  $z=(q,p)$. 
+%la función $L_{d}$ es la Lagrangiana discreta que proviene del mismo principio variacional que en el caso continuo. Al definir $D_{1}F(a_{k},b_{k})=F(a_{k+1},b_{k})$ y  $D_{2}F(a_{k},b_{k})=F(a_{k},b_{k+1})$, como aplicaciones análogas a las derivadas de manera discreta  es fácil ver que las ecuaciones de movimiento análogas a las ecuaciones \ref{ec de mov hamilton} son ahora
+%\begin{eqnarray}
+%q_{k+1}=D_{2}H_{d}^{+}(q_{k},p_{k+1}); \quad p_{k}=D_{1}H_{d}^{+}(q_{k},p_{k+1}),
+%\label{ec de mov hamilton derechas}
+%\end{eqnarray}
+%que también pueden ser expresadas en términos de las ecuaciones izquierdas 
+%\begin{eqnarray}
+%q_{k}=-D_{1}H_{d}^{-}(p_{k},q_{k+1}); \quad p_{k+1}=-D_{2}H_{d}^{-}(p_{k},q_{k+1}).
+%\label{ec de mov hamilton izquierdas}
+%\end{eqnarray}
+%El mapeo se define de manera implícita a partir de las ecuaciones \ref{ec de mov hamilton derechas},\ref{ec de mov hamilton izquierdas} como $\mathbf{f}_{L_{d}}:(q_{k},p_{k})\mapsto(q_{k+1},p_{k+1})$.\\
+
+%Físicamente hablando H es la energía total del sistema, que es invariante en el tiempo, $\frac{dH}{dt}=0$. La formulación Hamiltoniana de la mecánica no está limitada a sistemas que son de la forma  ``energía cinética más energía potencial'', ya que de manera más general una Hamiltoniana es cualquier función $C^{1}$, $H:M\rightarrow \mathbb{R}$ donde en nuestro caso $M$ es una variedad 2n-dimensional con coordenadas  $z=(q,p)$. 
 
 
 
@@ -315,12 +362,11 @@ Físicamente hablando H es la energía total del sistema, que es invariante en e
 %\begin{eqnarray}
 %q_{i+1}=q_{i}+\Delta t p_{i} ;\quad p_{i+1}=p_{i}-\Delta t\left( \frac{\partial V}{\partial q_{i} } \right)_{q=q_{i+1}} \label{hamilton sistema dinamico}
 %\end{eqnarray}
-Las ecuaciones \ref{ec de mov hamilton derechas},\ref{ec de mov hamilton izquierdas} ya está en forma de un sistema de los que estudiamos anteriormente. Para linearizar el sistema calculamos el jacobiano
+Las ecuaciones \eqref{sistema hamilton a},\eqref{sistema hamilton b} ya está en forma de un sistema de los que estudiamos anteriormente. Para linearizar el sistema calculamos el jacobiano
 \begin{eqnarray}
-\mathbf{J}=\frac{\partial(q_{k+1},p_{k+1})}{\partial(q_{k},p_{k})}.
+\mathbf{J}=\frac{\partial(q_{n+1},p_{n+1})}{\partial(q_{n},p_{n})},
 \end{eqnarray}
-
-Es justo de este sistema linearizado de donde obtendremos información a partir de aplicar los teoremas y resultados de las secciones anteriores. 
+con $q_{n+1}=q(t_{n+1})$ y análogamente para $p$. Es justo de este sistema linearizado de donde obtendremos información a partir de aplicar los teoremas y resultados de las secciones anteriores. 
 %Pero antes, notemos que el determinante es uno
 %\begin{eqnarray*}
 %det(\mathbf{J})=1+(\Delta t)^{2}\left( \frac{\partial^{2} V}{\partial q^{2} } \right)_{q=q_{i+1}}
@@ -338,7 +384,7 @@ Es justo de este sistema linearizado de donde obtendremos información a partir 
 \section{Método de parametrización}
 Como ya observamos en la sección anterior encontrar las variedades asociadas a un punto fijo no es trivial. Los métodos analíticos se vuelven no sólo tediosos si no que hacen necesario que el análisis de un sistema se haga de forma personalizada. Y para encontrar tales variedades debemos explotar los conocimientos que tenemos sobre los sistemas. Algunas de estas características son realmente simples, por ejemplo sabemos que en un punto hiperbólico resultarán dos variedades asociadas a los valores propios de la matriz que representa el sistema linearizado. Para este trabajo nos concentraremos en los sistemas Hamiltonianos ya que estos preservan el área y son importantes en la física, sin embargo el método funciona también para sistemas no Hamiltonianos. El objetivo de esta sección es hablar sobre el método de parametrización el cual fue desarrollado por X.Cabré, E. Fontich y R. de la Llave \cite{Haro}. El método fue desarrollado de manera general para conjuntos invariantes, se trata de un método semianalítico, es decir parte computacional y parte analítica.\\
 
-Para ahondar en el método recordemos que anteriormente mencionamos que los conjuntos \ref{variedad estable}, \ref{variedad inestable} son conjuntos invariantes. Por otro lado también recordemos la definición de sistema dinámico que nos dice que se trata de un semigrupo actuando sobre un espacio $M$, la manera en la que se genera el sistema es con un difeomorfismo $\mathbf{f}:M \rightarrow M$. En este mismo espacio $M$ definamos una inmersión inyectiva $P:\Theta \rightarrow M$  lo cual nos define una subvariedad $P$  parametrizada por medio de las variables locales en $\theta \in \Theta$. La variedad invariante parametrizada por $P$  junto con $g:\Theta \rightarrow \Theta$ deben cumplir 
+Para ahondar en el método recordemos que anteriormente mencionamos que los conjuntos \eqref{variedad estable}, \eqref{variedad inestable} son conjuntos invariantes. Por otro lado también recordemos la definición de sistema dinámico que nos dice que se trata de un semigrupo actuando sobre un espacio $M$, la manera en la que se genera el sistema es con un difeomorfismo $\mathbf{f}:M \rightarrow M$. En este mismo espacio $M$ definamos una inmersión inyectiva $P:\Theta \rightarrow M$  lo cual nos define una subvariedad $P$ parametrizada por medio de las variables locales en $\theta \in \Theta$. La variedad invariante parametrizada por $P$  junto con $g:\Theta \rightarrow \Theta$ deben cumplir 
 \begin{eqnarray}
 \mathbf{f} \circ P = P \circ g,  \label{Ecua de invariancia}
 \end{eqnarray}
@@ -351,17 +397,17 @@ M\subset\mathbb{R}^{n} \ar[r]^{\mathbf{f}} & M\subset\mathbb{R}^{n}
 }\label{conmutativo}
 \end{eqnarray}
 
-En este sentido $g$ representa un subsistema de $\mathbf{f}$, en otras palabras $g$ contiene la dinámica del mapeo pero sobre $\Theta$. El objetivo del método de parametrización es encontrar $P$ y $g$ que cumplan la ecuación de invariancia \ref{Ecua de invariancia}. Aunque no conozcamos la dinámica interna de $g$ sabemos que $P,g$ son soluciones de \ref{Ecua de invariancia}, si observamos el diagrama \ref{conmutativo} es claro que la composición también lo es y eso nos dará una libertad para resolver la ecuación. El obstáculo, de no conocer $g$, se puede pasar si se escoge una forma de parametrización que dependa del sistema; en el método de parametrización se tienen descritas dos formas: la forma gráfica y la forma normal. Usaremos el método de la forma gráfica, que es la forma más simple de parametrización. Consiste en adaptar la forma de la parametrización $P$ a la forma de las variedades, la cual esta relacionada con la dirección que proporcionan los vectores propios. Para el caso de una matriz hiperbólica de $2\times 2$ sus vectores propios nos indicarán, suficientemente cerca del punto fijo, la dirección de cada variedad. \\
+En este sentido $g$ representa un subsistema de $\mathbf{f}$, en otras palabras $g$ contiene la dinámica del mapeo pero sobre $\Theta$. El objetivo del método de parametrización es encontrar $P$ y $g$ que cumplan la ecuación de invariancia \eqref{Ecua de invariancia}. Aunque no conozcamos la dinámica interna de $g$ sabemos que $P,g$ son soluciones de \eqref{Ecua de invariancia}, si observamos el diagrama \eqref{conmutativo} es claro que la composición también lo es y eso nos dará una libertad para resolver la ecuación. El obstáculo, de no conocer $g$, se puede pasar si se escoge una forma de parametrización que dependa del sistema; en el método de parametrización se tienen descritas dos formas: la forma gráfica y la forma normal. Usaremos el método de la forma gráfica, que es la forma más simple de parametrización. Consiste en adaptar la forma de la parametrización $P$ a la forma de las variedades, la cual esta relacionada con la dirección que proporcionan los vectores propios. Para el caso de una matriz hiperbólica de $2\times 2$ sus vectores propios nos indicarán, suficientemente cerca del punto fijo, la dirección de cada variedad. \\
 
 
-La forma en la que se escoge $g$, en la mayoría de las veces, es polinomial de tal manera que se adapte a la forma del mapeo. Sin embargo la elección puede ser diferente dependiendo del sistema. En este caso escogimos la dependencia más sencilla para $x,y$ \ref{fun g} que resulta ser suficiente en el caso hiperbólico
+La forma en la que se escoge $g$, en la mayoría de las veces, es polinomial de tal manera que se adapte a la forma del mapeo. Sin embargo la elección puede ser diferente dependiendo del sistema. En este caso escogimos la dependencia más sencilla para $x,y$ \eqref{fun g} que resulta ser suficiente en el caso hiperbólico
 \begin{eqnarray}
 g(t) = (\lambda t,\lambda t).
 \label{fun g}
 \end{eqnarray}
-Con esto tendremos del lado derecho de la ecuación \ref{Ecua de invariancia} un polinomio. \\
+Con esto tendremos del lado derecho de la ecuación \eqref{Ecua de invariancia} un polinomio. \\
 
-Supongamos ahora que tenemos ya las variedades parametrizadas, para este punto es importante tener una función que nos indique que tan acertada es nuestra parametrización. La primera y más fácil forma de calcular el error es a partir de la ecuación \ref{Ecua de invariancia}, mediante la resta
+Supongamos ahora que tenemos ya las variedades parametrizadas, para este punto es importante tener una función que nos indique que tan acertada es nuestra parametrización. La primera y más fácil forma de calcular el error es a partir de la ecuación \eqref{Ecua de invariancia}, mediante la resta
 \begin{eqnarray}
 E_{n}(t) = \parallel \mathbf{f} \circ P_{n} - P_{n} \circ g \parallel_{\infty}.  \label{Ecua de invariancia resta}
 \end{eqnarray}

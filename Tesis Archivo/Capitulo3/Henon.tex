@@ -10,7 +10,7 @@ En el mapeo estándar \eqref{mapeo estandar} uno de los puntos fijos es el orige
 \begin{figure}[H]
  \centering
  \includegraphics[scale=0.6]{estandark03}
- \caption{$W^{s},W^{u}$ de oden $25$ en el mapeo estándar con $\kappa=0.3$ y $t_{max}=3.0$.}
+ \caption{\footnotesize $W^{s},W^{u}$ de oden $25$ en el mapeo estándar con $\kappa=0.3$ y $t_{max}=3.0$.}
  \label{estandar03}
 \end{figure}
 
@@ -89,7 +89,7 @@ Usar el mapeo inverso para calcular la variedad estable resulta ser mejor que us
 
 
 
-\section{Mapeo de Hénon}
+\label{henon-seccion}\section{Mapeo de Hénon}
 El mapeo de Hénon se define como \cite{devaney}
 \begin{eqnarray}
 \mathbf{f}_{a,b}(x,y)=\left( \begin{array}{lcc}
@@ -197,7 +197,7 @@ En las figuras \ref{Henon2}, \ref{Henon3} se muestran las variedades calculadas 
 
 Así que con el orden suficiente es posible observar los cruces de ambas variedades, retomaremos esto en la última sección. 
 
-\section{Mapeo exponencial}
+\label{jung-seccion}\section{Mapeo exponencial}
 El último mapeo que se estudió fue uno presentado en el artículo \citep{Jung} el cual queda definido por 
 \begin{eqnarray}
 \mathbf{j}_{a}(x,y)=\left(\begin{array}{lcc}
@@ -493,14 +493,14 @@ En el caso del mapeo de Hénon con $a=6.5$ se calcularon polinomios de orden 250
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{rectangulo-fundamental}
+\includegraphics[scale=0.4]{rectangulo-fundamental}
 \caption{Variedades estable e inestable de orden 250, para el mapeo de Hénon con $a=6.5,b=1.$, con $t_{max}=100$. El punto c) denota el punto fijo mientras que  a),b),d) son las primeras intersecciones de las variedades.}
 \label{rectangulo0}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{error-rectangulo}
+\includegraphics[scale=0.6]{error-rectangulo}
 \caption{Error asociado al cálculo de las variedades en la figura \ref{rectangulo0}}.
 \label{ErrorRectangulo0}
 \end{figure} 
@@ -537,40 +537,81 @@ W_{0}^{s}(\frac{t}{\lambda^{s}})=f_{a,b}(W_{0}^{s}(t)).
 Siendo que $\vert \lambda^{s} \vert < 1 $ la ecuación \eqref{InvarianciaEstable3} muestra que aplicar el mapeo es análogo a tener la variedad estable evaluada en un valor mayor del parámetro, puesto que $1/\lambda^{s}>1$. Este resultado es análogo para la variedad inestable. Usando esto se obtuvo la figura \ref{Rectangulo1}, que muestra el resultado de la iterar una vez, $(W_{x1}^{s},W_{y1}^{s})=f_{a,b}(W_{x}^{s},W_{y}^{s})$, análogamente para las inestables, evaluando los nuevos polinomios exactamente en los mismos intervalos que en el caso de la figura \ref{rectangulo0}.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{rectangulo1}
+\includegraphics[scale=0.6]{rectangulo1}
 \caption{Primera aplicación del mapeo a los polinomios de orden 250, $t_{max}=100$}.
 \label{Rectangulo1}
 \end{figure}
-La segunda aplicación de los mapeos a los polinomios, $(W_{x2}^{s},W_{y2}^{s})=f_{a,b}(W_{x1}^{s},W_{y1}^{s})$ se muestra en la figura \ref{Rectangulo2}, de nuevo usando el mismo valor máximo del parámetro $t$.
+El cálculo con el que se obtiene la figura \ref{Rectangulo1} produce un nuevo polinomio el cual tiene asociado también un error numérico. Para saber cuál es este error se usó la ecuación \eqref{InvarianciaEstable3},
+\begin{eqnarray}
+E_{1}(t)=\parallel W_{0}^{s}(\frac{t}{\lambda^{s}})-f_{a,b}(W_{0}^{s}(t))\parallel_{\infty},
+\label{error-1aplicacion}
+\end{eqnarray}
+está forma es análoga a la ecuación \eqref{Ecua de invariancia resta} la cual se representa en la figura \ref{error-1iteracion}. De la misma manera se evalúa el error en las aplicaciones consecutivas, el cual podemos expresar como
+\begin{eqnarray}
+E_{n}(t)=\parallel (f^{-1}_{k})^{n}(W_{0}^{s}(\frac{t}{\lambda^{s}}))- (f^{-1}_{k})^{n-1}(W_{0}^{s}(t)))\parallel_{\infty}.
+\label{error-n-aplicacion}
+\end{eqnarray}
+En la ecuación \eqref{error-n-aplicacion} $n$ representa el número de aplicaciones del mapeo mientras que $W_{0}$ es la parametrización inicial calculada mediante el método.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{error1ite}
+\caption{Error en el polinomio que resulta de aplicar el mapeo a la parametrización de orden 250.}
+\label{error-1iteracion}
+\end{figure}
+Se puede observar en la figura \ref{error-1iteracion} que el error es mínimo en ambas variedades, manteniéndose por debajo del orden de $10^{-70}$, las líneas verticales son producto de valores numéricos que aparecen como cero al evaluar el polinomio a los cuales se les sumó un valor del orden de $10^{-120}$ para poder evaluar el logaritmo base $10$ del error. Si revisamos en la sección \ref{henon-seccion} el error crece mucho más rápido cuando sólo se usa el polinomio que resulta de la parametrización, además de que no es posible llegar tan lejos como se muestra en las figuras \ref{Rectangulo1}-\ref{Rectangulo5}.
+
+La segunda aplicación del mapeo a los polinomios, $(W_{x2}^{s},W_{y2}^{s})=f_{a,b}(W_{x1}^{s},W_{y1}^{s})$ se muestra en la figura \ref{Rectangulo2}, de nuevo usando el mismo valor máximo del parámetro $t$, además en la figura \ref{error-2iteracion} muestra el error asociado a tal resulado.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{rectangulo2}
-\caption{Segunda aplicación del mapeo a los polinomios de orden 250.}.
+\includegraphics[scale=0.6]{rectangulo2}
+\caption{Segunda aplicación del mapeo a los polinomios de orden 250.}
 \label{Rectangulo2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{error2ite}
+\caption{Error en el polinomio que resulta de aplicar el mapeo por segunda vez a la parametrización de orden 250.}
+\label{error-2iteracion}
 \end{figure}
 
 De manera sucesiva se aplicaron los mapeos correspondientes hasta iterar cinco veces, siempre conservando el mismo valor máximo del parámetro $t$.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{rectangulo3}
+\includegraphics[scale=0.6]{rectangulo3}
 \caption{Tercer aplicación del mapeo a los polinomios de orden 250.}.
 \label{Rectangulo3}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{rectangulo4A}
+\includegraphics[scale=0.6]{error3ite}
+\caption{Error en el polinomio que resulta de aplicar el mapeo por tercera vez a la parametrización de orden 250.}
+\label{error-3iteracion}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{rectangulo4A}
 \caption{Cuarta aplicación del mapeo a los polinomios de orden 250.}.
 \label{Rectangulo4}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{rectangulo5}
+\includegraphics[scale=0.6]{error4ite}
+\caption{Error en el polinomio que resulta de aplicar el mapeo por cuarta vez a la parametrización de orden 250.}
+\label{error-4iteracion}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{rectangulo5}
 \caption{Quinta aplicación del mapeo a los polinomios de orden 250.}.
 \label{Rectangulo5}
 \end{figure}
 
-En las primeras dos iteraciones de los polinomios se puede observar un tentáculo más en cada variedad, mientras que en las siguientes aparecen hasta dos más. La profundidad de tentáculos y la forma en la que se cruzan, depende del valor del parámetro $a$. Hay que enfatizar que para lograr observar estos cruces de manera directa, se debería llegar a valores del parámetro muy grandes comparados con el valor que se usó en todos los casos, lo cual no siempre es posible pues como se vio en la sección \ref{SeccionEstandar} después de cierto orden el error se estanca y no es posible llegar tan lejos con errores controlables. Con esto mostramos que sólo se necesita conocer el rectángulo fundamental para conocer mucho de la dinámica de las variedades, y por tanto de los cruces entre ellas. 
+En las primeras dos aplicaciones del mapeo, \ref{Rectangulo2} y \ref{Rectangulo3}, se puede observar un tentáculo más en cada variedad, mientras que en las siguientes aparecen hasta dos más. La profundidad de tentáculos y la forma en la que se cruzan, depende del valor del parámetro $a$. Hay que enfatizar que para lograr observar estos cruces de manera directa, se debería llegar a valores del parámetro muy grandes comparados con el valor que se usó en todos los casos, lo cual no siempre es posible pues como se vio en la sección \ref{SeccionEstandar} después de cierto orden el error se estanca y no es posible llegar tan lejos con errores controlables, mientras que como muestran las figuras \ref{error-1iteracion}-\ref{error-4iteracion} el error es mucho menor que si se usará un polinomio de orden grande$(>250)$. Con esto mostramos que sólo se necesita conocer el rectángulo fundamental para conocer mucho de la dinámica de las variedades, y por tanto de los cruces entre ellas. 
 
 

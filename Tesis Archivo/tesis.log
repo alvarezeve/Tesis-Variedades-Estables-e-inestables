@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.10.3)  25 SEP 2018 01:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.10.3)  9 OCT 2018 00:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1567,17 +1567,17 @@ File: cruce_estandar.png Graphic file (type png)
 Package pdftex.def Info: cruce_estandar.png used on input line 326.
 (pdftex.def)             Requested size: 352.10216pt x 265.37749pt.
 
-<error_cruces_estandar.png, id=681, 586.8324pt x 442.2924pt>
+<error_cruces_estandar.png, id=681, 513.8397pt x 408.3255pt>
 File: error_cruces_estandar.png Graphic file (type png)
 
 <use error_cruces_estandar.png>
 Package pdftex.def Info: error_cruces_estandar.png used on input line 334.
-(pdftex.def)             Requested size: 352.10216pt x 265.37749pt.
+(pdftex.def)             Requested size: 308.3062pt x 244.99718pt.
 LaTeX Info: Redefining \. on input line 338.
 LaTeX Info: Redefining \% on input line 338.
  [39 <./cruce_estandar.png>]
-LaTeX Info: Redefining \. on input line 350.
-LaTeX Info: Redefining \% on input line 350.
+LaTeX Info: Redefining \. on input line 351.
+LaTeX Info: Redefining \% on input line 351.
  [40 <./error_cruces_estandar.png>] <crucesL.png, id=699, 684.5575pt x 537.0062
 6pt>
 File: crucesL.png Graphic file (type png)
@@ -1781,16 +1781,16 @@ LaTeX Info: Redefining \% on input line 507.
 File: rectangulo1.png Graphic file (type png)
  <use rectangulo1.png>
 Package pdftex.def Info: rectangulo1.png used on input line 540.
-(pdftex.def)             Requested size: 307.43895pt x 244.56355pt.
+(pdftex.def)             Requested size: 256.19652pt x 203.80089pt.
 LaTeX Info: Redefining \. on input line 544.
 LaTeX Info: Redefining \% on input line 544.
 
-[52 <./error-rectangulo.png>] <error1ite.png, id=841, 521.0667pt x 408.3255pt>
+[52 <./error-rectangulo.png>]
+<error1ite.png, id=841, 723.70375pt x 567.11874pt>
 File: error1ite.png Graphic file (type png)
-
-<use error1ite.png>
+ <use error1ite.png>
 Package pdftex.def Info: error1ite.png used on input line 558.
-(pdftex.def)             Requested size: 312.64243pt x 244.99718pt.
+(pdftex.def)             Requested size: 289.47636pt x 226.84348pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1799,64 +1799,64 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: rectangulo2.png Graphic file (type png)
  <use rectangulo2.png>
 Package pdftex.def Info: rectangulo2.png used on input line 567.
-(pdftex.def)             Requested size: 307.43895pt x 244.56355pt.
-LaTeX Info: Redefining \. on input line 570.
-LaTeX Info: Redefining \% on input line 570.
-
-[53 <./rectangulo1.png>]
+(pdftex.def)             Requested size: 256.19652pt x 203.80089pt.
 LaTeX Info: Redefining \. on input line 571.
 LaTeX Info: Redefining \% on input line 571.
- [54 <./error1ite.png>]
-<error2ite.png, id=866, 529.0164pt x 408.3255pt>
-File: error2ite.png Graphic file (type png)
- <use error2ite.png>
-Package pdftex.def Info: error2ite.png used on input line 574.
-(pdftex.def)             Requested size: 317.4123pt x 244.99718pt.
 
-<rectangulo3.png, id=867, 512.3943pt x 407.6028pt>
+[53 <./rectangulo1.png>] <error2ite.png, id=861, 723.70375pt x 567.11874pt>
+File: error2ite.png Graphic file (type png)
+
+<use error2ite.png>
+Package pdftex.def Info: error2ite.png used on input line 574.
+(pdftex.def)             Requested size: 289.47636pt x 226.84348pt.
+LaTeX Info: Redefining \. on input line 578.
+LaTeX Info: Redefining \% on input line 578.
+ [54 <./error1ite.png> <./rectangulo2.png>]
+<rectangulo3.png, id=868, 512.3943pt x 407.6028pt>
 File: rectangulo3.png Graphic file (type png)
  <use rectangulo3.png>
 Package pdftex.def Info: rectangulo3.png used on input line 582.
-(pdftex.def)             Requested size: 307.43895pt x 244.56355pt.
-LaTeX Info: Redefining \. on input line 585.
-LaTeX Info: Redefining \% on input line 585.
+(pdftex.def)             Requested size: 256.19652pt x 203.80089pt.
 
-[55 <./rectangulo2.png> <./error2ite.png>]
-<error3ite.png, id=874, 529.0164pt x 408.3255pt>
+<error3ite.png, id=869, 734.745pt x 567.11874pt>
 File: error3ite.png Graphic file (type png)
  <use error3ite.png>
 Package pdftex.def Info: error3ite.png used on input line 589.
-(pdftex.def)             Requested size: 317.4123pt x 244.99718pt.
+(pdftex.def)             Requested size: 293.89279pt x 226.84348pt.
 LaTeX Info: Redefining \. on input line 593.
 LaTeX Info: Redefining \% on input line 593.
- [56 <./rectangulo3.png>] <rectangulo4A.png, id=881, 512.3943pt x 407.6028pt>
+ [55 <./error2ite.png> <./rectangulo3.png>]
+<rectangulo4A.png, id=877, 512.3943pt x 407.6028pt>
 File: rectangulo4A.png Graphic file (type png)
-
-<use rectangulo4A.png>
+ <use rectangulo4A.png>
 Package pdftex.def Info: rectangulo4A.png used on input line 596.
-(pdftex.def)             Requested size: 307.43895pt x 244.56355pt.
-LaTeX Info: Redefining \. on input line 600.
-LaTeX Info: Redefining \% on input line 600.
- [57 <./error3ite.png>]
-<error4ite.png, id=889, 528.2937pt x 408.3255pt>
+(pdftex.def)             Requested size: 256.19652pt x 203.80089pt.
+
+<error4ite.png, id=878, 734.745pt x 567.11874pt>
 File: error4ite.png Graphic file (type png)
  <use error4ite.png>
 Package pdftex.def Info: error4ite.png used on input line 603.
-(pdftex.def)             Requested size: 316.97867pt x 244.99718pt.
+(pdftex.def)             Requested size: 293.89279pt x 226.84348pt.
 LaTeX Info: Redefining \. on input line 607.
 LaTeX Info: Redefining \% on input line 607.
- [58 <./rectangulo4A.png>] <rectangulo5.png, id=896, 512.3943pt x 407.6028pt>
+ [56 <./error3ite.png> <./rectangulo4A.png>]
+<rectangulo5.png, id=887, 512.3943pt x 407.6028pt>
 File: rectangulo5.png Graphic file (type png)
-
-<use rectangulo5.png>
+ <use rectangulo5.png>
 Package pdftex.def Info: rectangulo5.png used on input line 610.
-(pdftex.def)             Requested size: 307.43895pt x 244.56355pt.
-LaTeX Info: Redefining \. on input line 614.
-LaTeX Info: Redefining \% on input line 614.
- [59 <./error4ite.png>])
+(pdftex.def)             Requested size: 256.19652pt x 203.80089pt.
+
+<error5ite.png, id=888, 734.745pt x 567.11874pt>
+File: error5ite.png Graphic file (type png)
+ <use error5ite.png>
+Package pdftex.def Info: error5ite.png used on input line 617.
+(pdftex.def)             Requested size: 293.89279pt x 226.84348pt.
+LaTeX Info: Redefining \. on input line 621.
+LaTeX Info: Redefining \% on input line 621.
+ [57 <./error4ite.png> <./rectangulo5.png>])
 LaTeX Info: Redefining \. on input line 107.
 LaTeX Info: Redefining \% on input line 107.
- [60 <./rectangulo5.png>]
+ [58 <./error5ite.png>]
 \openout2 = `Capitulo4/conclusiones-p.aux'.
 
 
@@ -1877,7 +1877,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-[61
+[59
 
 
 
@@ -1894,11 +1894,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 )
 LaTeX Info: Redefining \. on input line 109.
 LaTeX Info: Redefining \% on input line 109.
- [62] (./tesis.bbl (./tesis.brf)
+ [60] (./tesis.bbl (./tesis.brf)
 \tf@brf=\write6
 \openout6 = `tesis.brf'.
 
- [63
+ [61
 
 
 ]
@@ -1921,11 +1921,11 @@ b.com/JuliaIntervals/IntervalRootFinding.jl.
 
 LaTeX Info: Redefining \. on input line 160.
 LaTeX Info: Redefining \% on input line 160.
-[64])
+[62])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
 LaTeX Info: Redefining \. on input line 132.
 LaTeX Info: Redefining \% on input line 132.
- [65]
+ [63]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 132.
  (./tesis.aux
 LaTeX Info: Redefining \. on input line 21.
@@ -1937,7 +1937,7 @@ LaTeX Info: Redefining \% on input line 21.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
 Package rerunfilecheck Info: File `tesis.out' has not changed.
-(rerunfilecheck)             Checksum: F37F06E37A132C797AAAB356F13F2B85;1558.
+(rerunfilecheck)             Checksum: 802796E27B02F3015F60E8CD4A689CC8;1558.
 Package rerunfilecheck Info: File `tesis.brf' has not changed.
 (rerunfilecheck)             Checksum: E38E1D7171914FFCFC889B60F01B6225;1499.
 
@@ -1950,10 +1950,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
- 15652 strings out of 494925
- 232682 string characters out of 6178544
- 383635 words of memory out of 5000000
- 18185 multiletter control sequences out of 15000+600000
+ 15657 strings out of 494925
+ 232787 string characters out of 6178544
+ 383775 words of memory out of 5000000
+ 18190 multiletter control sequences out of 15000+600000
  19937 words of font info for 81 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  43i,18n,46p,3237b,697s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2125,10 +2125,10 @@ onts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on tesis.pdf (75 pages, 2954260 bytes).
+Output written on tesis.pdf (73 pages, 2779129 bytes).
 PDF statistics:
- 1123 PDF objects out of 1200 (max. 8388607)
- 894 compressed objects within 9 object streams
- 276 named destinations out of 1000 (max. 500000)
- 442 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1118 PDF objects out of 1200 (max. 8388607)
+ 889 compressed objects within 9 object streams
+ 275 named destinations out of 1000 (max. 500000)
+ 447 words of extra memory for PDF output out of 10000 (max. 10000000)
 

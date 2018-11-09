@@ -3,21 +3,20 @@
 %           Capítulo 2: MARCO TEÓRICO - REVISIÓN DE LITERATURA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Método de parametrización}
-En este capítulo describimos cómo se realizó el método de parametrización aplicado a sistemas Hamiltonianos. Se comienza explicando el análisis del mapeo estándar siguiendo el trabajo de Mireles James \cite{Mireles}. A partir de este trabajo se generalizó el método para los sistemas Hamiltonianos de dos dimensiones de manera que dado un mapeo el método programado en Julia pudiera calcular de manera recurrente los polinomios asociados a las variedades.
-\section{Desarrollo explícito del mapeo estándar}
-Para desarrollar el método de parametrización de manera automática se usó como base el desarrollo que aparece en las notas \cite{Mireles}. En este trabajo se expone de manera explícita cómo se calculan las variedades estables e inestables para el mapeo estándar. La razón por la que se usa este mapeo es dado que preserva área y que puede ser pensado como una perturbación de un mapeo integrable en el toro, además de que exhibe la dinámica asociada a mapeos Hamiltonianos. El mapeo estándar tiene la forma\\
+En este capítulo describimos cómo se implementó el método de parametrización aplicado a sistemas Hamiltonianos. Se comienza explicando el análisis del mapeo estándar siguiendo el trabajo de Mireles James \cite{Mireles}. A partir de este trabajo se generalizó el método para los sistemas Hamiltonianos de dos dimensiones de manera que dado un mapeo el método programado en Julia pudiera calcular de manera recurrente los polinomios asociados a las variedades.
+\section{Desarrollo explícito para el mapeo estándar}
+Para desarrollar el método de parametrización de manera automática se usó como base el desarrollo que aparece en las notas \cite{Mireles}. En este trabajo se expone de manera explícita cómo se calculan las variedades estables e inestables para el mapeo estándar. El mapeo estándar tiene la forma\\
 \begin{eqnarray}
 \mathbf{f}_{k}(\theta,p) = \left[\begin{array}{c}
 \theta + p \\
 p + k\sin(\theta +p)
 \end{array}\right] \mod(2\pi),  \label{mapeo estandar}
 \end{eqnarray}
-
 mientras el inverso es
 \begin{eqnarray}
-\mathbf{f}_{k}^{-1}(\theta,p) = \left[\begin{array}{c}
-\theta  -k\sin(p-\theta) \\
-p -\theta
+\mathbf{f}_{k}^{-1}(p,\theta) = \left[\begin{array}{c}
+p  -k\sin(\theta) \\
+\theta-p+k\sin{\theta}
 \end{array}\right] \mod(2\pi). \label{mapeo estandar inverso}
 \end{eqnarray}
 Los puntos fijos del mapeo serán aquellos que 
@@ -57,7 +56,7 @@ los cuales son hiperbólicos para cualqier $k>0$. Mientras que para $\mathbf{x}_
 \end{eqnarray}
 resultan valores complejos, por lo que para el análisis sólo se ocupará el punto $\mathbf{x_{1}}$.\\
 
-Proponemos a las variables como dos polinomios en $t$, para encontrar la parametrización de las variedades
+Escribimos a las variables ($\theta,p$) como dos polinomios en $t$, para encontrar la parametrización de las variedades
 \begin{eqnarray}
 \theta(t)=\sum_{n=0}^{\infty}a_{n}t^{n}  ,
 \label{theta}
@@ -67,7 +66,7 @@ y
 p(t)=\sum_{n=0}^{\infty}b_{n}t^{n},
 \label{p}
 \end{eqnarray}
-tal que $P(t):=(\theta(t),p(t))$. Necesitamos la parametrización también de la dinámica interna $g$, para la cual proponemos que $g(t)=\lambda t$ con $\lambda$ una constante. Después de sustituir esto en la \eqref{Ecua de invariancia} para el mapeo estándar obtenemos
+tal que $P(t):=(\theta(t),p(t))$. Necesitamos la parametrización también de la dinámica interna $g$, para la cual usamos la ecuación \ref{fun g}. Después de sustituir esto en la \eqref{Ecua de invariancia} para el mapeo estándar obtenemos
 \begin{eqnarray}
 \mathbf{f}_{k}(\theta,p) = \left[\begin{array}{c}
 \theta(t) + p(t) \\
@@ -91,10 +90,10 @@ que en forma explícita es
 \end{eqnarray}
 Desarrollando el primer renglón de la ecuación \eqref{expandida}
 \begin{eqnarray}
-a_{0}+a_{1}t+a_{2}t^{2}+... +b_{0}+b_{1}t+b_{2}t^{2}+ ...=a_{0}+a_{1}\lambda t+...
+a_{0}+a_{1}t+a_{2}t^{2}+... +b_{0}+b_{1}t+b_{2}t^{2}+ ...=a_{0}+a_{1}\lambda t+...\quad .
 \label{primer renglon}
 \end{eqnarray}
-agrupamos términos del mismo orden y comparamos los de orden cero
+Agrupamos términos del mismo orden y comparamos primero los de orden cero
 \begin{eqnarray}
 a_{0}+b_{0}=a_{0},
 \end{eqnarray}
@@ -106,26 +105,26 @@ usando la serie de Taylor del seno
 \end{eqnarray}
 desarrollamos cada suma tomando en cuenta que $b_{0}=0$
 \begin{eqnarray}
-b_{1}t+b_{2}t^{2}+...+\kappa\left[a_{0}+(a_{1}+b_{1})t+...\right]+\frac{\kappa}{3!}\left[a_{0}+(a_{1}+b_{1})t\right]^{3}+...=b_{1}\lambda t+...
+b_{1}t+b_{2}t^{2}+...+k\left[a_{0}+(a_{1}+b_{1})t+...\right]-\frac{k}{3!}\left[a_{0}+(a_{1}+b_{1})t+(a_{2}+b_{2})t^{2}+...\right]^{3}+...=b_{1}\lambda t+b_{2}\lambda^{2}t^{2}+...
 \label{segundo renglon}
 \end{eqnarray}
 e igualamos los términos de orden cero
 \begin{eqnarray}
-\kappa a_{0}+\frac{\kappa}{3!}a_{0}^{3}+...=0, 
+k a_{0}+\frac{k}{3!}a_{0}^{3}+...=0, 
 \end{eqnarray}
-por lo que $a_{0}=0$. Si ahora usamos los de orden uno en la ecuación \eqref{primer renglon}, \eqref{segundo renglon} respectivamente
+por lo que $a_{0}=0$. Si recordamos, $a_{0},b_{0}$ es el punto fijo. Si ahora usamos los de orden uno en la ecuación \eqref{primer renglon}, \eqref{segundo renglon} respectivamente
 \begin{eqnarray}
 (a_{1}+b_{1})t=a_{1}\lambda t,
 \end{eqnarray}
 
 \begin{eqnarray}
-b_{1}t+\kappa(a_{1}+b_{1})t=b_{1}\lambda t.
+b_{1}t+k(a_{1}+b_{1})t=b_{1}\lambda t.
 \end{eqnarray}
 Al dividir entre $t$ ambas ecuaciones podemos escribir las ecuaciones en forma matricial
 \begin{eqnarray}
 \begin{pmatrix}
 1 & 1\\
-\kappa & 1+\kappa
+k & 1+k
 \end{pmatrix}
 \begin{pmatrix}
 a_{1}\\
@@ -136,7 +135,33 @@ a_{1}\\
 b_{1}
 \end{pmatrix}.
 \end{eqnarray}
-Es posible obtener las soluciones para $a_{1}$ en términos de $b_{1}$ y de $\lambda$ en términos de $\kappa$. Análogamente se pueden obtener los coeficientes $a_{2},b_{2}$ al comparar los términos cuadráticos. Sin embargo es claro que obtener los términos de esta manera es un camino tedioso, por lo que recurrimos al método de parametrización para poder encontrar relaciones de recurrencia que calculen los coeficientes de los polinomios. Usando de nuevo las ecuaciones \eqref{theta}, \eqref{p} proponemos que 
+Es posible obtener las soluciones para $a_{1}$ en términos de $b_{1}$ y de $\lambda$ en términos de $k$. Este procedimiento es básicamente el análisis lineal al rededor del punto $(0,0)$. Análogamente se pueden obtener los coeficientes $a_{2},b_{2}$, tomando los términos cuadráticos de la ecuación \ref{primer renglon} y agrupando obtenemos
+\begin{eqnarray}
+(a_{2}+b_{2})t^{2}=a_{2}\lambda^{2}t^{2}.
+\label{segundos_coeficientes_a}
+\end{eqnarray}
+De la misma forma tomamos los coeficientes de los términos cuadráticos en la ecuación \ref{segundo renglon} y obtenemos
+\begin{eqnarray}
+b_{2}t^{2}+k(a_{2}+b_{2})t^{2}=b_{2}\lambda^{2}t^{2}.
+\label{segundos_coeficientes_b}
+\end{eqnarray}
+Al dividir \ref{segundos_coeficientes_a} y \ref{segundos_coeficientes_b} entre $t^{2}$ podemos formar el sistema matricial
+\begin{eqnarray}
+\begin{pmatrix}
+1 & 1\\
+k & 1+k
+\end{pmatrix}
+\begin{pmatrix}
+a_{2}\\
+b_{2}
+\end{pmatrix}=
+\lambda^{2} \begin{pmatrix}
+a_{2}\\
+b_{2}
+\end{pmatrix}.
+\end{eqnarray}
+
+Podemos resolver el sistema en términos de $\lambda^{2}$ y de $k$, como en el caso de $a_{1},b_{1}$. Sin embargo, obtener los términos de esta manera es un camino tedioso, por lo que recurrimos a encontrar relaciones de recurrencia que calculen los coeficientes de los polinomios. Usando de nuevo las ecuaciones \eqref{theta}, \eqref{p} escribimos 
 \begin{eqnarray}
 W(t)=\sum_{n=0}^{\infty}\beta_{n}t^{n}=\sin\left(\sum_{n=0}^{\infty}a_{n}t^{n}+\sum_{n=0}^{\infty}
 b_{n}t^{n}\right),
@@ -179,7 +204,7 @@ Podemos volver a igualar potencias de $t$ en \eqref{parte real}, \eqref{parte co
 \beta_{n+1}=\frac{1}{n+1}\sum_{l=0}^{n}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1}),
 \label{recurrencia beta}
 \end{eqnarray}
-que son las relaciones de recurrencia para $\alpha,\beta$ en términos de los coeficientes del polinomio, con las que podemos calcular $\sin(\theta+p)$. Acabamos de usar un truco en el que fue muy importante la forma del mapeo en el que sólo tuvimos que usar una expansión en serie de Taylor, sin embargo si resultara que en el mapeo aparecieran productos de funciones no podemos garantizar que se puedan encontrar las relaciones de recurrencia de manera fácil. \\
+que son las relaciones de recurrencia para $\alpha,\beta$ en términos de los coeficientes del polinomio, con las que podemos calcular $\sin(\theta+p)$. Acabamos de usar un truco en el que fue muy importante la forma del mapeo en el que sólo tuvimos que usar una expansión en serie de Taylor, sin embargo si en el mapeo aparecieran productos de funciones, no necesariamente se podrán factorizar fácilmente los términos de cada orden.\\
 
 Para obtener las relaciones de recurrencia de $a_{n},b_{n}$ usaremos el caso $t=0$ pues ya sabemos los primeros valores de las constantes $\alpha_{0}, \beta_{0}, a_{0}, b_{0}$, entonces al sustituir $t=0$ en la ecuación \eqref{W compleja} resulta
 \begin{eqnarray}
@@ -277,7 +302,7 @@ Usando el cada uno de los valores propios y las anteriores ecuaciones de recurre
 
 
 \section{Implementación del método}
-En esta sección explicaremos paso a paso la cómo se implementó el modo. Supondremos que se tiene un mapeo Hamiltoniano $\mathbf{f}_{k}(\mathbf{x})$ donde $\kappa$  es un parámetro, del cual tenemos un punto fijo $\mathbf{x}_{*}=(\theta_{*},p_{*})$. En la siguiente liga se encuentra un ejemplo de cómo se aplica el método paso a paso para el mapeo estándar, lo cual dio una idea clara para implementar el método de parametrización, \url{https://github.com/alvarezeve/Tesis-Variedades-Estables-e-inestables/blob/master/N5(Implementaci%C3%B3n).ipynb}. 
+En esta sección explicaremos paso a paso la cómo se implementó el método. Supondremos que se tiene un mapeo Hamiltoniano $\mathbf{f}_{k}(\mathbf{x})$ donde $k$  es un parámetro, del cual tenemos un punto fijo $\mathbf{x}_{*}=(\theta_{*},p_{*})$. En la siguiente liga se encuentra el archivo llamado N5(Implementación.ipynb) que contiene el ejemplo de cómo se aplica el método paso a paso para el mapeo estándar, \url{https://github.com/alvarezeve/Tesis-Variedades-Estables-e-inestables/}. 
 \linebreak
 
 
@@ -289,8 +314,6 @@ Primer orden
 \>\textsl{Primero se crean dos variables $\theta,p$ del} \> \\
 \>\textsl{mapeo, como dos polinomios de grado} \>$\mathbf{x}_{1}=(\theta+... ,p+...)$  \\
 \>\textsl{mayor a uno que corresponden a $\mathbf{x}_{1}$ en \eqref{sistema discreto}.}\>   \\
-\>\textsl{Se escogen de esta manera para }\>   \\
-\>\textsl{obtener una ecuación lineal. }\>   \\
 \>............................................................  \>..................................................\\
 \>\textsl{Creamos dos polinomios de variable}\> \\
 \>\textsl{$t$ de orden uno que representan la }  \> \\
@@ -334,7 +357,7 @@ donde la matriz $\mathbf{A}$ contiene a los coeficientes de  orden $n=1$  de $P$
 \end{center}
 Los valores de $\mathbf{v_{2}}$ serán los coeficientes de orden uno en los polinomios $P_{\theta},P_{p}$, que acompañan a $t$. Al ser los vectores propios proporcionan una dirección tangente a la variedad, que es justo la manera en la que se implementa el método usual.\\
 
-Como se está usando el método gráfico necesitamos una forma polinomial para $g$ y la forma más simple es proponer que sea lineal $g(\theta,p)=(\lambda_{2}t,\lambda_{2}t)$. Además recordemos que nuestro sistema lo linearizamos para analizarlo y la matriz asociada a la linearización es justo la que contiene los vectores propios como columnas.\\
+Como se está usando el método gráfico necesitamos una forma polinomial para $g$ y la forma más simple es usar \ref{fun g} con $\lambda_{2}$, $g(t)=(\lambda_{2}t,\lambda_{2}t)$. Además recordemos que nuestro sistema lo linearizamos para analizarlo y la matriz asociada a la linearización es justo la que contiene los vectores propios como columnas.\\
 
 \begin{center}
 Segundo orden
@@ -377,45 +400,45 @@ Ahora que tenemos las dos partes de la ecuación \eqref{Ecua de invariancia} par
 \>\textsl{\eqref{Ecua de invariancia} igualada a cero. Con tal condición} \> $h_{\theta}(\theta,p)t^{2}=(C_{2\theta}-\theta\lambda^{2})t^{2} $\\
 \>\textsl{el término de orden dos cumple una} \> $h_{p}(\theta,p)t^{2}=(C_{2p}-p\lambda^{2})t^{2}$\\
 \>\textsl{ecuación lineal inhomogénea, en donde}\> \\
-\>\textsl{la matriz se obtiene con el jacobiano. }\> $\mathbf{A_{2}}=\mathbf{J}(h_{\theta},h_{p})$\\ 
+\>\textsl{la matriz se obtiene calculando el jacobiano. }\> $\mathbf{A_{2}}=\mathbf{J}(h_{\theta},h_{p})$\\ 
 \>............................................................  \>..................................................\\
 \>\textsl{Acomodamos los valores independientes }\> $\mathbf{w}_{2}=(c_{\theta},c_{p})$\\
-\>\textsl{ de $h_{\theta},h_{p}$ en $\mathbf{w}_{2}$.} \> \\
+\>\textsl{ de $h_{\theta},h_{p}$ en un vector $\mathbf{w}_{2}$.} \> \\
 \>............................................................  \>..................................................\\
 \>\textsl{Escribimos el sistema en forma} \> \\
 \>\textsl{matricial \eqref{lineal A} y resolvemos multiplicando} \> $\mathbf{v}_{2}=\mathbf{A}_{2}^{-1}\mathbf{w}_{2}$\\ 
 \>\textsl{por la inversa del lado izquierdo}  \>\\
 \>............................................................  \>..................................................\\
 \>\textsl{El resultado de esta ecuación serán los} \> $\mathbf{v}_{2}=(a_{2},b_{2})$ \\
-\>\textsl{coeficientes cuadráticos de $P$.} \>  $P_{\theta}=\theta_{*}+a_{1}t+a_{2}t^{2}+O(t^{3})$ \\
-\> \> $P_{p}=p_{*}+b_{1}t+b_{2}t^{2}+O(t^{3})$\\
+\>\textsl{coeficientes cuadráticos de $P$, es decir,} \>$P_{\theta}=\theta_{*}+a_{1}t+a_{2}t^{2}+O(t^{3})$ \\
+\>\textsl{a_{2},b_{2}.}\> $P_{p}=p_{*}+b_{1}t+b_{2}t^{2}+O(t^{3})$ \\
 \>............................................................  \>..................................................\\
 \end{tabbing}
 
-La manera de proceder con el cálculo de los coeficientes de orden cúbico es la misma que la de orden cuadrático, en cada orden aparecerá la dependencia de $\lambda^{n}$ debida a lado derecho de la ecuación de invariancia y a la forma de la función $g$. En general una vez actualizados los valores $a_{n},b_{n}$ se agrega un orden más a los polinomios $P_{\theta},P_{p}$ así como a los de $P_{\theta\lambda},P_{p\lambda}$ en términos de las variables $\theta$ y $p$, se aplica el mapeo a los primeros y se escribe la resta igualada a cero de la ecuación \eqref{Ecua de invariancia}. Con el jacobiano se obtiene la matriz del sistema $\mathbf{A}_{n+1}$ y con los términos independientes $\mathbf{w}_{n+1}$. Se resuelve el sistema mediante la inversa de $\mathbf{A}_{n}$ y se obtienen ahora los términos $a_{n+1},b_{n+1}$.\\
+La manera de proceder con el cálculo de los coeficientes de orden cúbico es la misma que la de orden cuadrático. En cada orden $n$ aparecerá la dependencia de $\lambda^{n}$ debida a lado derecho de la ecuación de invariancia y a la forma de la función $g$. En general una vez actualizados los valores $a_{n},b_{n}$ se agrega un orden más a los polinomios $P_{\theta},P_{p}$ así como a los de $P_{\theta\lambda},P_{p\lambda}$ en términos de las variables $\theta$ y $p$, se aplica el mapeo a los primeros y se escribe la resta igualada a cero de la ecuación \eqref{Ecua de invariancia}. Calculando el jacobiano se obtiene la matriz del sistema $\mathbf{A}_{n+1}$ y con los términos independientes $\mathbf{w}_{n+1}$. Se resuelve el sistema mediante la inversa de $\mathbf{A}_{n}$ y se obtienen ahora los términos $a_{n+1},b_{n+1}$.\\
 
-Notemos que es sólo el primer orden el que difiere en la forma del cálculo ya que en el primer paso se necesitan los valores y vectores propios. Salvo esos primeros términos los otros se pueden resumir en un sólo procedimiento. Tales características fuero las que permitieron automatizar el método. Las diferencias que surgen al resolver la ecuación lineal se toman en cuenta en el cálculo así como el error que se va acumulando en cada paso. \\
+Notemos que es sólo el primer orden el que difiere en la forma del cálculo ya que en el primer paso se necesitan los valores y vectores propios. Salvo esos primeros términos los otros se pueden resumir en un sólo procedimiento. Tales características fueron las que permitieron automatizar el método. Las diferencias que surgen al resolver la ecuación lineal se toman en cuenta en el cálculo así como el error que se va acumulando en cada paso. \\
 
-Al tener la parametrización $P$ hasta un cierto orden $n$ es necesario calcular el error cometido al evaluar $t$. Tengamos en mente que los polinomios son desarrollos en series de Taylor al rededor del punto fijo por lo que nuestra parametrización es válida sólo en una vecindad cercana. Cómo ya vimos el error se calcula mediante \eqref{Ecua de invariancia resta}. Si tenemos a $P=(P_{\theta},P_{p})$ entonces podemos proceder como se muestra a continuación.
+Al tener la parametrización $P$ hasta cierto orden $n$ es necesario calcular el error cometido al evaluar $t$. Tengamos en mente que los polinomios son desarrollos en series de Taylor alrededor del punto fijo por lo que nuestra parametrización es válida sólo en una vecindad cercana. Como ya vimos el error se calcula mediante \eqref{Ecua de invariancia resta}. Si tenemos a $P=(P_{\theta},P_{p})$ entonces podemos proceder como se muestra a continuación.
 
 \begin{tabbing}
 12\=34567890123456789012345678901234567890123456\=7890123456789012345678901234567890\kill%
 \>............................................................  \>..................................................\\
 \>\textsl{Aplicamos el mapeo a $P$.}\> $\mathbf{S}=\mathbf{f}_{\kappa}(P)$ \\
 \> ............................................................ \>............................................\\
-\>\textsl{Extraemos también los polinomios $P_{\lambda}$.}\> $P_{\lambda}=(P_{\theta\lambda},P_{p\lambda})$\\
+\>\textsl{Construimos los polinomios $P_{\lambda}$.}\> $P_{\lambda}=(P_{\theta\lambda},P_{p\lambda})$\\
 \> ............................................................ \>............................................\\
-\> \textsl{Usando la ecuación \eqref{Ecua de invariancia resta}.}\> $\mathbf{E} =\mathbf{S}-P_{\lambda}$\\
+\> \textsl{Usamos la ecuación \eqref{Ecua de invariancia resta}.}\> $\mathbf{E} =\mathbf{S}-P_{\lambda}$\\
 \> ............................................................ \>............................................\\
 
 \end{tabbing}
 El error será un conjunto de valores que resulten de evaluar la función \eqref{Ecua de invariancia resta} para un conjunto $\tau = \lbrace t_{0},t_{1},..., t_{n} \rbrace$. \\
 
-Usando este procedimiento se automatizó el método sin necesitar las ecuaciones de recurrencia, ya que mediante la manipulación algebraica de las series de Taylor se calcula fácilmente los nuevos términos de la parametrización. En general el método se desarrolló para las variedades inestables, ya que la misma dinámica de tal variedad permite llegar más lejos en la evaluación tanto de los coeficientes como del parámetro $t$ garantizando una mejor aproximación. Sin embargo la manera en la que se calculan las variedades estables es en esencia la misma, escogiendo el vector y valor propio adecuado se puede hacer el mismo análisis para la inestable. Hacerlo de ésta forma no será lo más conveniente pues la dinámica de la variedad provoca que mantenerse en la variedad estable sea numéricamente inestable. La forma más adecuada será calcular la variedad estable usando el mismo método para la variedad inestable del mapeo inverso. \\
+Usando este procedimiento se automatizó el método sin necesitar las ecuaciones de recurrencia explícitamente, ya que mediante la manipulación algebraica de las series de Taylor se calcula fácilmente los nuevos términos de la parametrización. En general el método se desarrolló para las variedades inestables, ya que la misma dinámica de tal variedad permite llegar más lejos en la evaluación tanto de los coeficientes como del parámetro $t$ garantizando una mejor aproximación. La manera en la que se calculan las variedades estables es en esencia la misma, escogiendo el vector y valor propio adecuado se puede hacer el mismo análisis para la inestable. Hacerlo de esta forma no será lo más conveniente, mantenerse en la variedad estable será numéricamente inestable debido a los errores de truncamiento y redondeo, que llevarán a caer en la dinámica inestable del sistema. La forma más adecuada será calcular la variedad estable usando el mismo método para la variedad inestable del mapeo inverso. \\
 
 
 
-Con esto se completa la automatización del método, el código junto con la documentación de cómo usar el programa y algunos ejemplos se encuentran en \url{https://github.com/alvarezeve}. 
+Con esto se completa la automatización del método, el código junto con la documentación de cómo usar el programa y algunos ejemplos se encuentran en \url{https://github.com/alvarezeve/}. 
 
 
 

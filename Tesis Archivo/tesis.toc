@@ -7,8 +7,8 @@
 \contentsline {section}{\numberline {1.4}Sistemas Hamiltonianos}{6}{section.1.4}
 \contentsline {section}{\numberline {1.5}M\IeC {\'e}todo de parametrizaci\IeC {\'o}n}{8}{section.1.5}
 \contentsline {chapter}{\numberline {2}M\IeC {\'e}todo de parametrizaci\IeC {\'o}n}{11}{chapter.2}
-\contentsline {section}{\numberline {2.1}Desarrollo expl\IeC {\'\i }cito del mapeo est\IeC {\'a}ndar}{11}{section.2.1}
-\contentsline {section}{\numberline {2.2}Implementaci\IeC {\'o}n del m\IeC {\'e}todo}{16}{section.2.2}
+\contentsline {section}{\numberline {2.1}Desarrollo expl\IeC {\'\i }cito para el mapeo est\IeC {\'a}ndar}{11}{section.2.1}
+\contentsline {section}{\numberline {2.2}Implementaci\IeC {\'o}n del m\IeC {\'e}todo}{17}{section.2.2}
 \contentsline {chapter}{\numberline {3}Ejemplos de aplicaci\IeC {\'o}n del m\IeC {\'e}todo}{21}{chapter.3}
 \contentsline {section}{\numberline {3.1}Mapeo Est\IeC {\'a}ndar}{21}{section.3.1}
 \contentsline {section}{\numberline {3.2}Mapeo de H\IeC {\'e}non}{27}{section.3.2}

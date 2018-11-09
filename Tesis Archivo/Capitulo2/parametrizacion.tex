@@ -105,7 +105,9 @@ usando la serie de Taylor del seno
 \end{eqnarray}
 desarrollamos cada suma tomando en cuenta que $b_{0}=0$
 \begin{eqnarray}
-b_{1}t+b_{2}t^{2}+...+k\left[a_{0}+(a_{1}+b_{1})t+...\right]-\frac{k}{3!}\left[a_{0}+(a_{1}+b_{1})t+(a_{2}+b_{2})t^{2}+...\right]^{3}+...=b_{1}\lambda t+b_{2}\lambda^{2}t^{2}+...
+&b_{1}t&+b_{2}t^{2}+...+k\left[a_{0}+(a_{1}+b_{1})t+...\right]-\\
+&\frac{k}{3!}&\left[a_{0}+(a_{1}+b_{1})t+(a_{2}+b_{2})t^{2}+...\right]^{3}+...\\
+&=&b_{1}\lambda t+b_{2}\lambda^{2}t^{2}+...
 \label{segundo renglon}
 \end{eqnarray}
 e igualamos los términos de orden cero
@@ -215,7 +217,7 @@ entonces $\alpha_{0}=1,\beta_{0}=0$, tenemos entonces los valores iniciales de l
 \sum_{n=1}^{\infty}a_{n}t^{n}+\sum_{n=1}^{\infty}b_{n}t^{n}=\sum_{n=1}^{\infty}a_{n}\lambda^{n}t^{n},
 \end{eqnarray}
 \begin{eqnarray}
-\sum_{n=1}^{\infty}b_{n}t^{n}+\kappa\sum_{n=1}^{\infty}\beta_{n}t^{n}=\sum_{n=1}^{\infty}b_{n}
+\sum_{n=1}^{\infty}b_{n}t^{n}+k\sum_{n=1}^{\infty}\beta_{n}t^{n}=\sum_{n=1}^{\infty}b_{n}
 \lambda^{n}t^{n}.
 \end{eqnarray}
 Reescribimos las ecuaciones anteriores de manera que nos permita comparar términos de la misma potencia
@@ -223,7 +225,7 @@ Reescribimos las ecuaciones anteriores de manera que nos permita comparar térmi
 \sum_{n=1}^{\infty}(1-\lambda^{n})a_{n}t^{n}=-\sum_{n=1}^{\infty}b_{n}t^{n},
 \end{eqnarray}
 \begin{eqnarray}
-\sum_{n=1}^{\infty}(1-\lambda^{n})b_{n}t^{n}=-\kappa\sum_{n=1}^{\infty}\beta_{n}t^{n},
+\sum_{n=1}^{\infty}(1-\lambda^{n})b_{n}t^{n}=-k\sum_{n=1}^{\infty}\beta_{n}t^{n},
 \end{eqnarray}
 entonces los coeficientes de $t^{n+1}$ son
 \begin{eqnarray}
@@ -231,22 +233,22 @@ entonces los coeficientes de $t^{n+1}$ son
 \label{coeficiente recursion 1}
 \end{eqnarray}
 \begin{eqnarray}
-(1-\lambda^{n+1})b_{n+1}=-\kappa\beta_{n+1}.
+(1-\lambda^{n+1})b_{n+1}=-k\beta_{n+1}.
 \label{coeficiente recursion 2}
 \end{eqnarray}
 Sustituyendo \eqref{recurrencia beta} en  \eqref{coeficiente recursion 2}
 \begin{eqnarray}
-(1-\lambda^{n+1})b_{n+1}=\frac{-\kappa}{n+1}\sum_{l=0}^{n}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1}).
+(1-\lambda^{n+1})b_{n+1}=\frac{-k}{n+1}\sum_{l=0}^{n}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1}).
 \label{triangulo}
 \end{eqnarray}
 Como buscamos una ecuación para la recurrencia separaremos el término $l=n$ del lado derecho de \eqref{triangulo}
 \begin{eqnarray}
-(1-\lambda^{n+1})b_{n+1}=-\frac{\kappa}{n+1}\sum_{l=0}^{n-1}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1})-\kappa(a_{n+1}+b_{n+1}),
+(1-\lambda^{n+1})b_{n+1}=-\frac{k}{n+1}\sum_{l=0}^{n-1}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1})-k(a_{n+1}+b_{n+1}),
 \label{triangulo1}
 \end{eqnarray}
 y agrupamos de manera que los coeficientes $a_{n+1},b_{n+1}$ queden en el mismo lado de la ecuación
 \begin{eqnarray}
-\kappa a_{n+1}+(1-\lambda^{n+1}+\kappa)b_{n+1}=-\frac{\kappa}{n+1}\sum_{l=0}^{n-1}(l+1)\alpha_{n-l}
+k a_{n+1}+(1-\lambda^{n+1}+k)b_{n+1}=-\frac{k}{n+1}\sum_{l=0}^{n-1}(l+1)\alpha_{n-l}
 (a_{l+1}+b_{l+1}).
 \label{triangulo2}
 \end{eqnarray}
@@ -255,7 +257,7 @@ Usando las ecuaciones \eqref{coeficiente recursion 1} y \eqref{triangulo2} escri
 \mathbf{A}\begin{pmatrix}
 a_{n+1}\\
 b_{n+1}
-\end{pmatrix}=-\frac{\kappa}{n+1}\sum_{l=0}^{n-1}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1})\begin{pmatrix}
+\end{pmatrix}=-\frac{k}{n+1}\sum_{l=0}^{n-1}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1})\begin{pmatrix}
 0\\
 1
 \end{pmatrix},
@@ -265,7 +267,7 @@ siendo
 \begin{eqnarray}
 \mathbf{A}=\begin{pmatrix}
 a-\lambda^{n+1} & 1 \\
-\kappa & 1-\lambda^{n+1}+\kappa
+k & 1-\lambda^{n+1}+k
 \end{pmatrix}.
 \end{eqnarray}
 Escrito de esta forma es claro que podemos resolver el sistema multiplicando por $\mathbf{A}^{-1}$ siempre que $\det(\mathbf{A})\neq 0$
@@ -273,7 +275,7 @@ Escrito de esta forma es claro que podemos resolver el sistema multiplicando por
 \begin{pmatrix}
 a_{n+1}\\
 b_{n+1}
-\end{pmatrix}=-\frac{\kappa}{n+1}\sum_{l=0}^{n-1}\alpha_{n-l}(a_{l+1}+b_{l+1})\mathbf{A}^{-1}\begin{pmatrix}
+\end{pmatrix}=-\frac{k}{n+1}\sum_{l=0}^{n-1}\alpha_{n-l}(a_{l+1}+b_{l+1})\mathbf{A}^{-1}\begin{pmatrix}
 0\\
 1
 \end{pmatrix},
@@ -281,17 +283,17 @@ b_{n+1}
 \end{eqnarray}
 siendo
 \begin{eqnarray}
-\mathbf{A}^{-1}=\frac{1}{(1-\lambda^{n+1})(1-\lambda^{n+1}-\kappa)-\kappa}\begin{pmatrix}
-1-\lambda^{n+1}+\kappa & -1\\
--\kappa & 1-\lambda^{n+1}
+\mathbf{A}^{-1}=\frac{1}{(1-\lambda^{n+1})(1-\lambda^{n+1}-k)-k}\begin{pmatrix}
+1-\lambda^{n+1}+k & -1\\
+-k & 1-\lambda^{n+1}
 \end{pmatrix}.
 \end{eqnarray}
 Al escribir de manera separada la ecuación \eqref{Sistema recurrencia} obtenemos las relaciones de recurrencia para los coeficientes de la parametrización
 \begin{eqnarray}
-a_{n+1}=\frac{\kappa}{(n+1)[(1-\lambda^{n+1})(1-\lambda^{n+1}+\kappa)-\kappa]}\sum_{l=0}^{n-1}\alpha_{n-l}(l+1)(a_{l+1}+b_{l+1}),
+a_{n+1}=\frac{k}{(n+1)[(1-\lambda^{n+1})(1-\lambda^{n+1}+k)-k]}\sum_{l=0}^{n-1}\alpha_{n-l}(l+1)(a_{l+1}+b_{l+1}),
 \end{eqnarray}
 \begin{eqnarray}
-b_{n+1}=\frac{-\kappa(1-\lambda^{n+1})}{(n+1)[(1-\lambda^{n+1})(1-\lambda^{n+1}+\kappa)-\kappa]}\sum_{l=0}^{n-1}\alpha_{n-l}(l+1)(a_{l+1}+b_{l+1}).
+b_{n+1}=\frac{-k 1-\lambda^{n+1}}{(n+1)[(1-\lambda^{n+1})(1-\lambda^{n+1}+k)-k]}\sum_{l=0}^{n-1}\alpha_{n-l}(l+1)(a_{l+1}+b_{l+1}).
 \end{eqnarray}
 Usando el cada uno de los valores propios y las anteriores ecuaciones de recurrencia obtendremos los coeficientes de los polinomios $\theta(t),p(t)$ a cualquier orden. Dependiendo de qué valor de $\lambda$ se tome tendremos la parametrización de la variedad estable o de la inestable.\\
 
@@ -320,8 +322,8 @@ Primer orden
 \>\textsl{variedad. Los coeficientes de orden }\> $P_{\theta}=\theta_{*}+(\theta+...)t+O(t^{2})$\\
 \>\textsl{cero son el punto fijo.} \> $ P_{p}=p_{*}+(p+...)t+O(t^{2})$\\
 \>............................................................  \>..................................................\\
-\>\textsl{Aplicamos el mapeo $\mathbf{f}_{\kappa}$ a los polinomios  }\> \\
-\>\textsl{anteriores lo cual corresponde al lado } \>$C_{1}=\mathbf{f}_{\kappa}(P_{\theta},P_{p})$  \\
+\>\textsl{Aplicamos el mapeo $\mathbf{f}_{k}$ a los polinomios  }\> \\
+\>\textsl{anteriores lo cual corresponde al lado } \>$C_{1}=\mathbf{f}_{k}(P_{\theta},P_{p})$  \\
 \>\textsl{izquierdo de \eqref{Ecua de invariancia}.} \> \\
 \>............................................................  \>..................................................\\
 \end{tabbing} 
@@ -341,7 +343,7 @@ donde la matriz $\mathbf{A}$ contiene a los coeficientes de  orden $n=1$  de $P$
 12\=34567890123456789012345678901234567890123456\=7890123456789012345678901234567890\kill%
 \>............................................................  \>..................................................\\
 \>\textsl{La matriz $\mathbf{A}$ se calculó con el } \>  \\
-\>\textsl{jacobiano de $P_{n}$, permitiendonos } \> $\mathbf{J}(\mathbf{f}_{\kappa}(P_{\theta},P_{p}))$  \\
+\>\textsl{jacobiano de $P_{n}$, permitiendonos } \> $\mathbf{J}(\mathbf{f}_{k}(P_{\theta},P_{p}))$  \\
 \>\textsl{obtener los coeficientes de orden uno  } \> \\
 
 
@@ -370,7 +372,7 @@ Segundo orden
 \> \textsl{Agregamos de nuevo las variables $\theta,p$} \> $P_{\theta}=\theta_{*}+a_{1}t+(\theta)t^{2}+O(t^{3})$ \\
 \> \textsl{para calcular el término cuadrático.} \> $P_{p}=p{*}+b_{1}t+(p)t^{2}+O(t^{3})$\\
 \>............................................................  \>..................................................\\
-\>\textsl{Aplicamos el mapeo} \> $C_{2}=\mathbf{f}_{\kappa}(P_{\theta},P_{p})$\\
+\>\textsl{Aplicamos el mapeo} \> $C_{2}=\mathbf{f}_{k}(P_{\theta},P_{p})$\\
 \>............................................................  \>..................................................\\
 \end{tabbing}
 \end{center}
@@ -411,7 +413,7 @@ Ahora que tenemos las dos partes de la ecuación \eqref{Ecua de invariancia} par
 \>............................................................  \>..................................................\\
 \>\textsl{El resultado de esta ecuación serán los} \> $\mathbf{v}_{2}=(a_{2},b_{2})$ \\
 \>\textsl{coeficientes cuadráticos de $P$, es decir,} \>$P_{\theta}=\theta_{*}+a_{1}t+a_{2}t^{2}+O(t^{3})$ \\
-\>\textsl{a_{2},b_{2}.}\> $P_{p}=p_{*}+b_{1}t+b_{2}t^{2}+O(t^{3})$ \\
+\>\textsl{$a_{2},b_{2}$.}\> $P_{p}=p_{*}+b_{1}t+b_{2}t^{2}+O(t^{3})$ \\
 \>............................................................  \>..................................................\\
 \end{tabbing}
 
@@ -424,7 +426,7 @@ Al tener la parametrización $P$ hasta cierto orden $n$ es necesario calcular el
 \begin{tabbing}
 12\=34567890123456789012345678901234567890123456\=7890123456789012345678901234567890\kill%
 \>............................................................  \>..................................................\\
-\>\textsl{Aplicamos el mapeo a $P$.}\> $\mathbf{S}=\mathbf{f}_{\kappa}(P)$ \\
+\>\textsl{Aplicamos el mapeo a $P$.}\> $\mathbf{S}=\mathbf{f}_{k}(P)$ \\
 \> ............................................................ \>............................................\\
 \>\textsl{Construimos los polinomios $P_{\lambda}$.}\> $P_{\lambda}=(P_{\theta\lambda},P_{p\lambda})$\\
 \> ............................................................ \>............................................\\

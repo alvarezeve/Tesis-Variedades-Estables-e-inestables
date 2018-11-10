@@ -103,7 +103,7 @@ siendo el mapeo inverso
 \begin{eqnarray}
 \mathbf{f}^{-1}_{a,b}(x,y)=\left( \begin{array}{lcc}
              y\\
-             \\ (x+y^{2}-a)/-b
+             \\ (a-x-y^{2})/b
              \end{array}
              \right). \label{HenonI}
 \end{eqnarray} 
@@ -146,7 +146,7 @@ para el caso en que $b=1$ se tiene
 \begin{eqnarray}
 x=\frac{-2\pm 2(1+a)^{1/2} }{2}.
 \end{eqnarray}
-Al escoger $b=1$ garantizamos estar en un sistema Hamiltoniano, mientras que $a$ debe escogerse de manera que resulten puntos fijos hiperbólicos. La figura \ref{Henon1} muestra un ejemplo en cálculos de variedades para el mapeo de Hénon, junto con el error. 
+Al escoger $b=1$ garantizamos estar en un sistema Hamiltoniano, mientras que $a$ debe escogerse de manera que resulten puntos fijos hiperbólicos$(a>-1)$. La figura \ref{Henon1} muestra un ejemplo en cálculos de variedades para el mapeo de Hénon con $a=1.5$ y polinomios de orden 45, tomando un valor máximo del parámetro $t=1000.0$, junto con el error. 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{henon1}
@@ -160,9 +160,9 @@ Al escoger $b=1$ garantizamos estar en un sistema Hamiltoniano, mientras que $a$
 \caption{Error asociado a las variedades de la figura \ref{Henon1}.}
 \label{ErrorHenon1}
 \end{figure}
-Las variedades que aparecen en la figura \ref{Henon1} fueron calculadas con el mapeo de Hénon inicial \eqref{Henon}, las variedades se observan simétricas, aún así las parametrizaciones son diferentes. Puede verse en el error, figura \ref{ErrorHenon1}, que la variedad estable tiene un mayor error que la variedad inestable, mientras en la inestable el error cambia cinco órdenes de magnitud, en todo el intervalo del parámetro, el error de la variedad estable cambia en al menos quince órdenes de magnitud. \\
+Las variedades que aparecen en la figura \ref{Henon1} fueron calculadas con el mapeo de Hénon inicial \eqref{Henon}; las variedades se observan simétricas, aún así las parametrizaciones son diferentes. Puede verse en el error, figura \ref{ErrorHenon1}, que la variedad estable tiene un mayor error que la variedad inestable, mientras en la inestable el error cambia cinco órdenes de magnitud en todo el intervalo del parámetro; el error de la variedad estable cambia en al menos quince órdenes de magnitud. \\
 
-A diferencia del mapeo estándar en éste mapeo las órbitas pueden irse al infinito, es decir no están  constreñidas en una sección fija, lo que representa un mayor reto en cuanto a la parametrización ya que el polinomio debe ser tal que pueda regresar varias veces. De hecho podemos observar que se necesitan valores realmente grandes, comparados con los del mapeo estándar, para observar los cruces de las variedades. También esta situación hace que el error numérico sea mayor que para el estándar. \\
+A diferencia del mapeo estándar en este mapeo las órbitas pueden escapar a infinito, es decir, no están  constreñidas en una región finita, lo que representa un mayor reto en cuanto a la parametrización ya que el polinomio debe ser tal que pueda regresar varias veces. De hecho podemos observar que se necesitan valores grandes en el parámetro, comparados con los del mapeo estándar, para observar los cruces de las variedades. También esta situación hace que el error numérico sea mayor que para el mapeo estándar. \\
 
 En las figuras \ref{Henon2}, \ref{Henon3} se muestran las variedades calculadas de la misma manera en la que se calcularon para la figura \ref{Henon1}. En \ref{Henon2} las curvas son más cerradas y se necesita de un polinomio de orden mayor que en el caso de \ref{Henon3} para observar los cortes. 
 \begin{figure}[H]
@@ -198,7 +198,7 @@ En las figuras \ref{Henon2}, \ref{Henon3} se muestran las variedades calculadas 
 Así que con el orden suficiente es posible observar los cruces de ambas variedades, retomaremos esto en la última sección. 
 
 \label{jung-seccion}\section{Mapeo exponencial}
-El último mapeo que se estudió fue uno presentado en el artículo \citep{Jung} el cual queda definido por 
+El último mapeo que se estudió fue uno usado en el artículo \citep{Jung} el cual queda definido por 
 \begin{eqnarray}
 \mathbf{j}_{a}(x,y)=\left(\begin{array}{lcc}
              x+y\\
@@ -207,7 +207,7 @@ El último mapeo que se estudió fue uno presentado en el artículo \citep{Jung}
 \label{Jung}
 \end{eqnarray}
 
-que describe el movimiento de una partícula pateada, donde la coordenada $x$ representa la posición en una dimensión mientras que la coordenada $y$ es el momento, $a$ es un parámetro libre. La función $f$ es la responsable de describir la fuerza aplicada, en el artículo \cite{Jung} se escoge
+que describe el movimiento de una partícula pateada, donde la coordenada $x$ representa la posición en una dimensión mientras que la coordenada $y$ es el momento, $a$ es un parámetro libre. La función $f$ es la responsable de describir la fuerza aplicada; en el artículo \cite{Jung} se escoge
 \begin{eqnarray*}
 f(x)=x(x-1)e^{-x}.
 \end{eqnarray*}
@@ -219,9 +219,9 @@ A este mapeo le corresponde su mapeo inverso
              \end{array}\right).
              \label{jungI}
 \end{eqnarray}
-Los puntos fijos encontrados del sistema son $\mathbf{x}_{0}=(1,0), \mathbf{x}_{1}=(0,0)$ donde $\mathbf{x}_{0}$ es un punto fijo hiperbólico. El punto $\mathbf{x}_{1}$ es un punto elíptico mientras el valor del parámetro $a$ sea menor a 4, para valores de $a \geq 4$ se torna inverso hiperbólico.\\
+Los puntos fijos encontrados del sistema son $\mathbf{x}_{0}=(1,0), \mathbf{x}_{1}=(0,0)$ donde $\mathbf{x}_{0}$ es un punto fijo hiperbólico. El punto $\mathbf{x}_{1}$ es un punto elíptico mientras el valor del parámetro $a$ sea menor a 4, y para valores de $a \geq 4$ se torna inverso hiperbólico.\\
 
-Aplicando el mismo mecanismo que en los casos pasados se obtuvieron las figuras \ref{jung1}-\ref{errorjung2} que muestran cómo se comportan las variedades aún en el caso en que el sistema no sea completamente hiperbólico. Como en los casos anteriores el error asociado a la variedad estable es mayor que el asociado a la inestable. El orden al que se debe llegar en los polinomios para observar algunos de los cortes de las variedades es más alto en comparación con el mapeo de Hénon debido a que en este caso se esta aproximando una función exponencial.
+Usando el mismo procedimiento que en los casos anteriores se obtuvieron las figuras \ref{jung1}-\ref{errorjung2} que muestran cómo se comportan las variedades aún en el caso en que el sistema no sea completamente hiperbólico. Como en los casos anteriores el error asociado a la variedad estable es mayor que el asociado a la variedad inestable. El orden al que se debe llegar en los polinomios para observar algunos de los cortes de las variedades es más alto en comparación con el mapeo de Hénon debido a que en este caso se esta aproximando una función exponencial.
 
 \begin{figure}[H]
 \centering
@@ -279,7 +279,7 @@ La figura \ref{convergenciaHenon1} muestra la convergencia de las parametrizacio
 \end{figure}
 
 
-Para el mapeo exponencial realizamos los dos criterios de convergencia. La figura \ref{convergenciaJH} muestra el criterio de Hadamard \eqref{hadamard}, para los polinomios que parametrizan la variable x en cada variedad, se ve que hay una convergencia clara de los coeficientes. Lo mismo ocurre en la figura \ref{convergenciaJ3} en dónde se usó el criterio de tres términos, \eqref{tres terminos}.
+Para el mapeo exponencial realizamos los dos criterios de convergencia. La figura \ref{convergenciaJH} muestra el criterio de Hadamard \eqref{hadamard}, para los polinomios que parametrizan la variable x en cada variedad, se ve que hay una convergencia clara de los coeficientes. Lo mismo ocurre en la figura \ref{convergenciaJ3} en dónde se usó el criterio de tres términos \eqref{tres terminos}, con $c_{n}=n\frac{a_{n+1}}{a_n}-(n-1)\frac{a_{n}}{a_{n-1}}$.
 
 \begin{figure}[H]
 \centering
@@ -300,9 +300,9 @@ Estudiar la convergencia de las parametrizaciones puede dar una idea de cómo se
 
 \section{Existencia de puntos homoclínicos/heteroclínicos}
 
-Siendo que el resultado son polinomios se puede aplicar el método de Newton en dos dimensiones o cualquier otro para resolver $P^{u}=P^{s}$ y encontrar puntos homoclínicos o heteroclínicos. Por suerte existe una paquetería en Julia que hace cálculos numéricos validados \texttt{ValidatedNumerics}\cite{validated} dentro de la cuál se tiene un paquete para aritmética de intervalos \texttt{IntervalArithmetic}\citep{interval} y para encontrar raíces \texttt{IntervalRootFinding}\cite{root} además del paquete \texttt{Static Arrays}\cite{static} que permite manipular intervalos.\\ 
+Siendo que el resultado son polinomios se puede aplicar el método de Newton, o cualquier otro, en dos dimensiones para resolver $P^{u}=P^{s}$ y encontrar puntos homoclínicos o heteroclínicos. Por suerte existe una paquetería en Julia que hace cálculos numéricos validados \texttt{ValidatedNumerics}\cite{validated} dentro de la cuál se tiene un paquete para aritmética de intervalos \texttt{IntervalArithmetic}\citep{interval} y para encontrar raíces \texttt{IntervalRootFinding}\cite{root}.\\
 
-El paquete \cite{validated} hace cálculos de computación rigurosa con números de punto flotante usando el paquete de aritmética de intervalos, que efectúa operaciones con intervalos en lugar de números. Mientras que \cite{root} automatiza el métodos populares como el de Newton para encontrar raíces de funciones, en este caso se garantiza que la respuesta correcta se encuentra en un intervalo. Para entender mejor cómo funcionan cada una de las paqueterías así como la teoría rigurosa detrás de éstos recomendamos revisar las lecturas \cite{ramon},\cite{Numerics}. De manera breve podemos decir que los paquetes ya mencionados generalizan las operaciones y funciones ahora en términos de conjuntos, de tal manera que que la solución contenga la respuesta correcta. \\
+El paquete \cite{validated} hace cálculos de computación rigurosa con números de punto flotante usando el paquete de aritmética de intervalos, que efectúa operaciones con intervalos en lugar de números. Mientras que \cite{root} automatiza métodos populares como el de Newton para encontrar raíces de funciones, en este caso se garantiza que la respuesta correcta se encuentra en un intervalo. Para entender mejor cómo funcionan cada una de las paqueterías así como la teoría rigurosa detrás de éstos recomendamos revisar las lecturas \cite{ramon},\cite{Numerics}. De manera breve podemos decir que los paquetes ya mencionados generalizan las operaciones y funciones ahora en términos de conjuntos, de tal manera que la solución contenga la respuesta correcta. \\
 
 Las variedades parametrizadas que resultan del método son polinomios, por lo que con las paqueterías  mencionadas se puede analizar cuando dos de ellas se cruzan. Concretamente se tienen  $W^{s}(t)=(P_{x}(t),P_{y}(t))$ y $W^{u}(\tau)=(P_{x}(\tau),P_{y}(\tau))$ de órdenes no necesariamente iguales, y lo que se busca es:
 \begin{eqnarray}
@@ -336,7 +336,7 @@ El error asociado al cálculo de las variedades se puede ver en la figura \ref{e
 \label{errorEstCruces}
 \end{figure}
 
-El cálculo numérico riguroso garantiza que la solución está en el intervalo que da como resultado, sin embargo no debemos olvidar que nuestras variedades tienen un error asociado, por lo que es importante quedarse en aquellos intervalos del parámetro donde se tenga un error mínimo. Con las raíces obtenidas podemos asegurar que en el mapeo estándar con el valor del parámetro $k=1.5$ se encuentran cuatro puntos homoclínicos. Si se quiere encontrar más puntos se debe considerar un polinomio de orden mayor o en todo caso usar números de precisión extendida para llegar más lejos en las variedades. 
+El cálculo numérico riguroso garantiza que la solución está en el intervalo que da como resultado, sin embargo no debemos olvidar que nuestras variedades tienen un error asociado, por lo que es importante quedarse en aquellos intervalos del parámetro donde se tenga un error mínimo; en otras palabras, el método de encontrar raíces está validado mientras que el cálculo de los coeficientes de polinomios no. Con las raíces obtenidas podemos asegurar que en el mapeo estándar con el valor del parámetro $k=1.5$ se encuentran cuatro intersecciones de las variedades, sin embargo es necesaria sólo una de ellas para saber que hay un número infinito\citep{Ott}. Si se quiere encontrar más intersecciones, de manera directa, se debe considerar un polinomio de orden mayor o en todo caso usar números de precisión extendida para llegar más lejos en las variedades. 
 
 
 
@@ -360,62 +360,84 @@ La leyenda \texttt{unknown} nos dice que no puede concluir si hay una o más ra�
 \caption{Cruces de $W^{u},W^{s}$ encontrados en el intervalo $[-400.,0.] \times [0.,400.]$ .}
 \label{crucesH}
 \end{figure}
-Los puntos de color son sólo para indicar cuales intersecciones fueron encontradas. Para los intervalos encontrados se hizo una gráfica que representa la región en el espacio fase donde se encuentra el cruce, las figuras \ref{cruce1H}-\ref{cruce8H} muestran cada una de ellas.
+Los puntos de color son sólo para indicar cuales intersecciones fueron encontradas. Para los intervalos encontrados se hizo una gráfica que representa la región en el espacio fase donde se encuentra el cruce, la figura \ref{matriz_cortes} muestra cada una de ellas.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
-\includegraphics[scale=0.4]{cruce1}
-\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo a.}
-\label{cruce1H}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.4]{cruce2}
-\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo b.}
-\label{cruce2H}
-\end{figure}
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.4]{cruce3}
-\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo c.}
-\label{cruce3H}
+\subfigure[Intervalo a]{\includegraphics[width=40mm]{cruce1}}
+\subfigure[Intervalo b]{\includegraphics[width=40mm]{cruce2}}
+\subfigure[Intervalo c]{\includegraphics[width=40mm]{cruce3}}
+\subfigure[Intervalo e]{\includegraphics[width=40mm]{cruce5}}
+\subfigure[Intervalo f]{\includegraphics[width=40mm]{cruce6}}
+\subfigure[Intervalo g]{\includegraphics[width=40mm]{cruce7}}
+\subfigure[Intervalo h]{\includegraphics[width=40mm]{cruce8}}
+\caption{Intervalos de intersecciones entre las variedades estable e inestable del mapeo de Hénon.} \label{matriz_cortes}
 \end{figure}
 
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.4]{cruce5}
-\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo e.}
-\label{cruce5H}
-\end{figure}
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.4]{cruce6}
-\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo f.}
-\label{cruce6H}
-\end{figure}
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.4]{cruce7}
-\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo g.}
-\label{cruce7H}
-\end{figure}
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.4]{cruce8}
-\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo h.}
-\label{cruce8H}
-\end{figure}
 
-La zona rectangular sombreada en cada gráfica representa el producto cartesiano de los intervalos donde se encuentra la solución. Podemos observar que de hecho cada zona contiene el cruce de las variedades garantizando así que en el intervalo propuesto hay un cruce lo cual representa un punto homoclínico. Algunos de los cruces como los de las figuras \ref{cruce1H}, \ref{cruce2H}, \ref{cruce7H} y \ref{cruce8H} son realmente imperceptibles. Este tipo de resultados son útiles para hablar sobre caos topológico \cite{devaney},\cite{gerald}.\\
 
-Para complementar todo este análisis se puede obtener una gráfica de las superficies que forman las variedades al cambiar el parámetro del mapeo lo que nos da una idea de como se ven las superficies y además de como se comportan las intersecciones. La figura \ref{SuperficiesH} muestra las superficies formadas por las variedades para ciertos valores del parámetro $a$. Algunas gráficas más se encuentran en \url{https://github.com/alvarezeve/Tesis-Variedades-Estables-e-inestables/blob/master/Superficies.ipynb}
+
+
+
+
+%=begin{figure}[H]
+%\centering
+%\includegraphics[scale=0.4]{cruce1}
+%\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo a.}
+%\label{cruce1H}
+%\end{figure}
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=0.4]{cruce2}
+%\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo b.}
+%\label{cruce2H}
+%\end{figure}
+
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=0.4]{cruce3}
+%\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo c.}
+%\label{cruce3H}
+%\end{figure}
+
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=0.4]{cruce5}
+%\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo e.}
+%\label{cruce5H}
+%\end{figure}
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=0.4]{cruce6}
+%\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo f.}
+%\label{cruce6H}
+%\end{figure}
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=0.4]{cruce7}
+%\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo g.}
+%\label{cruce7H}
+%\end{figure}
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=0.4]{cruce8}
+%\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo h.}
+%\label{cruce8H}
+%\end{figure}
+
+La zona rectangular sombreada en cada gráfica representa el producto cartesiano de los intervalos donde se encuentra la solución. Podemos observar que de hecho cada zona contiene el cruce de las variedades garantizando así que en el intervalo propuesto hay un cruce lo cual representa un punto homoclínico. Algunos de los intervalos como los de las figuras \ref{matriz_cortes}a), \ref{matriz_cortes}b), \ref{matriz_cortes}g) y \ref{matriz_cortes}h) son muy delgados. Este tipo de resultados son útiles para hablar sobre caos topológico \cite{devaney},\cite{gerald}.\\
+
+Para complementar todo este análisis se puede obtener una gráfica de las superficies que forman las variedades al cambiar el parámetro del mapeo lo que nos da una idea de como se ven las superficies y además de como se comportan las intersecciones. La figura \ref{SuperficiesH} muestra las superficies formadas por las variedades para ciertos valores del parámetro $a$. Algunas gráficas más se encuentran en \url{https://github.com/alvarezeve/Tesis-Variedades-Estables-e-inestables/} en el archivo llamado Superficies.ipynb.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.9]{HenonV}
@@ -426,7 +448,7 @@ Para complementar todo este análisis se puede obtener una gráfica de las super
 
 
 \subsection{Mapeo exponencial}
-Las intersecciones en el caso del mapeo \eqref{Jung} se calcularon usando como en los casos anteriores el mapeo inverso \eqref{jungI}. Este mapeo representa un mayor reto en cuanto al orden del polinomio, pes la presencia de la exponencial hace que la parametrización sea sensible al orden del mismo. Para el siguiente ejemplo se utilizó un polinomio de orden 86 y una tolerancia en el método de Newton de $10-6$ y se calcularon los cruces de las variedades como en los otros casos. Las siguientes fueron las secciones en términos del parámetro $t,\tau$ dónde se encontraron los cortes. 
+Las intersecciones en el caso del mapeo \eqref{Jung} se calcularon usando como en los casos anteriores el mapeo inverso \eqref{jungI}. Este mapeo representa un mayor reto en cuanto al orden del polinomio, pues la presencia de la exponencial hace que la parametrización sea sensible al orden del mismo. Para el siguiente ejemplo se utilizó un polinomio de orden 86 y una tolerancia en el método de Newton de $10-6$ y se calcularon los cruces de las variedades como en los otros casos. Las siguientes fueron las secciones en términos del parámetro $t,\tau$ dónde se encontraron los cortes. 
 \begin{itemize}
 \item[a)] Root$([-0.985068, -0.985067] \times [5.99488, 5.99489]$, :unique)
 \item[b)] Root$([-3.46215, -3.46214] \times [5.49229, 5.4923]$, :unique)
@@ -442,42 +464,48 @@ La representación de los cortes se puede ver en la figura \ref{jung_cortes}.
 
 Tomando los cruces a escala del intervalo se obtuvieron las figuras \ref{jung_corte1}-\ref{jung_corte3}.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
-\includegraphics[scale=0.4]{cruce_a}
-\caption{Intersección en el intervalo a.}
-\label{jung_corte1}
+\subfigure[Intervalo a]{\includegraphics[width=40mm]{cruce_a}}
+\subfigure[Intervalo b]{\includegraphics[width=40mm]{cruce_b}}
+\subfigure[Intervalo c]{\includegraphics[width=80mm]{cruce_c}}
+\caption{Intervalo de intersección de las variedades estable e inestable en el mapeo exponencial.} \label{cruces_jung}
 \end{figure}
 
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.4]{cruce_b}
-\caption{Intersección en el intervalo b.}
-\label{jung_corte2}
-\end{figure}
 
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.4]{cruce_c}
-\caption{Intersección en el intervalo c.}
-\label{jung_corte3}
-\end{figure}
 
-Las escalas en las que se observan los cortes de las variedades son pequeños comparados con la escala del mapeo, tanto que si se graficaran en el espacio fase no se podrían observar. Como ya se mencionó estos garantiza que existen tres puntos homoclínicos en el intervalo usado. \\
-
-
-La implementación del método resultó ser eficiente para encontrar los polinomios que representan las variedades estable e inestable asociadas a puntos fijos hiperbólicos de los diferentes mapeos. Se tomaron estos tres mapeos para tener un poco de variedad en la forma de las variedades y también de los puntos fijos, en todos los casos el orden de la parametrización afecta de manera diferente, para el caso del mapeo exponencial resulta ser más sensible. En todos ellos un orden mayor contribuye a llegar más lejos en el valor del parámetro con un error bajo y como consecuencia graficar de mejor manera las variedades. Podemos decir que el error lo manipulamos al mover el orden pero también mostramos que se puede mejorar al usar números de precisión extendida. Una característica que se puede observar es que el error se comporta esencialmente de la misma forma para los tres mapeos, creciendo de manera lenta y luego creciendo rápido a partir de cierto valor. \\
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=0.4]{cruce_a}
+%\caption{Intersección en el intervalo a.}
+%\label{jung_corte1}
+%\end{figure}
 
 
-El análisis de la convergencia resulta congruente con lo que se puede observar en el error y en las mismas gráficas de las variedades. La convergencia también ayudó a ver que a partir de cierto orden los coeficientes no hacen un cambio significativo, por lo que no es necesariamente cierto que cada que aumentemos el orden se mejorará la parametrización.\\
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=0.4]{cruce_b}
+%\caption{Intersección en el intervalo b.}
+%\label{jung_corte2}
+%\end{figure}
 
 
-El cálculo de puntos homoclínicos resulta una de las aplicaciones de tener las variedades parametrizadas. El método junto con las otras paqueterías de Julia son indispensables para hacer este tipo de cálculos de una manera fácil. A pesar de que la aritmética de intervalos arroja resultados garantizados, no hay que olvidar que nuestros polinomios no son calculados de la misma manera, es decir se debe tener siempre en mente que al rededor de cada variedad hay un error asociado. Aún así las intersecciones pueden ser encontradas controlando bien el error en la parametrización y controlando la tolerancia en el método de Newton.
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=0.4]{cruce_c}
+%\caption{Intersección en el intervalo c.}
+%\label{jung_corte3}
+%\end{figure}
+
+Las escalas en las que se observan los cortes de las variedades son pequeños comparados con la escala del mapeo, tanto que si se graficaran en el espacio fase no se podrían observar. Como ya se mencionó ésto garantiza que existen tres puntos homoclínicos en el intervalo usado. \\
+
+
+
 
 \label{SeccionRectanguloFundamental}\section{Rectángulo fundamental}
-Para los mapeos abiertos como lo son Hénon y el mapeo de la sección anterior \eqref{Jung} se puede tener el conjunto fundamental a partir de los polinomios que se obtienen en el método de parametrización. El conjunto fundamental constituye una parte de las variedades mediante la cual se puede obtener toda la dinámica fuera del mismo, llamado también rectángulo fundamental puesto que forma un polígono de cuatro lados que tiene como vértices el punto fijo hiperbólico y las intersecciones de las variedades, como aristas las secciones de las variedades entre estos puntos. Lo que pasa dentro del área del rectángulo fundamental con las variedades estables e inestables es una ventana a escala de lo que pasa si se extienden las variedades. A partir de esto podemos observar lo que se llaman tentáculos o herraduras en la dinámica del mapeo, en la figura \ref{herradura} se muestra un diagrama de este tipo de comportamiento.
+Para los mapeos abiertos como lo son Hénon y el mapeo de la sección anterior \ref{jung-seccion} se puede tener el rectángulo fundamental a partir de los polinomios que se obtienen en el método de parametrización. El rectángulo fundamental es una región del espacio fase que contiene todas las intersecciones(homoclínicas y heteroclínicas) del mapeo, lo que permite obtener toda la dinámica fuera del mismo. Lo que pasa dentro del área del rectángulo fundamental con las variedades estables e inestables es una ventana a escala de lo que pasa si se extienden las variedades. A partir de esto podemos observar lo que se llaman tentáculos o herraduras en la dinámica del mapeo, en la figura \ref{herradura} se muestra un diagrama de este tipo de comportamiento.
 
 \begin{figure}[H]
 \centering
@@ -486,10 +514,10 @@ Para los mapeos abiertos como lo son Hénon y el mapeo de la sección anterior \
 \label{herradura}
 \end{figure}
 
-Una manera de llegar a observar estas estructuras con los polinomios de la parametrización sería usando polinomios de ordenes grandes, pero como hemos visto en la sección \ref{SeccionEstandar} el error no cambia mucho cuando pasamos de cierto grado en el polinomio. Sin embargo si notamos que nuestra parametrización representa, con cierto error, una sección de la variedad estable o inestable, entonces podemos aplicar el mapeo a la parametrización de manera que iteramos, análogamente a iterar puntos. Con esta idea se pudo encontrar parte de las estructuras mostradas en la figura \ref{herradura}, para los mapeos \eqref{Henon}, \eqref{Jung}.
+Una manera de llegar a observar estas estructuras con los polinomios de la parametrización sería usando polinomios de ordenes grandes, sin embargo como vimos en la gráfica \ref{erroresf64} de la sección \ref{SeccionEstandar} aumentar en 60 el orden del polinomio(de 20 a 80) sólo se traduce en una unidad del parámetro $t$ donde el error es mínimo. Para evitar calcular polinomios de órdenes grandes tomamos la idea de la órbita de un punto, aplicando el mapeo a la parametrización, pues ésta representa los puntos sobre la variedad. Con esta idea se pudo encontrar parte de las estructuras mostradas en la figura \ref{herradura}, para los mapeos \eqref{Henon}, \eqref{Jung}.
 
 
-En el caso del mapeo de Hénon con $a=6.5$ se calcularon polinomios de orden 250 usando números de precisión extendida ($W_{0}^{s},W_{0}^{u}$), además calcular la variedad estable usando el mapeo de Hénon inverso \eqref{HenonI}. En este caso se necesitó un valor máximo del parámetro $t=100$ para obtener el rectángulo fundamental, que se muestra en la figura \ref{rectangulo0}, para éstas condiciones el error es menor a $10^{-73}$.
+En el caso del mapeo de Hénon con $a=6.5$ se calcularon polinomios de orden 250 usando números de precisión extendida ($W_{0}^{s},W_{0}^{u}$), además calcular la variedad estable usando el mapeo de Hénon inverso \eqref{HenonI}. En este caso se necesitó un valor máximo del parámetro $t=100$ para obtener el rectángulo fundamental, que se muestra en la figura \ref{rectangulo0}, en este caso, el error es menor a $10^{-73}$.
 
 \begin{figure}[H]
 \centering
@@ -524,7 +552,7 @@ W_{0}^{s}(t)=f_{a,b}(W_{0}^{s}(\lambda^{s}t)),
 %W_{0}^{u}(t)=f_{a,b}^{-1}(W_{0}^{u}(\lambda^{u}t))
 %\label{InvarianciaInestable2}
 %\end{eqnarray}
-como el parámetro es una variable muda podemos reescribir \eqref{InvarianciaEstable2}, 
+que podemos reescribir \eqref{InvarianciaEstable2}, 
 \begin{eqnarray}
 W_{0}^{s}(\frac{t}{\lambda^{s}})=f_{a,b}(W_{0}^{s}(t)).
 \label{InvarianciaEstable3}
@@ -534,7 +562,7 @@ W_{0}^{s}(\frac{t}{\lambda^{s}})=f_{a,b}(W_{0}^{s}(t)).
 %W_{0}^{u}(\frac{t}{\lambda^{u}})=f_{a,b}^{-1}(W_{0}^{u}(t)).
 %\label{InvarianciaInestable3}
 %\end{eqnarray}
-Siendo que $\vert \lambda^{s} \vert < 1 $ la ecuación \eqref{InvarianciaEstable3} muestra que aplicar el mapeo es análogo a tener la variedad estable evaluada en un valor mayor del parámetro, puesto que $1/\lambda^{s}>1$. Este resultado es análogo para la variedad inestable. Usando esto se obtuvo la figura \ref{Rectangulo1}, que muestra el resultado de la iterar una vez, $(W_{x1}^{s},W_{y1}^{s})=f_{a,b}(W_{x}^{s},W_{y}^{s})$, análogamente para las inestables, evaluando los nuevos polinomios exactamente en los mismos intervalos que en el caso de la figura \ref{rectangulo0}.
+Siendo que $\vert \lambda^{s} \vert < 1 $ la ecuación \eqref{InvarianciaEstable3} muestra que aplicar el mapeo es análogo a tener la variedad estable evaluada en un valor mayor del parámetro, puesto que $1/\lambda^{s}>1$. Este resultado es análogo para la variedad inestable. Usando esto se obtuvo la figura \ref{Rectangulo1}, que muestra el resultado de iterar una vez, $(W_{x1}^{s},W_{y1}^{s})=f_{a,b}(W_{x}^{s},W_{y}^{s})$, análogamente para las inestables, evaluando los nuevos polinomios exactamente en los mismos intervalos que en el caso de la figura \ref{rectangulo0}.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{rectangulo1}
@@ -622,3 +650,10 @@ De manera sucesiva se aplicaron los mapeos correspondientes hasta iterar cinco v
 En las primeras dos aplicaciones del mapeo, \ref{Rectangulo2} y \ref{Rectangulo3}, se puede observar un tentáculo más en cada variedad, mientras que en las siguientes aparecen hasta dos más. La profundidad de tentáculos y la forma en la que se cruzan, depende del valor del parámetro $a$. Hay que enfatizar que para lograr observar estos cruces de manera directa, se debería llegar a valores del parámetro muy grandes comparados con el valor que se usó en todos los casos, lo cual no siempre es posible pues como se vio en la sección \ref{SeccionEstandar} después de cierto orden el error se estanca y no es posible llegar tan lejos con errores controlables, mientras que como muestran las figuras \ref{error-1iteracion}-\ref{error-4iteracion} el error es mucho menor que si se usará un polinomio de orden grande$(>250)$. Con esto mostramos que sólo se necesita conocer el rectángulo fundamental para conocer mucho de la dinámica de las variedades, y por tanto de los cruces entre ellas. 
 
 
+La implementación del método resultó ser eficiente para encontrar los polinomios que representan las variedades estable e inestable asociadas a puntos fijos hiperbólicos de los diferentes mapeos. Se tomaron estos tres mapeos para tener un poco de variedad en la forma de las variedades y también de los puntos fijos, en todos los casos el orden de la parametrización afecta de manera diferente, para el caso del mapeo exponencial resulta ser más sensible. En todos ellos un orden mayor contribuye a llegar más lejos en el valor del parámetro con un error bajo y como consecuencia graficar de mejor manera las variedades. Podemos decir que el error lo manipulamos al mover el orden pero también mostramos que se puede mejorar al usar números de precisión extendida. Una característica que se puede observar es que el error se comporta esencialmente de la misma forma para los tres mapeos, creciendo de manera lenta y luego creciendo rápido a partir de cierto valor. \\
+
+
+El análisis de la convergencia resulta congruente con lo que se puede observar en el error y en las mismas gráficas de las variedades. La convergencia también ayudó a ver que a partir de cierto orden los coeficientes son muy pequeños, por lo que no es necesariamente cierto que cada que aumentemos el orden se mejorará la parametrización.\\
+
+
+El cálculo de puntos homoclínicos resulta una de las aplicaciones de tener las variedades parametrizadas. El método, junto con otras paqueterías de Julia, son indispensables para hacer este tipo de cálculos de una manera fácil. A pesar de que la aritmética de intervalos arroja resultados garantizados, no hay que olvidar que nuestros polinomios no son calculados de la misma manera, es decir se debe tener siempre en mente que al rededor de cada variedad hay un error asociado. Aún así las intersecciones pueden ser encontradas controlando bien el error en la parametrización y controlando la tolerancia en el método de Newton.

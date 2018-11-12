@@ -4,6 +4,7 @@
 \backcite {Jung}{{\es@scroman {vi}}{(document)}{Doc-Start}}
 \backcite {gerald}{{2}{1}{defini.1}}
 \backcite {Friedberg}{{4}{1.2}{equation.1.2.5}}
+\backcite {arnold}{{4}{1.2}{equation.1.2.6}}
 \backcite {Meiss}{{4}{1.2}{figure.caption.4}}
 \backcite {Meyer}{{4}{1.2}{figure.caption.4}}
 \backcite {Juergen}{{4}{1.2}{figure.caption.4}}
@@ -11,8 +12,8 @@
 \backcite {Mateo}{{5}{1}{thm.1}}
 \backcite {Ott}{{6}{1.3}{thm.1}}
 \backcite {Haro}{{8}{1.5}{section.1.5}}
-\backcite {Haro}{{8}{1.5}{equation.1.5.24}}
-\backcite {Chang}{{9}{1.5}{equation.1.5.28}}
+\backcite {Haro}{{8}{1.5}{equation.1.5.25}}
+\backcite {Chang}{{9}{1.5}{equation.1.5.29}}
 \backcite {Mireles}{{11}{2}{chapter.2}}
 \backcite {Mireles}{{11}{2.1}{section.2.1}}
 \backcite {Mireles}{{21}{3.1}{section.3.1}}
@@ -23,11 +24,11 @@
 \backcite {validated}{{38}{3.5}{section.3.5}}
 \backcite {interval}{{38}{3.5}{section.3.5}}
 \backcite {root}{{38}{3.5}{section.3.5}}
-\backcite {static}{{38}{3.5}{section.3.5}}
 \backcite {validated}{{38}{3.5}{section.3.5}}
 \backcite {root}{{38}{3.5}{section.3.5}}
 \backcite {ramon}{{38}{3.5}{section.3.5}}
 \backcite {Numerics}{{38}{3.5}{section.3.5}}
-\backcite {devaney}{{45}{3.5.2}{figure.caption.37}}
-\backcite {gerald}{{45}{3.5.2}{figure.caption.37}}
-\backcite {Ying}{{50}{3.39}{figure.caption.43}}
+\backcite {Ott}{{40}{3.5.1}{figure.caption.29}}
+\backcite {devaney}{{43}{3.5.2}{figure.caption.31}}
+\backcite {gerald}{{43}{3.5.2}{figure.caption.31}}
+\backcite {Ying}{{46}{3.31}{figure.caption.35}}

@@ -17,7 +17,7 @@
 \contentsline {section}{\numberline {3.5}Existencia de puntos homocl\IeC {\'\i }nicos/heterocl\IeC {\'\i }nicos}{38}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Est\IeC {\'a}ndar}{38}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}H\IeC {\'e}non}{40}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Mapeo exponencial}{46}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}Rect\IeC {\'a}ngulo fundamental}{50}{section.3.6}
-\contentsline {chapter}{\numberline {4}Resumen y perspectivas}{59}{chapter.4}
-\contentsline {chapter}{Bibliograf\'{\i }a}{61}{appendix*.56}
+\contentsline {subsection}{\numberline {3.5.3}Mapeo exponencial}{44}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.6}Rect\IeC {\'a}ngulo fundamental}{46}{section.3.6}
+\contentsline {chapter}{\numberline {4}Resumen y perspectivas}{57}{chapter.4}
+\contentsline {chapter}{Bibliograf\'{\i }a}{59}{appendix*.48}

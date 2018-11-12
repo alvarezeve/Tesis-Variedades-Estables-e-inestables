@@ -5,7 +5,7 @@
 \chapter{Método de parametrización}
 En este capítulo describimos cómo se implementó el método de parametrización aplicado a sistemas Hamiltonianos. Se comienza explicando el análisis del mapeo estándar siguiendo el trabajo de Mireles James \cite{Mireles}. A partir de este trabajo se generalizó el método para los sistemas Hamiltonianos de dos dimensiones de manera que dado un mapeo el método programado en Julia pudiera calcular de manera recurrente los polinomios asociados a las variedades.
 \section{Desarrollo explícito para el mapeo estándar}
-Para desarrollar el método de parametrización de manera automática se usó como base el desarrollo que aparece en las notas \cite{Mireles}. En este trabajo se expone de manera explícita cómo se calculan las variedades estables e inestables para el mapeo estándar. El mapeo estándar tiene la forma\\
+Para desarrollar el método de parametrización de manera automática se usó como base el desarrollo que aparece en las notas \cite{Mireles}. En este trabajo se expone de manera explícita cómo se calculan las variedades estables e inestables para el mapeo estándar. El mapeo estándar tiene la forma
 \begin{eqnarray}
 \mathbf{f}_{k}(\theta,p) = \left[\begin{array}{c}
 \theta + p \\
@@ -105,8 +105,8 @@ usando la serie de Taylor del seno
 \end{eqnarray}
 desarrollamos cada suma tomando en cuenta que $b_{0}=0$
 \begin{eqnarray}
-&b_{1}t&+b_{2}t^{2}+...+k\left[a_{0}+(a_{1}+b_{1})t+...\right]-\\
-&\frac{k}{3!}&\left[a_{0}+(a_{1}+b_{1})t+(a_{2}+b_{2})t^{2}+...\right]^{3}+...\\
+&b_{1}t&+b_{2}t^{2}+...+k\left[a_{0}+(a_{1}+b_{1})t+...\right]-\nonumber\\
+&\frac{k}{3!}&\left[a_{0}+(a_{1}+b_{1})t+(a_{2}+b_{2})t^{2}+...\right]^{3}+...\nonumber\\
 &=&b_{1}\lambda t+b_{2}\lambda^{2}t^{2}+...
 \label{segundo renglon}
 \end{eqnarray}
@@ -114,7 +114,7 @@ e igualamos los términos de orden cero
 \begin{eqnarray}
 k a_{0}+\frac{k}{3!}a_{0}^{3}+...=0, 
 \end{eqnarray}
-por lo que $a_{0}=0$. Si recordamos, $a_{0},b_{0}$ es el punto fijo. Si ahora usamos los de orden uno en la ecuación \eqref{primer renglon}, \eqref{segundo renglon} respectivamente
+por lo que $a_{0}=0$, recordemos que $a_{0},b_{0}$ es el punto fijo. Si ahora usamos los de orden uno en la ecuación \eqref{primer renglon}, \eqref{segundo renglon} respectivamente
 \begin{eqnarray}
 (a_{1}+b_{1})t=a_{1}\lambda t,
 \end{eqnarray}
@@ -212,7 +212,7 @@ Para obtener las relaciones de recurrencia de $a_{n},b_{n}$ usaremos el caso $t=
 \begin{eqnarray}
 \overline{W}(0)=\alpha_{0}+i\beta_{0}=\cos(\theta(0)+p(0))+i\sin(\theta(0)+p(0))=1,
 \end{eqnarray}
-entonces $\alpha_{0}=1,\beta_{0}=0$, tenemos entonces los valores iniciales de la recursión y por tanto podemos calcular los otros valores. Para encontrar los demás usemos la ecuación \eqref{expandida} pero tomando en cuenta la forma en la que escribimos al seno
+por lo que $\alpha_{0}=1,\beta_{0}=0$, ahora ya tenemos los valores iniciales de la recursión y por tanto podemos calcular los otros valores. Para encontrar los demás coeficientes usemos la ecuación \eqref{expandida} pero tomando en cuenta la forma en la que escribimos al seno
 \begin{eqnarray}
 \sum_{n=1}^{\infty}a_{n}t^{n}+\sum_{n=1}^{\infty}b_{n}t^{n}=\sum_{n=1}^{\infty}a_{n}\lambda^{n}t^{n},
 \end{eqnarray}
@@ -295,7 +295,7 @@ a_{n+1}=\frac{k}{(n+1)[(1-\lambda^{n+1})(1-\lambda^{n+1}+k)-k]}\sum_{l=0}^{n-1}\
 \begin{eqnarray}
 b_{n+1}=\frac{-k 1-\lambda^{n+1}}{(n+1)[(1-\lambda^{n+1})(1-\lambda^{n+1}+k)-k]}\sum_{l=0}^{n-1}\alpha_{n-l}(l+1)(a_{l+1}+b_{l+1}).
 \end{eqnarray}
-Usando el cada uno de los valores propios y las anteriores ecuaciones de recurrencia obtendremos los coeficientes de los polinomios $\theta(t),p(t)$ a cualquier orden. Dependiendo de qué valor de $\lambda$ se tome tendremos la parametrización de la variedad estable o de la inestable.\\
+Usando cada uno de los valores propios y las anteriores ecuaciones de recurrencia obtendremos los coeficientes de los polinomios $\theta(t),p(t)$ a cualquier orden. Dependiendo de qué valor de $\lambda$ se tome tendremos la parametrización de la variedad estable o de la inestable.\\
 
 %El ejemplo del cálculo de los polinomios mediante las relaciones de recurrencia se encuenta en la siguiente liga \url{}
 
@@ -343,7 +343,7 @@ donde la matriz $\mathbf{A}$ contiene a los coeficientes de  orden $n=1$  de $P$
 12\=34567890123456789012345678901234567890123456\=7890123456789012345678901234567890\kill%
 \>............................................................  \>..................................................\\
 \>\textsl{La matriz $\mathbf{A}$ se calculó con el } \>  \\
-\>\textsl{jacobiano de $P_{n}$, permitiendonos } \> $\mathbf{J}(\mathbf{f}_{k}(P_{\theta},P_{p}))$  \\
+\>\textsl{jacobiano de $P_{n}$, permitiéndonos } \> $\mathbf{J}(\mathbf{f}_{k}(P_{\theta},P_{p}))$  \\
 \>\textsl{obtener los coeficientes de orden uno  } \> \\
 
 
@@ -378,8 +378,8 @@ Segundo orden
 \end{center}
 Necesitamos retomar el lado derecho de la ecuación de invariancia \eqref{Ecua de invariancia} para el cual tenemos un polinomio que tiene como coeficientes los valores de $a_{i}$ multiplicados  con una potencia del valor propio.
 \begin{eqnarray}
-\sum_{n=1}^{\infty}a_{n}\lambda^{n}t^{n}\\
-\sum_{n=1}^{\infty}b_{n}\lambda^{n}t^{n}
+a_{0}+a_{1}\lambda t+a_{2}\lambda^{2}t^{2}\\
+b_{0}+b_{1}\lambda t+b_{2}\lambda^{2}t^{2}
 \end{eqnarray}
 \begin{center}
 
@@ -417,7 +417,7 @@ Ahora que tenemos las dos partes de la ecuación \eqref{Ecua de invariancia} par
 \>............................................................  \>..................................................\\
 \end{tabbing}
 
-La manera de proceder con el cálculo de los coeficientes de orden cúbico es la misma que la de orden cuadrático. En cada orden $n$ aparecerá la dependencia de $\lambda^{n}$ debida a lado derecho de la ecuación de invariancia y a la forma de la función $g$. En general una vez actualizados los valores $a_{n},b_{n}$ se agrega un orden más a los polinomios $P_{\theta},P_{p}$ así como a los de $P_{\theta\lambda},P_{p\lambda}$ en términos de las variables $\theta$ y $p$, se aplica el mapeo a los primeros y se escribe la resta igualada a cero de la ecuación \eqref{Ecua de invariancia}. Calculando el jacobiano se obtiene la matriz del sistema $\mathbf{A}_{n+1}$ y con los términos independientes $\mathbf{w}_{n+1}$. Se resuelve el sistema mediante la inversa de $\mathbf{A}_{n}$ y se obtienen ahora los términos $a_{n+1},b_{n+1}$.\\
+La manera de proceder con el cálculo de los coeficientes de orden cúbico es la misma que la de orden cuadrático. En cada orden $n$ aparecerá la dependencia de $\lambda^{n}$ debida a lado derecho de la ecuación de invariancia y a la forma de la función $g$. En general una vez actualizados los valores $a_{n},b_{n}$ se agrega un orden más a los polinomios $P_{\theta},P_{p}$ así como a los de $P_{\theta\lambda},P_{p\lambda}$ en términos de las variables $\theta$ y $p$, se aplica el mapeo a los primeros y se escribe la resta igualada a cero de la ecuación \eqref{Ecua de invariancia}. Calculando el Jacobiano se obtiene la matriz del sistema $\mathbf{A}_{n+1}$ y con los términos independientes $\mathbf{w}_{n+1}$. Se resuelve el sistema mediante la inversa de $\mathbf{A}_{n}$ y se obtienen ahora los términos $a_{n+1},b_{n+1}$.\\
 
 Notemos que es sólo el primer orden el que difiere en la forma del cálculo ya que en el primer paso se necesitan los valores y vectores propios. Salvo esos primeros términos los otros se pueden resumir en un sólo procedimiento. Tales características fueron las que permitieron automatizar el método. Las diferencias que surgen al resolver la ecuación lineal se toman en cuenta en el cálculo así como el error que se va acumulando en cada paso. \\
 

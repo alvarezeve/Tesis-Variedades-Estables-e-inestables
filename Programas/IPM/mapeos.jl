@@ -19,8 +19,8 @@ El mapeo estándar inverso con módulo 2pi
 
 function EstandarI(x,y,k)
 
-    x_n = mod(x-k*sin(y-x),2.*pi)
-    y_n = mod(y-x,2.*pi)
+    x_n = mod(x-y+k*sin(x),2.*pi)
+    y_n = mod(y-k*sin(x),2.*pi)
 
     return [x_n,y_n]
 end
@@ -63,4 +63,4 @@ function HenonI(x,y,a,b)
     y_n = (x+y^2-a)/(-b)
 
     return [x_n,y_n]
-end 
+end

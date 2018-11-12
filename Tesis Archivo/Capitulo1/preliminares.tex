@@ -13,7 +13,7 @@ En algunos casos los sistemas resultan ser simples, por ejemplo si su movimiento
 
 Para formalizar usaremos la siguiente definición de sistema dinámico.  \\
 \begin{defini}[\textsc{\textit{Sistema dinámico}}\cite{gerald}]
-\textit{Un sistema dinámico es un semigrupo $G$ actuando en un espacio $M$, definido por una relacón de la forma}
+\textit{Un sistema dinámico es un semigrupo $G$ actuando en un espacio $M$, definido por una relación de la forma}
 \begin{equation}
 T : G \times M \rightarrow M; \quad
 T_{g}\circ T_{h}=T_{g\circ h} . \label{def sistema dinamico}
@@ -75,7 +75,7 @@ Los vectores serán linealmente independientes si $\lambda_{1},\lambda_{2}$ son 
 \end{pmatrix}.
 \end{eqnarray}
 A partir de esto es fácil ver que $\mathbf{U}$ tiene como columnas los vectores propios. Consecuentemente un mapeo lineal de dimensión dos es linealmente conjugado con un mapeo el cual tiene una matriz de representación diagonal. Este tipo de matrices son llamadas formas normales y
-permiten representar el sistema en su forma más simple mediante la diagonalización del mismo.\\
+permiten representar el sistema en su forma más simple mediante la diagonalización del mismo \citep{arnold}.\\
 
 Cuando $\mathbf{A}$ es una matriz diagonalizable y sus valores propios son puramente imaginarios entonces decimos que el punto fijo tiene un comportamiento elíptico. Si es el caso que ninguno de los dos valores propios tienen parte real cero entonces el punto fijo asociado es un punto fijo hiperbólico. El resultado de estas características visto en el espacio fase es un comportamiento muy particular que se muestra en la figura \ref{hiperbolic}. \\
 
@@ -193,7 +193,7 @@ Esto se resume en el siguiente teorema.
 
 
 \begin{thm}[\underline{\textit{De la variedad estable}} \cite{Mateo}]
-\textit{Sea un sistema de la forma $\mathbf{x}_{n+1}=\mathbf{f}(\mathbf{x}_{n})$ con un punto fijo en el origen. Sean $E^{s}$ y $E^{u}$ los subespacios estables e inestables de la linearización del sistema,$\mathbf{f}(\mathbf{x}_{n})\rightarrow\mathbb{J}\mathbf{x}_{n}$,  donde $\mathbb{J}$ es la matriz jacobiana en el origen . Si $\mid \mathbf{f}(\mathbf{x}_{n})-\mathbb{J}\mathbf{x}_{n}\mid =O(x^{2})$ entonces existen localmente variedades estables e inestables con las mismas dimensiones que $E^{s}$,$E^{u}$ y que son tangentes a éstos en cero respectivamente.}
+\textit{Sea un sistema de la forma $\mathbf{x}_{n+1}=\mathbf{f}(\mathbf{x}_{n})$ con un punto fijo en el origen. Sean $E^{s}$ y $E^{u}$ los subespacios estables e inestables de la linearización del sistema,$\mathbf{f}(\mathbf{x}_{n})\rightarrow\mathbb{J}\mathbf{x}_{n}$,  donde $\mathbb{J}$ es la matriz Jacobiana en el origen . Si $\mid \mathbf{f}(\mathbf{x}_{n})-\mathbb{J}\mathbf{x}_{n}\mid =O(x^{2})$ entonces existen localmente variedades estables e inestables con las mismas dimensiones que $E^{s}$,$E^{u}$ y que son tangentes a éstos en cero respectivamente.}
 \begin{eqnarray*}
 W^{s}_{loc}(\mathbf{x}_{*})= \lbrace \mathbf{x}_{*} : \mathbf{f}^{k}(\mathbf{x}_{n})\rightarrow \mathbf{x}_{*} cuando\quad k \rightarrow \infty \rbrace,
 \end{eqnarray*}
@@ -229,7 +229,12 @@ Las ecuaciones \eqref{fuerza sistema dif a} y \eqref{fuerza sistema dif b} puede
 H(q,p)=\frac{p^{2}}{2}+V(q)\sum_{n=-\infty}^{\infty}\delta(t-nT), 
 \label{ec de hamilton} 
 \end{eqnarray}
-llamada Hamiltoniana, donde $p$ denota el momento y $q$ la posición. Al observar \eqref{ec de hamilton}, \eqref{fuerza sistema dif a} y \eqref{fuerza sistema dif b} podemos notar que las ecuaciones de movimiento resultan
+llamada Hamiltoniana, donde $p$ denota el momento y $q$ la posición.De manera general, cuando se tiene uns sistema de la forma
+\begin{eqnarray}
+H(p,q)=\frac{p^{2}}{2}+V(q),
+\label{Hamiltoniano-general}
+\end{eqnarray}
+las ecuaciones de movimiento son
 \begin{eqnarray}
 \frac{dq}{dt}=\frac{\partial H}{\partial p}
 \label{1ec de mov}
@@ -238,7 +243,7 @@ llamada Hamiltoniana, donde $p$ denota el momento y $q$ la posición. Al observa
 \frac{dp}{dt}=-\frac{\partial H}{\partial q}.
 \label{2ec de mov}
 \end{eqnarray}
-De aquí obtenemos 
+De aquí obtenemos para el caso de \eqref{ec de hamilton}
 \begin{eqnarray}
 \frac{dq}{dt}=p\quad
 \label{SistemaH1}

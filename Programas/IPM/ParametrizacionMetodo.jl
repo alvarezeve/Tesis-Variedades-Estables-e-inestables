@@ -17,6 +17,6 @@ export Error4
 
 include("VariedadesIPM.jl")
 include("mapeos.jl")
-include("graficar-mapeos.jl")
+#include("graficar-mapeos.jl")
 
 end

@@ -9,7 +9,7 @@ Cuando uno habla sobre sistemas dinámicos lo que le viene a la mente es alguna 
 En el estudio de los mismos se hace una clasificación en términos de sus propiedades vistas en el espacio fase o por la forma del sistema. Hay sistemas dinámicos discretos y sistemas dinámicos continuos, en el primero el tiempo varía discretamente mientras que en el segundo varía de manera contínua. \\
 
  Dentro de estas características de clasificación también puede ser que el sistema sea de tipo determinista o estocástico. La diferencia entre ambos es que para el determinista dado un punto en el espacio fase existe uno y sólo un punto subsecuente bien definido, mientras que en el estocástico para un estado puede haber varios estados subsecuentes posibles.
-En algunos casos los sistemas resultan ser simples, por ejemplo si su movimiento es regular. Sin embargo hay muchos otros sistemas que no son regulares en los que para dos condiciones iniciales parecidas los resultados de la dinámica después de cierto tiempo son diferentes. En este trabajo nos enfocaremos en los  sistemas deterministas discretos.\\
+En algunos casos los sistemas resultan ser simples, por ejemplo si su movimiento es regular. En otros sistemas, dos condiciones iniciales cercanas se alejan exponencialmente con el tiempo. En este trabajo nos enfocaremos en los  sistemas deterministas discretos.\\
 
 Para formalizar usaremos la siguiente definición de sistema dinámico.  \\
 \begin{defini}[\textsc{\textit{Sistema dinámico}}\cite{gerald}]
@@ -55,7 +55,7 @@ Si tenemos un puno fijo $\mathbf{x}_{*}$ asociado al mapeo entonces la ecuación
 \begin{eqnarray}
 \mathbf{x}_{n+1} =\mathbf{A}\mathbf{x}_{n},
 \end{eqnarray}
-representa el sistema linearizado alrededor del punto, donde $\mathbf{A}=D\mathbf{f}(\mathbf{x}_{*})$. Es decir el mapeo puede ser representado como una matriz de coeficientes constantes,además si el sistema dinámico es invertible se puede conocer el punto anterior $\mathbf{x}_{n-1}$ a un cierto $\mathbf{x}_{n}$ usando la matriz inversa de $\mathbf{A}$ que representa la linearización del mapeo inverso $\mathbf{f}^{-1}$. Es decir las características de tal matriz nos dirán el comportamiento del sistema. \\
+representa el sistema linearizado alrededor del punto, donde $\mathbf{A}=D\mathbf{f}(\mathbf{x}_{*})$. Es decir el mapeo puede ser representado como una matriz de coeficientes constantes, además si el sistema dinámico es invertible se puede conocer el punto anterior $\mathbf{x}_{n-1}$ a un cierto $\mathbf{x}_{n}$ usando la matriz inversa de $\mathbf{A}$ que representa la linearización del mapeo inverso $\mathbf{f}^{-1}$. Es decir las características de tal matriz nos dirán el comportamiento del sistema. \\
 
 Dado que los sistemas tratados en este trabajo son de dos dimensiones entonces analizaremos sólo este caso. Los valores propios $\lambda_{1}, \lambda_{2}$, soluciones del polinomio característico de grado dos, son en general valores complejos clasificados como sigue.
 \begin{itemize}
@@ -77,7 +77,7 @@ Los vectores serán linealmente independientes si $\lambda_{1},\lambda_{2}$ son 
 A partir de esto es fácil ver que $\mathbf{U}$ tiene como columnas los vectores propios. Consecuentemente un mapeo lineal de dimensión dos es linealmente conjugado con un mapeo el cual tiene una matriz de representación diagonal. Este tipo de matrices son llamadas formas normales y
 permiten representar el sistema en su forma más simple mediante la diagonalización del mismo \citep{arnold}.\\
 
-Cuando $\mathbf{A}$ es una matriz diagonalizable y sus valores propios son puramente imaginarios entonces decimos que el punto fijo tiene un comportamiento elíptico. Si es el caso que ninguno de los dos valores propios tienen parte real cero entonces el punto fijo asociado es un punto fijo hiperbólico. El resultado de estas características visto en el espacio fase es un comportamiento muy particular que se muestra en la figura \ref{hiperbolic}. \\
+Cuando los valores propios de $\mathbf{A}$ son en valor absoluto igual a uno entonces decimos que el punto fijo tiene un comportamiento elíptico. Si es el caso que un valor propio tiene valor absoluto mayor a uno y otro menor a uno entonces el punto fijo asociado es un punto fijo hiperbólico. El resultado de estas características visto en el espacio fase es un comportamiento muy particular que se muestra en la figura \ref{hiperbolic}. \\
 
 \begin{figure}[h!]
 \centering
@@ -229,7 +229,7 @@ Las ecuaciones \eqref{fuerza sistema dif a} y \eqref{fuerza sistema dif b} puede
 H(q,p)=\frac{p^{2}}{2}+V(q)\sum_{n=-\infty}^{\infty}\delta(t-nT), 
 \label{ec de hamilton} 
 \end{eqnarray}
-llamada Hamiltoniana, donde $p$ denota el momento y $q$ la posición.De manera general, cuando se tiene uns sistema de la forma
+llamada Hamiltoniana, donde $p$ denota el momento y $q$ la posición. De manera general, cuando se tiene un sistema de la forma
 \begin{eqnarray}
 H(p,q)=\frac{p^{2}}{2}+V(q),
 \label{Hamiltoniano-general}
@@ -278,7 +278,7 @@ q(t_{n+1})=p(t_{n+1})+q(t_{n}),
 \label{sistema hamilton a}
 \end{eqnarray}
 \begin{eqnarray}
-p(t_{n+1})=p(t_{n})-\frac{dV(q)}{dt}.
+p(t_{n+1})=p(t_{n})-\frac{dV(q(t_{n}))}{dt}.
 \label{sistema hamilton b}
 \end{eqnarray}
 
@@ -387,7 +387,7 @@ con $q_{n+1}=q(t_{n+1})$ y análogamente para $p$. Es justo de este sistema line
 \section{Método de parametrización}
 Como ya observamos en la sección anterior encontrar las variedades asociadas a un punto fijo no es trivial. Los métodos analíticos se vuelven no sólo tediosos si no que hacen necesario que el análisis de un sistema se haga de forma particular. Y para encontrar tales variedades debemos explotar los conocimientos que tenemos sobre los sistemas. Algunas de estas características son realmente simples, por ejemplo sabemos que en un punto hiperbólico resultarán dos variedades asociadas a los valores propios de la matriz que representa el sistema linearizado. Para este trabajo nos concentraremos en los sistemas Hamiltonianos ya que estos preservan el área y son importantes en la física, sin embargo el método funciona también para sistemas no Hamiltonianos. El objetivo de esta sección es describir sobre el método de parametrización el cual fue desarrollado por X.Cabré, E. Fontich y R. de la Llave \cite{Haro}. El método fue desarrollado de manera general para conjuntos invariantes, estables e inestables, en puntos hiperbólicos, tratándose de un método semianalítico, es decir parte computacional y parte analítica.\\
 
-Para ahondar en el método recordemos que anteriormente mencionamos que los conjuntos \eqref{variedad estable}, \eqref{variedad inestable} son conjuntos invariantes. Por otro lado también recordemos la definición de sistema dinámico que nos dice que se trata de un semigrupo actuando sobre un espacio $M$, la manera en la que se genera el sistema es con un difeomorfismo $\mathbf{f}:M \rightarrow M$. En este mismo espacio $M$ definamos una inmersión inyectiva $P:\Theta \rightarrow M$  lo cual nos define una subvariedad $P$ parametrizada por medio de las variables locales en $\theta \in \Theta$. La variedad invariante parametrizada por $P$  junto con $g:\Theta \rightarrow \Theta$ deben cumplir 
+Para ahondar en el método recordemos que anteriormente mencionamos que los conjuntos \eqref{variedad estable}, \eqref{variedad inestable} son conjuntos invariantes. Por otro lado también recordemos la definición de sistema dinámico que nos dice que se trata de un semigrupo actuando sobre un espacio $M$, la manera en la que se genera el sistema es con un difeomorfismo $\mathbf{f}:M \rightarrow M$. En este mismo espacio $M$ definamos una inmersión inyectiva $P:\Theta \rightarrow M$ con $\theta\subset \mathbb{R}$, lo cual nos define una subvariedad $P$ parametrizada por medio de las variables locales en $\theta \in \Theta$. La variedad invariante parametrizada por $P$  junto con $g:\Theta \rightarrow \Theta$ deben cumplir 
 \begin{eqnarray}
 \mathbf{f} \circ P = P \circ g,  \label{Ecua de invariancia}
 \end{eqnarray}
@@ -405,7 +405,7 @@ En este sentido $g$ representa un subsistema de $\mathbf{f}$, en otras palabras 
 
 La forma en la que se escoge $g$, en la mayoría de las veces, es polinomial de tal manera que se adapte a la forma del mapeo. Sin embargo la elección puede ser diferente dependiendo del sistema. En este caso escogimos la dependencia más sencilla para $x,y$ \eqref{fun g} que resulta ser suficiente en el caso hiperbólico
 \begin{eqnarray}
-g(t) = (\lambda t,\lambda t).
+g(t) = \lambda t.
 \label{fun g}
 \end{eqnarray}
 Con esto tendremos del lado derecho de la ecuación \eqref{Ecua de invariancia} un polinomio. \\

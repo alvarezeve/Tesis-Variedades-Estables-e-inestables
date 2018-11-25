@@ -28,6 +28,12 @@ Gerald Teschl.
 A.~J. Insel y L.E.~Spence Stephen H.~Friedberg.
 \newblock Algebra lineal.
 
+\bibitem{arnold}
+Vladimir~I. Arnol'd.
+\newblock {\em Mathematical Methods of Classical Mechanics}, volume~1 of {\em
+  Analytic Mechanics}.
+\newblock Springer-Verlag, 2nd edition, 1992.
+
 \bibitem{Meiss}
 James~D. Meiss.
 \newblock {\em Differential Dynamical Systems}, volume~14 of {\em Mathematical
@@ -56,11 +62,6 @@ Mateo Wirth.
 \newblock Invariant manifolds of dynamical systems and an application to space
   exploration.
 
-\bibitem{Tomoki}
-Anthony M. Bloch y Melvin~Leok Tomoki~Ohsawa.
-\newblock Discrete hamilton-jacobi theory.
-\newblock {\em SIAM J. Control Optim}, 49:1822--1856, 3009.
-
 \bibitem{Chang}
 Y.F.~Chang y~G.~Corliss.
 \newblock Ratio-like and recurrence relation tests for convergence of series.
@@ -83,11 +84,6 @@ Interval arithmetic(paquete julia).
 Interval root finding(paquete julia).
 \newblock url={https://github.com/JuliaIntervals/IntervalRootFinding.jl}.
 
-\bibitem{static}
-Static arrays(paquete julia).
-\newblock url={https://github.com/JuliaArrays/StaticArrays.jl}.
-\newblock v0.7.2.
-
 \bibitem{ramon}
 R.Baker Kearfott y Michael J.~Cloud Ramon E.~More.
 \newblock {\em Introduction to Interval Analysis}.
@@ -98,11 +94,27 @@ W.~Tucker.
 \newblock {\em Valdated Numerics:A short introduction to RigorousComputations}.
 \newblock Princeton University Press.
 
+\bibitem{Ying}
+Tamás~Tél Ying-Cheng~Lai.
+\newblock {\em Transient Chaos}, volume 173 of {\em Applied Mathematical
+  Sciences}.
+\newblock Springer, 1 edition, 2010.
+
 \bibitem{Mireles2}
 J.D. Mireles James y Christian~Reinhardt Jan Bouwe van~den Berg.
 \newblock Computing (un)stable manifolds with validated error bounds:
   non-resonant and resonant spectra.
 \newblock 2015.
+
+\bibitem{Merlo}
+O.~Merlo y T.H.~Seligman C.~Jung, C. Mejía-Monasterio.
+\newblock Self-pushing effect in chaotic scattering.
+\newblock {\em New Journal of Physics}, 6, 2004.
+
+\bibitem{Tomoki}
+Anthony M. Bloch y Melvin~Leok Tomoki~Ohsawa.
+\newblock Discrete hamilton-jacobi theory.
+\newblock {\em SIAM J. Control Optim}, 49:1822--1856, 3009.
 
 \bibitem{Jung2}
 B.~Rückerl y~C.~Jung.
@@ -119,12 +131,6 @@ C.~Lipp y T.H.~Seligman C.~Jung.
 Charles P. Poole y John L.~Safko Herbert~Goldstein.
 \newblock {\em Classical mechanics}.
 \newblock Addison-Wesley, 3 edition, 2000.
-
-\bibitem{arnold}
-Vladimir~I. Arnol'd.
-\newblock {\em Mathematical Methods of Classical Mechanics}, volume~1 of {\em
-  Analytic Mechanics}.
-\newblock Springer-Verlag, 2nd edition, 1992.
 
 \bibitem{arn}
 Vladimir I.~Arnol'd y~Roger~Cooke.
@@ -151,17 +157,16 @@ Stephen T.~Thornton y~Jerry B.~Marion.
 \newblock {\em Classical Dynamics of Particles and Systems}.
 \newblock Thomson, 5th edition, 2004.
 
+\bibitem{static}
+Static arrays(paquete julia).
+\newblock url={https://github.com/JuliaArrays/StaticArrays.jl}.
+\newblock v0.7.2.
+
 \bibitem{book:Calvin}
 Calvin D.~Ahlbrandt y~Allan C. Peterson~(auth.).
 \newblock {\em Discrete Hamiltonian Systems: Difference Equations, Continued
   Fractions, and Riccati Equations}.
 \newblock Kluwer Texts in the Mathematical Sciences 16. Springer US, 1 edition,
   1996.
-
-\bibitem{Ying}
-Tamás~Tél Ying-Cheng~Lai.
-\newblock {\em Transient Chaos}, volume 173 of {\em Applied Mathematical
-  Sciences}.
-\newblock Springer, 1 edition, 2010.
 
 \end{thebibliography}

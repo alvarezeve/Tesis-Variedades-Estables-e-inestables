@@ -3,7 +3,7 @@
 \backcite {Mireles}{{\es@scroman {vi}}{(document)}{Doc-Start}}
 \backcite {Jung}{{\es@scroman {vi}}{(document)}{Doc-Start}}
 \backcite {gerald}{{2}{1}{defini.1}}
-\backcite {Friedberg}{{4}{1.2}{equation.1.2.5}}
+\backcite {Friedberg}{{3}{1.2}{equation.1.2.5}}
 \backcite {arnold}{{4}{1.2}{equation.1.2.6}}
 \backcite {Meiss}{{4}{1.2}{figure.caption.4}}
 \backcite {Meyer}{{4}{1.2}{figure.caption.4}}
@@ -31,4 +31,4 @@
 \backcite {Ott}{{40}{3.5.1}{figure.caption.29}}
 \backcite {devaney}{{43}{3.5.2}{figure.caption.31}}
 \backcite {gerald}{{43}{3.5.2}{figure.caption.31}}
-\backcite {Ying}{{46}{3.31}{figure.caption.35}}
+\backcite {Merlo}{{46}{3.31}{figure.caption.35}}

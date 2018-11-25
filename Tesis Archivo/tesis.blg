@@ -10,7 +10,7 @@ A level-1 auxiliary file: Capitulo3/Henon.aux
 A level-1 auxiliary file: Capitulo4/conclusiones-p.aux
 The style file: unsrt.bst
 Database file #1: referencias.bib
-"{" immediately follows a field name---line 265 of file referencias.bib
+"{" immediately follows a field name---line 274 of file referencias.bib
  :  year
  :      {2010}
 I'm skipping whatever remains of this entry
@@ -20,45 +20,45 @@ Warning--empty note in Mireles
 Warning--empty note in Mateo
 Warning--empty year in Numerics
 Warning--empty note in Mireles2
-You've used 31 entries,
+You've used 32 entries,
             1791 wiz_defined-function locations,
-            624 strings with 7197 characters,
-and the built_in function-call counts, 4789 in all, are:
-= -- 428
-> -- 112
+            630 strings with 7327 characters,
+and the built_in function-call counts, 4922 in all, are:
+= -- 440
+> -- 116
 < -- 5
-+ -- 58
-- -- 27
-* -- 205
-:= -- 739
-add.period$ -- 90
-call.type$ -- 31
-change.case$ -- 26
++ -- 60
+- -- 28
+* -- 209
+:= -- 764
+add.period$ -- 93
+call.type$ -- 32
+change.case$ -- 27
 chr.to.int$ -- 0
-cite$ -- 35
-duplicate$ -- 266
-empty$ -- 583
-format.name$ -- 27
-if$ -- 1120
+cite$ -- 36
+duplicate$ -- 274
+empty$ -- 597
+format.name$ -- 28
+if$ -- 1149
 int.to.chr$ -- 0
-int.to.str$ -- 31
-missing$ -- 40
-newline$ -- 153
-num.names$ -- 27
-pop$ -- 140
+int.to.str$ -- 32
+missing$ -- 41
+newline$ -- 158
+num.names$ -- 28
+pop$ -- 141
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 82
+skip$ -- 86
 stack$ -- 0
 substring$ -- 132
-swap$ -- 38
+swap$ -- 39
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 33
-width$ -- 33
-write$ -- 318
+while$ -- 34
+width$ -- 34
+write$ -- 329
 (There were 2 error messages)

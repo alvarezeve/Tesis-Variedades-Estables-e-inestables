@@ -1,4 +1,4 @@
-\select@language {spanish}
+\babel@toc {spanish}{}
 \contentsline {chapter}{Introducci\IeC {\'o}n}{\es@scroman {v}}{chapter*.2}
 \contentsline {chapter}{\numberline {1}Sistemas Hamiltonianos de dos dimensiones}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Sistemas din\IeC {\'a}micos}{1}{section.1.1}

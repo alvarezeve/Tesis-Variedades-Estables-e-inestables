@@ -1,9 +1,13 @@
-
 module ParametrizacionMetodo
 
 
 using TaylorSeries
 using LinearAlgebra
+using GenericLinearAlgebra
+using PyPlot
+using IntervalArithmetic, IntervalRootFinding
+using ValidatedNumerics
+using StaticArrays
 
 export Inestable
 export InestableCoef

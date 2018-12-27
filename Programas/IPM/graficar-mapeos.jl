@@ -1,3 +1,4 @@
+module graficar-mapeos
 #este módulo sirve para graficar mapeos.
 
 
@@ -62,13 +63,14 @@ function Evaluar(Tiempo,paso,A,B,PuntoFijo,col)
     p = plot(ValX,ValY,linestyle = "-",marker=",",color=col)
 
 
+#=
     title("Espacio Fase")
     xlabel("$\theta$")
     ylabel("$p$")
     xlim(0.,2*pi)
     ylim(0.,2*pi)
     legend(loc="upper right",fancybox="true")
-
+=#
 
 
 end
@@ -77,4 +79,7 @@ end
 function Graficar(Tiempo,paso,k,A,B,PuntoFijo,col)
     GraficarEstandarMap(k)
     Evaluar(Tiempo,paso,A,B,PuntoFijo,col)
+end
+
+
 end

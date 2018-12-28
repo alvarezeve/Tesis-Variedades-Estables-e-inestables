@@ -21,15 +21,15 @@ Argumentos:
 
 
 """
-function PolinomioTaylor1{T<:Real}(g::Int64,CX::Array{TaylorN{T}},CY::Array{TaylorN{T}})
+function PolinomioTaylor1(g::Int64,CX::Array{TaylorN{T}},CY::Array{TaylorN{T}}) where T<:Real
     #=
     Creamos x,y como variables tipo TaylorN de orden 2
     =#
     x,y = set_variables(T, "x y", order = 2)
     #especificamos que LX,LY son de arreglos que guardarán coeficientes del polinomio,
     # sólo son auxiliares en esta función
-    LX = Array{TaylorSeries.TaylorN{T}}(1)
-    LY = Array{TaylorSeries.TaylorN{T}}(1)
+    LX = Array{TaylorN{T},1}
+    LY = Array{TaylorN{T},1}
 
     # usamos un condicional para separar el caso 1 del resto, en el caso uno sólo se creal el polinomio
     # mientras que para g>1 hay que actualizar las lista y luego crear el polinomio
@@ -108,24 +108,24 @@ Argumentos:
 -M: Matriz tipo BigFloat (2-element Array{BigFloat,1})
 
 """
-function EigenValores{T<:BigFloat}(M::Array{T,2})
+function EigenValores(M::Array{T,2}) where T<:BigFloat
     # MM sirve como matriz auxiliar para el cálculo de eigenvalores con la función eig()
     MM = [Float64(M[1]) Float64(M[3]); Float64(M[2]) Float64(M[4])]
-    vfloat = [0. 0;0 0]
+    vfloat = [0. 0. ;0. 0.]
     h = 0.
-    λfloat_aux,vfloat_aux = eig(MM)
-    imag(λfloat_aux[1]) == 0.? h=1. :   error("Error: el valor propio 1 es complejo, es decir es un punto elíptico")
-    imag(λfloat_aux[2]) == 0.?  h=1. :  error("Error: el valor propio 2 es complejo, es decir es un punto elíptico")
+    λfloat_aux,vfloat_aux = eigen(MM)
+    imag(λfloat_aux[1]) == 0. ? h=1. :   error("Error: el valor propio 1 es complejo, es decir es un punto elíptico")
+    imag(λfloat_aux[2]) == 0. ?  h=1. :  error("Error: el valor propio 2 es complejo, es decir es un punto elíptico")
     if λfloat_aux[1]>λfloat_aux[2]
         λfloat = [λfloat_aux[2],λfloat_aux[1]]
         vfloat[:,1] = vfloat_aux[:,2]
         vfloat[:,2] = vfloat_aux[:,1]
     else
-        λfloat,vfloat = eig(MM)
+        λfloat,vfloat = eigen(MM)
     end
 
     #Por otra parte calculamos los valores propios de M usando :
-    Vals = real(LinearAlgebra.EigenGeneral.eigvals!(M))
+    Vals = real(GenericLinearAlgebra._eigvals!(M))
     #Creamos matrices que nos ayudarán en el método
     Id = [big(1.) big(0.); big(0.) big(1.)] #matriz identidad
     EigVec = [big(0.) big(0.);big(0.) big(0.)] #Matriz que guardará los vectores propios
@@ -175,12 +175,12 @@ function EigenValores{T<:BigFloat}(M::Array{T,2})
 end
 #_________________________________________________________________________________________________________________________________________________
 
-function EigenValores{T<:Float64}(M::Array{T,2})
+function EigenValores(M::Array{T,2}) where T<:Float64
     EigVec=[0. 0.;0. 0.]
     ValsOrden = T[0.,0.]
     #@show(M)
 
-    ValsOrden_aux,EigVec_aux = eig(M)
+    ValsOrden_aux,EigVec_aux = eigen(M)
     #@show(ValsOrden_aux)
     #@show(EigVec_aux)
     if ValsOrden_aux[1] > ValsOrden_aux[2]
@@ -194,7 +194,7 @@ function EigenValores{T<:Float64}(M::Array{T,2})
     else
 
 
-        ValsOrden,EigVec = eig(M)
+        ValsOrden,EigVec = eigen(M)
 
 
     end
@@ -214,8 +214,7 @@ ________________________________________________________________________________
  							Comienza el método de parametrización
 La función Orden uno hace la inicialización del método.
 =#
-
-function Orden1{T<:Real}(CX::Array{TaylorN{T}}, CY::Array{TaylorN{T}}, Mapeo, PuntoFijo::Array{T,1}, tipo_v, λarrayX::Array{T}, λarrayY::Array{T})
+function Orden1(CX::Array{TaylorN{T}}, CY::Array{TaylorN{T}}, Mapeo, PuntoFijo::Array{T,1}, tipo_v, λarrayX::Array{T}, λarrayY::Array{T}) where T<:Real
 
             t = PolinomioTaylor1(1, CX, CY)
 
@@ -225,6 +224,7 @@ function Orden1{T<:Real}(CX::Array{TaylorN{T}}, CY::Array{TaylorN{T}}, Mapeo, Pu
 
             #Calculamos el jacobiano del Orden 1 para obtener sus valores y vectores propios.
             JPO = jacobian(AuxOr1)
+            JPO = [JPO[1] JPO[3];JPO[2] JPO[4]]
 
             #Calculamos los valores y vectores propios
             eigval,eigvec = EigenValores(JPO)
@@ -235,7 +235,7 @@ function Orden1{T<:Real}(CX::Array{TaylorN{T}}, CY::Array{TaylorN{T}}, Mapeo, Pu
 
             # preguntamos si hay parte imaginaria del valor propio, en tal caso muestra un error
             tt = imag(λ)
-            tt == 0.?  Coef = eigvec[:,tipo_v] : error("Error: el valor propio es complejo, es decir es un punto elíptico")
+            tt == 0. ?  Coef = eigvec[:,tipo_v] : error("Error: el valor propio es complejo, es decir es un punto elíptico")
 
             #Ponemos los coeficientes en una variable nueva cada uno y los agregamos a las listas CX,CP,λ
             push!(CX, Coef[1])
@@ -248,7 +248,6 @@ function Orden1{T<:Real}(CX::Array{TaylorN{T}}, CY::Array{TaylorN{T}}, Mapeo, Pu
 
     return CX, CY, λarrayX, λarrayY, λ_v,λ, eigval,eigvec
 end
-
 
 #=
 ............................................................................................................................................
@@ -277,7 +276,7 @@ Argumentos:
 
 
 """
-function Variedades{T<:Real}(Mapeo, orden::Int64, PuntoFijo::Array{T,1},tipo_v) #, k::T, l::T)
+function Variedades(Mapeo, orden::Int64, PuntoFijo::Array{T,1},tipo_v) where T<:Real
 
     # definimos unas listas donde se guardarán los coeficientes  de todo el polinomio, tales deben ser
     # de tipo "Array{TaylorSeries.TaylorN{T},1}" dado que los términos que se van agregando
@@ -287,8 +286,8 @@ function Variedades{T<:Real}(Mapeo, orden::Int64, PuntoFijo::Array{T,1},tipo_v) 
     a=T(PuntoFijo[1])
     b=T(PuntoFijo[2])
 
-    CX = [a+TaylorN(0.)]
-    CY = [b+TaylorN(0.)]
+    CX = [a+TaylorN(HomogeneousPolynomial([0.,0.]))]
+    CY = [b+TaylorN(HomogeneousPolynomial([0.,0.]))]
 
 
     #λarray es la lista que contiene a los coeficientes del polinomio de λ
@@ -363,7 +362,6 @@ function Variedades{T<:Real}(Mapeo, orden::Int64, PuntoFijo::Array{T,1},tipo_v) 
     end
     return CX, CY, λarrayX, λarrayY, eigval,eigvec
 end
-
 #=
 ......................................................................................................................................
 					El método sigue con el calculo del error
@@ -388,7 +386,7 @@ Argumentos:
 -modulo : si el mapeo tiene algún modulo, ej. 2pi
 
 """
-function Invariancia{T<:Real}(Mapeo, Pol_vec::Array{Taylor1{T},1}, λvec::Array{Taylor1{T},1} ,modulo::T)
+function Invariancia(Mapeo, Pol_vec::Array{Taylor1{T},1}, λvec::Array{Taylor1{T},1} ,modulo::T) where T<:Real
     #@show(Pol_vec)
     Map_vec = Mapeo(Pol_vec[1],Pol_vec[2])
     #@show(Map_vec)
@@ -397,7 +395,7 @@ function Invariancia{T<:Real}(Mapeo, Pol_vec::Array{Taylor1{T},1}, λvec::Array{
     return Ec_Invariancia
 end
 
-function Invariancia{T<:Real}(Mapeo, Pol_vec::Array{Taylor1{T},1}, λvec::Array{Taylor1{T},1} )
+function Invariancia(Mapeo, Pol_vec::Array{Taylor1{T},1}, λvec::Array{Taylor1{T},1} ) where T<:Real
     #@show(Pol_vec)
     #@show(λvec)
     Map_vec = Mapeo(Pol_vec[1],Pol_vec[2])
@@ -426,9 +424,7 @@ Argumentos:
 - paso    : es el paso que se considera en cada evaluación del polinomio.
 
 """
-function EvaluarPol{T<:Real}(Ec_2var,Tiempo::Array{T}, paso::T)
-
-
+function EvaluarPol(Ec_2var,Tiempo::Array{T}, paso::T) where T<:Real
 
     Val = T[]
     Tiem = T[]
@@ -454,8 +450,6 @@ end
 
 
 
-
-
 #=
 .....................................................................................................................................
  					El método termina con la creación de los polinomios
@@ -473,7 +467,7 @@ Argumentos:
 - A,B : arreglos que contienen lo que serán los coeficientes del polinomio.
 - orden : grado del polinomio
 """
-function CreaPol{T<:Real}(A::Array{T}, B::Array{T}, orden::Int64)
+function CreaPol(A::Array{T}, B::Array{T}, orden::Int64) where T<:Real
 
     Taylor = [Taylor1(A, orden), Taylor1(B, orden)]
 
@@ -489,7 +483,7 @@ para evaluar la convergencia de los polinomios se hizo la siguiente función que
 =#
 
 
-function Convergencia{T<:Real}(A::Taylor1{T}, B::Taylor1{T})
+function Convergencia(A::Taylor1{T}, B::Taylor1{T}) where T<:Real
     A_aux = []
     B_aux = []
     Con_x = []
@@ -559,7 +553,7 @@ end
 
 
 
-function CalculoError{T<:Real}(Mapeo,modulo::Real,Taylor::Array{Taylor1{T}}, λ_vec::Array{Taylor1{T}},Tiempo::Array{T},paso::Real)
+function CalculoError(Mapeo,modulo::Real,Taylor::Array{Taylor1{T}}, λ_vec::Array{Taylor1{T}},Tiempo::Array{T},paso::Real) where T<:Real
 
 
     Ecua_Invariancia = Invariancia(Mapeo, Taylor, λ_vec, modulo)
@@ -569,7 +563,7 @@ function CalculoError{T<:Real}(Mapeo,modulo::Real,Taylor::Array{Taylor1{T}}, λ_
     return ErrorV
 end
 
-function CalculoError{T<:Real}(Mapeo,Taylor::Array{Taylor1{T}}, λ_vec::Array{Taylor1{T}},Tiempo::Array{T},paso::Real)
+function CalculoError(Mapeo,Taylor::Array{Taylor1{T}}, λ_vec::Array{Taylor1{T}},Tiempo::Array{T},paso::Real) where T<:Real
 
 
     Ecua_Invariancia = Invariancia(Mapeo, Taylor, λ_vec)
@@ -579,7 +573,7 @@ function CalculoError{T<:Real}(Mapeo,Taylor::Array{Taylor1{T}}, λ_vec::Array{Ta
     return ErrorV
 end
 
-function Error2{T<:Real}(Mapeo,Taylor::Array{Taylor1{T}}, λ_vec::Array{Taylor1{T}},Tiempo::Array{T},paso::Real)
+function Error2(Mapeo,Taylor::Array{Taylor1{T}}, λ_vec::Array{Taylor1{T}},Tiempo::Array{T},paso::Real) where T<:Real
 
     Ecua_Invariancia = Invariancia(Mapeo, Taylor, λ_vec)
 
@@ -591,7 +585,7 @@ function Error2{T<:Real}(Mapeo,Taylor::Array{Taylor1{T}}, λ_vec::Array{Taylor1{
 
 end
 
-function Error3{T<:Real}(PuntoFijo::Array{T,1},Taylor::Array{Taylor1{T}},eigval, eigvec,Tiempo::Array{T}, paso::Real,orden::Real)
+function Error3(PuntoFijo::Array{T,1},Taylor::Array{Taylor1{T}},eigval, eigvec,Tiempo::Array{T}, paso::Real,orden::Real) where T<:Real
 
 
     var_aux = Taylor1([0.,1.])
@@ -600,7 +594,7 @@ function Error3{T<:Real}(PuntoFijo::Array{T,1},Taylor::Array{Taylor1{T}},eigval,
 
     prim = 1-eigval[1]
     cuar = 1+1.5-eigval[1]
-    matriz_a = [prim*var_aux 1.5*var_aux; 1.*var_aux cuar*var_aux ]
+    matriz_a = [prim*var_aux 1.5*var_aux; 1.0*var_aux cuar*var_aux ]
 
 
     U_inv =inv(U)
@@ -617,8 +611,7 @@ function Error3{T<:Real}(PuntoFijo::Array{T,1},Taylor::Array{Taylor1{T}},eigval,
     return norma
 end
 
-
-function Error4{T<:Real}(Mapeo,Taylor::Array{Taylor1{T}}, λ_vec::Array{Taylor1{T}},Tiempo::Array{T},paso::Real)
+function Error4(Mapeo,Taylor::Array{Taylor1{T}}, λ_vec::Array{Taylor1{T}},Tiempo::Array{T},paso::Real) where T<:Real
     DW_X = derivative(Taylor[1])
     DW_Y = derivative(Taylor[2])
     Ecua_derecha = [DW_X*λ_vec[1],DW_Y*λ_vec[2]]
@@ -631,7 +624,6 @@ function Error4{T<:Real}(Mapeo,Taylor::Array{Taylor1{T}}, λ_vec::Array{Taylor1{
 
     return [Tiempo, Val]
 end
-
 
 
 
@@ -666,7 +658,7 @@ end
 
 
 
-function Inestable{T<:Real}(Mapeo , orden::Int64, PuntoFijo::Array{T}, Tiempo::Array{T}, paso::T)
+function Inestable(Mapeo , orden::Int64, PuntoFijo::Array{T}, Tiempo::Array{T}, paso::T) where T<:Real
     CoeficienteX, CoeficienteY, λarrayX, λarrayY,eigval,eigvec = Variedades(Mapeo, orden, PuntoFijo,1)
 
     X = T[]
@@ -697,7 +689,7 @@ end
 
 
 #..............................................................................................................................................
-function Estable{T<:Real}(Mapeo, orden::Int64, PuntoFijo::Array{T}, Tiempo::Array{T}, paso::T)
+function Estable(Mapeo, orden::Int64, PuntoFijo::Array{T}, Tiempo::Array{T}, paso::T) where T<:Real
     CoeficienteX, CoeficienteY, λarrayX, λarrayY,eigval,eigvec = Variedades(Mapeo, orden, PuntoFijo,2)
 
 

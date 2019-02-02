@@ -5,9 +5,12 @@ using TaylorSeries
 using LinearAlgebra
 using GenericLinearAlgebra
 using PyPlot
+using PyCall
 using IntervalArithmetic, IntervalRootFinding
 using ValidatedNumerics
 using StaticArrays
+#using LaTeXStrings
+
 
 export Inestable
 export InestableCoef
@@ -21,6 +24,6 @@ export Error4
 
 include("VariedadesIPM.jl")
 include("mapeos.jl")
-#include("graficar-mapeos.jl")
+include("graficar.jl")
 
 end

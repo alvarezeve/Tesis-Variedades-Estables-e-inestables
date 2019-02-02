@@ -23,6 +23,7 @@ Función para el mapeo estándar inverso con módulo 2pi.
 function EstandarI(x::Any, y::Any ,k::Real)
     x_n = mod(x-y+k*sin(x),2*pi)
     y_n = mod(y-k*sin(x),2*pi)
+
     return [x_n,y_n]
 end
 

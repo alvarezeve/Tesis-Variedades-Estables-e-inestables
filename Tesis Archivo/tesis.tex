@@ -9,16 +9,22 @@
 %                     Under GNU License v3
 
 % ADAPTADO PARA FI-UNAM:  Jesús Velázquez y Marco Ruiz
-
+\sloppy
 \documentclass[twoside,11pt]{Latex/Classes/PhDthesisPSnPDF} 
 \usepackage{blindtext}
 \usepackage[spanish]{babel}
+\usepackage{babelbib}
 %\usepackage{multicols}
 \usepackage{natbib} 
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{breakurl}
 %\usepackage[dvips]{graphicx}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{multicol}
+\usepackage{mathtools}
 \usepackage{float}
 \usepackage{theorem}
 \setlength{\theorempreskipamount}{5mm}
@@ -55,10 +61,10 @@
 %                                   DATOS                                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Método de parametrización: Variedades estables e inestables en mapeos hamiltonianos de dos dimensiones}
-\author{Evelyn Álvarez Cruz}        
-\degree{Físico}               % Carrera
+\author{\LARGE Evelyn Álvarez Cruz}        
+\degree{Física}               % Carrera
 \director{Dr. Luis Benet Fernández}               % Director de tesis
-\degreedate{2018}                           % Año de la fecha del examen
+\degreedate{2019}                           % Año de la fecha del examen
 \lugar{México, D.F.}                        % Lugar
 %\portadafalse                              % Portada en NEGRO, descomentar y comentar la línea siguiente si se quiere utilizar
 \portadatrue                                % Portada en COLOR
@@ -79,9 +85,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frontmatter
 \include{Agradecimientos/Dedicatoria} 
-\include{Declaracion/Declaracion}      % Comentar línea si no se usa
+\include{Declaracion/Declaracion}  
+\include{Agradecimientos/Agradecimientos}     % Comentar línea si no se usa
 \include{introduccion/introduccion}            % ~10 páginas - Explicar el propósito de la tesis
-%\include{Agradecimientos/Agradecimientos}   % Comentar línea si no se usa 
+  % Comentar línea si no se usa 
 %\include{Declaracion/Declaracion}           % Comentar línea si no se usa
 %\include{Resumen/Resumen}                   % Comentar línea si no se usa
 

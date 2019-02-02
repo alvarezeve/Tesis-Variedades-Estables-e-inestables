@@ -1,8 +1,7 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: tesis.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: tesis.aux
 A level-1 auxiliary file: Agradecimientos/Dedicatoria.aux
 A level-1 auxiliary file: Declaracion/Declaracion.aux
+A level-1 auxiliary file: Agradecimientos/Agradecimientos.aux
 A level-1 auxiliary file: introduccion/introduccion.aux
 A level-1 auxiliary file: Capitulo1/preliminares.aux
 A level-1 auxiliary file: Capitulo2/parametrizacion.aux
@@ -10,55 +9,22 @@ A level-1 auxiliary file: Capitulo3/Henon.aux
 A level-1 auxiliary file: Capitulo4/conclusiones-p.aux
 The style file: unsrt.bst
 Database file #1: referencias.bib
-"{" immediately follows a field name---line 274 of file referencias.bib
+Warning--entry type for "Mireles2" isn't style-file defined
+--line 13 of file referencias.bib
+"{" immediately follows a field name---line 277 of file referencias.bib
  :  year
  :      {2010}
 I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 294 of file referencias.bib
+ :  
+ :  author = {Lang Serge}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Too many commas in name 1 of "Á. Haro, M. Canadell, J. Figueras,A. Luque y J. Mondelo" for entry Haro
 while executing---line 944 of file unsrt.bst
-Warning--empty note in Mireles
-Warning--empty note in Mateo
+Warning--empty year in Friedberg
+Warning--empty author and editor in lang
+Warning--empty publisher in lang
+Warning--empty year in lang
 Warning--empty year in Numerics
-Warning--empty note in Mireles2
-You've used 32 entries,
-            1791 wiz_defined-function locations,
-            630 strings with 7327 characters,
-and the built_in function-call counts, 4922 in all, are:
-= -- 440
-> -- 116
-< -- 5
-+ -- 60
-- -- 28
-* -- 209
-:= -- 764
-add.period$ -- 93
-call.type$ -- 32
-change.case$ -- 27
-chr.to.int$ -- 0
-cite$ -- 36
-duplicate$ -- 274
-empty$ -- 597
-format.name$ -- 28
-if$ -- 1149
-int.to.chr$ -- 0
-int.to.str$ -- 32
-missing$ -- 41
-newline$ -- 158
-num.names$ -- 28
-pop$ -- 141
-preamble$ -- 1
-purify$ -- 0
-quote$ -- 0
-skip$ -- 86
-stack$ -- 0
-substring$ -- 132
-swap$ -- 39
-text.length$ -- 5
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
-warning$ -- 4
-while$ -- 34
-width$ -- 34
-write$ -- 329
-(There were 2 error messages)
+(There were 3 error messages)

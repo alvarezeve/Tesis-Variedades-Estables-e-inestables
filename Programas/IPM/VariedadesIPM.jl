@@ -387,20 +387,15 @@ Argumentos:
 
 """
 function Invariancia(Mapeo, Pol_vec::Array{Taylor1{T},1}, λvec::Array{Taylor1{T},1} ,modulo::T) where T<:Real
-    #@show(Pol_vec)
     Map_vec = Mapeo(Pol_vec[1],Pol_vec[2])
-    #@show(Map_vec)
-    Ec_Invariancia = mod(Map_vec-λvec, modulo)
-
-    return Ec_Invariancia
+    Aux = Map_vec-λvec
+    Ec_Invariancia = [Taylor1([mod(Aux[1].coeffs[i],modulo) for i in 1:length(Aux[1])]),Taylor1([mod(Aux[2].coeffs[i],modulo) for i in 1:length(Aux[2])])]
+    #return Ec_Invariancia
+    return Aux
 end
 
 function Invariancia(Mapeo, Pol_vec::Array{Taylor1{T},1}, λvec::Array{Taylor1{T},1} ) where T<:Real
-    #@show(Pol_vec)
-    #@show(λvec)
     Map_vec = Mapeo(Pol_vec[1],Pol_vec[2])
-    #@show(Map_vec)
-
     Ec_Invariancia = Map_vec-λvec
     return Ec_Invariancia
 end
@@ -431,8 +426,8 @@ function EvaluarPol(Ec_2var,Tiempo::Array{T}, paso::T) where T<:Real
 
 
     for t = Tiempo[1]:paso:Tiempo[2]
-        x = evaluate(Ec_2var[1], t)
-        y = evaluate(Ec_2var[2], t)
+        x = Ec_2var[1](t)
+        y = Ec_2var[2](t)
 
 
         norma = norm([x,y], Inf)

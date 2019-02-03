@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840) (preloaded format=pdflatex 2019.1.21)  1 FEB 2019 22:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840) (preloaded format=pdflatex 2019.1.21)  2 FEB 2019 19:23
 entering extended mode
 **./tesis.tex
 (tesis.tex
@@ -918,21 +918,46 @@ l.3 \begin{declaration}
 
 
 ]
-Underfull \hbox (badness 1472) in paragraph at lines 5--6
-[]\OT1/cmr/m/n/10.95 Gracias al Programa de Apoyo a Proyectos de Investigacion
- e Innovacion
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
  []
 
 [5
 
-])
+] [6])
 \openout2 = `introduccion/introduccion.aux'.
 
- (introduccion/introduccion.tex [6
-
-
-
-]
+ (introduccion/introduccion.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -947,7 +972,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-[7]
+[7
+
+
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
@@ -1840,14 +1869,9 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 139.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 139.
 Package rerunfilecheck Info: File `tesis.out' has not changed.
 (rerunfilecheck)             Checksum: 9411C6512C52039E50C972C8B316E5E4;1562.
+Package rerunfilecheck Info: File `tesis.brf' has not changed.
+(rerunfilecheck)             Checksum: F2F0301EE0822B01B2941205C223AAC5;1710.
 
-
-Package rerunfilecheck Warning: File `tesis.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `tesis.brf':
-(rerunfilecheck)             Before: 0728771D8A933814763F0CF4B94BDD5B;1666
-(rerunfilecheck)             After:  F2F0301EE0822B01B2941205C223AAC5;1710.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1859,7 +1883,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 139.
 Here is how much of TeX's memory you used:
  16288 strings out of 494866
  251267 string characters out of 3178265
- 413939 words of memory out of 3000000
+ 413965 words of memory out of 3000000
  19202 multiletter control sequences out of 15000+200000
  21943 words of font info for 90 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
@@ -2071,9 +2095,9 @@ miktex/texmfs/install/fonts/type1/public/amsfonts/euler/eusm10.pfb></home/evely
 n/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb></home/
 evelyn/.miktex/texmfs/install/fonts/type1/public/xypic/xyatip10.pfb></home/evel
 yn/.miktex/texmfs/install/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on tesis.pdf (77 pages, 5776245 bytes).
+Output written on tesis.pdf (77 pages, 5778777 bytes).
 PDF statistics:
- 4495 PDF objects out of 5155 (max. 8388607)
+ 4496 PDF objects out of 5155 (max. 8388607)
  292 named destinations out of 1000 (max. 500000)
  457 words of extra memory for PDF output out of 10000 (max. 10000000)
 

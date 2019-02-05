@@ -1,6 +1,6 @@
 \babel@toc {spanish}{}
 \babel@toc {spanish}{}
-\contentsline {chapter}{Introducci\IeC {\'o}n}{\es@scroman {vii}}{chapter*.3}% 
+\contentsline {chapter}{Introducci\IeC {\'o}n}{\es@scroman {xi}}{chapter*.3}% 
 \contentsline {chapter}{\numberline {1}Sistemas Hamiltonianos de dos dimensiones}{1}{chapter.1}% 
 \contentsline {section}{\numberline {1.1}Sistemas din\IeC {\'a}micos}{1}{section.1.1}% 
 \contentsline {section}{\numberline {1.2}Mapeos}{3}{section.1.2}% 
@@ -20,5 +20,5 @@
 \contentsline {subsection}{\numberline {3.5.2}H\IeC {\'e}non}{41}{subsection.3.5.2}% 
 \contentsline {subsection}{\numberline {3.5.3}Mapeo exponencial}{44}{subsection.3.5.3}% 
 \contentsline {section}{\numberline {3.6}Rect\IeC {\'a}ngulo fundamental}{47}{section.3.6}% 
-\contentsline {chapter}{\numberline {4}Resumen y perspectivas}{61}{chapter.4}% 
-\contentsline {chapter}{Bibliograf\'{\i }a}{63}{appendix*.50}% 
+\contentsline {chapter}{\numberline {4}Resumen y perspectivas}{57}{chapter.4}% 
+\contentsline {chapter}{Bibliograf\'{\i }a}{59}{appendix*.50}% 

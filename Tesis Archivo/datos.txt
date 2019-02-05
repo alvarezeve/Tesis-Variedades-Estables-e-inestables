@@ -1,0 +1,18 @@
+1.Datos de la alumna
+    Autor: Álvarez Cruz Evelyn
+    Teléfono: 5521664066
+    Universidad: Universidad Nacional Autónoma de México
+    Facultad: Facultad de Ciencias
+    Carrera: Física
+    Número de cuenta: 309112426
+
+2. Datos del asesor
+    Nombre: Benet Fernández Luis
+    
+3. Datos de la tesis:
+    Título: Método de parametrización: Variedades estables e inestables en mapeos Hamiltonianos de dos dimensiones.
+    Número de páginas: 61
+    Año: 2019
+    
+4. Palabras clave:
+    Parametrización, mapeos discretos, Hamiltonianos, variedad estable, variedad inestable. 

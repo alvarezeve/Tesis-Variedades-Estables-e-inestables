@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840) (preloaded format=pdflatex 2019.1.21)  2 FEB 2019 19:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840) (preloaded format=pdflatex 2019.1.21)  4 FEB 2019 14:17
 entering extended mode
 **./tesis.tex
 (tesis.tex
@@ -746,10 +746,11 @@ LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
- (Agradecimientos/Dedicatoria.aux)
-(Declaracion/Declaracion.aux) (Agradecimientos/Agradecimientos.aux)
-(introduccion/introduccion.aux) (Capitulo1/preliminares.aux)
-(Capitulo2/parametrizacion.aux) (Capitulo3/Henon.aux
+ (Datos/Datos.aux)
+(Agradecimientos/Dedicatoria.aux) (Declaracion/Declaracion.aux)
+(Agradecimientos/Agradecimientos.aux) (introduccion/introduccion.aux)
+(Capitulo1/preliminares.aux) (Capitulo2/parametrizacion.aux)
+(Capitulo3/Henon.aux
 
 LaTeX Warning: Label `Henon2' multiply defined.
 
@@ -888,33 +889,54 @@ Overfull \vbox (234.29004pt too high) detected at line 81
 cudos/unam_azul_5x5cm.pdf> <./Latex/Classes/Escudos/fi_azul.pdf>] [2
 
 ]
-\openout2 = `Agradecimientos/Dedicatoria.aux'.
+\openout2 = `Datos/Datos.aux'.
 
 
-(Agradecimientos/Dedicatoria.texpdfTeX warning (ext4): destination with the sam
-e identifier (name{page.I}) has been already used, duplicate ignored
+(Datos/Datos.tex
+Overfull \hbox (54.96278pt too wide) in paragraph at lines 4--51
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--51
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.6 \end{dedication}
-                     [1
+l.51 
+      [1
+
+]
+Overfull \vbox (14.39638pt too high) has occurred while \output is active []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.II}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.51 
+      [2]) [3]
+\openout2 = `Agradecimientos/Dedicatoria.aux'.
+
+ (Agradecimientos/Dedicatoria.tex [4
+
 
 ])
 \openout2 = `Declaracion/Declaracion.aux'.
 
- (Declaracion/Declaracion.texpdfTeX warning (ext4): destination with the same i
-dentifier (name{page.II}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3 \begin{declaration}
-                        [2
+
+(Declaracion/Declaracion.tex [5
 
 
-] [3
+] [6
 
-])
+] [7])
 \openout2 = `Agradecimientos/Agradecimientos.aux'.
 
- (Agradecimientos/Agradecimientos.tex [4
+ (Agradecimientos/Agradecimientos.tex
+[8
 
 
 ]
@@ -952,9 +974,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-[5
+[9
 
-] [6])
+] [10])
 \openout2 = `introduccion/introduccion.aux'.
 
  (introduccion/introduccion.tex
@@ -972,7 +994,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-[7
+[11
 
 
 
@@ -982,9 +1004,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
  []
 
 )
-LaTeX Info: Redefining \. on input line 90.
-LaTeX Info: Redefining \% on input line 90.
- [8] (tesis.toc
+LaTeX Info: Redefining \. on input line 91.
+LaTeX Info: Redefining \% on input line 91.
+ [12] (tesis.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 2.
@@ -1002,10 +1024,10 @@ Package spanish Warning: Replacing `OT1/cmr/bx/sc' by
 \tf@toc=\write5
 \openout5 = `tesis.toc'.
 
- [9
+ [13
 
 
-] [10
+] [14
 
 ]
 \openout2 = `Capitulo1/preliminares.aux'.
@@ -1030,6 +1052,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
+
 LaTeX Info: Redefining \. on input line 53.
 LaTeX Info: Redefining \% on input line 53.
 [2]
@@ -1047,8 +1074,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--63
 
  []
 
-LaTeX Info: Redefining \. on input line 80.
-LaTeX Info: Redefining \% on input line 80.
+LaTeX Info: Redefining \. on input line 73.
+LaTeX Info: Redefining \% on input line 73.
 [3]
 Underfull \hbox (badness 10000) in paragraph at lines 80--82
 
@@ -1059,77 +1086,77 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
-<hyperbolic.pdf, id=227, 462.52798pt x 346.89601pt>
+<hyperbolic.pdf, id=244, 462.52798pt x 346.89601pt>
 File: hyperbolic.pdf Graphic file (type pdf)
 <use hyperbolic.pdf>
 Package pdftex.def Info: hyperbolic.pdf  used on input line 87.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
-<hyperbolic2.pdf, id=228, 462.52798pt x 346.89601pt>
+<hyperbolic2.pdf, id=245, 462.52798pt x 346.89601pt>
 File: hyperbolic2.pdf Graphic file (type pdf)
 <use hyperbolic2.pdf>
 Package pdftex.def Info: hyperbolic2.pdf  used on input line 88.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
-LaTeX Info: Redefining \. on input line 109.
-LaTeX Info: Redefining \% on input line 109.
+LaTeX Info: Redefining \. on input line 100.
+LaTeX Info: Redefining \% on input line 100.
 [4 <./hyperbolic.pdf> <./hyperbolic2.pdf
 
 pdfTeX warning: pdflatex (file ./hyperbolic2.pdf): PDF inclusion: multiple pdfs
  with page group included in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 115--115
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-LaTeX Info: Redefining \. on input line 212.
-LaTeX Info: Redefining \% on input line 212.
+LaTeX Info: Redefining \. on input line 146.
+LaTeX Info: Redefining \% on input line 146.
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
-LaTeX Info: Redefining \. on input line 241.
-LaTeX Info: Redefining \% on input line 241.
+LaTeX Info: Redefining \. on input line 175.
+LaTeX Info: Redefining \% on input line 175.
 [6]
-LaTeX Info: Redefining \. on input line 385.
-LaTeX Info: Redefining \% on input line 385.
+LaTeX Info: Redefining \. on input line 239.
+LaTeX Info: Redefining \% on input line 239.
  [7]
-Underfull \hbox (badness 10000) in paragraph at lines 404--405
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
 
  []
 
-LaTeX Font Info:    Try loading font information for U+eus on input line 410.
+LaTeX Font Info:    Try loading font information for U+eus on input line 260.
 (/home/evelyn/.miktex/texmfs/install/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 ) <xymatrix 2x2
 182>
-LaTeX Info: Redefining \. on input line 421.
-LaTeX Info: Redefining \% on input line 421.
+LaTeX Info: Redefining \. on input line 271.
+LaTeX Info: Redefining \% on input line 271.
  [8]
-<diagrama-conmutativo.pdf, id=315, 794.94157pt x 614.26657pt>
+<diagrama-conmutativo.pdf, id=331, 794.94157pt x 614.26657pt>
 File: diagrama-conmutativo.pdf Graphic file (type pdf)
 <use diagrama-conmutativo.pdf>
-Package pdftex.def Info: diagrama-conmutativo.pdf  used on input line 425.
+Package pdftex.def Info: diagrama-conmutativo.pdf  used on input line 275.
 (pdftex.def)             Requested size: 317.971pt x 245.70227pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--432
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
 
  []
 
-LaTeX Info: Redefining \. on input line 435.
-LaTeX Info: Redefining \% on input line 435.
+LaTeX Info: Redefining \. on input line 285.
+LaTeX Info: Redefining \% on input line 285.
 [9 <./diagrama-conmutativo.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 438--440
+Underfull \hbox (badness 10000) in paragraph at lines 288--290
 
  []
 
 )
-LaTeX Info: Redefining \. on input line 112.
-LaTeX Info: Redefining \% on input line 112.
+LaTeX Info: Redefining \. on input line 113.
+LaTeX Info: Redefining \% on input line 113.
  [10]
 \openout2 = `Capitulo2/parametrizacion.aux'.
 
@@ -1165,58 +1192,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 297--299
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--309
+Underfull \hbox (badness 10000) in paragraph at lines 305--307
 \OT1/cmtt/m/n/10.95 Tesis-[]Variedades-[]Estables-[]e-[]inestables/$[][]\OT1/cm
 r/m/n/10.95 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--309
+Underfull \hbox (badness 10000) in paragraph at lines 305--307
 
  []
 
-LaTeX Info: Redefining \. on input line 309.
-LaTeX Info: Redefining \% on input line 309.
+LaTeX Info: Redefining \. on input line 307.
+LaTeX Info: Redefining \% on input line 307.
 [16]
-LaTeX Info: Redefining \. on input line 352.
-LaTeX Info: Redefining \% on input line 352.
+LaTeX Info: Redefining \. on input line 350.
+LaTeX Info: Redefining \% on input line 350.
  [17]
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 360--361
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 362--363
+LaTeX Info: Redefining \. on input line 399.
+LaTeX Info: Redefining \% on input line 399.
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 420--421
 
  []
 
-LaTeX Info: Redefining \. on input line 401.
-LaTeX Info: Redefining \% on input line 401.
-[18]
+
 Underfull \hbox (badness 10000) in paragraph at lines 422--423
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 424--425
+LaTeX Info: Redefining \. on input line 426.
+LaTeX Info: Redefining \% on input line 426.
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
 
  []
 
-LaTeX Info: Redefining \. on input line 428.
-LaTeX Info: Redefining \% on input line 428.
-[19]
+
 Underfull \hbox (badness 10000) in paragraph at lines 439--440
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 441--442
-
- []
-
 )
-LaTeX Info: Redefining \. on input line 113.
-LaTeX Info: Redefining \% on input line 113.
+LaTeX Info: Redefining \. on input line 114.
+LaTeX Info: Redefining \% on input line 114.
  [20]
 \openout2 = `Capitulo3/Henon.aux'.
 
@@ -1227,7 +1254,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<k03.pdf, id=522, 462.52798pt x 346.89601pt>
+<k03.pdf, id=538, 462.52798pt x 346.89601pt>
 File: k03.pdf Graphic file (type pdf)
 <use k03.pdf>
 Package pdftex.def Info: k03.pdf  used on input line 12.
@@ -1237,12 +1264,12 @@ Package pdftex.def Info: k03.pdf  used on input line 12.
 
 
 ]
-<errork03.pdf, id=527, 462.52798pt x 346.89601pt>
+<errork03.pdf, id=544, 462.52798pt x 346.89601pt>
 File: errork03.pdf Graphic file (type pdf)
 <use errork03.pdf>
 Package pdftex.def Info: errork03.pdf  used on input line 19.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-<k15.pdf, id=530, 462.52798pt x 346.89601pt>
+<k15.pdf, id=547, 462.52798pt x 346.89601pt>
 File: k15.pdf Graphic file (type pdf)
 <use k15.pdf>
 Package pdftex.def Info: k15.pdf  used on input line 27.
@@ -1254,12 +1281,12 @@ LaTeX Info: Redefining \% on input line 31.
 pdfTeX warning: pdflatex (file ./errork03.pdf): PDF inclusion: multiple pdfs wi
 th page group included in a single page
 >]
-<errork15.pdf, id=1051, 462.52798pt x 346.89601pt>
+<errork15.pdf, id=1068, 462.52798pt x 346.89601pt>
 File: errork15.pdf Graphic file (type pdf)
 <use errork15.pdf>
 Package pdftex.def Info: errork15.pdf  used on input line 34.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-<k07.pdf, id=1054, 462.52798pt x 346.89601pt>
+<k07.pdf, id=1071, 462.52798pt x 346.89601pt>
 File: k07.pdf Graphic file (type pdf)
 <use k07.pdf>
 Package pdftex.def Info: k07.pdf  used on input line 44.
@@ -1271,7 +1298,7 @@ LaTeX Info: Redefining \% on input line 48.
 pdfTeX warning: pdflatex (file ./errork15.pdf): PDF inclusion: multiple pdfs wi
 th page group included in a single page
 >]
-<errork07.pdf, id=1573, 462.52798pt x 346.89601pt>
+<errork07.pdf, id=1590, 462.52798pt x 346.89601pt>
 File: errork07.pdf Graphic file (type pdf)
 <use errork07.pdf>
 Package pdftex.def Info: errork07.pdf  used on input line 51.
@@ -1292,7 +1319,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-<errorf64.pdf, id=2101, 462.52798pt x 346.89601pt>
+<errorf64.pdf, id=2118, 462.52798pt x 346.89601pt>
 File: errorf64.pdf Graphic file (type pdf)
 <use errorf64.pdf>
 Package pdftex.def Info: errorf64.pdf  used on input line 64.
@@ -1300,12 +1327,12 @@ Package pdftex.def Info: errorf64.pdf  used on input line 64.
 LaTeX Info: Redefining \. on input line 69.
 LaTeX Info: Redefining \% on input line 69.
 [25 <./errorf64.pdf>]
-<errorbf.pdf, id=2139, 462.52798pt x 346.89601pt>
+<errorbf.pdf, id=2155, 462.52798pt x 346.89601pt>
 File: errorbf.pdf Graphic file (type pdf)
 <use errorbf.pdf>
 Package pdftex.def Info: errorbf.pdf  used on input line 72.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-<error_inversa.pdf, id=2142, 462.52798pt x 346.89601pt>
+<error_inversa.pdf, id=2158, 462.52798pt x 346.89601pt>
 File: error_inversa.pdf Graphic file (type pdf)
 <use error_inversa.pdf>
 Package pdftex.def Info: error_inversa.pdf  used on input line 82.
@@ -1316,7 +1343,7 @@ LaTeX Info: Redefining \% on input line 86.
 LaTeX Info: Redefining \. on input line 126.
 LaTeX Info: Redefining \% on input line 126.
  [27 <./error_inversa.pdf>]
-<h15.pdf, id=2218, 462.52798pt x 346.89601pt>
+<h15.pdf, id=2235, 462.52798pt x 346.89601pt>
 File: h15.pdf Graphic file (type pdf)
 <use h15.pdf>
 Package pdftex.def Info: h15.pdf  used on input line 153.
@@ -1324,7 +1351,7 @@ Package pdftex.def Info: h15.pdf  used on input line 153.
 LaTeX Info: Redefining \. on input line 157.
 LaTeX Info: Redefining \% on input line 157.
  [28]
-<errorH15.pdf, id=2228, 462.52798pt x 346.89601pt>
+<errorH15.pdf, id=2245, 462.52798pt x 346.89601pt>
 File: errorH15.pdf Graphic file (type pdf)
 <use errorH15.pdf>
 Package pdftex.def Info: errorH15.pdf  used on input line 160.
@@ -1345,12 +1372,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
  []
 
-<h07.pdf, id=2309, 462.52798pt x 346.89601pt>
+<h07.pdf, id=2326, 462.52798pt x 346.89601pt>
 File: h07.pdf Graphic file (type pdf)
 <use h07.pdf>
 Package pdftex.def Info: h07.pdf  used on input line 171.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-<errorH07.pdf, id=2310, 462.52798pt x 346.89601pt>
+<errorH07.pdf, id=2327, 462.52798pt x 346.89601pt>
 File: errorH07.pdf Graphic file (type pdf)
 <use errorH07.pdf>
 Package pdftex.def Info: errorH07.pdf  used on input line 178.
@@ -1358,12 +1385,12 @@ Package pdftex.def Info: errorH07.pdf  used on input line 178.
 LaTeX Info: Redefining \. on input line 182.
 LaTeX Info: Redefining \% on input line 182.
 [30 <./h07.pdf>]
-<h65.pdf, id=2347, 462.52798pt x 346.89601pt>
+<h65.pdf, id=2364, 462.52798pt x 346.89601pt>
 File: h65.pdf Graphic file (type pdf)
 <use h65.pdf>
 Package pdftex.def Info: h65.pdf  used on input line 186.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-<errorH65.pdf, id=2348, 462.52798pt x 346.89601pt>
+<errorH65.pdf, id=2365, 462.52798pt x 346.89601pt>
 File: errorH65.pdf Graphic file (type pdf)
 <use errorH65.pdf>
 Package pdftex.def Info: errorH65.pdf  used on input line 193.
@@ -1382,12 +1409,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 221--223
 LaTeX Info: Redefining \. on input line 225.
 LaTeX Info: Redefining \% on input line 225.
 [32 <./errorH65.pdf>]
-<jung34.pdf, id=2462, 462.52798pt x 346.89601pt>
+<jung34.pdf, id=2478, 462.52798pt x 346.89601pt>
 File: jung34.pdf Graphic file (type pdf)
 <use jung34.pdf>
 Package pdftex.def Info: jung34.pdf  used on input line 228.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-<error_jung34.pdf, id=2463, 462.52798pt x 346.89601pt>
+<error_jung34.pdf, id=2479, 462.52798pt x 346.89601pt>
 File: error_jung34.pdf Graphic file (type pdf)
 <use error_jung34.pdf>
 Package pdftex.def Info: error_jung34.pdf  used on input line 235.
@@ -1395,12 +1422,12 @@ Package pdftex.def Info: error_jung34.pdf  used on input line 235.
 LaTeX Info: Redefining \. on input line 239.
 LaTeX Info: Redefining \% on input line 239.
  [33 <./jung34.pdf>]
-<jung57.pdf, id=2497, 462.52798pt x 346.89601pt>
+<jung57.pdf, id=2514, 462.52798pt x 346.89601pt>
 File: jung57.pdf Graphic file (type pdf)
 <use jung57.pdf>
 Package pdftex.def Info: jung57.pdf  used on input line 243.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-<error_jung57.pdf, id=2498, 462.52798pt x 346.89601pt>
+<error_jung57.pdf, id=2515, 462.52798pt x 346.89601pt>
 File: error_jung57.pdf Graphic file (type pdf)
 <use error_jung57.pdf>
 Package pdftex.def Info: error_jung57.pdf  used on input line 251.
@@ -1416,7 +1443,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 259--260
 
  []
 
-<converEst15.pdf, id=2571, 462.52798pt x 346.89601pt>
+<converEst15.pdf, id=2588, 462.52798pt x 346.89601pt>
 File: converEst15.pdf Graphic file (type pdf)
 <use converEst15.pdf>
 Package pdftex.def Info: converEst15.pdf  used on input line 264.
@@ -1424,7 +1451,7 @@ Package pdftex.def Info: converEst15.pdf  used on input line 264.
 LaTeX Info: Redefining \. on input line 268.
 LaTeX Info: Redefining \% on input line 268.
 [35 <./error_jung57.pdf>]
-<converHenon1.pdf, id=2614, 462.52798pt x 346.89601pt>
+<converHenon1.pdf, id=2631, 462.52798pt x 346.89601pt>
 File: converHenon1.pdf Graphic file (type pdf)
 <use converHenon1.pdf>
 Package pdftex.def Info: converHenon1.pdf  used on input line 273.
@@ -1432,7 +1459,7 @@ Package pdftex.def Info: converHenon1.pdf  used on input line 273.
 LaTeX Info: Redefining \. on input line 277.
 LaTeX Info: Redefining \% on input line 277.
  [36 <./converEst15.pdf>]
-<convergenciaJungH57.pdf, id=2657, 462.52798pt x 346.89601pt>
+<convergenciaJungH57.pdf, id=2674, 462.52798pt x 346.89601pt>
 File: convergenciaJungH57.pdf Graphic file (type pdf)
 <use convergenciaJungH57.pdf>
 Package pdftex.def Info: convergenciaJungH57.pdf  used on input line 283.
@@ -1440,7 +1467,7 @@ Package pdftex.def Info: convergenciaJungH57.pdf  used on input line 283.
 LaTeX Info: Redefining \. on input line 287.
 LaTeX Info: Redefining \% on input line 287.
  [37 <./converHenon1.pdf>]
-<convergenciaJungT57.pdf, id=2699, 462.52798pt x 346.89601pt>
+<convergenciaJungT57.pdf, id=2715, 462.52798pt x 346.89601pt>
 File: convergenciaJungT57.pdf Graphic file (type pdf)
 <use convergenciaJungT57.pdf>
 Package pdftex.def Info: convergenciaJungT57.pdf  used on input line 291.
@@ -1465,12 +1492,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 302--303
 LaTeX Info: Redefining \. on input line 316.
 LaTeX Info: Redefining \% on input line 316.
 [39]
-<cruce_estandar.pdf, id=2791, 462.52798pt x 346.89601pt>
+<cruce_estandar.pdf, id=2808, 462.52798pt x 346.89601pt>
 File: cruce_estandar.pdf Graphic file (type pdf)
 <use cruce_estandar.pdf>
 Package pdftex.def Info: cruce_estandar.pdf  used on input line 323.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-<error_cruces_estandar.pdf, id=2793, 462.52798pt x 346.89601pt>
+<error_cruces_estandar.pdf, id=2810, 462.52798pt x 346.89601pt>
 File: error_cruces_estandar.pdf Graphic file (type pdf)
 <use error_cruces_estandar.pdf>
 Package pdftex.def Info: error_cruces_estandar.pdf  used on input line 331.
@@ -1481,42 +1508,42 @@ LaTeX Info: Redefining \% on input line 335.
 LaTeX Info: Redefining \. on input line 347.
 LaTeX Info: Redefining \% on input line 347.
  [41 <./error_cruces_estandar.pdf>]
-<crucesL.pdf, id=3328, 462.52798pt x 346.89601pt>
+<crucesL.pdf, id=3345, 462.52798pt x 346.89601pt>
 File: crucesL.pdf Graphic file (type pdf)
 <use crucesL.pdf>
 Package pdftex.def Info: crucesL.pdf  used on input line 356.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-<alpha.pdf, id=3330, 462.52798pt x 346.89601pt>
+<alpha.pdf, id=3347, 462.52798pt x 346.89601pt>
 File: alpha.pdf Graphic file (type pdf)
 <use alpha.pdf>
 Package pdftex.def Info: alpha.pdf  used on input line 364.
 (pdftex.def)             Requested size: 184.9429pt x 138.7083pt.
-<beta.pdf, id=3331, 462.52798pt x 346.89601pt>
+<beta.pdf, id=3348, 462.52798pt x 346.89601pt>
 File: beta.pdf Graphic file (type pdf)
 <use beta.pdf>
 Package pdftex.def Info: beta.pdf  used on input line 365.
 (pdftex.def)             Requested size: 184.9429pt x 138.7083pt.
-<gamma.pdf, id=3332, 462.52798pt x 346.89601pt>
+<gamma.pdf, id=3349, 462.52798pt x 346.89601pt>
 File: gamma.pdf Graphic file (type pdf)
 <use gamma.pdf>
 Package pdftex.def Info: gamma.pdf  used on input line 366.
 (pdftex.def)             Requested size: 184.9429pt x 138.7083pt.
-<phi.pdf, id=3333, 462.52798pt x 346.89601pt>
+<phi.pdf, id=3350, 462.52798pt x 346.89601pt>
 File: phi.pdf Graphic file (type pdf)
 <use phi.pdf>
 Package pdftex.def Info: phi.pdf  used on input line 367.
 (pdftex.def)             Requested size: 184.9429pt x 138.7083pt.
-<rho.pdf, id=3334, 462.52798pt x 346.89601pt>
+<rho.pdf, id=3351, 462.52798pt x 346.89601pt>
 File: rho.pdf Graphic file (type pdf)
 <use rho.pdf>
 Package pdftex.def Info: rho.pdf  used on input line 368.
 (pdftex.def)             Requested size: 184.9429pt x 138.7083pt.
-<psi.pdf, id=3335, 462.52798pt x 346.89601pt>
+<psi.pdf, id=3352, 462.52798pt x 346.89601pt>
 File: psi.pdf Graphic file (type pdf)
 <use psi.pdf>
 Package pdftex.def Info: psi.pdf  used on input line 369.
 (pdftex.def)             Requested size: 184.9429pt x 138.7083pt.
-<eta.pdf, id=3336, 462.52798pt x 346.89601pt>
+<eta.pdf, id=3353, 462.52798pt x 346.89601pt>
 File: eta.pdf Graphic file (type pdf)
 <use eta.pdf>
 Package pdftex.def Info: eta.pdf  used on input line 370.
@@ -1526,31 +1553,31 @@ Package pdftex.def Info: eta.pdf  used on input line 370.
 LaTeX Warning: Float too large for page by 50.87787pt on input line 372.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--436
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
 
  []
 
-<HenonV.pdf, id=3342, 462.52798pt x 346.89601pt>
+<HenonV.pdf, id=3359, 462.52798pt x 346.89601pt>
 File: HenonV.pdf Graphic file (type pdf)
 <use HenonV.pdf>
-Package pdftex.def Info: HenonV.pdf  used on input line 440.
+Package pdftex.def Info: HenonV.pdf  used on input line 388.
 (pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
 
-Overfull \hbox (3.70638pt too wide) in paragraph at lines 440--441
+Overfull \hbox (3.70638pt too wide) in paragraph at lines 388--389
  [][] 
  []
 
 
-Underfull \hbox (badness 1389) in paragraph at lines 437--443
+Underfull \hbox (badness 1389) in paragraph at lines 385--391
 \OT1/cmtt/m/n/10.95 alvarezeve / Tesis-[]Variedades-[]Estables-[]e-[]inestables
 /$[][] \OT1/cmr/m/n/10.95 en el archivo llamado
  []
 
-LaTeX Info: Redefining \. on input line 443.
-LaTeX Info: Redefining \% on input line 443.
+LaTeX Info: Redefining \. on input line 391.
+LaTeX Info: Redefining \% on input line 391.
 [42 <./crucesL.pdf>]
-LaTeX Info: Redefining \. on input line 443.
-LaTeX Info: Redefining \% on input line 443.
+LaTeX Info: Redefining \. on input line 391.
+LaTeX Info: Redefining \% on input line 391.
  [43 <./alpha.pdf> <./beta.pdf
 
 pdfTeX warning: pdflatex (file ./beta.pdf): PDF inclusion: multiple pdfs with p
@@ -1576,79 +1603,79 @@ ge group included in a single page
 pdfTeX warning: pdflatex (file ./eta.pdf): PDF inclusion: multiple pdfs with pa
 ge group included in a single page
 >]
-LaTeX Info: Redefining \. on input line 451.
-LaTeX Info: Redefining \% on input line 451.
+LaTeX Info: Redefining \. on input line 399.
+LaTeX Info: Redefining \% on input line 399.
  [44 <./HenonV.pdf>]
-<cruces_jung1.pdf, id=3628, 462.52798pt x 346.89601pt>
+<cruces_jung1.pdf, id=3644, 462.52798pt x 346.89601pt>
 File: cruces_jung1.pdf Graphic file (type pdf)
 <use cruces_jung1.pdf>
-Package pdftex.def Info: cruces_jung1.pdf  used on input line 457.
+Package pdftex.def Info: cruces_jung1.pdf  used on input line 405.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-<cruce_a.pdf, id=3630, 462.52798pt x 346.89601pt>
+<cruce_a.pdf, id=3646, 462.52798pt x 346.89601pt>
 File: cruce_a.pdf Graphic file (type pdf)
 <use cruce_a.pdf>
-Package pdftex.def Info: cruce_a.pdf  used on input line 466.
+Package pdftex.def Info: cruce_a.pdf  used on input line 414.
 (pdftex.def)             Requested size: 227.62204pt x 170.71628pt.
-<cruce_b.pdf, id=3631, 462.52798pt x 346.89601pt>
+<cruce_b.pdf, id=3647, 462.52798pt x 346.89601pt>
 File: cruce_b.pdf Graphic file (type pdf)
 <use cruce_b.pdf>
-Package pdftex.def Info: cruce_b.pdf  used on input line 467.
+Package pdftex.def Info: cruce_b.pdf  used on input line 415.
 (pdftex.def)             Requested size: 227.62204pt x 170.71628pt.
-<cruce_c.pdf, id=3632, 462.52798pt x 346.89601pt>
+<cruce_c.pdf, id=3648, 462.52798pt x 346.89601pt>
 File: cruce_c.pdf Graphic file (type pdf)
 <use cruce_c.pdf>
-Package pdftex.def Info: cruce_c.pdf  used on input line 468.
+Package pdftex.def Info: cruce_c.pdf  used on input line 416.
 (pdftex.def)             Requested size: 227.62204pt x 170.71628pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--508
+Underfull \hbox (badness 10000) in paragraph at lines 423--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--508
+Underfull \hbox (badness 10000) in paragraph at lines 423--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--508
+Underfull \hbox (badness 10000) in paragraph at lines 423--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--508
+Underfull \hbox (badness 10000) in paragraph at lines 423--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--508
+Underfull \hbox (badness 10000) in paragraph at lines 423--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--508
+Underfull \hbox (badness 10000) in paragraph at lines 423--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--508
+Underfull \hbox (badness 10000) in paragraph at lines 423--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--508
+Underfull \hbox (badness 10000) in paragraph at lines 423--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--508
+Underfull \hbox (badness 10000) in paragraph at lines 423--432
 
  []
 
-LaTeX Info: Redefining \. on input line 512.
-LaTeX Info: Redefining \% on input line 512.
+LaTeX Info: Redefining \. on input line 436.
+LaTeX Info: Redefining \% on input line 436.
 [45 <./cruces_jung1.pdf>]
-LaTeX Info: Redefining \. on input line 512.
-LaTeX Info: Redefining \% on input line 512.
+LaTeX Info: Redefining \. on input line 436.
+LaTeX Info: Redefining \% on input line 436.
  [46 <./cruce_a.pdf> <./cruce_b.pdf
 
 pdfTeX warning: pdflatex (file ./cruce_b.pdf): PDF inclusion: multiple pdfs wit
@@ -1658,135 +1685,177 @@ h page group included in a single page
 pdfTeX warning: pdflatex (file ./cruce_c.pdf): PDF inclusion: multiple pdfs wit
 h page group included in a single page
 >]
-<herradura.png, id=3763, 664.4825pt x 635.37375pt>
+<herradura.png, id=3780, 664.4825pt x 635.37375pt>
 File: herradura.png Graphic file (type png)
 <use herradura.png>
-Package pdftex.def Info: herradura.png  used on input line 515.
+Package pdftex.def Info: herradura.png  used on input line 439.
 (pdftex.def)             Requested size: 232.57236pt x 222.38414pt.
-LaTeX Info: Redefining \. on input line 524.
-LaTeX Info: Redefining \% on input line 524.
+LaTeX Info: Redefining \. on input line 448.
+LaTeX Info: Redefining \% on input line 448.
  [47 <./herradura.png>]
-<rectangulo_fundamental.pdf, id=3779, 462.52798pt x 346.89601pt>
+<rectangulo_fundamental.pdf, id=3796, 462.52798pt x 346.89601pt>
 File: rectangulo_fundamental.pdf Graphic file (type pdf)
 <use rectangulo_fundamental.pdf>
-Package pdftex.def Info: rectangulo_fundamental.pdf  used on input line 527.
+Package pdftex.def Info: rectangulo_fundamental.pdf  used on input line 451.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-<error_rectangulo.pdf, id=3780, 462.52798pt x 346.89601pt>
+<error_rectangulo.pdf, id=3797, 462.52798pt x 346.89601pt>
 File: error_rectangulo.pdf Graphic file (type pdf)
 <use error_rectangulo.pdf>
-Package pdftex.def Info: error_rectangulo.pdf  used on input line 534.
+Package pdftex.def Info: error_rectangulo.pdf  used on input line 458.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-LaTeX Info: Redefining \. on input line 538.
-LaTeX Info: Redefining \% on input line 538.
+LaTeX Info: Redefining \. on input line 462.
+LaTeX Info: Redefining \% on input line 462.
  [48 <./rectangulo_fundamental.pdf>]
-<rectangulo1.pdf, id=3833, 462.52798pt x 346.89601pt>
+<rectangulo1.pdf, id=3850, 462.52798pt x 346.89601pt>
 File: rectangulo1.pdf Graphic file (type pdf)
 <use rectangulo1.pdf>
-Package pdftex.def Info: rectangulo1.pdf  used on input line 566.
+Package pdftex.def Info: rectangulo1.pdf  used on input line 483.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-LaTeX Info: Redefining \. on input line 570.
-LaTeX Info: Redefining \% on input line 570.
+LaTeX Info: Redefining \. on input line 487.
+LaTeX Info: Redefining \% on input line 487.
  [49 <./error_rectangulo.pdf>]
-<error1ite.pdf, id=3886, 462.52798pt x 346.89601pt>
+Underfull \hbox (badness 10000) in paragraph at lines 496--498
+
+ []
+
+<error1ite.pdf, id=3902, 462.52798pt x 346.89601pt>
 File: error1ite.pdf Graphic file (type pdf)
 <use error1ite.pdf>
-Package pdftex.def Info: error1ite.pdf  used on input line 585.
+Package pdftex.def Info: error1ite.pdf  used on input line 501.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
 
-<rectangulo2.pdf, id=3893, 462.52798pt x 346.89601pt>
+Underfull \hbox (badness 10000) in paragraph at lines 505--506
+
+ []
+
+<rectangulo2.pdf, id=3909, 462.52798pt x 346.89601pt>
 File: rectangulo2.pdf Graphic file (type pdf)
 <use rectangulo2.pdf>
-Package pdftex.def Info: rectangulo2.pdf  used on input line 594.
+Package pdftex.def Info: rectangulo2.pdf  used on input line 510.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-LaTeX Info: Redefining \. on input line 597.
-LaTeX Info: Redefining \% on input line 597.
+LaTeX Info: Redefining \. on input line 514.
+LaTeX Info: Redefining \% on input line 514.
 [50 <./rectangulo1.pdf>]
-LaTeX Info: Redefining \. on input line 598.
-LaTeX Info: Redefining \% on input line 598.
- [51 <./error1ite.pdf>]
-<error2ite.pdf, id=3972, 462.52798pt x 346.89601pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<error2ite.pdf, id=3948, 462.52798pt x 346.89601pt>
 File: error2ite.pdf Graphic file (type pdf)
 <use error2ite.pdf>
-Package pdftex.def Info: error2ite.pdf  used on input line 601.
+Package pdftex.def Info: error2ite.pdf  used on input line 517.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-<rectangulo3.pdf, id=3973, 462.52798pt x 346.89601pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<rectangulo3.pdf, id=3949, 462.52798pt x 346.89601pt>
 File: rectangulo3.pdf Graphic file (type pdf)
 <use rectangulo3.pdf>
-Package pdftex.def Info: rectangulo3.pdf  used on input line 609.
+Package pdftex.def Info: rectangulo3.pdf  used on input line 525.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-LaTeX Info: Redefining \. on input line 612.
-LaTeX Info: Redefining \% on input line 612.
- [52 <./rectangulo2.pdf> <./error2ite.pdf
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<error3ite.pdf, id=3950, 462.52798pt x 346.89601pt>
+File: error3ite.pdf Graphic file (type pdf)
+<use error3ite.pdf>
+Package pdftex.def Info: error3ite.pdf  used on input line 532.
+(pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<rectangulo4.pdf, id=3951, 462.52798pt x 346.89601pt>
+File: rectangulo4.pdf Graphic file (type pdf)
+<use rectangulo4.pdf>
+Package pdftex.def Info: rectangulo4.pdf  used on input line 539.
+(pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<error4ite.pdf, id=3952, 462.52798pt x 346.89601pt>
+File: error4ite.pdf Graphic file (type pdf)
+<use error4ite.pdf>
+Package pdftex.def Info: error4ite.pdf  used on input line 546.
+(pdftex.def)             Requested size: 300.63962pt x 225.47972pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<rectangulo5.pdf, id=3953, 462.52798pt x 346.89601pt>
+File: rectangulo5.pdf Graphic file (type pdf)
+<use rectangulo5.pdf>
+Package pdftex.def Info: rectangulo5.pdf  used on input line 553.
+(pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
+LaTeX Info: Redefining \. on input line 557.
+LaTeX Info: Redefining \% on input line 557.
+[51 <./error1ite.pdf>]
+
+LaTeX Warning: Text page 52 contains only floats.
+
+
+Overfull \vbox (3.69577pt too high) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 557.
+LaTeX Info: Redefining \% on input line 557.
+
+[52 <./rectangulo2.pdf> <./error2ite.pdf
 
 pdfTeX warning: pdflatex (file ./error2ite.pdf): PDF inclusion: multiple pdfs w
 ith page group included in a single page
 >]
-<error3ite.pdf, id=4043, 462.52798pt x 346.89601pt>
-File: error3ite.pdf Graphic file (type pdf)
-<use error3ite.pdf>
-Package pdftex.def Info: error3ite.pdf  used on input line 616.
-(pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-LaTeX Info: Redefining \. on input line 620.
-LaTeX Info: Redefining \% on input line 620.
- [53 <./rectangulo3.pdf>]
-<rectangulo4A.png, id=4079, 512.3943pt x 407.6028pt>
-File: rectangulo4A.png Graphic file (type png)
-<use rectangulo4A.png>
-Package pdftex.def Info: rectangulo4A.png  used on input line 623.
-(pdftex.def)             Requested size: 358.67357pt x 285.32pt.
-LaTeX Info: Redefining \. on input line 627.
-LaTeX Info: Redefining \% on input line 627.
- [54 <./error3ite.pdf>]
-<error4ite.pdf, id=4122, 462.52798pt x 346.89601pt>
-File: error4ite.pdf Graphic file (type pdf)
-<use error4ite.pdf>
-Package pdftex.def Info: error4ite.pdf  used on input line 630.
-(pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-LaTeX Info: Redefining \. on input line 634.
-LaTeX Info: Redefining \% on input line 634.
- [55 <./rectangulo4A.png>]
-<rectangulo5.pdf, id=4130, 462.52798pt x 346.89601pt>
-File: rectangulo5.pdf Graphic file (type pdf)
-<use rectangulo5.pdf>
-Package pdftex.def Info: rectangulo5.pdf  used on input line 637.
-(pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-LaTeX Info: Redefining \. on input line 641.
-LaTeX Info: Redefining \% on input line 641.
-
-[56 <./error4ite.pdf>]
-<error5ite.pdf, id=4172, 462.52798pt x 346.89601pt>
+<error5ite.pdf, id=4064, 462.52798pt x 346.89601pt>
 File: error5ite.pdf Graphic file (type pdf)
 <use error5ite.pdf>
-Package pdftex.def Info: error5ite.pdf  used on input line 644.
+Package pdftex.def Info: error5ite.pdf  used on input line 560.
 (pdftex.def)             Requested size: 323.76736pt x 242.82555pt.
-LaTeX Info: Redefining \. on input line 648.
-LaTeX Info: Redefining \% on input line 648.
- [57 <./rectangulo5.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 652--653
+LaTeX Info: Redefining \. on input line 564.
+LaTeX Info: Redefining \% on input line 564.
+ [53 <./rectangulo3.pdf> <./rectangulo5.pdf
+
+pdfTeX warning: pdflatex (file ./rectangulo5.pdf): PDF inclusion: multiple pdfs
+ with page group included in a single page
+>]
+Overfull \vbox (0.69577pt too high) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 564.
+LaTeX Info: Redefining \% on input line 564.
+
+[54 <./error3ite.pdf> <./error5ite.pdf
+
+pdfTeX warning: pdflatex (file ./error5ite.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
+>]
+
+LaTeX Warning: Text page 55 contains only floats.
+
+
+Overfull \vbox (1.3499pt too high) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 564.
+LaTeX Info: Redefining \% on input line 564.
+
+[55 <./rectangulo4.pdf> <./error4ite.pdf
+
+pdfTeX warning: pdflatex (file ./error4ite.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 568--569
 
  []
 
-LaTeX Info: Redefining \. on input line 653.
-LaTeX Info: Redefining \% on input line 653.
-[58 <./error5ite.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 655--656
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--572
 
  []
 
 )
-LaTeX Info: Redefining \. on input line 114.
-LaTeX Info: Redefining \% on input line 114.
- [59]
+LaTeX Info: Redefining \. on input line 115.
+LaTeX Info: Redefining \% on input line 115.
+ [56]
 \openout2 = `Capitulo4/conclusiones-p.aux'.
 
- (Capitulo4/conclusiones-p.tex [60
-
-
-
-]
+ (Capitulo4/conclusiones-p.tex
 Cap\'{\i }tulo 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
@@ -1809,7 +1878,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-[61]
+[57
+
+
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
@@ -1820,9 +1893,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
  []
 
 )
-LaTeX Info: Redefining \. on input line 116.
-LaTeX Info: Redefining \% on input line 116.
- [62] (tesis.bbl (tesis.brf)
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
+ [58] (tesis.bbl (tesis.brf)
 \tf@brf=\write6
 \openout6 = `tesis.brf'.
 
@@ -1832,7 +1905,7 @@ Underfull \hbox (badness 1189) in paragraph at lines 21--21
 m/n/10.95 http : / / cosweb1 . fau . edu /
  []
 
-[63
+[59
 
 
 ]
@@ -1843,34 +1916,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--116
 
 LaTeX Info: Redefining \. on input line 152.
 LaTeX Info: Redefining \% on input line 152.
-[64]
+[60]
 Underfull \hbox (badness 6575) in paragraph at lines 167--167
 []\OT1/cmr/m/n/10.95 Static Arrays (paquete de julia).  [][]$\OT1/cmtt/m/n/10.9
 5 https : / / github . com / JuliaArrays /
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 139.
-LaTeX Info: Redefining \. on input line 139.
-LaTeX Info: Redefining \% on input line 139.
- [65]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 139.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 140.
+LaTeX Info: Redefining \. on input line 140.
+LaTeX Info: Redefining \% on input line 140.
+ [61]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 140.
  (tesis.aux
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
- (Agradecimientos/Dedicatoria.aux)
+ (Datos/Datos.aux) (Agradecimientos/Dedicatoria.aux)
 (Declaracion/Declaracion.aux) (Agradecimientos/Agradecimientos.aux)
 (introduccion/introduccion.aux) (Capitulo1/preliminares.aux)
 (Capitulo2/parametrizacion.aux) (Capitulo3/Henon.aux)
 (Capitulo4/conclusiones-p.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 139.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 139.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 140.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 140.
 Package rerunfilecheck Info: File `tesis.out' has not changed.
 (rerunfilecheck)             Checksum: 9411C6512C52039E50C972C8B316E5E4;1562.
 Package rerunfilecheck Info: File `tesis.brf' has not changed.
-(rerunfilecheck)             Checksum: F2F0301EE0822B01B2941205C223AAC5;1710.
+(rerunfilecheck)             Checksum: 2DD97DDFFD6F833AEEF5BC315A0A335D;1705.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1878,13 +1951,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 139.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
  ) 
 Here is how much of TeX's memory you used:
- 16288 strings out of 494866
- 251267 string characters out of 3178265
- 413965 words of memory out of 3000000
- 19202 multiletter control sequences out of 15000+200000
+ 16298 strings out of 494866
+ 251584 string characters out of 3178265
+ 414962 words of memory out of 3000000
+ 19203 multiletter control sequences out of 15000+200000
  21943 words of font info for 90 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
  43i,18n,79p,3239b,868s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1921,8 +1994,8 @@ gingroup\040\\def\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040
 \040\040\040\040\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\wri
 te\040\\@unused\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr
 /m/n'\040by\040\\MessageBreak\040faked\040small\040caps\040on\040input\040line\
-04027.\012}\\endgroup\040\\uppercase\040{viii}}} has been referenced but does n
-ot exist, replaced by a fixed one
+04027.\012}\\endgroup\040\\uppercase\040{xii}}} has been referenced but does no
+t exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{page.\\protect\040\\unhbox\040\\voidb@x\040\\hbox\0
 40{\\protect\040\\relax\040\\protect\040\\edef\040n{sc}\\protect\040\\afterassi
@@ -1957,8 +2030,8 @@ ngroup\040\\def\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\0
 40\040\040\040\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write
 \040\\@unused\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m
 /n'\040by\040\\MessageBreak\040faked\040small\040caps\040on\040input\040line\04
-021.\012}\\endgroup\040\\uppercase\040{viii}}} has been referenced but does not
- exist, replaced by a fixed one
+021.\012}\\endgroup\040\\uppercase\040{xii}}} has been referenced but does not 
+exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{page.\\protect\040\\unhbox\040\\voidb@x\040\\hbox\0
 40{\\protect\040\\relax\040\\protect\040\\edef\040n{sc}\\protect\040\\afterassi
@@ -1993,80 +2066,80 @@ ngroup\040\\def\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\0
 40\040\040\040\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write
 \040\\@unused\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m
 /n'\040by\040\\MessageBreak\040faked\040small\040caps\040on\040input\040line\04
-021.\012}\\endgroup\040\\uppercase\040{vii}}} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{page.\\protect\040\\unhbox\040\\voidb@x\040\\hbox\0
-40{\\protect\040\\relax\040\\protect\040\\edef\040n{sc}\\protect\040\\afterassi
-gnment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt\040
-plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\baselines
-kip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineski
-p\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7
-\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update
-\040\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT
-1/cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\protect\040\\afterassign
-ment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt\040pl
-us\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\baselineski
-p\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineskip\
-040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7\\
-baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update\0
-40\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT1/
-cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\gdef\04010.95{10.95}\\gdef
-\0408{8}\\gdef\0406{6}\\protect\040\\afterassignment\040\\edef\04010.95{10.95}\
-\afterassignment\040\\edef\04013.6pt{0.0pt\040plus\0401.0pt}\\edef\040{1.5}\\le
-t\0401.5\\def\040\\size@update\040{\\baselineskip\04013.6pt\\relax\040\\baselin
-eskip\040\\baselineskip\040\\normalbaselineskip\040\\baselineskip\040\\setbox\0
-40\\strutbox\040\\hbox\040{\\vrule\040height.7\\baselineskip\040depth.3\\baseli
-neskip\040width\\z@\040}\\let\040\\size@update\040\\relax\040}\\protect\040\\af
-terassignment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.
-0pt\040plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\ba
-selineskip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbase
-lineskip\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040h
-eight.7\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size
-@update\040\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95\0
-40}\\OT1/cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\protect\040\\begi
-ngroup\040\\def\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\0
-40\040\040\040\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write
-\040\\@unused\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m
-/n'\040by\040\\MessageBreak\040faked\040small\040caps\040on\040input\040line\04
-014.\012}\\endgroup\040\\uppercase\040{vii}}} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{page.\\protect\040\\unhbox\040\\voidb@x\040\\hbox\0
-40{\\protect\040\\relax\040\\protect\040\\edef\040n{sc}\\protect\040\\afterassi
-gnment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt\040
-plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\baselines
-kip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineski
-p\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7
-\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update
-\040\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT
-1/cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\protect\040\\afterassign
-ment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt\040pl
-us\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\baselineski
-p\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineskip\
-040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7\\
-baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update\0
-40\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT1/
-cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\gdef\04010.95{10.95}\\gdef
-\0408{8}\\gdef\0406{6}\\protect\040\\afterassignment\040\\edef\04010.95{10.95}\
-\afterassignment\040\\edef\04013.6pt{0.0pt\040plus\0401.0pt}\\edef\040{1.5}\\le
-t\0401.5\\def\040\\size@update\040{\\baselineskip\04013.6pt\\relax\040\\baselin
-eskip\040\\baselineskip\040\\normalbaselineskip\040\\baselineskip\040\\setbox\0
-40\\strutbox\040\\hbox\040{\\vrule\040height.7\\baselineskip\040depth.3\\baseli
-neskip\040width\\z@\040}\\let\040\\size@update\040\\relax\040}\\protect\040\\af
-terassignment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.
-0pt\040plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\ba
-selineskip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbase
-lineskip\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040h
-eight.7\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size
-@update\040\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95\0
-40}\\OT1/cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\protect\040\\begi
-ngroup\040\\def\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\0
-40\040\040\040\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write
-\040\\@unused\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m
-/n'\040by\040\\MessageBreak\040faked\040small\040caps\040on\040input\040line\04
-08.\012}\\endgroup\040\\uppercase\040{vii}}} has been referenced but does not e
+021.\012}\\endgroup\040\\uppercase\040{xi}}} has been referenced but does not e
 xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{page.\\protect\040\\unhbox\040\\voidb@x\040\\hbox\0
+40{\\protect\040\\relax\040\\protect\040\\edef\040n{sc}\\protect\040\\afterassi
+gnment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt\040
+plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\baselines
+kip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineski
+p\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7
+\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update
+\040\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT
+1/cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\protect\040\\afterassign
+ment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt\040pl
+us\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\baselineski
+p\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineskip\
+040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7\\
+baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update\0
+40\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT1/
+cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\gdef\04010.95{10.95}\\gdef
+\0408{8}\\gdef\0406{6}\\protect\040\\afterassignment\040\\edef\04010.95{10.95}\
+\afterassignment\040\\edef\04013.6pt{0.0pt\040plus\0401.0pt}\\edef\040{1.5}\\le
+t\0401.5\\def\040\\size@update\040{\\baselineskip\04013.6pt\\relax\040\\baselin
+eskip\040\\baselineskip\040\\normalbaselineskip\040\\baselineskip\040\\setbox\0
+40\\strutbox\040\\hbox\040{\\vrule\040height.7\\baselineskip\040depth.3\\baseli
+neskip\040width\\z@\040}\\let\040\\size@update\040\\relax\040}\\protect\040\\af
+terassignment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.
+0pt\040plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\ba
+selineskip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbase
+lineskip\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040h
+eight.7\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size
+@update\040\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95\0
+40}\\OT1/cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\protect\040\\begi
+ngroup\040\\def\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\0
+40\040\040\040\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write
+\040\\@unused\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m
+/n'\040by\040\\MessageBreak\040faked\040small\040caps\040on\040input\040line\04
+014.\012}\\endgroup\040\\uppercase\040{xi}}} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{page.\\protect\040\\unhbox\040\\voidb@x\040\\hbox\0
+40{\\protect\040\\relax\040\\protect\040\\edef\040n{sc}\\protect\040\\afterassi
+gnment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt\040
+plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\baselines
+kip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineski
+p\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7
+\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update
+\040\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT
+1/cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\protect\040\\afterassign
+ment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.0pt\040pl
+us\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\baselineski
+p\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbaselineskip\
+040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040height.7\\
+baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size@update\0
+40\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95\040}\\OT1/
+cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\gdef\04010.95{10.95}\\gdef
+\0408{8}\\gdef\0406{6}\\protect\040\\afterassignment\040\\edef\04010.95{10.95}\
+\afterassignment\040\\edef\04013.6pt{0.0pt\040plus\0401.0pt}\\edef\040{1.5}\\le
+t\0401.5\\def\040\\size@update\040{\\baselineskip\04013.6pt\\relax\040\\baselin
+eskip\040\\baselineskip\040\\normalbaselineskip\040\\baselineskip\040\\setbox\0
+40\\strutbox\040\\hbox\040{\\vrule\040height.7\\baselineskip\040depth.3\\baseli
+neskip\040width\\z@\040}\\let\040\\size@update\040\\relax\040}\\protect\040\\af
+terassignment\040\\edef\04010.95{10.95}\\afterassignment\040\\edef\04013.6pt{0.
+0pt\040plus\0401.0pt}\\edef\040{1.5}\\let\0401.5\\def\040\\size@update\040{\\ba
+selineskip\04013.6pt\\relax\040\\baselineskip\040\\baselineskip\040\\normalbase
+lineskip\040\\baselineskip\040\\setbox\040\\strutbox\040\\hbox\040{\\vrule\040h
+eight.7\\baselineskip\040depth.3\\baselineskip\040width\\z@\040}\\let\040\\size
+@update\040\\relax\040}\\xdef\040\\OT1/cmr/m/it/10.95\040{\\OT1/cmr/m/n/10.95\0
+40}\\OT1/cmr/m/it/10.95\040\\size@update\040\\enc@update\040\\protect\040\\begi
+ngroup\040\\def\040\\MessageBreak\040{\012\(spanish\)\040\040\040\040\040\040\0
+40\040\040\040\040\040\040\040\040\040}\\let\040\\protect\040\\immediate\\write
+\040\\@unused\040{\012Package\040spanish\040Warning:\040Replacing\040`OT1/cmr/m
+/n'\040by\040\\MessageBreak\040faked\040small\040caps\040on\040input\040line\04
+08.\012}\\endgroup\040\\uppercase\040{xi}}} has been referenced but does not ex
+ist, replaced by a fixed one
 
 </home/evelyn/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </home/evelyn/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
@@ -2095,9 +2168,9 @@ miktex/texmfs/install/fonts/type1/public/amsfonts/euler/eusm10.pfb></home/evely
 n/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb></home/
 evelyn/.miktex/texmfs/install/fonts/type1/public/xypic/xyatip10.pfb></home/evel
 yn/.miktex/texmfs/install/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on tesis.pdf (77 pages, 5778777 bytes).
+Output written on tesis.pdf (77 pages, 6130552 bytes).
 PDF statistics:
- 4496 PDF objects out of 5155 (max. 8388607)
+ 4521 PDF objects out of 5155 (max. 8388607)
  292 named destinations out of 1000 (max. 500000)
  457 words of extra memory for PDF output out of 10000 (max. 10000000)
 

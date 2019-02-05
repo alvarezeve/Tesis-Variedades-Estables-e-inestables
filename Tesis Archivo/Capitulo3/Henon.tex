@@ -1,6 +1,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%           Capítulo 3: Mapeo de Henon
+%           Capítulo 3: Mapeo de Hénon
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Ejemplos de aplicación del método}
 \label{SeccionEstandar}\section{Mapeo estándar}
@@ -380,58 +380,6 @@ Los puntos de color son sólo para indicar cuales intersecciones fueron encontra
 
 
 
-
-%=begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.4]{cruce1}
-%\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo a.}
-%\label{cruce1H}
-%\end{figure}
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.4]{cruce2}
-%\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo b.}
-%\label{cruce2H}
-%\end{figure}
-
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.4]{cruce3}
-%\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo c.}
-%\label{cruce3H}
-%\end{figure}
-
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.4]{cruce5}
-%\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo e.}
-%\label{cruce5H}
-%\end{figure}
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.4]{cruce6}
-%\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo f.}
-%\label{cruce6H}
-%\end{figure}
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.4]{cruce7}
-%\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo g.}
-%\label{cruce7H}
-%\end{figure}
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.4]{cruce8}
-%\caption{Cruce de $W^{u},W^{s}$ encontrado con el intervalo h.}
-%\label{cruce8H}
-%\end{figure}
-
 La zona rectangular sombreada en cada gráfica representa el producto cartesiano de los intervalos donde se encuentra la solución. Podemos observar que de hecho cada zona contiene el cruce de las variedades, garantizando así que en el intervalo propuesto hay un cruce, siendo esta intersección punto homoclínico. Las regiones que aparecen en la figura \ref{matriz_cortes} son de área pequeña comparados con el área que ocupan las variedades. Este tipo de resultados son útiles para hablar sobre caos topológico \cite{devaney}, \cite{gerald}.\\
 
 Para complementar este análisis se obtuvo una gráfica de las superficies que forman las variedades al cambiar el parámetro del mapeo, dando una idea de cómo se ven las superficies y además de cómo se comportan las intersecciones. La figura \ref{SuperficiesH} muestra las superficies formadas por las variedades para ciertos valores del parámetro $a$. Algunas gráficas más se encuentran en  \url{https://github.com/alvarezeve/Tesis-Variedades-Estables-e-inestables/} en el archivo llamado \texttt{Superficies.ipynb}.
@@ -471,30 +419,6 @@ Tomando los cruces a escala del intervalo se obtuvieron las figuras \ref{cruces_
 
 
 
-
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.4]{cruce_a}
-%\caption{Intersección en el intervalo a.}
-%\label{jung_corte1}
-%\end{figure}
-
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.4]{cruce_b}
-%\caption{Intersección en el intervalo b.}
-%\label{jung_corte2}
-%\end{figure}
-
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.4]{cruce_c}
-%\caption{Intersección en el intervalo c.}
-%\label{jung_corte3}
-%\end{figure}
 
 Las escalas en las que se observan los cortes de las variedades son pequeños com\-pa\-ra\-dos con la escala del mapeo, tanto que si se graficaran en el espacio fase no se podrían observar. Como ya se mencionó, ésto garantiza que existen tres puntos homoclínicos en el intervalo usado. \\
 \linebreak
@@ -541,10 +465,7 @@ Reescribiendo la ecuación de invariancia \eqref{Ecua de invariancia} para el ca
 f_{a,b}^{-1}(W_{0}^{s}(t))=W_{0}^{s}(\lambda^{s}t).
 \label{InvarianciaEstable1}
 \end{eqnarray}
-%\begin{eqnarray}
-%f_{a,b}(W_{0}^{u}(t))=W_{0}^{u}(\lambda^{u}t)
-%\label{InvarianciaInestable1}
-%\end{eqnarray}
+
 Aplicando el mapeo de Hénon inverso \eqref{HenonI} a la ecuación \eqref{InvarianciaEstable1} resulta
 \begin{eqnarray}
 W_{0}^{s}(t)=f_{a,b}(W_{0}^{s}(\lambda^{s}t)),
@@ -556,20 +477,15 @@ W_{0}^{s}\left(\frac{t}{\lambda^{s}}\right)=f_{a,b}(W_{0}^{s}(t)).
 \label{InvarianciaEstable3}
 \end{eqnarray}
 
-%\begin{eqnarray}
-%W_{0}^{u}(\frac{t}{\lambda^{u}})=f_{a,b}^{-1}(W_{0}^{u}(t)).
-%\label{InvarianciaInestable3}
-%\end{eqnarray}
 Siendo que $\vert \lambda^{s} \vert < 1 $ la ecuación \eqref{InvarianciaEstable3} muestra que aplicar el mapeo es análogo a tener la variedad estable evaluada en un valor mayor del parámetro, puesto que $1/\lambda^{s}>1$. Este resultado es análogo para la variedad inestable. Usando esto se obtiene la figura \ref{Rectangulo1}, que muestra el resultado de iterar una vez, $(W_{x1}^{s},W_{y1}^{s})=f_{a,b}(W_{x}^{s},W_{y}^{s})$, análogamente para las inestables, evaluando los nuevos polinomios exactamente en los mismos intervalos que en el caso de la figura \ref{rectangulo0}.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.7]{rectangulo1.pdf}
-\caption{Primera aplicación del mapeo a los polinomios de orden 250, $t_{max}=100$}.
+\caption{Primera aplicación del mapeo a los polinomios de orden 250, $t=[0,100]$.}
 \label{Rectangulo1}
 \end{figure}
 El cálculo con el que se obtiene la figura \ref{Rectangulo1} produce un nuevo polinomio el cual tiene asociado también un error numérico. Para saber cuál es este error se usó la ecuación \eqref{InvarianciaEstable3},
 \begin{eqnarray}
-%E_{1}(t)=\parallel W_{0}^{s}(\frac{t}{\lambda^{s}})-f_{a,b}(W_{0}^{s}(t))\parallel_{\infty},
 E_{1}(t)=\bigg\| W_{0}^{s}\left(\frac{t}{\lambda^{s}}\right)-f_{a,b}(W_{0}^{s}(t))\bigg\|_{\infty},
 \label{error-1aplicacion}
 \end{eqnarray}
@@ -578,25 +494,25 @@ está forma es análoga a la ecuación \eqref{Ecua de invariancia resta}, la cua
 E_{n}(t)=\bigg\| (f^{-1}_{k})^{n}\left(W_{0}^{s}\left(\frac{t}{\lambda^{s}}\right)\right)- (f^{-1}_{k})^{n-1}(W_{0}^{s}(t)))\bigg\|_{\infty}.
 \label{error-n-aplicacion}
 \end{eqnarray}
-En la ecuación \eqref{error-n-aplicacion} $n$ representa el número de aplicaciones del mapeo, mientras que $W_{0}$ es la parametrización inicial calculada mediante el método.
+En la ecuación \eqref{error-n-aplicacion} $n$ representa el número de aplicaciones del mapeo, mientras que $W_{0}$ es la parametrización inicial calculada mediante el método.\\
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 \includegraphics[scale=0.7]{error1ite.pdf}
 \caption{Error en el polinomio que resulta de aplicar el mapeo a la parametrización de orden 250.}
 \label{error-1iteracion}
 \end{figure}
-Se puede observar en la figura \ref{error-1iteracion} que el error es mínimo en ambas variedades, manteniéndose por debajo del orden de $10^{-70}$; las líneas verticales son producto de valores numéricos que aparecen como cero al evaluar el polinomio a los cuales se les sumó un valor del orden de $10^{-120}$ para poder evaluar el logaritmo base $10$ del error. Al revisar en la sección \ref{henon-seccion}, el error crece mucho más rápido cuando sólo se usa el polinomio que resulta de la parametrización, además de que no es posible llegar tan lejos como se muestra en las figuras \ref{Rectangulo1}-\ref{Rectangulo5}.
+Se puede observar en la figura \ref{error-1iteracion} que el error es mínimo en ambas variedades, manteniéndose por debajo del orden de $10^{-70}$; las líneas verticales son producto de valores numéricos que aparecen como cero al evaluar el polinomio a los cuales se les sumó un valor del orden de $10^{-120}$ para poder evaluar el logaritmo base $10$ del error. Al revisar en la sección \ref{henon-seccion}, el error crece mucho más rápido cuando sólo se usa el polinomio que resulta de la parametrización, además de que no es posible llegar tan lejos como se muestra en las figuras \ref{Rectangulo1}-\ref{Rectangulo5}.\\
 
-La segunda aplicación del mapeo a los polinomios, $(W_{x2}^{s},W_{y2}^{s})=f_{a,b}(W_{x1}^{s},W_{y1}^{s})$ se muestra en la figura \ref{Rectangulo2}, de nuevo usando el mismo valor máximo del parámetro $t$, además en la figura \ref{error-2iteracion} muestra el error asociado a tal resulado.
-\begin{figure}[H]
+La segunda aplicación del mapeo a los polinomios, $(W_{x2}^{s},W_{y2}^{s})=f_{a,b}(W_{x1}^{s},W_{y1}^{s})$ se muestra en la figura \ref{Rectangulo2}, de nuevo usando el mismo valor máximo del parámetro $t$, además en la figura \ref{error-2iteracion} muestra el error asociado a tal resultado.\\
+\begin{figure}[h!]
 \centering
 \includegraphics[scale=0.7]{rectangulo2.pdf}
 \caption{Segunda aplicación del mapeo a los polinomios de orden 250.}
 \label{Rectangulo2}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
 \includegraphics[scale=0.7]{error2ite.pdf}
 \caption{Error en el polinomio que resulta de aplicar el mapeo por segunda vez a la parametrización de orden 250.}
@@ -604,30 +520,30 @@ La segunda aplicación del mapeo a los polinomios, $(W_{x2}^{s},W_{y2}^{s})=f_{a
 \end{figure}
 
 De manera sucesiva se aplicaron los mapeos correspondientes hasta iterar cinco veces, siempre conservando el mismo valor máximo del parámetro $t$.
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
 \includegraphics[scale=0.7]{rectangulo3.pdf}
 \caption{Tercer aplicación del mapeo a los polinomios de orden 250.}.
 \label{Rectangulo3}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
 \includegraphics[scale=0.7]{error3ite.pdf}
 \caption{Error en el polinomio que resulta de aplicar el mapeo por tercera vez a la parametrización de orden 250.}
 \label{error-3iteracion}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
-\includegraphics[scale=0.7]{rectangulo4A}
+\includegraphics[scale=0.7]{rectangulo4.pdf}
 \caption{Cuarta aplicación del mapeo a los polinomios de orden 250.}.
 \label{Rectangulo4}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
-\includegraphics[scale=0.7]{error4ite.pdf}
+\includegraphics[scale=0.65]{error4ite.pdf}
 \caption{Error en el polinomio que resulta de aplicar el mapeo por cuarta vez a la parametrización de orden 250.}
 \label{error-4iteracion}
 \end{figure}

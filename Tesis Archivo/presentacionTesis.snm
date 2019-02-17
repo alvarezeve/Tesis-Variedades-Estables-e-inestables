@@ -1,0 +1,60 @@
+\beamer@slide {fig:rotor}{3}
+\beamer@slide {sistema_lineal}{4}
+\beamer@slide {primer_valorp}{4}
+\beamer@slide {segundo_valorp}{4}
+\beamer@slide {variedad estable}{5}
+\beamer@slide {variedad inestable}{5}
+\beamer@slide {hiperbolico}{5}
+\beamer@slide {conmutativo}{8}
+\beamer@slide {Ecua de invariancia}{8}
+\beamer@slide {Ecua de invariancia resta}{8}
+\beamer@slide {mapeo estandar}{9}
+\beamer@slide {theta}{10}
+\beamer@slide {p}{10}
+\beamer@slide {sumas en mapeo}{11}
+\beamer@slide {expandida}{11}
+\beamer@slide {segundos_coeficientes_a}{13}
+\beamer@slide {segundos_coeficientes_b}{13}
+\beamer@slide {W compleja}{14}
+\beamer@slide {W compleja deriv}{14}
+\beamer@slide {parte real}{16}
+\beamer@slide {parte compleja}{16}
+\beamer@slide {recurrencia alpha}{17}
+\beamer@slide {recurrencia beta}{17}
+\beamer@slide {sistema recurrencia}{19}
+\beamer@slide {estandar03}{21}
+\beamer@slide {error est k03}{22}
+\beamer@slide {estandar15}{23}
+\beamer@slide {erroresf64}{24}
+\beamer@slide {erroresBig}{25}
+\beamer@slide {mapeo estandar inverso}{26}
+\beamer@slide {erroresinverso}{26}
+\beamer@slide {Henon}{27}
+\beamer@slide {HenonI}{27}
+\beamer@slide {Henon1}{28}
+\beamer@slide {Henon3}{29}
+\beamer@slide {Jung}{30}
+\beamer@slide {jungI}{30}
+\beamer@slide {jung2}{31}
+\beamer@slide {hadamard}{32}
+\beamer@slide {convergenciaJH}{32}
+\beamer@slide {tres terminos}{33}
+\beamer@slide {convergenciaJ3}{33}
+\beamer@slide {cruce_estandar}{35}
+\beamer@slide {crucesH}{36}
+\beamer@slide {matriz_cortes}{37}
+\beamer@slide {jung_cortes}{38}
+\beamer@slide {cruces_jung}{39}
+\beamer@slide {herradura}{40}
+\beamer@slide {InvarianciaEstable1}{41}
+\beamer@slide {InvarianciaEstable2}{41}
+\beamer@slide {InvarianciaEstable3}{41}
+\beamer@slide {rectangulo0}{42}
+\beamer@slide {Rectangulo1}{43}
+\beamer@slide {error-1aplicacion}{44}
+\beamer@slide {error-n-aplicacion}{44}
+\beamer@slide {error-1iteracion}{45}
+\beamer@slide {Rectangulo2}{46}
+\beamer@slide {Rectangulo3}{47}
+\beamer@slide {Rectangulo4}{48}
+\beamer@slide {Rectangulo5}{49}

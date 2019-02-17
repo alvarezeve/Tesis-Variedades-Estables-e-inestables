@@ -40,9 +40,7 @@ o
 \end{eqnarray*}
 Al conjunto ordenado $( \pmb x_{0},\pmb x_{1},\ldots,\pmb x_{n} )$ se le llama la \textit{órbita} de $\pmb x_{0}$.\\
 
-En este tipo de sistemas es posible que exista un $\pmb x_{*}$ tal que $\mathbf{f}^{p}(\pmb x_{*})=\pmb x_{*}$ con $p \in \mathbb{Z}$. Es decir, después de un número finito de aplicaciones se vuelve al mismo punto ($\pmb x_{*}$), llamado un \textit{punto periódico} de periodo $p$. También es entonces posible  que exista un punto de periodo uno, $\pmb x_{*}=\mathbf{f}(\pmb x_{*})$, llamado \textit{punto fijo}. \\
-
-Las órbitas se separan en términos de los periodos como sigue:
+En este tipo de sistemas es posible que exista un $\pmb x_{*}$ tal que $\mathbf{f}^{p}(\pmb x_{*})=\pmb x_{*}$ con $p \in \mathbb{Z}$. Es decir, después de un número finito de aplicaciones se vuelve al mismo punto ($\pmb x_{*}$), llamado un \textit{punto periódico} de periodo $p$. También es entonces posible  que exista un punto de periodo uno, $\pmb x_{*}=\mathbf{f}(\pmb x_{*})$, llamado \textit{punto fijo}. Los puntos fijos formarán parte indispensable del método que se implementó, por ello es importante clasificar las órbitas en términos de los periodos como sigue:
 
 \begin{itemize}
 \item  Órbitas fijas (asociadas a puntos con periodo uno).
@@ -53,7 +51,7 @@ Aunque el análisis se enfoca en puntos fijos, es posible analizar aquellos punt
 \section{Mapeos}
 Como se menciona en la introducción existen diferentes características de los sis\-te\-mas dinámicos, la forma en la que depende un estado del estado anterior es una de ellas. Esa dependencia está determinada por $\mathbf{f}$ en la ecuación \eqref{sistema discreto}; gráficamente se describe en el espacio fase, que es el espacio de todos los posibles valores de $\pmb x$. En el mismo espacio la órbita de cualquier punto se ve como una trayectoria que representa la evolución de un punto $\pmb x$ bajo el mapeo hacia adelante y hacia atrás. \\
 
-Las funciones que aparecen en el mapeo pueden ser polinomiales, productos entre las variables o, peor aún, funciones mucho más difíciles de manejar, provocando que la suma de soluciones no sea solución; esa característica se llama \textit{no linealidad}. Una de las primeras cosas a analizar serían los puntos fijos del sistema, los cuales deberán encontrarse algebráicamente o numéricamente dependiendo de la dificultad del mapeo, alrededor de los cuales pueden presentarse diversos comportamientos de las trayectorias.\\
+Las funciones que aparecen en el mapeo pueden ser polinomiales, productos entre las variables o, funciones más difíciles de manejar, provocando que \underline{la suma de soluciones no sea solución}; esa característica se llama \textit{no linealidad}. Una de las primeras cosas a analizar serían los puntos fijos del sistema, los cuales deberán encontrarse algebráicamente o numéricamente dependiendo de la dificultad del mapeo, alrededor de los cuales pueden presentarse diversos comportamientos de las trayectorias.\\
 
 Sea $\mathbf{x}_{*}$ un punto fijo asociado al mapeo, entonces la ecuación
 \begin{eqnarray}
@@ -96,7 +94,7 @@ En el caso hiperbólico existen dos comportamientos que nos interesan, marcados 
 
 
 \section{Conjuntos invariantes}
-Alrededor de un punto fijo existen ciertos conjuntos que expresan algunas ca\-rac\-te\-rís\-ti\-cas del sistema; estos conjuntos tienen que ver directamente con lo que se observa en la figura \ref{hiperbolic}. Para entender su comportamiento, se usa la definición de un conjunto invariante.
+Alrededor de un punto fijo existen ciertos conjuntos que expresan algunas ca\-rac\-te\-rís\-ti\-cas del sistema, que nos interesa conocer para describir la dinámica alrededor del punto fijo; estos conjuntos tienen que ver directamente con lo que se observa en la figura \ref{hiperbolic}. Para entender su comportamiento, se usa la definición de un conjunto invariante.
 
 \begin{defini}[\textit{\textsc{Conjunto invariante}}\cite{Ott}]
 \textit{Un conjunto invariante es un subconjunto $\mathbf{I} \subset \mathbf{E}$ del espacio fase tal que para cualquier $\mathbf{x}_{i}\in  \mathbf{I}$  y $ n\in\mathbb{N}$ \\
@@ -162,7 +160,7 @@ Los sistemas Hamiltonianos son una clase particular de los sistemas dinámicos. 
 \begin{eqnarray}
 \mathbf{F}=-\nabla V. \label{fuerza potencial}
 \end{eqnarray}
-La ecuación \eqref{fuerza potencial} se puede convertir en un sistemas de ecuaciones diferenciales, con $\mathbf{x} \in \mathbb{R}^{n}$
+La ecuación \eqref{fuerza potencial} se puede convertir en un sistemas de ecuaciones diferenciales, con $\mathbf{x} \in \mathbb{R}^{n}$ la posición y $V$ la función potencial.
 \begin{eqnarray}
 \frac{d\mathbf{x}}{dt}=\mathbf{v},
 \label{fuerza sistema dif a}
@@ -186,7 +184,7 @@ las ecuaciones de movimiento que se obtienen de \ref{Hamiltoniano-general} son:
 \label{2ec de mov}
 \end{eqnarray}
 
-Para un sistema en el que el potencial se aplica de manera discreta, en pasos de tiempo $t_{n}$ con $n\in\mathbb{Z}$ y $t\in\mathbb{R}$, en periodos de tiempo $T$, la Hamiltoniana es:
+Para un sistema en el que el potencial se aplica de manera discreta, en pasos de tiempo $t_{n}$ con $n\in\mathbb{Z}$ y $t\in\mathbb{R}$, en periodos de tiempo $T$, la Hamiltoniana incluye a la función delta de Dirac:
 \begin{eqnarray}
 H(q,p)=\frac{p^{2}}{2}+V(q)\sum_{n=-\infty}^{\infty}\delta(t-nT).
 \label{ec de hamilton} 
@@ -278,7 +276,7 @@ M\subset\mathbb{R}^{n} \ar[r]^{\mathbf{f}} & M\subset\mathbb{R}^{n}
 \end{figure}
 
 
-En este sentido $g$ representa un subsistema de $\mathbf{f}$, en otras palabras $g$ contiene la dinámica del mapeo pero sobre $\Theta$. El objetivo del método de parametrización es encontrar $\mathcal{P}$ y $g$ que cumplan la ecuación de invariancia \eqref{Ecua de invariancia}. Aunque no se conozca la dinámica interna de $g$, es fácil ver que $\mathcal{P}$ y $g$ son soluciones de \eqref{Ecua de invariancia}; al observar el diagrama \eqref{conmutativo} es claro que la composición también es solución y eso proporciona una libertad para resolver la ecuación. El obstáculo, no conocer $g$, se puede pasar si se escoge una forma de parametrización que dependa del sistema; en el método de parametrización se tienen descritas dos formas: la forma gráfica y la forma normal. De aquí en adelante se usa el método de la forma gráfica, que es la forma más simple de parametrización. Consiste en adaptar la forma de la parametrización $\mathcal{P}$ a la forma de las variedades, la cual está relacionada con la dirección que proporcionan los vectores propios. Para el caso de una matriz hiperbólica de $2\times 2$ sus vectores propios indican, suficientemente cerca del punto fijo, la dirección de cada variedad. \\
+En este sentido $g$ representa un subsistema de $\mathbf{f}$, en otras palabras $g$ contiene la dinámica del mapeo pero sobre $\Theta$. El objetivo del método de parametrización es encontrar $\mathcal{P}$ y $g$ que cumplan la ecuación de invariancia \eqref{Ecua de invariancia}. Aunque no se conozca la dinámica interna de $g$, es fácil ver que $\mathcal{P}$ y $g$ son soluciones de \eqref{Ecua de invariancia}; al observar el diagrama \eqref{conmutativo} se puede notar que la composición también es solución y eso proporciona una libertad para resolver la ecuación. El obstáculo, no conocer $g$, se puede pasar si se escoge una forma de parametrización que dependa del sistema; en el método de parametrización se tienen descritas dos formas: la forma gráfica y la forma normal. De aquí en adelante se usa el método de la forma gráfica, que es la forma más simple de parametrización. Consiste en adaptar la forma de la parametrización $\mathcal{P}$ a la forma de las variedades, la cual está relacionada con la dirección que proporcionan los vectores propios. Para el caso de una matriz hiperbólica de $2\times 2$ sus vectores propios indican, suficientemente cerca del punto fijo, la dirección de cada variedad. \\
 
 
 La forma en la que se escoge $g$, en la mayoría de las veces, es polinomial de tal manera que se adapte a la forma del mapeo. Sin embargo la elección puede ser diferente dependiendo del sistema. Se escogió la dependencia más sencilla para las variables del mapeo $\mathbf{f}(x,y)$ \eqref{fun g}, en la que se incluye el valor propio del sistema $\lambda$; para el caso hiperbólico es suficientes con esto

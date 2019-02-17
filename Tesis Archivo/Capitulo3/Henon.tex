@@ -4,60 +4,62 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Ejemplos de aplicación del método}
 \label{SeccionEstandar}\section{Mapeo estándar}
-En el capítulo anterior mostramos cómo se aplica el método de parametrización de manera algebráica para el caso del mapeo estándar. Utilizando el método ya programado se hicieron diferentes cálculos para reproducir los resultados presentados en \citep{Mireles}. Una de las razones de estudiar el mapeo estándar, además de usarlo como una forma de validación, es porque a partir del estudio de este mapeo se saben muchas de las características de otros. Por otro lado queremos mostrar lo importante que es tener una parametrización analítica. Aunque el estudio cualitativo del mapeo puede dar información útil, tener una parametrización de las variedades relacionadas a sus puntos fijos convierte el análisis en algo cuantitativo y semianalítico. El objetivo de esta sección es mostrar algunas de las cosas que son posibles de alcanzar en términos de este análisis, además de la forma en la que se usa el método desde Julia.\\
+En el capítulo anterior se vio cómo aplicar el método de parametrización de manera algebráica para el caso del mapeo estándar. Utilizando el método ya programado se hicieron diferentes cálculos para reproducir los resultados presentados en \citep{Mireles}. Una de las razones de estudiar el mapeo estándar, además de usarlo como una forma de validación, es porque se trata de un modelo simple de un sistema conservativo que presenta caos, mediante el cual se pueden conocer características de otros mapeos Hamiltonianos mas complicados. Por otro lado hay que hacer evidente lo importante que es tener una parametrización analítica. Aunque el estudio cualitativo del mapeo puede dar información útil, tener una parametrización de las variedades relacionadas a sus puntos fijos convierte el análisis en algo cuantitativo y semianalítico. El objetivo de esta sección es mostrar algunas de las cosas que son posibles de alcanzar en términos de este análisis, además de la forma en la que se usa el método desde Julia.\\
 
-En el mapeo estándar \eqref{mapeo estandar} uno de los puntos fijos es el origen de coordenadas $\mathbf{x}_{1}=(0,0)$. Utilizando el método programado se calcularon las variedades estables e inestables para diferentes valores del parámetro en el mapeo. En las notas \citep{Mireles} no aparece explícitamente el orden del polinomio usado ni el error específico, sin embargo se intentó reproducir al menos gráficamente los resultados. Dependiendo del orden del polinomio que se calcule y del parámetro del mapeo se podrá llegar más lejos del punto fijo.  
+En el mapeo estándar \eqref{mapeo estandar} uno de los puntos fijos es el origen de coordenadas $\mathbf{x}_{1}=(0,0)$. Utilizando el método programado se calcularon las variedades estables e inestables para diferentes valores del parámetro en el mapeo. En las notas \citep{Mireles} no aparece explícitamente el orden del polinomio usado ni el error específico, sin embargo se intentó reproducir al menos gráficamente los resultados. Dependiendo del orden del polinomio que se calcule y del parámetro del mapeo se podrá llegar más lejos del punto fijo. \\
+
+
+En las figuras \ref{estandar03}--\ref{error est k07} se muestran los resultados de la parametrización de las variedades estable e inestable asociadas al punto fijo $\mathbf{x}_{1}$ para diferentes valores del parámetro $k$; junto con cada una aparece su respectiva gráfica del error numérico.   Los cálculos se hicieron utilizando números de punto flotante de 64 bits (\texttt{float64}). Para las figuras \ref{estandar03}, \ref{estandar07} se puede ver que las variedades se juntan de manera que parecen ser tangentes, mientras que para el caso de la figura \ref{estandar15} se observan tres intersecciones entre las variedades. En todos los casos el error se comporta de manera similar, manteniéndose prácticamente constante, del orden del epsilon de la máquina $10^{-16}$, hasta cierto valor del parámetro $t$ y creciendo de forma exponencial después del mismo. La curva será entonces confiable hasta valores del parámetro $t$ que no excedan el punto donde el error crece rápidamente.  \\
+
 \begin{figure}[H]
- \centering
- \includegraphics[scale=0.7]{k03}
- \caption{\footnotesize $W^{s},W^{u}$ de orden $25$ en el mapeo estándar con $k=0.3$ en el intervalo $t=[0.,3.]$}
- \label{estandar03}
+	\centering
+	\includegraphics[scale=0.7]{k03}
+	\caption{\footnotesize $W^{s},W^{u}$ de orden $25$ en el mapeo estándar con $k=0.3$ en el intervalo $t=[0.,3.]$}
+	\label{estandar03}
 \end{figure}
 
 \begin{figure}[H]
-\centering
-\includegraphics[scale=0.7]{errork03} 
-\caption{Error en las variedades de la figura \ref{estandar03}.}
-\label{error est k03}
+	\centering
+	\includegraphics[scale=0.7]{errork03} 
+	\caption{Error en las variedades de la figura \ref{estandar03}.}
+	\label{error est k03}
 \end{figure}
 
 
 \begin{figure}[H]
-\centering
-\includegraphics[scale=0.7]{k15}
-\caption{$W^{s},W^{u}$ de orden $80$ en el mapeo estándar con $k=1.5$ en el intervalo $t=[0.,13.].$}
-\label{estandar15}
+	\centering
+	\includegraphics[scale=0.7]{k15}
+	\caption{$W^{s},W^{u}$ de orden $80$ en el mapeo estándar con $k=1.5$ en el intervalo $t=[0.,13.].$}
+	\label{estandar15}
 \end{figure}
 
 \begin{figure}[H]
-\centering
-\includegraphics[scale=0.7]{errork15} 
-\caption{Error en las variedades de la figura \ref{estandar15}.}
-\label{error est k15}
+	\centering
+	\includegraphics[scale=0.7]{errork15} 
+	\caption{Error en las variedades de la figura \ref{estandar15}.}
+	\label{error est k15}
 \end{figure}
 
 
 
 
 \begin{figure}[H]
-\centering
-\includegraphics[scale=0.7]{k07}
-\caption{$W^{s},W^{u}$ de orden 70 en el mapeo estándar con $k=0.7$ en el intervalo $t=[0.,5.5]$.}
-\label{estandar07}
+	\centering
+	\includegraphics[scale=0.7]{k07}
+	\caption{$W^{s},W^{u}$ de orden 70 en el mapeo estándar con $k=0.7$ en el intervalo $t=[0.,5.5]$.}
+	\label{estandar07}
 \end{figure}
 
 \begin{figure}[H]
-\centering
-\includegraphics[scale=0.7]{errork07} 
-\caption{Error en las variedades de la figura \ref{estandar07}.}
-\label{error est k07}
+	\centering
+	\includegraphics[scale=0.7]{errork07} 
+	\caption{Error en las variedades de la figura \ref{estandar07}.}
+	\label{error est k07}
 \end{figure}
 
 
-En las figuras \ref{estandar03}--\ref{error est k07} se muestran los resultados de la parametrización de las variedades estable e inestable asociadas al punto fijo $\mathbf{x}_{1}$ para diferentes valores del parámetro $k$; junto con cada una aparece su respectiva gráfica del error numérico.   Los cálculos se hicieron utilizando números de punto flotante de 64 bits (\texttt{float64}). Para las figuras \ref{estandar03}, \ref{estandar07} se puede ver que las variedades se juntan de manera que parecen ser tangentes, mientras que para el caso de la figura \ref{estandar15} observamos tres intersecciones entre las variedades. En todos los casos el error se comporta de manera similar, manteniéndose prácticamente constante, del orden del epsilon de la máquina $10^{-16}$, hasta cierto valor del parámetro $t$ y creciendo de forma exponencial después del mismo. La curva será entonces confiable hasta valores del parámetro $t$ que no excedan el punto donde el error crece rápidamente.  \\
 
-
-Para observar cómo cambia el comportamiento del error respecto al orden de la parametrización se calcularon polinomios de diferente orden que parametrizan a la variedad inestable del mapeo con $k=0.3$, como se muestra en la figura \ref{erroresf64}. Observamos que mientras más grande sea el orden del polinomio, mejor es la aproximación, pues podemos llegar a valores del parámetro más grandes, que se traduce en ir más lejos en la variedad inestable. \\
+Para observar cómo cambia el comportamiento del error respecto al orden de la parametrización se calcularon polinomios de diferente orden que parametrizan a la variedad inestable del mapeo con $k=0.3$, como se muestra en la figura \ref{erroresf64}. Se observa que mientras más grande sea el orden del polinomio, mejor es la aproximación, pues es posible llegar a valores del parámetro más grandes, que se traduce en ir más lejos en la variedad inestable. \\
 
 \begin{figure}[H]
 \centering
@@ -65,7 +67,7 @@ Para observar cómo cambia el comportamiento del error respecto al orden de la p
 \caption{Curvas de error para diferentes órdenes en el mapeo estándar, $k=0.3$. }
 \label{erroresf64}
 \end{figure}
-A fin de mostrar que el error es de alguna manera controlable se usaron números de precisión extendida (256 bits) para hacer cálculos análogos a los anteriores. En la figura \ref{erroresBig} se muestran los resultados para parametrizaciones de órdenes entre $10$ y $80$. Observamos un comportamiento análogo, de tal manera que para cada orden diferente de parametrización hay un valor diferente del parámetro en el cual pasa de un error que no crece significativamente a un error que crece de manera abrupta. También notamos que al usar precisión extendida(256 bits, $\epsilon_{\mathrm{mach}}=10^{-77}$) el error cerca del punto fijo es imperceptible pero en la parte donde crece, tiene un cambio más pronunciado que en el caso de números de punto flotante. 
+A fin de mostrar que el error es de alguna manera controlable se usaron números de precisión extendida (256 bits) para hacer cálculos análogos a los anteriores. En la figura \ref{erroresBig} se muestran los resultados para parametrizaciones de órdenes entre $10$ y $80$. Se observa un comportamiento análogo, de tal manera que para cada orden diferente de parametrización hay un valor diferente del parámetro en el cual pasa de un error que no crece significativamente a un error que crece de manera abrupta. También se notó que al usar precisión extendida(256 bits, $\epsilon_{\mathrm{mach}}=10^{-77}$) el error cerca del punto fijo es imperceptible pero en la parte donde crece, tiene un cambio más pronunciado que en el caso de números de punto flotante. 
 
 \begin{figure}[H]
 \centering
@@ -74,7 +76,7 @@ A fin de mostrar que el error es de alguna manera controlable se usaron números
 \label{erroresBig}
 \end{figure}
 
-Como ya mencionamos, antes la variedad inestable del mapeo inverso corresponde a la variedad estable del mapeo. Si se usa el mismo método calculando la variedad inestable del mapeo inverso \eqref{mapeo estandar inverso} podemos controlar mejor el error numérico. Para mostrar esto hicimos una comparación parametrizando la variedad estable mediante el mapeo inverso y el mapeo inicial. Los polinomios fueron del mismo orden y lo que se observa en el error se muestra en la figura \ref{erroresinverso}.
+Como ya se mencionó antes, la variedad inestable del mapeo inverso corresponde a la variedad estable del mapeo. Si se usa el mismo método calculando la variedad inestable del mapeo inverso \eqref{mapeo estandar inverso} se puede controlar mejor el error numérico. Para mostrar esto se hizo una comparación parametrizando la variedad estable mediante el mapeo inverso y el mapeo inicial. Los polinomios fueron del mismo orden y lo que se observa en el error se muestra en la figura \ref{erroresinverso}.
 
 
 \begin{figure}[H]
@@ -163,7 +165,7 @@ Al escoger $b=1$ se garantiza estar en un sistema Hamiltoniano, mientras que $a$
 \end{figure}
 Las variedades que aparecen en la figura \ref{Henon1} se calcularon con el mapeo de Hénon \eqref{Henon} y el mapeo inverso \eqref{HenonI}; las variedades se observan simétricas; aún así, las parametrizaciones son diferentes. Puede verse en la figura \ref{ErrorHenon1} que el error cambia cinco órdenes de magnitud en todo el intervalo del parámetro.\\
 
-A diferencia del mapeo estándar, en este mapeo las órbitas pueden escapar a infinito, es decir, no están  constreñidas en una región finita, lo que representa un mayor reto en cuanto a la parametrización, ya que el polinomio debe ser tal que pueda regresar varias veces. De hecho se observa que se necesitan valores grandes en el parámetro, comparados con los del mapeo estándar, para observar los cruces de las variedades. También esta situación hace que el error numérico sea mayor que para el mapeo estándar. \\
+A diferencia del mapeo estándar, en este mapeo las órbitas pueden escapar a infinito, es decir, no están  constreñidas en una región finita, lo que representa un mayor reto en cuanto a la parametrización, ya que el polinomio debe ser tal que pueda regresar varias veces. De hecho se observa que son necesarios valores grandes en el parámetro, comparados con los del mapeo estándar, para observar los cruces de las variedades. También esta situación hace que el error numérico sea mayor que para el mapeo estándar. \\
 
 En las figuras \ref{Henon2}, \ref{Henon3} se muestran las variedades calculadas de la misma manera en la que se calcularon para la figura \ref{Henon1}. En \ref{Henon2} las curvas son más cerradas y se necesita de un polinomio de orden mayor que en el caso de \ref{Henon3} para observar los cortes. 
 \begin{figure}[H]
@@ -177,7 +179,7 @@ En las figuras \ref{Henon2}, \ref{Henon3} se muestran las variedades calculadas 
 \centering
 \includegraphics[scale=0.7]{errorH07}
 \caption{Error asociado a las variedades de la figura \ref{Henon2}.}
-\label{Henon2}
+\label{ErrorHenon2}
 \end{figure}
 
 
@@ -192,11 +194,11 @@ En las figuras \ref{Henon2}, \ref{Henon3} se muestran las variedades calculadas 
 \centering
 \includegraphics[scale=0.6]{errorH65}
 \caption{Error asociado a las variedades de la figura \ref{Henon3}.}
-\label{Henon3}
+\label{ErrorHenon3}
 \end{figure}
 
 
-Así que con el orden suficiente es posible observar los cruces de ambas variedades; lo anterior se retoma en la última sección. 
+Así que con el orden suficiente es posible observar los cruces de ambas variedades; estos cruces son importantes en la dinámica pues dan información sobre caos en el sistema,  en la última sección se habla un poco sobre esto. 
 
 \label{jung-seccion}\section{Mapeo exponencial}
 El último mapeo que se estudió fue uno usado en el artículo \citep{Jung}: 
@@ -252,7 +254,8 @@ Usando el mismo procedimiento que en los casos anteriores se obtuvieron las figu
 \caption{Error asociado las variedades de la figura \ref{jung2}.}
 \label{errorjung2}
 \end{figure}
-Se puede observar en las figuras \ref{errorjung1}, \ref{errorjung2} que en la variedad estable el error crece de manera abrupta antes que el error de la variedad inestable. Ambas curvas del error tienen la misma forma, y se mantienen aproximadamente en el mismo orden de error. El mapeo \eqref{Jung} es más sensible que los dos mapeos pasados, algunos órdenes resultaban no ajustarse a la variedad más allá de valores del parámetro menor a uno. 
+Se puede observar en las figuras \ref{errorjung1}, \ref{errorjung2} que en la variedad estable el error crece de manera abrupta antes que el error de la variedad inestable. Ambas curvas del error tienen la misma forma, y se mantienen aproximadamente en el mismo orden de error. El mapeo \eqref{Jung} es más sensible que los dos mapeos pasados, algunos órdenes resultaban no ajustarse a la variedad más allá de valores del parámetro menor a uno.\\
+
 
 
 \section{Convergencia}
@@ -380,7 +383,7 @@ Los puntos de color son sólo para indicar cuales intersecciones fueron encontra
 
 
 
-La zona rectangular sombreada en cada gráfica representa el producto cartesiano de los intervalos donde se encuentra la solución. Podemos observar que de hecho cada zona contiene el cruce de las variedades, garantizando así que en el intervalo propuesto hay un cruce, siendo esta intersección punto homoclínico. Las regiones que aparecen en la figura \ref{matriz_cortes} son de área pequeña comparados con el área que ocupan las variedades. Este tipo de resultados son útiles para hablar sobre caos topológico \cite{devaney}, \cite{gerald}.\\
+La zona rectangular sombreada en cada gráfica representa el producto cartesiano de los intervalos donde se encuentra la solución. Es posible observar que de hecho cada zona contiene el cruce de las variedades, garantizando así que en el intervalo propuesto hay un cruce, siendo esta intersección punto homoclínico. Las regiones que aparecen en la figura \ref{matriz_cortes} son de área pequeña comparados con el área que ocupan las variedades. Este tipo de resultados son útiles para hablar sobre caos topológico \cite{devaney}, \cite{gerald}.\\
 
 Para complementar este análisis se obtuvo una gráfica de las superficies que forman las variedades al cambiar el parámetro del mapeo, dando una idea de cómo se ven las superficies y además de cómo se comportan las intersecciones. La figura \ref{SuperficiesH} muestra las superficies formadas por las variedades para ciertos valores del parámetro $a$. Algunas gráficas más se encuentran en  \url{https://github.com/alvarezeve/Tesis-Variedades-Estables-e-inestables/} en el archivo llamado \texttt{Superficies.ipynb}.
 \begin{figure}[H]
@@ -523,7 +526,7 @@ De manera sucesiva se aplicaron los mapeos correspondientes hasta iterar cinco v
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=0.7]{rectangulo3.pdf}
-\caption{Tercer aplicación del mapeo a los polinomios de orden 250.}.
+\caption{Tercer aplicación del mapeo a los polinomios de orden 250.}
 \label{Rectangulo3}
 \end{figure}
 
@@ -562,7 +565,7 @@ De manera sucesiva se aplicaron los mapeos correspondientes hasta iterar cinco v
 \label{error-5iteracion}
 \end{figure}
 
-En las primeras dos aplicaciones del mapeo, \ref{Rectangulo2} y \ref{Rectangulo3}, se puede observar un tentáculo más en cada variedad, mientras que en las siguientes aparecen hasta dos más. La profundidad de tentáculos y la forma en la que se cruzan depende del valor del parámetro $a$. Hay que enfatizar que para lograr observar estos cruces de manera directa, se debería llegar a valores del parámetro muy grandes comparados con el valor que se usó en todos los casos, lo cual no siempre es posible, pues como se vio en la sección \ref{SeccionEstandar} después de cierto orden el error se estanca y no es posible llegar tan lejos con errores controlables, mientras que como muestran las figuras \ref{error-1iteracion}-\ref{error-4iteracion} el error es mucho menor que si se usara un polinomio de orden grande $(>250)$. Con esto es evidente que sólo se necesita conocer el rectángulo fundamental para conocer mucho de la dinámica de las variedades, y por tanto de los cruces entre ellas. 
+En las primeras dos aplicaciones del mapeo, \ref{Rectangulo2} y \ref{Rectangulo3}, se puede observar un tentáculo más en cada variedad, mientras que en las siguientes aparecen hasta dos más. La profundidad de tentáculos y la forma en la que se cruzan depende del valor del parámetro $a$. Hay que enfatizar que para lograr observar estos cruces de manera directa, se debería llegar a valores del parámetro muy grandes comparados con el valor que se usó en todos los casos, lo cual no siempre es posible, pues como se vio en la sección \ref{SeccionEstandar} después de cierto orden el error se estanca y no es posible llegar tan lejos con errores controlables, mientras que como muestran las figuras \ref{error-1iteracion}-\ref{error-4iteracion} el error es mucho menor que si se usara un polinomio de orden grande $(>250)$. Con esto es evidente que sólo se necesita conocer el rectángulo fundamental para conocer mucho de la dinámica de las variedades, y por tanto de los cruces entre ellas.\\ 
 
 
 La implementación del método resultó ser eficiente para encontrar los polinomios que representan las variedades estable e inestable asociadas a puntos fijos hiperbólicos de los diferentes mapeos. Se tomaron estos tres mapeos para tener un poco de variedad en la forma de las variedades y también de los puntos fijos. En todos los casos el orden de la parametrización afecta de manera diferente: para el caso del mapeo exponencial resulta ser más sensible. En todos ellos un orden mayor contribuye a llegar más lejos en el valor del parámetro con un error bajo y como consecuencia graficar de mejor manera las variedades. El error se manipula al mover el orden pero también, se puede mejorar al usar números de precisión extendida. Una característica que se puede observar es que el error se comporta esencialmente de la misma forma para los tres mapeos, creciendo de manera lenta y luego creciendo rápido a partir de cierto valor. \\

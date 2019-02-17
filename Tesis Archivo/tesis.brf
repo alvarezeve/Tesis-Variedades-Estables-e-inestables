@@ -1,8 +1,8 @@
-\backcite {Meyer}{{\es@scroman {xi}}{(document)}{Doc-Start}}
-\backcite {Haro}{{\es@scroman {xi}}{(document)}{Doc-Start}}
-\backcite {Mireles}{{\es@scroman {xi}}{(document)}{Doc-Start}}
-\backcite {Mireles}{{\es@scroman {xii}}{(document)}{Doc-Start}}
-\backcite {Jung}{{\es@scroman {xii}}{(document)}{Doc-Start}}
+\backcite {Meyer}{{\es@scroman {vii}}{(document)}{Doc-Start}}
+\backcite {Haro}{{\es@scroman {vii}}{(document)}{Doc-Start}}
+\backcite {Mireles}{{\es@scroman {vii}}{(document)}{Doc-Start}}
+\backcite {Mireles}{{\es@scroman {viii}}{(document)}{Doc-Start}}
+\backcite {Jung}{{\es@scroman {viii}}{(document)}{Doc-Start}}
 \backcite {gerald}{{2}{1}{defini.1}}
 \backcite {Friedberg}{{4}{1.2}{equation.1.2.5}}
 \backcite {arnold}{{4}{1.2}{equation.1.2.6}}
@@ -21,17 +21,17 @@
 \backcite {devaney}{{11}{2.1}{section.2.1}}
 \backcite {Mireles}{{21}{3.1}{section.3.1}}
 \backcite {Mireles}{{21}{3.1}{section.3.1}}
-\backcite {devaney}{{27}{3.2}{section.3.2}}
-\backcite {Jung}{{32}{3.3}{section.3.3}}
-\backcite {Jung}{{32}{3.3}{equation.3.3.6}}
-\backcite {validated}{{39}{3.5}{section.3.5}}
-\backcite {interval}{{39}{3.5}{section.3.5}}
-\backcite {root}{{39}{3.5}{section.3.5}}
-\backcite {validated}{{39}{3.5}{section.3.5}}
-\backcite {root}{{39}{3.5}{section.3.5}}
-\backcite {ramon}{{39}{3.5}{section.3.5}}
-\backcite {Numerics}{{39}{3.5}{section.3.5}}
-\backcite {Ott}{{41}{3.5.1}{figure.caption.31}}
-\backcite {devaney}{{42}{3.5.2}{figure.caption.33}}
-\backcite {gerald}{{42}{3.5.2}{figure.caption.33}}
-\backcite {Merlo}{{47}{3.31}{figure.caption.37}}
+\backcite {devaney}{{28}{3.2}{section.3.2}}
+\backcite {Jung}{{33}{3.3}{section.3.3}}
+\backcite {Jung}{{33}{3.3}{equation.3.3.6}}
+\backcite {validated}{{40}{3.5}{section.3.5}}
+\backcite {interval}{{40}{3.5}{section.3.5}}
+\backcite {root}{{40}{3.5}{section.3.5}}
+\backcite {validated}{{40}{3.5}{section.3.5}}
+\backcite {root}{{40}{3.5}{section.3.5}}
+\backcite {ramon}{{40}{3.5}{section.3.5}}
+\backcite {Numerics}{{40}{3.5}{section.3.5}}
+\backcite {Ott}{{42}{3.5.1}{figure.caption.31}}
+\backcite {devaney}{{43}{3.5.2}{figure.caption.33}}
+\backcite {gerald}{{43}{3.5.2}{figure.caption.33}}
+\backcite {Merlo}{{48}{3.31}{figure.caption.37}}

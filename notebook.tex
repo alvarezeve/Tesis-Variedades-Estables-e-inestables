@@ -1,0 +1,1865 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{N5(Implementaci?n)}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    \hypertarget{implementaciuxf3n-del-muxe9todo}{%
+\section{Implementación del
+método}\label{implementaciuxf3n-del-muxe9todo}}
+
+    Este notebook muestra paso a paso cómo funciona el método de
+parametrización para el mapeo estándar. Recordemos que antes ya se
+calcularon los puntos fijos del mapeo y se hizo un análisis de los
+mismos por lo que nos concentraremos en sólo aplicar de manera clara y
+paso a paso el método. Hacerlo de esta manera nos ayudará a comprender
+mejor cómo se implementó método de manera general. Dado que conocemos ya
+los puntos fijos entonces nos concentraremos en calcular la variedad
+inestable, la cual se podrá elegir en términos de escoger el valor
+propio con el signo negativo que ya se calculó en el N3.
+
+En primer lugar hay que notar que como queremos implementar eso de
+manera general tenemos que hacer el cálculo de los valores propios en un
+inicio. Luego de esto se puede proceder con el calculo de cada variedad.
+
+    Como ya sabemos cuáles son los puntos fijos necesitamos ahora calcular
+los polinomios que serán la parametrización de la variedad.Para ello
+debemos resolver la ecuación de invariancia.
+\[F_{\epsilon}\circ P=P\circ \lambda\]
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{c}{\PYZsh{}usaremos el paquete de TaylorSeries}
+        \PY{k}{using} \PY{n}{TaylorSeries}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{c}{\PYZsh{}necesitamos tambien definir el mapeo estandar }
+        \PY{l+s}{\PYZdq{}\PYZdq{}\PYZdq{}}\PY{l+s}{E}\PY{l+s}{s}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{n}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{r}\PY{l+s}{M}\PY{l+s}{a}\PY{l+s}{p}\PY{l+s}{(}\PY{l+s}{θ}\PY{l+s}{,}\PY{l+s}{p}\PY{l+s}{,}\PY{l+s}{k}\PY{l+s}{)}
+        \PY{l+s}{ }\PY{l+s}{ }\PY{l+s}{ }
+        \PY{l+s}{ }\PY{l+s}{ }\PY{l+s}{ }\PY{l+s}{F}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{ó}\PY{l+s}{n}\PY{l+s}{ }\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{i}\PY{l+s}{n}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{m}\PY{l+s}{a}\PY{l+s}{p}\PY{l+s}{e}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{e}\PY{l+s}{s}\PY{l+s}{t}\PY{l+s}{á}\PY{l+s}{n}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{r}\PY{l+s}{.}
+        \PY{l+s}{ }\PY{l+s}{ }
+        
+        \PY{l+s}{ }\PY{l+s}{ }\PY{l+s}{ }\PY{l+s}{A}\PY{l+s}{r}\PY{l+s}{g}\PY{l+s}{u}\PY{l+s}{m}\PY{l+s}{e}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{:}
+        \PY{l+s}{ }\PY{l+s}{ }\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{θ}\PY{l+s}{ }\PY{l+s}{:}\PY{l+s}{ }\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{ó}\PY{l+s}{n}
+        \PY{l+s}{ }\PY{l+s}{ }\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{p}\PY{l+s}{ }\PY{l+s}{:}\PY{l+s}{ }\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{m}\PY{l+s}{e}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{o}
+        \PY{l+s}{ }\PY{l+s}{ }\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{k}\PY{l+s}{ }\PY{l+s}{:}\PY{l+s}{ }\PY{l+s}{c}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{s}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{m}\PY{l+s}{a}\PY{l+s}{p}\PY{l+s}{e}\PY{l+s}{o}
+        \PY{l+s}{\PYZdq{}\PYZdq{}\PYZdq{}}
+        \PY{k}{function} \PY{n}{EstandarMap}\PY{p}{(}\PY{n}{θ}\PY{p}{,}\PY{n}{p}\PY{p}{,}\PY{n}{k}\PY{p}{)}
+            
+            \PY{n}{θ\PYZus{}n} \PY{o}{=} \PY{n}{mod2pi}\PY{p}{(}\PY{n}{θ}\PY{o}{+}\PY{n}{p}\PY{p}{)}
+            \PY{n}{p\PYZus{}n} \PY{o}{=} \PY{n}{mod2pi}\PY{p}{(}\PY{n}{p}\PY{o}{+}\PY{n}{k}\PY{o}{*}\PY{n}{sin}\PY{p}{(}\PY{n}{θ\PYZus{}n}\PY{p}{)}\PY{p}{)}
+            
+            \PY{k}{return} \PY{p}{[}\PY{n}{θ\PYZus{}n}\PY{p}{,}\PY{n}{p\PYZus{}n}\PY{p}{]}
+            
+            
+        \PY{k}{end}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{ansi-yellow-intense}{\textbf{WARNING: }}\textcolor{ansi-yellow}{replacing docs for 'EstandarMap :: Tuple\{Any,Any,Any\}' in module 'Main'.}
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}3}]:} EstandarMap
+\end{Verbatim}
+            
+    Definimos el valor de la constante del mapeo que usaremos en este caso.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{ke}\PY{o}{=}\PY{l+m+mf}{0.3}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}4}]:} 0.3
+\end{Verbatim}
+            
+    \begin{verbatim}
+                                                ORDEN 1 
+\end{verbatim}
+
+    Dado que queremos que \(P_{x}\), \(P_{p}\) sean polinomios necesitamos
+construirlos como dos polinomios de los cuales solo sabemos su primer
+coeficiente pero la idea es ir calculando los términos en cada
+iteración. Escribirmos los coeficientes que buscamos como un polinomio a
+su vez de orden mayor a uno.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{c}{\PYZsh{}Queremos que los polinomios para θ, p sean de orden uno, eso no influye en el orden del coeficiente que estamos calculando}
+        \PY{n}{θ}\PY{p}{,}\PY{n}{p} \PY{o}{=} \PY{n}{set\PYZus{}variables}\PY{p}{(}\PY{k+kt}{Float64}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{θ}\PY{l+s}{ }\PY{l+s}{p}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{order}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}5}]:} 2-element Array\{TaylorSeries.TaylorN\{Float64\},1\}:
+          1.0 θ + 𝒪(‖x‖³)
+          1.0 p + 𝒪(‖x‖³)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{c}{\PYZsh{}Ahora necesitamos los polinomios que parametrizan a las variedades en específico, estos serán tipo Taylor1.TaylorN}
+        \PY{n}{P\PYZus{}θ}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{n}{θ}\PY{p}{]}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+        \PY{n}{P\PYZus{}p}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{n}{p}\PY{p}{]}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+        \PY{c}{\PYZsh{}el orden de estos ya es importante para cada iteración, aquí es uno porque estamos en el coeficiente de primer grado}
+        \PY{n}{print}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{,}\PY{n}{P\PYZus{}p}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+  1.0 θ + 𝒪(‖x‖³) + 𝒪(t²)  1.0 p + 𝒪(‖x‖³) + 𝒪(t²)
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}7}]:} \PY{c}{\PYZsh{}Aplicamos el mapeo a estos dos polinomios}
+        \PY{n}{Orden1}\PY{o}{=}\PY{n}{EstandarMap}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{,}\PY{n}{P\PYZus{}p}\PY{p}{,}\PY{n}{ke}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}7}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+           1.0 θ + 1.0 p + 𝒪(‖x‖³) + 𝒪(t²)
+           0.3 θ + 1.3 p + 𝒪(‖x‖³) + 𝒪(t²)
+\end{Verbatim}
+            
+    Hasta este momento tenemos calculado la parte de la ecuación
+cohomológica que corresponde a la composición de
+\(f_{\epsilon} \circ P\), es decir creamos un arreglo de polinomios P
+que después evaluamos en la función \(f_{\epsilon}\). Construiremos la
+otra composición que aparece en la ecuación cohomológica más adelante.
+Antes de eso debemos pensar cómo se resolverá esta ecuación, la forma
+más fácil es escribirla como un sistema en forma matricial.
+\[\mathbb{A}\textbf{v}=\textbf{w} \] Donde la matriz A contiene los
+coeficientes que aparecen en los polinomios de acuerdo a cada variable.
+Mientras que la x representa el vector \((\theta,p)\) y \(w\) el vector
+de términos independientes de los polinomios.
+
+    Para escribirlo de esta manera usaremos una función dentro de
+TaylorSeries que es el jacobiano. El jacobiano como recordamos es una
+matriz formada por las derivadas parciales de los dos polinomios para
+cada una de las variables. En este caso dos variables y dos polinomios
+nos llevan a una matriz de \(2 \times 2\) formada por :
+\[ \left( \begin{array}{cc}
+\frac{\partial f_{x}}{\partial \theta} & \frac{\partial f_{p}}{\partial \theta}  \\
+\frac{\partial f_{x}}{\partial p} & \frac{\partial f_{p}}{\partial p}  \end{array} \right) \]
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}8}]:} \PY{c}{\PYZsh{}al calcular el jacobiano obtendremos sólo los valores de los coeficientes los cuales }
+        \PY{c}{\PYZsh{} son de tipo TaylorN}
+        \PY{n}{JPO}\PY{o}{=}\PY{n}{jacobian}\PY{p}{(}\PY{n}{Orden1}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}8}]:} 2×2 Array\{TaylorSeries.Taylor1\{Float64\},2\}:
+          1.0 + 𝒪(t²)   1.0 + 𝒪(t²)
+          0.3 + 𝒪(t²)   1.3 + 𝒪(t²)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{c}{\PYZsh{}como los valores que contiene el jacobiano son de tipo TaylorN y para usarlos como necesitamos}
+        \PY{c}{\PYZsh{} se deben tener en Float64 vamos a obtenerlos de la siguente manera. }
+        \PY{n}{JacFl} \PY{o}{=} \PY{k+kt}{Array}\PY{p}{\PYZob{}}\PY{k+kt}{Float64}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
+        \PY{k}{for} \PY{n}{ind} \PY{k+kp}{in} \PY{n}{eachindex}\PY{p}{(}\PY{n}{JPO}\PY{p}{)}
+                        \PY{n}{JacFl}\PY{p}{[}\PY{n}{ind}\PY{p}{]} \PY{o}{=} \PY{n}{JPO}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+        \PY{k}{end}
+        \PY{c}{\PYZsh{}usamos la matriz JacFl como auxiliar para encontrar los valores flotantes}
+        \PY{n+nd}{@show}\PY{p}{(}\PY{n}{JacFl}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+JacFl = [1.0 1.0; 0.3 1.3]
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}9}]:} 2×2 Array\{Float64,2\}:
+         1.0  1.0
+         0.3  1.3
+\end{Verbatim}
+            
+    La matriz que aparece arriba es una que ya podemos usar para calcular
+los valores y vectores propios. Necesitamos sólo uno de ellos.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}10}]:} \PY{c}{\PYZsh{} eig () es una función que calcula los valores y vectores propios de una matriz y los da en ese orden en forma de vector.}
+         \PY{n}{JPO}\PY{o}{=}\PY{n}{JacFl}
+         \PY{n}{eval}\PY{p}{,}\PY{n}{eve}\PY{o}{=}\PY{n}{eig}\PY{p}{(}\PY{n}{JPO}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+WARNING: imported binding for eval overwritten in module Main
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}10}]:} ([0.582109, 1.71789], [-0.922675 -0.812346; 0.385578 -0.583176])
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}11}]:} \PY{c}{\PYZsh{} dado que usaremos la variedad inestable, entonces usamos el segundo valor propio}
+         \PY{n}{λ}\PY{o}{=}\PY{n}{eval}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
+         \PY{n}{print}\PY{p}{(}\PY{n}{λ}\PY{p}{,}\PY{n}{eve}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+1.7178908345800274[-0.922675 -0.812346; 0.385578 -0.583176]
+    \end{Verbatim}
+
+    Tomamos por ende el segundo vector propio, los coeficientes de este
+vector serán los coeficientes de primer orden en los polinomios.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}12}]:} \PY{n}{vec}\PY{o}{=}\PY{n}{eve}\PY{p}{[}\PY{o}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{]}
+         \PY{c}{\PYZsh{} decimos que vec es un arreglo de contiene los valores correspondientes a los lugares [1,2], [2,2] de eve.}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}12}]:} 2-element Array\{Float64,1\}:
+          -0.812346
+          -0.583176
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{c}{\PYZsh{}queremos revisar la estabilidad de tipo de las variables Pθ,x}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{Orden1}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{Orden1}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+P\_θ =   1.0 θ + 𝒪(‖x‖³) + 𝒪(t²)
+typeof(P\_θ) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+Orden1[1] =   1.0 θ + 1.0 p + 𝒪(‖x‖³) + 𝒪(t²)
+typeof(Orden1[1]) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}13}]:} TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+\end{Verbatim}
+            
+    \begin{verbatim}
+                                              ORDEN 2
+\end{verbatim}
+
+    A partir de este término la forma de obtener los coeficientes se vuelve
+monótona, esto facilita que podamos sintetizar todos los pasos en
+funciones. Antes de eso calcularemos cada término por separado. La forma
+de comenzar a calcular cada coeficiente no cambia con respecto al
+primero.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}16}]:} \PY{c}{\PYZsh{}Queremos hacer la misma idea para este orden, recordemos que el orden de este polinomio no influye por ahora en el cálculo}
+         \PY{c}{\PYZsh{} ya que en los términos que no aparecen explícitamente sirven para justo calcular la parte que no conocemos.}
+         
+         \PY{n}{θ}\PY{p}{,}\PY{n}{p} \PY{o}{=} \PY{n}{set\PYZus{}variables}\PY{p}{(}\PY{k+kt}{Float64}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{θ}\PY{l+s}{ }\PY{l+s}{p}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{order}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}16}]:} 2-element Array\{TaylorSeries.TaylorN\{Float64\},1\}:
+           1.0 θ + 𝒪(‖x‖²)
+           1.0 p + 𝒪(‖x‖²)
+\end{Verbatim}
+            
+    Para los nuevos polinomios agregamos los valores que calculamos en el
+paso anterior, además de las variables x,p como series de Taylor.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}17}]:} \PY{c}{\PYZsh{}usamos los valores ya calculados en el orden 1 para x,p de primer orden, estos los incluyo en una lista junto }
+         \PY{c}{\PYZsh{}con  el polinomio que representa a x,p  tipo TaylorN }
+         \PY{n}{P\PYZus{}θ}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{θ}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
+         \PY{n}{P\PYZus{}p}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{p}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}17}]:}  ( - 0.5831757547123116 + 𝒪(‖x‖¹)) t + ( 1.0 p + 𝒪(‖x‖²)) t² + 𝒪(t³)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}18}]:} \PY{c}{\PYZsh{}aplicamos el mapeo}
+         \PY{n}{SO}\PY{o}{=}\PY{n}{EstandarMap}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{,}\PY{n}{P\PYZus{}p}\PY{p}{,}\PY{n}{ke}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}18}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+           ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 1.0 θ + 1.0 p + 𝒪(‖x‖²)) t² + 𝒪(t³)
+           ( - 1.0018322839695704 + 𝒪(‖x‖¹)) t + ( 0.3 θ + 1.3 p + 𝒪(‖x‖²)) t² + 𝒪(t³)
+\end{Verbatim}
+            
+    Para el lado derecho de la ecuación cohomológica necesitamos un vector
+de lambdas, pues recordemos\\
+\[ \Sigma_{n=1}^{\inf}a_{n}t^{n}\lambda^{n}\]
+\[\Sigma_{n=1}^{\inf}b_{n}t^{n}\lambda^{n}\]
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}19}]:} \PY{c}{\PYZsh{} como nos falta el otro lado de la ecuación cohomológica definimos un vector de lambdas}
+         \PY{n}{vλ}\PY{o}{=}\PY{p}{[}\PY{l+m+mf}{0.0}\PY{p}{,}\PY{n}{λ}\PY{p}{,}\PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{2}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}19}]:} 3-element Array\{Float64,1\}:
+          0.0    
+          1.71789
+          2.95115
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}20}]:} \PY{c}{\PYZsh{}y definimos también un polinomio para las lambdas, del mismo orden que el polinomio de P\PYZus{}θ,P\PYZus{}p}
+         \PY{c}{\PYZsh{} que juega la parte de a\PYZus{}\PYZob{}n\PYZcb{}\PYZbs{}lambda\PYZca{}\PYZob{}n\PYZcb{}}
+         \PY{n}{θλt}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{n}{vλ}\PY{o}{.*}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{θ}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
+         \PY{n}{pλt}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{n}{vλ}\PY{o}{.*}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{p}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
+         \PY{n}{λvec}\PY{o}{=}\PY{p}{[}\PY{n}{θλt}\PY{p}{,}\PY{n}{pλt}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}20}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+           ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 2.9511489195340634 θ + 𝒪(‖x‖²)) t² + 𝒪(t³)
+           ( - 1.0018322839695704 + 𝒪(‖x‖¹)) t + ( 2.9511489195340634 p + 𝒪(‖x‖²)) t² + 𝒪(t³)
+\end{Verbatim}
+            
+    Ahora ya tengo las dos partes de la ecuación y debo igualarlas para
+resolver. SO representa la parte de la primera composición mientras que
+\(λvec\) representa la parte derecha de la ecuación de invariancia. Al
+restarlas estoy resolviendo \[f_{\epsilon}\circ P- P \circ \lambda=0 \].
+En este caso no esta igualada a cero puesto que estamos tratando de
+calcular el siguente término, es decir van a diferir justo en ese
+término.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}21}]:} \PY{c}{\PYZsh{}Restando ambos vectores que representan la ecuación cohomológica encontraremos los términos que faltan}
+         \PY{c}{\PYZsh{} de empatar}
+         \PY{n}{Ecua}\PY{o}{=}\PY{n}{SO}\PY{o}{\PYZhy{}}\PY{n}{λvec}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}21}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+           ( - 1.9511489195340634 θ + 1.0 p + 𝒪(‖x‖²)) t² + 𝒪(t³)
+             ( 0.3 θ - 1.6511489195340634 p + 𝒪(‖x‖²)) t² + 𝒪(t³)
+\end{Verbatim}
+            
+    En este paso nos podemos dar cuenta que sólo aprece el término de orden
+dos puesto que el de orden uno ya lo calculamos.
+
+Notemos que hay un pequeño error, pues aparece un número en el polinomio
+asociado a \(\theta\) de orden 1, sin embargo este número es del orden
+de \(10^{-16}\) lo cual nos dice que es un error numérico.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}22}]:} \PY{c}{\PYZsh{} de esta ecuación necesitamos solo los de segundo orden, así que los extraemos manualmente }
+         \PY{n}{θ2}\PY{o}{=}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{]}
+         \PY{n}{p2}\PY{o}{=}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{]}
+         \PY{n}{vec2}\PY{o}{=}\PY{p}{[}\PY{n}{θ2}\PY{p}{,}\PY{n}{p2}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}22}]:} 2-element Array\{TaylorSeries.TaylorN\{Float64\},1\}:
+           - 1.9511489195340634 θ + 1.0 p + 𝒪(‖x‖²)
+             0.3 θ - 1.6511489195340634 p + 𝒪(‖x‖²)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}23}]:} \PY{c}{\PYZsh{}calculamos ahora el jacobiano de este vector, ya que los coeficientes serán parte de la matriz que queremos}
+         \PY{n}{JSO}\PY{o}{=}\PY{n}{jacobian}\PY{p}{(}\PY{n}{vec2}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}23}]:} 2×2 Array\{Float64,2\}:
+          -1.95115   1.0    
+           0.3      -1.65115
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}24}]:} \PY{c}{\PYZsh{}calculamos su determinante para ver si es cero, }
+         \PY{n}{det}\PY{p}{(}\PY{n}{JSO}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}24}]:} 2.9216374303387243
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}25}]:} \PY{c}{\PYZsh{} como es distinto de cero y la ecuación esta igualada a cero entonces la única solución es la trivial}
+         \PY{n}{θ2}\PY{o}{=}\PY{l+m+mf}{0.}
+         \PY{n}{p2}\PY{o}{=}\PY{l+m+mf}{0.}
+         \PY{n}{vec2}\PY{o}{=}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{l+m+mf}{0.}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}25}]:} 2-element Array\{Float64,1\}:
+          0.0
+          0.0
+\end{Verbatim}
+            
+    Esto concuerda con lo que habíamos encontrado antes, los coeficientes de
+orden par son cero.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}26}]:} \PY{c}{\PYZsh{}queremos revisar la estabilidad de las variables tx,x}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{SO}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{SO}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{θλt}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{θλt}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+P\_θ =  ( - 0.8123460094785507 + 𝒪(‖x‖¹)) t + ( 1.0 θ + 𝒪(‖x‖²)) t² + 𝒪(t³)
+typeof(P\_θ) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+SO[1] =  ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 1.0 θ + 1.0 p + 𝒪(‖x‖²)) t² + 𝒪(t³)
+typeof(SO[1]) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+θλt =  ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 2.9511489195340634 θ + 𝒪(‖x‖²)) t² + 𝒪(t³)
+typeof(θλt) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+Ecua[1] =  ( - 1.9511489195340634 θ + 1.0 p + 𝒪(‖x‖²)) t² + 𝒪(t³)
+typeof(Ecua[1]) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}26}]:} TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+\end{Verbatim}
+            
+    \begin{verbatim}
+                                            ORDEN 3
+\end{verbatim}
+
+    Para este orden comenzaremos a generar los vectores como en el caso
+anterior, lo que cambia en este caso es que aparecen términos
+independientes en la ecuación comohológica. Esto resulta en que las
+solución ya no será la trivial como en el caso pasado.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}27}]:} \PY{c}{\PYZsh{}genramos un par de variables de tipo TaylorN de orden 3}
+         \PY{n}{θ}\PY{p}{,}\PY{n}{p} \PY{o}{=} \PY{n}{set\PYZus{}variables}\PY{p}{(}\PY{k+kt}{Float64}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{θ}\PY{l+s}{ }\PY{l+s}{p}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{order}\PY{o}{=}\PY{l+m+mi}{3}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}27}]:} 2-element Array\{TaylorSeries.TaylorN\{Float64\},1\}:
+           1.0 θ + 𝒪(‖x‖⁴)
+           1.0 p + 𝒪(‖x‖⁴)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}28}]:} \PY{c}{\PYZsh{}generamos las variables con las que evaluamos el mapeo, notemos que deben de tener orden mayor al orden que estamos }
+         \PY{c}{\PYZsh{} calculando}
+         \PY{n}{P\PYZus{}θ}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{θ2}\PY{p}{,}\PY{n}{θ}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}
+         \PY{n}{P\PYZus{}p}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{p2}\PY{p}{,}\PY{n}{p}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}28}]:}  ( - 0.5831757547123116 + 𝒪(‖x‖¹)) t + ( 1.0 p + 𝒪(‖x‖⁴)) t³ + 𝒪(t⁵)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}29}]:} \PY{c}{\PYZsh{}aplicamos el mapeo }
+         \PY{n}{TO}\PY{o}{=}\PY{n}{EstandarMap}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{,}\PY{n}{P\PYZus{}p}\PY{p}{,}\PY{n}{ke}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}29}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+                                ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 1.0 θ + 1.0 p + 𝒪(‖x‖⁴)) t³ + 𝒪(t⁵)
+           ( - 1.0018322839695704 + 𝒪(‖x‖¹)) t + ( 0.1358876056468051 + 0.3 θ + 1.3 p + 𝒪(‖x‖⁴)) t³ + 𝒪(t⁵)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}30}]:} \PY{c}{\PYZsh{}creamos un vector de lambdas que formará parte del lado derecho de la ecuación cohomo.}
+         \PY{n}{vλ}\PY{o}{=}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{n}{λ}\PY{p}{,}\PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{3}\PY{p}{]}
+         \PY{n}{θλt}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{θ2}\PY{p}{,}\PY{n}{θ}\PY{p}{]}\PY{o}{.*}\PY{n}{vλ}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}
+         \PY{n}{pλt}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{p2}\PY{p}{,}\PY{n}{p}\PY{p}{]}\PY{o}{.*}\PY{n}{vλ}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}30}]:}  ( - 1.0018322839695704 + 𝒪(‖x‖¹)) t + ( 5.069751680348318 p + 𝒪(‖x‖⁴)) t³ + 𝒪(t⁵)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}31}]:} \PY{c}{\PYZsh{}lo usaremos como vector pues el mapeo regresa un vector}
+         \PY{n}{λvec}\PY{o}{=}\PY{p}{[}\PY{n}{θλt}\PY{p}{,}\PY{n}{pλt}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}31}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+           ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 5.069751680348318 θ + 𝒪(‖x‖⁴)) t³ + 𝒪(t⁵)
+           ( - 1.0018322839695704 + 𝒪(‖x‖¹)) t + ( 5.069751680348318 p + 𝒪(‖x‖⁴)) t³ + 𝒪(t⁵)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}32}]:} \PY{c}{\PYZsh{}Escribimos la ecuación cohomo}
+         \PY{n}{Ecua}\PY{o}{=}\PY{n}{TO}\PY{o}{\PYZhy{}}\PY{n}{λvec}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}32}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+                               ( - 4.069751680348318 θ + 1.0 p + 𝒪(‖x‖⁴)) t³ + 𝒪(t⁵)
+           ( 0.1358876056468051 + 0.3 θ - 3.7697516803483184 p + 𝒪(‖x‖⁴)) t³ + 𝒪(t⁵)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}33}]:} \PY{c}{\PYZsh{}notamos de nuevo que sólo sobreviven los términos de orden 3 y que hay un pequeño error en el término 1 }
+         \PY{n}{θ3}\PY{o}{=}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{]}
+         \PY{n}{p3}\PY{o}{=}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}33}]:}  0.1358876056468051 + 0.3 θ - 3.7697516803483184 p + 𝒪(‖x‖⁴)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}34}]:} \PY{c}{\PYZsh{}Dado que en este momento comienzan a aparecer términos independientes en x, p necesitamos una forma de extraerlos}
+         \PY{c}{\PYZsh{} primero estraemos los coeficientes de x, p como antes con el jacobiano. }
+         \PY{n}{JTO}\PY{o}{=}\PY{n}{jacobian}\PY{p}{(}\PY{p}{[}\PY{n}{θ3}\PY{p}{,}\PY{n}{p3}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}34}]:} 2×2 Array\{Float64,2\}:
+          -4.06975   1.0    
+           0.3      -3.76975
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}35}]:} \PY{c}{\PYZsh{}calculamos el determinante }
+         \PY{n}{det}\PY{p}{(}\PY{n}{JTO}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}35}]:} 15.041953235593466
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}36}]:} \PY{c}{\PYZsh{}extraemos ahora los coeficientes independientes de x,p }
+         \PY{n}{a}\PY{o}{=} \PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+         \PY{n}{b}\PY{o}{=} \PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+         \PY{n}{vecCoef}\PY{o}{=}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{n}{a}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{n}{b}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}36}]:} 2-element Array\{Float64,1\}:
+          -0.0     
+          -0.135888
+\end{Verbatim}
+            
+    Dado que el determinante de la matriz es distinto de cero y los términos
+independientes son diferentes de cero entonces existe una solución no
+trivial. Para resolver este sitema utilizamos que :
+\[JTO [\theta, p]^{T}=[a,b]^{T}\] \[[\theta, p]^{T}=JTO^{-1}[a,b]^{T}\]
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}37}]:} \PY{c}{\PYZsh{} entonces solo se trata de invertir el jacobiano y multiplicar con el vector del lado izquierdo}
+         \PY{n}{T3}\PY{o}{=}\PY{n}{JTO} \PY{o}{\PYZbs{}} \PY{n}{vecCoef}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}37}]:} 2-element Array\{Float64,1\}:
+          0.00903391
+          0.0367658 
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}38}]:} \PY{c}{\PYZsh{}los valores que obtuvimos son los nuevos coeficientes de orden 3}
+         \PY{n}{θ3}\PY{o}{=}\PY{n}{T3}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+         \PY{n}{p3}\PY{o}{=}\PY{n}{T3}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
+         \PY{n}{v3}\PY{o}{=}\PY{p}{[}\PY{n}{θ3}\PY{p}{,}\PY{n}{p3}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}38}]:} 2-element Array\{Float64,1\}:
+          0.00903391
+          0.0367658 
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}39}]:} \PY{c}{\PYZsh{}queremos revisar la estabilidad de las variables tx,x}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{TO}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{TO}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{θλt}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{θλt}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+P\_θ =  ( - 0.8123460094785507 + 𝒪(‖x‖¹)) t + ( 1.0 θ + 𝒪(‖x‖⁴)) t³ + 𝒪(t⁵)
+typeof(P\_θ) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+TO[1] =  ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 1.0 θ + 1.0 p + 𝒪(‖x‖⁴)) t³ + 𝒪(t⁵)
+typeof(TO[1]) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+θλt =  ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 5.069751680348318 θ + 𝒪(‖x‖⁴)) t³ + 𝒪(t⁵)
+typeof(θλt) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+Ecua[1] =  ( - 4.069751680348318 θ + 1.0 p + 𝒪(‖x‖⁴)) t³ + 𝒪(t⁵)
+typeof(Ecua[1]) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}39}]:} TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+\end{Verbatim}
+            
+    \begin{verbatim}
+                                                    ORDEN 4
+\end{verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}40}]:} \PY{c}{\PYZsh{}creamos las variables de tipo TaylorN}
+         \PY{n}{θ}\PY{p}{,}\PY{n}{p} \PY{o}{=} \PY{n}{set\PYZus{}variables}\PY{p}{(}\PY{k+kt}{Float64}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{θ}\PY{l+s}{ }\PY{l+s}{p}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{order}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}40}]:} 2-element Array\{TaylorSeries.TaylorN\{Float64\},1\}:
+           1.0 θ + 𝒪(‖x‖²)
+           1.0 p + 𝒪(‖x‖²)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}41}]:} \PY{c}{\PYZsh{}creamos las variables del mapeo que ya toman en cuenta los coeficientes que calculamos}
+         \PY{n}{P\PYZus{}θ}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{θ2}\PY{p}{,}\PY{n}{θ3}\PY{p}{,}\PY{n}{θ}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}
+         \PY{n}{P\PYZus{}p}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{p2}\PY{p}{,}\PY{n}{p3}\PY{p}{,}\PY{n}{p}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}41}]:}  ( - 0.5831757547123116 + 𝒪(‖x‖¹)) t + ( 0.036765757927698775 + 𝒪(‖x‖¹)) t³ + ( 1.0 p + 𝒪(‖x‖²)) t⁴ + 𝒪(t⁶)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}46}]:} \PY{c}{\PYZsh{}Le aplicamos el mapeo estándar}
+         \PY{n}{CO}\PY{o}{=}\PY{n}{EstandarMap}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{,}\PY{n}{P\PYZus{}p}\PY{p}{,}\PY{n}{ke}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}46}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+                                                    ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( 1.0 θ + 1.0 p + 𝒪(‖x‖²)) t⁴ + 𝒪(t⁶)
+           ( - 1.0018322839695704 + 𝒪(‖x‖¹)) t + ( 0.18639326303323034 + 𝒪(‖x‖¹)) t³ + ( 0.3 θ + 1.3 p + 𝒪(‖x‖²)) t⁴ + ( - 0.026611022998050755 + 𝒪(‖x‖²)) t⁵ + 𝒪(t⁶)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}49}]:} \PY{c}{\PYZsh{}creamos la parte derecha de la ecuación}
+         \PY{n}{vλ}\PY{o}{=}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,} \PY{n}{λ}\PY{p}{,} \PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{3}\PY{p}{,} \PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{4}\PY{p}{]}
+         \PY{n}{θλt}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{θ2}\PY{p}{,}\PY{n}{θ3}\PY{p}{,}\PY{n}{θ}\PY{p}{]}\PY{o}{.*}\PY{n}{vλ}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}
+         \PY{n}{pλt}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{p2}\PY{p}{,}\PY{n}{p3}\PY{p}{,}\PY{n}{p}\PY{p}{]}\PY{o}{.*}\PY{n}{vλ}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}
+         \PY{n}{print}\PY{p}{(}\PY{n}{xλt}\PY{p}{,}\PY{n}{pλt}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+ ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( 8.709279945267069 θ + 𝒪(‖x‖²)) t⁴ + 𝒪(t⁶) ( - 1.0018322839695704 + 𝒪(‖x‖¹)) t + ( 0.18639326303323037 + 𝒪(‖x‖¹)) t³ + ( 8.709279945267069 p + 𝒪(‖x‖²)) t⁴ + 𝒪(t⁶)
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}50}]:} \PY{c}{\PYZsh{}es más útil tener esta parte como un vector}
+         \PY{n}{λvec}\PY{o}{=}\PY{p}{[}\PY{n}{θλt}\PY{p}{,}\PY{n}{pλt}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}50}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+           ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( 8.709279945267069 θ + 𝒪(‖x‖²)) t⁴ + 𝒪(t⁶)
+           ( - 1.0018322839695704 + 𝒪(‖x‖¹)) t + ( 0.18639326303323037 + 𝒪(‖x‖¹)) t³ + ( 8.709279945267069 p + 𝒪(‖x‖²)) t⁴ + 𝒪(t⁶)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}51}]:} \PY{c}{\PYZsh{}escribimos la ecuación cohomo, para poder sacar el jacobiano}
+         \PY{n}{Ecua}\PY{o}{=}\PY{n}{CO}\PY{o}{\PYZhy{}}\PY{n}{λvec}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}51}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+                                                                                             ( - 7.709279945267069 θ + 1.0 p + 𝒪(‖x‖²)) t⁴ + 𝒪(t⁶)
+           ( - 2.7755575615628914e-17 + 𝒪(‖x‖¹)) t³ + ( 0.3 θ - 7.409279945267069 p + 𝒪(‖x‖²)) t⁴ + ( - 0.026611022998050755 + 𝒪(‖x‖²)) t⁵ + 𝒪(t⁶)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}52}]:} \PY{c}{\PYZsh{}obtenemos los valores de orden 4 }
+         \PY{n}{θ4}\PY{o}{=}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{]}
+         \PY{n}{p4}\PY{o}{=}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}52}]:}  0.3 θ - 7.409279945267069 p + 𝒪(‖x‖²)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}53}]:} \PY{c}{\PYZsh{}calculamos el jacobiano de estos términos, para obtener solo los coeficientes}
+         \PY{n}{JCO}\PY{o}{=}\PY{n}{jacobian}\PY{p}{(}\PY{p}{[}\PY{n}{θ4}\PY{p}{,}\PY{n}{p4}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}53}]:} 2×2 Array\{Float64,2\}:
+          -7.70928   1.0    
+           0.3      -7.40928
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}54}]:} \PY{c}{\PYZsh{}calculamos el determinante para saber si podemos resolver el sistema\PYZus{}}
+         \PY{n}{det}\PY{p}{(}\PY{n}{JCO}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}54}]:} 56.8202132909169
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}55}]:} \PY{c}{\PYZsh{}dado que el determinante es distinto de cero y los valores independientes del sistema son cero}
+         \PY{c}{\PYZsh{} la única solución es la trivial}
+         \PY{n}{T4}\PY{o}{=}\PY{n}{JCO}\PY{o}{\PYZbs{}} \PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{l+m+mf}{0.}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}55}]:} 2-element Array\{Float64,1\}:
+          -0.0
+          -0.0
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}57}]:} \PY{c}{\PYZsh{}esta solución son los nuevos coeficientes del polinomio}
+         \PY{n}{θ4}\PY{o}{=}\PY{n}{T4}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+         \PY{n}{p4}\PY{o}{=}\PY{n}{T4}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}57}]:} -0.0
+\end{Verbatim}
+            
+    De nuevo dado que es un término de orden par, los coeficientes fueron
+cero.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}58}]:} \PY{c}{\PYZsh{}queremos revisar la estabilidad de las variables tx,x}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{CO}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{CO}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{θλt}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{θλt}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+P\_θ =  ( - 0.8123460094785507 + 𝒪(‖x‖¹)) t + ( 0.009033906934722882 + 𝒪(‖x‖¹)) t³ + ( 1.0 θ + 𝒪(‖x‖²)) t⁴ + 𝒪(t⁶)
+typeof(P\_θ) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+CO[1] =  ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( 1.0 θ + 1.0 p + 𝒪(‖x‖²)) t⁴ + 𝒪(t⁶)
+typeof(CO[1]) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+θλt =  ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( 8.709279945267069 θ + 𝒪(‖x‖²)) t⁴ + 𝒪(t⁶)
+typeof(θλt) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+Ecua[1] =  ( - 7.709279945267069 θ + 1.0 p + 𝒪(‖x‖²)) t⁴ + 𝒪(t⁶)
+typeof(Ecua[1]) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}58}]:} TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+\end{Verbatim}
+            
+    \begin{verbatim}
+                                             QUINTO ORDEN
+\end{verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}59}]:} \PY{c}{\PYZsh{}creamos las variables que representan a x,p de tipo TaylorN}
+         \PY{n}{θ}\PY{p}{,}\PY{n}{p} \PY{o}{=} \PY{n}{set\PYZus{}variables}\PY{p}{(}\PY{k+kt}{Float64}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{θ}\PY{l+s}{ }\PY{l+s}{p}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{order}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}59}]:} 2-element Array\{TaylorSeries.TaylorN\{Float64\},1\}:
+           1.0 θ + 𝒪(‖x‖²)
+           1.0 p + 𝒪(‖x‖²)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}60}]:} \PY{c}{\PYZsh{}definimos nuestros nuevos polinomios tomando en cuenta todos los coeficientes ya calculados}
+         \PY{n}{P\PYZus{}θ}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{θ2}\PY{p}{,}\PY{n}{θ3}\PY{p}{,}\PY{n}{θ4}\PY{p}{,}\PY{n}{θ}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}
+         \PY{n}{P\PYZus{}p}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{p2}\PY{p}{,}\PY{n}{p3}\PY{p}{,}\PY{n}{p4}\PY{p}{,}\PY{n}{p}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}60}]:}  ( - 0.5831757547123116 + 𝒪(‖x‖¹)) t + ( 0.036765757927698775 + 𝒪(‖x‖¹)) t³ + ( 1.0 p + 𝒪(‖x‖²)) t⁵ + 𝒪(t⁷)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}62}]:} \PY{c}{\PYZsh{}aplicamos el mapeo}
+         \PY{n}{QO}\PY{o}{=}\PY{n}{EstandarMap}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{,}\PY{n}{P\PYZus{}p}\PY{p}{,}\PY{n}{ke}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}62}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+                                    ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( 1.0 θ + 1.0 p + 𝒪(‖x‖²)) t⁵ + 𝒪(t⁷)
+           ( - 1.0018322839695704 + 𝒪(‖x‖¹)) t + ( 0.18639326303323034 + 𝒪(‖x‖¹)) t³ + ( - 0.026611022998050755 + 0.3 θ + 1.3 p + 𝒪(‖x‖²)) t⁵ + 𝒪(t⁷)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}64}]:} \PY{c}{\PYZsh{}creamos la otra parte de la ecuación cohomo}
+         \PY{n}{vλ}\PY{o}{=}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{λ}\PY{p}{,}\PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{3}\PY{p}{,}\PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{4}\PY{p}{,}\PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{5}\PY{p}{]}
+         \PY{n}{θλt}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{θ2}\PY{p}{,}\PY{n}{θ3}\PY{p}{,}\PY{n}{θ4}\PY{p}{,}\PY{n}{θ}\PY{p}{]}\PY{o}{.*}\PY{n}{vλ}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}
+         \PY{n}{pλt}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{p2}\PY{p}{,}\PY{n}{p3}\PY{p}{,}\PY{n}{p4}\PY{p}{,}\PY{n}{p}\PY{p}{]}\PY{o}{.*}\PY{n}{vλ}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}
+         \PY{n}{print}\PY{p}{(}\PY{n}{θλt}\PY{p}{,}\PY{n}{pλt}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+ ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( 14.96159219376594 θ + 𝒪(‖x‖²)) t⁵ + 𝒪(t⁷) ( - 1.0018322839695704 + 𝒪(‖x‖¹)) t + ( 0.18639326303323037 + 𝒪(‖x‖¹)) t³ + ( 14.96159219376594 p + 𝒪(‖x‖²)) t⁵ + 𝒪(t⁷)
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}65}]:} \PY{c}{\PYZsh{}nos es más útil como vector}
+         \PY{n}{λvec}\PY{o}{=}\PY{p}{[}\PY{n}{θλt}\PY{p}{,}\PY{n}{pλt}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}65}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+           ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( 14.96159219376594 θ + 𝒪(‖x‖²)) t⁵ + 𝒪(t⁷)
+           ( - 1.0018322839695704 + 𝒪(‖x‖¹)) t + ( 0.18639326303323037 + 𝒪(‖x‖¹)) t³ + ( 14.96159219376594 p + 𝒪(‖x‖²)) t⁵ + 𝒪(t⁷)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}66}]:} \PY{c}{\PYZsh{}escribimos la ecuación cohomo}
+         \PY{n}{Ecua}\PY{o}{=}\PY{n}{QO}\PY{o}{\PYZhy{}}\PY{n}{λvec}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}66}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+                                                                              ( - 13.96159219376594 θ + 1.0 p + 𝒪(‖x‖²)) t⁵ + 𝒪(t⁷)
+           ( - 2.7755575615628914e-17 + 𝒪(‖x‖¹)) t³ + ( - 0.026611022998050755 + 0.3 θ - 13.661592193765939 p + 𝒪(‖x‖²)) t⁵ + 𝒪(t⁷)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}67}]:} \PY{c}{\PYZsh{}obtenemos los coeficientes  que no son cero, es decir los de orden 5}
+         \PY{n}{θ5}\PY{o}{=}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{6}\PY{p}{]}
+         \PY{n}{p5}\PY{o}{=}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{6}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}67}]:}  - 0.026611022998050755 + 0.3 θ - 13.661592193765939 p + 𝒪(‖x‖²)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}68}]:} \PY{c}{\PYZsh{}les calculamos el jacobiano}
+         \PY{n}{JQO}\PY{o}{=}\PY{n}{jacobian}\PY{p}{(}\PY{p}{[}\PY{n}{θ5}\PY{p}{,}\PY{n}{p5}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}68}]:} 2×2 Array\{Float64,2\}:
+          -13.9616    1.0   
+            0.3     -13.6616
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}69}]:} \PY{c}{\PYZsh{}calculamos el determinante para ver si podemos encontrar una solución}
+         \PY{n}{det}\PY{p}{(}\PY{n}{JQO}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}69}]:} 190.43757892689624
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}70}]:} \PY{c}{\PYZsh{}Dado que el determinante es distinto de cero buscamos los términos independientes}
+         \PY{n}{a}\PY{o}{=} \PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{6}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+         \PY{n}{b}\PY{o}{=} \PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{6}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+         \PY{n}{vecCoef}\PY{o}{=}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{n}{a}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{n}{b}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}70}]:} 2-element Array\{Float64,1\}:
+          -0.0     
+           0.026611
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}71}]:} \PY{c}{\PYZsh{}como los térmimos independientes son diferentes de cero, y el determinante de la matriz también }
+         \PY{c}{\PYZsh{} podemos encontrar una solución }
+         
+         \PY{n}{T4}\PY{o}{=}\PY{n}{JQO} \PY{o}{\PYZbs{}} \PY{n}{vecCoef}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}71}]:} 2-element Array\{Float64,1\}:
+          -0.000139736
+          -0.00195094 
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}72}]:} \PY{c}{\PYZsh{}estos són los nuevos coeficientes de orden 5}
+         \PY{n}{θ5}\PY{o}{=}\PY{n}{T4}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+         \PY{n}{p5}\PY{o}{=}\PY{n}{T4}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}72}]:} -0.0019509397937700751
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}73}]:} \PY{c}{\PYZsh{}queremos revisar la estabilidad de las variables tx,x}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{QO}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{QO}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{θλt}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{θλt}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+P\_θ =  ( - 0.8123460094785507 + 𝒪(‖x‖¹)) t + ( 0.009033906934722882 + 𝒪(‖x‖¹)) t³ + ( 1.0 θ + 𝒪(‖x‖²)) t⁵ + 𝒪(t⁷)
+typeof(P\_θ) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+QO[1] =  ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( 1.0 θ + 1.0 p + 𝒪(‖x‖²)) t⁵ + 𝒪(t⁷)
+typeof(QO[1]) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+θλt =  ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( 14.96159219376594 θ + 𝒪(‖x‖²)) t⁵ + 𝒪(t⁷)
+typeof(θλt) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+Ecua[1] =  ( - 13.96159219376594 θ + 1.0 p + 𝒪(‖x‖²)) t⁵ + 𝒪(t⁷)
+typeof(Ecua[1]) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}73}]:} TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+\end{Verbatim}
+            
+    \begin{verbatim}
+                                                Sexto orden
+\end{verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}74}]:} \PY{c}{\PYZsh{}creamos las variables que representan a x,p}
+         \PY{n}{θ}\PY{p}{,}\PY{n}{p} \PY{o}{=} \PY{n}{set\PYZus{}variables}\PY{p}{(}\PY{k+kt}{Float64}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{θ}\PY{l+s}{ }\PY{l+s}{p}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{order}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}74}]:} 2-element Array\{TaylorSeries.TaylorN\{Float64\},1\}:
+           1.0 θ + 𝒪(‖x‖²)
+           1.0 p + 𝒪(‖x‖²)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}75}]:} \PY{c}{\PYZsh{}creamos las variables que meteremos en el mapeo, las cuales son polinomios que ya tienen hasta el quinto orden calculado}
+         \PY{n}{P\PYZus{}θ}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{θ2}\PY{p}{,}\PY{n}{θ3}\PY{p}{,}\PY{n}{θ4}\PY{p}{,}\PY{n}{θ5}\PY{p}{,}\PY{n}{θ}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{)}
+         \PY{n}{P\PYZus{}p}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{p2}\PY{p}{,}\PY{n}{p3}\PY{p}{,}\PY{n}{p4}\PY{p}{,}\PY{n}{p5}\PY{p}{,}\PY{n}{p}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}75}]:}  ( - 0.5831757547123116 + 𝒪(‖x‖¹)) t + ( 0.036765757927698775 + 𝒪(‖x‖¹)) t³ + ( - 0.0019509397937700751 + 𝒪(‖x‖¹)) t⁵ + ( 1.0 p + 𝒪(‖x‖²)) t⁶ + 𝒪(t⁸)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}76}]:} \PY{c}{\PYZsh{}les aplicamos el mapeo}
+         \PY{n}{SO}\PY{o}{=}\PY{n}{EstandarMap}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{,}\PY{n}{P\PYZus{}p}\PY{p}{,}\PY{n}{ke}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}76}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+                                                  ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( - 0.0020906759905228492 + 𝒪(‖x‖¹)) t⁵ + ( 1.0 θ + 1.0 p + 𝒪(‖x‖²)) t⁶ + 𝒪(t⁸)
+           ( - 1.0018322839695704 + 𝒪(‖x‖¹)) t + ( 0.18639326303323034 + 𝒪(‖x‖¹)) t³ + ( - 0.029189165588977682 + 𝒪(‖x‖¹)) t⁵ + ( 0.3 θ + 1.3 p + 𝒪(‖x‖²)) t⁶ + ( 0.0038346622037622514 + 𝒪(‖x‖²)) t⁷ + 𝒪(t⁸)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}77}]:} \PY{c}{\PYZsh{}creamos el otro lado de la ecuación cohomo}
+         \PY{n}{vλ}\PY{o}{=}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,} \PY{n}{λ}\PY{p}{,} \PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{3}\PY{p}{,} \PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{4}\PY{p}{,} \PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{6}\PY{p}{]}
+         \PY{n}{θλt}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{θ2}\PY{p}{,}\PY{n}{θ3}\PY{p}{,}\PY{n}{θ4}\PY{p}{,}\PY{n}{θ5}\PY{p}{,}\PY{n}{θ}\PY{p}{]}\PY{o}{.*}\PY{n}{vλ}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{)}
+         \PY{n}{pλt}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{p2}\PY{p}{,}\PY{n}{p3}\PY{p}{,}\PY{n}{p4}\PY{p}{,}\PY{n}{p5}\PY{p}{,}\PY{n}{p}\PY{p}{]}\PY{o}{.*}\PY{n}{vλ}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{)}
+         \PY{n}{print}\PY{p}{(}\PY{n}{θλt}\PY{p}{,}\PY{n}{pλt}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+ ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( - 0.0020906759905228492 + 𝒪(‖x‖¹)) t⁵ + ( 25.702382100394594 θ + 𝒪(‖x‖²)) t⁶ + 𝒪(t⁸) ( - 1.0018322839695704 + 𝒪(‖x‖¹)) t + ( 0.18639326303323037 + 𝒪(‖x‖¹)) t³ + ( - 0.02918916558897769 + 𝒪(‖x‖¹)) t⁵ + ( 25.702382100394594 p + 𝒪(‖x‖²)) t⁶ + 𝒪(t⁸)
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}78}]:} \PY{n}{λvec}\PY{o}{=}\PY{p}{[}\PY{n}{θλt}\PY{p}{,}\PY{n}{pλt}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}78}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+           ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( - 0.0020906759905228492 + 𝒪(‖x‖¹)) t⁵ + ( 25.702382100394594 θ + 𝒪(‖x‖²)) t⁶ + 𝒪(t⁸)
+             ( - 1.0018322839695704 + 𝒪(‖x‖¹)) t + ( 0.18639326303323037 + 𝒪(‖x‖¹)) t³ + ( - 0.02918916558897769 + 𝒪(‖x‖¹)) t⁵ + ( 25.702382100394594 p + 𝒪(‖x‖²)) t⁶ + 𝒪(t⁸)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}79}]:} \PY{c}{\PYZsh{}escribimos la ecuación cohomo para obtener el sistema asociado a este orden}
+         \PY{n}{Ecua}\PY{o}{=}\PY{n}{SO}\PY{o}{\PYZhy{}}\PY{n}{λvec}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}79}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+                                                                                                                                    ( - 24.702382100394594 θ + 1.0 p + 𝒪(‖x‖²)) t⁶ + 𝒪(t⁸)
+           ( - 2.7755575615628914e-17 + 𝒪(‖x‖¹)) t³ + ( 6.938893903907228e-18 + 𝒪(‖x‖¹)) t⁵ + ( 0.3 θ - 24.402382100394593 p + 𝒪(‖x‖²)) t⁶ + ( 0.0038346622037622514 + 𝒪(‖x‖²)) t⁷ + 𝒪(t⁸)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}80}]:} \PY{c}{\PYZsh{}extraemos solo los coeficientes que nos interesa calcular, en principio los demás términos deben ser cero pues ya los }
+         \PY{c}{\PYZsh{} calculamos previamente}
+         \PY{n}{θ6}\PY{o}{=}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{7}\PY{p}{]}
+         \PY{n}{p6}\PY{o}{=}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{7}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}80}]:}  0.3 θ - 24.402382100394593 p + 𝒪(‖x‖²)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}81}]:} \PY{c}{\PYZsh{}calculamos el jacobiano para obetener el sistema}
+         \PY{n}{JSO}\PY{o}{=}\PY{n}{jacobian}\PY{p}{(}\PY{p}{[}\PY{n}{θ6}\PY{p}{,}\PY{n}{p6}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}81}]:} 2×2 Array\{Float64,2\}:
+          -24.7024    1.0   
+            0.3     -24.4024
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}82}]:} \PY{c}{\PYZsh{}calculamos el determinante del jacobiano para saber si hay solución}
+         \PY{n}{det}\PY{p}{(}\PY{n}{JSO}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}82}]:} 602.4969668037768
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}83}]:} \PY{c}{\PYZsh{}dado que el determinante del jacobiano es distinto de cero y los términos independientes son iguales a cero }
+         \PY{c}{\PYZsh{} la solución a este sistema es la trivial}
+         \PY{n}{T6}\PY{o}{=}\PY{n}{JSO}\PY{o}{\PYZbs{}} \PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{l+m+mf}{0.}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}83}]:} 2-element Array\{Float64,1\}:
+          -0.0
+          -0.0
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}84}]:} \PY{c}{\PYZsh{}por tanto los coeficientes de orden 6 son cero}
+         \PY{n}{θ6}\PY{o}{=}\PY{n}{T6}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+         \PY{n}{p6}\PY{o}{=}\PY{n}{T6}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}84}]:} -0.0
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}85}]:} \PY{c}{\PYZsh{}queremos revisar la estabilidad de las variables tx,x}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{SO}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{SO}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{θλt}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{θλt}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+P\_θ =  ( - 0.8123460094785507 + 𝒪(‖x‖¹)) t + ( 0.009033906934722882 + 𝒪(‖x‖¹)) t³ + ( - 0.0001397361967527743 + 𝒪(‖x‖¹)) t⁵ + ( 1.0 θ + 𝒪(‖x‖²)) t⁶ + 𝒪(t⁸)
+typeof(P\_θ) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+SO[1] =  ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( - 0.0020906759905228492 + 𝒪(‖x‖¹)) t⁵ + ( 1.0 θ + 1.0 p + 𝒪(‖x‖²)) t⁶ + 𝒪(t⁸)
+typeof(SO[1]) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+θλt =  ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( - 0.0020906759905228492 + 𝒪(‖x‖¹)) t⁵ + ( 25.702382100394594 θ + 𝒪(‖x‖²)) t⁶ + 𝒪(t⁸)
+typeof(θλt) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+Ecua[1] =  ( - 24.702382100394594 θ + 1.0 p + 𝒪(‖x‖²)) t⁶ + 𝒪(t⁸)
+typeof(Ecua[1]) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}85}]:} TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+\end{Verbatim}
+            
+    \begin{verbatim}
+                                            Séptimo orden
+\end{verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}86}]:} \PY{c}{\PYZsh{}creamos las variables de x,p}
+         \PY{n}{θ}\PY{p}{,}\PY{n}{p} \PY{o}{=} \PY{n}{set\PYZus{}variables}\PY{p}{(}\PY{k+kt}{Float64}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{θ}\PY{l+s}{ }\PY{l+s}{p}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{order}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}86}]:} 2-element Array\{TaylorSeries.TaylorN\{Float64\},1\}:
+           1.0 θ + 𝒪(‖x‖²)
+           1.0 p + 𝒪(‖x‖²)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}88}]:} \PY{c}{\PYZsh{}calculamos los polinomios asociados a la variedad que ya tienen todos los términos previos}
+         \PY{n}{P\PYZus{}θ}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{θ2}\PY{p}{,}\PY{n}{θ3}\PY{p}{,}\PY{n}{θ4}\PY{p}{,}\PY{n}{θ5}\PY{p}{,}\PY{n}{θ6}\PY{p}{,}\PY{n}{θ}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{)}
+         \PY{n}{P\PYZus{}p}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{p2}\PY{p}{,}\PY{n}{p3}\PY{p}{,}\PY{n}{p4}\PY{p}{,}\PY{n}{p5}\PY{p}{,}\PY{n}{p6}\PY{p}{,}\PY{n}{p}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}88}]:}  ( - 0.5831757547123116 + 𝒪(‖x‖¹)) t + ( 0.036765757927698775 + 𝒪(‖x‖¹)) t³ + ( - 0.0019509397937700751 + 𝒪(‖x‖¹)) t⁵ + ( 1.0 p + 𝒪(‖x‖²)) t⁷ + 𝒪(t⁹)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}89}]:} \PY{c}{\PYZsh{}les aplicamos el mapeo}
+         \PY{n}{SEO}\PY{o}{=}\PY{n}{EstandarMap}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{,}\PY{n}{P\PYZus{}p}\PY{p}{,}\PY{n}{ke}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}89}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+                                  ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( - 0.0020906759905228492 + 𝒪(‖x‖¹)) t⁵ + ( 1.0 θ + 1.0 p + 𝒪(‖x‖²)) t⁷ + 𝒪(t⁹)
+           ( - 1.0018322839695704 + 𝒪(‖x‖¹)) t + ( 0.18639326303323034 + 𝒪(‖x‖¹)) t³ + ( - 0.029189165588977682 + 𝒪(‖x‖¹)) t⁵ + ( 0.0038346622037622514 + 0.3 θ + 1.3 p + 𝒪(‖x‖²)) t⁷ + 𝒪(t⁹)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}90}]:} \PY{c}{\PYZsh{}calculamos el otro lado de la ecuación cohomo}
+         \PY{n}{vλ}\PY{o}{=}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,} \PY{n}{λ}\PY{p}{,} \PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{3}\PY{p}{,} \PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{4}\PY{p}{,} \PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{6}\PY{p}{,}\PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{7}\PY{p}{]}
+         \PY{n}{θλt}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{θ2}\PY{p}{,}\PY{n}{θ3}\PY{p}{,}\PY{n}{θ4}\PY{p}{,}\PY{n}{θ5}\PY{p}{,}\PY{n}{θ6}\PY{p}{,}\PY{n}{θ}\PY{p}{]}\PY{o}{.*}\PY{n}{vλ}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{)}
+         \PY{n}{pλt}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{p2}\PY{p}{,}\PY{n}{p3}\PY{p}{,}\PY{n}{p4}\PY{p}{,}\PY{n}{p5}\PY{p}{,}\PY{n}{p6}\PY{p}{,}\PY{n}{p}\PY{p}{]}\PY{o}{.*}\PY{n}{vλ}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{)}
+         \PY{n}{print}\PY{p}{(}\PY{n}{θλt}\PY{p}{,}\PY{n}{pλt}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+ ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( - 0.0020906759905228492 + 𝒪(‖x‖¹)) t⁵ + ( 44.15388663714163 θ + 𝒪(‖x‖²)) t⁷ + 𝒪(t⁹) ( - 1.0018322839695704 + 𝒪(‖x‖¹)) t + ( 0.18639326303323037 + 𝒪(‖x‖¹)) t³ + ( - 0.02918916558897769 + 𝒪(‖x‖¹)) t⁵ + ( 44.15388663714163 p + 𝒪(‖x‖²)) t⁷ + 𝒪(t⁹)
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}91}]:} \PY{n}{λvec}\PY{o}{=}\PY{p}{[}\PY{n}{θλt}\PY{p}{,}\PY{n}{pλt}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}91}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+           ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( - 0.0020906759905228492 + 𝒪(‖x‖¹)) t⁵ + ( 44.15388663714163 θ + 𝒪(‖x‖²)) t⁷ + 𝒪(t⁹)
+             ( - 1.0018322839695704 + 𝒪(‖x‖¹)) t + ( 0.18639326303323037 + 𝒪(‖x‖¹)) t³ + ( - 0.02918916558897769 + 𝒪(‖x‖¹)) t⁵ + ( 44.15388663714163 p + 𝒪(‖x‖²)) t⁷ + 𝒪(t⁹)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}92}]:} \PY{c}{\PYZsh{}escribimos la ecua. cohomo}
+         \PY{n}{Ecua}\PY{o}{=}\PY{n}{SEO}\PY{o}{\PYZhy{}}\PY{n}{λvec}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}92}]:} 2-element Array\{TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\},1\}:
+                                                                                                                     ( - 43.15388663714163 θ + 1.0 p + 𝒪(‖x‖²)) t⁷ + 𝒪(t⁹)
+           ( - 2.7755575615628914e-17 + 𝒪(‖x‖¹)) t³ + ( 6.938893903907228e-18 + 𝒪(‖x‖¹)) t⁵ + ( 0.0038346622037622514 + 0.3 θ - 42.853886637141635 p + 𝒪(‖x‖²)) t⁷ + 𝒪(t⁹)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}93}]:} \PY{c}{\PYZsh{}dado que los términos anteriores ya los calculamos solo extraemos los términos de orden 7 }
+         \PY{n}{θ7}\PY{o}{=}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{8}\PY{p}{]}
+         \PY{n}{p7}\PY{o}{=}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{8}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}93}]:}  0.0038346622037622514 + 0.3 θ - 42.853886637141635 p + 𝒪(‖x‖²)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}94}]:} \PY{c}{\PYZsh{}los ponemos como un vector y le calculamos el jacobianos para obtener el sistema}
+         \PY{n}{JSEO}\PY{o}{=}\PY{n}{jacobian}\PY{p}{(}\PY{p}{[}\PY{n}{θ7}\PY{p}{,}\PY{n}{p7}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}94}]:} 2×2 Array\{Float64,2\}:
+          -43.1539    1.0   
+            0.3     -42.8539
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}95}]:} \PY{c}{\PYZsh{}calculamos el determinante del sistema para saber si hay solución}
+         \PY{n}{det}\PY{p}{(}\PY{n}{JSEO}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}95}]:} 1849.0117659001287
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}96}]:} \PY{c}{\PYZsh{}extraemos los términos independienets de la ecuación cohomo}
+         \PY{n}{a}\PY{o}{=} \PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{8}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+         \PY{n}{b}\PY{o}{=} \PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{8}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{coeffs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+         \PY{n}{vecCoef}\PY{o}{=}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{n}{a}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{n}{b}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}96}]:} 2-element Array\{Float64,1\}:
+          -0.0       
+          -0.00383466
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}97}]:} \PY{c}{\PYZsh{}dado que el determinante de la matriz es distinto de cero y los términos independientes también, podemos encontrar }
+         \PY{c}{\PYZsh{} una solución distinta de la trivial}
+         \PY{n}{T7}\PY{o}{=}\PY{n}{JSEO}\PY{o}{\PYZbs{}}\PY{n}{vecCoef}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}97}]:} 2-element Array\{Float64,1\}:
+          2.0739e-6 
+          8.94968e-5
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}98}]:} \PY{c}{\PYZsh{}estos nuevos elementos son los coeficientes de orden 7 en el polinomio}
+         \PY{n}{θ7}\PY{o}{=}\PY{n}{T7}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+         \PY{n}{p7}\PY{o}{=}\PY{n}{T7}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}98}]:} 8.94967685358829e-5
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}99}]:} \PY{c}{\PYZsh{}queremos revisar la estabilidad de las variables tx,x}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{P\PYZus{}θ}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{SEO}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{SEO}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{θλt}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{θλt}\PY{p}{)}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n+nd}{@show}\PY{p}{(}\PY{n}{typeof}\PY{p}{(}\PY{n}{Ecua}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+P\_θ =  ( - 0.8123460094785507 + 𝒪(‖x‖¹)) t + ( 0.009033906934722882 + 𝒪(‖x‖¹)) t³ + ( - 0.0001397361967527743 + 𝒪(‖x‖¹)) t⁵ + ( 1.0 θ + 𝒪(‖x‖²)) t⁷ + 𝒪(t⁹)
+typeof(P\_θ) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+SEO[1] =  ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( - 0.0020906759905228492 + 𝒪(‖x‖¹)) t⁵ + ( 1.0 θ + 1.0 p + 𝒪(‖x‖²)) t⁷ + 𝒪(t⁹)
+typeof(SEO[1]) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+θλt =  ( - 1.3955217641908624 + 𝒪(‖x‖¹)) t + ( 0.04579966486242166 + 𝒪(‖x‖¹)) t³ + ( - 0.0020906759905228492 + 𝒪(‖x‖¹)) t⁵ + ( 44.15388663714163 θ + 𝒪(‖x‖²)) t⁷ + 𝒪(t⁹)
+typeof(θλt) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+Ecua[1] =  ( - 43.15388663714163 θ + 1.0 p + 𝒪(‖x‖²)) t⁷ + 𝒪(t⁹)
+typeof(Ecua[1]) = TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}99}]:} TaylorSeries.Taylor1\{TaylorSeries.TaylorN\{Float64\}\}
+\end{Verbatim}
+            
+    \begin{verbatim}
+                                        Resultados gráficos
+\end{verbatim}
+
+    Nos quedaremos solo con estos términos, ya que el fin de este notebook
+era visualizar como funcionaba el método en específico para poder
+implementarlo. Graficaremos la variedad que calculamos al igual que el
+error cometido. Para ello primero debemos tomar el polinomio de grado 7
+que calculamos y evaluarlo hasta cierto parámetro t y graficarlo sobre
+el espacio fase del mapeo. Para el error recordemos que en el notebook 4
+lo calculamos, dado que el error no forma parte del método en si, si no
+que es un desarrollo aparte aquí solo anexaremos las funciones que ya
+usamos en el notebook pasado.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}100}]:} \PY{c}{\PYZsh{}definimos dos polinomios con los coeficientes que calculamos.}
+          \PY{n}{P\PYZus{}θ}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{θ2}\PY{p}{,}\PY{n}{θ3}\PY{p}{,}\PY{n}{θ4}\PY{p}{,}\PY{n}{θ5}\PY{p}{,}\PY{n}{θ6}\PY{p}{,}\PY{n}{θ7}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{)}
+          \PY{n}{P\PYZus{}p}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{p2}\PY{p}{,}\PY{n}{p3}\PY{p}{,}\PY{n}{p4}\PY{p}{,}\PY{n}{p5}\PY{p}{,}\PY{n}{p6}\PY{p}{,}\PY{n}{p7}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}100}]:}  - 0.5831757547123116 t + 0.036765757927698775 t³ - 0.0019509397937700751 t⁵ + 8.94967685358829e-5 t⁷ + 𝒪(t⁸)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}101}]:} \PY{c}{\PYZsh{} los ponemos dentro un un vector solución}
+          \PY{n}{E}\PY{o}{=}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{n}{P\PYZus{}θ}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{n}{P\PYZus{}p}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}101}]:} 2-element Array\{TaylorSeries.Taylor1\{Float64\},1\}:
+            0.8123460094785507 t - 0.009033906934722882 t³ + 0.0001397361967527743 t⁵ - 2.0738982165943525e-6 t⁷ + 𝒪(t⁸)
+              0.5831757547123116 t - 0.036765757927698775 t³ + 0.0019509397937700751 t⁵ - 8.94967685358829e-5 t⁷ + 𝒪(t⁸)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}102}]:} \PY{c}{\PYZsh{}también necesitaremos el vector de lambas }
+          \PY{n}{vλ}\PY{o}{=}\PY{p}{[}\PY{l+m+mf}{0.}\PY{p}{,} \PY{n}{λ}\PY{p}{,} \PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{3}\PY{p}{,} \PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{4}\PY{p}{,} \PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{6}\PY{p}{,} \PY{n}{λ}\PY{o}{\PYZca{}}\PY{l+m+mi}{7}\PY{p}{]}
+          \PY{n}{λθ\PYZus{}pol}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{θ2}\PY{p}{,}\PY{n}{θ3}\PY{p}{,}\PY{n}{θ4}\PY{p}{,}\PY{n}{θ5}\PY{p}{,}\PY{n}{θ6}\PY{p}{,}\PY{n}{θ7}\PY{p}{]}\PY{o}{.*}\PY{n}{vλ}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{)}
+          \PY{n}{λp\PYZus{}pol}\PY{o}{=}\PY{n}{Taylor1}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{n}{vec}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{p2}\PY{p}{,}\PY{n}{p3}\PY{p}{,}\PY{n}{p4}\PY{p}{,}\PY{n}{p5}\PY{p}{,}\PY{n}{p6}\PY{p}{,}\PY{n}{p7}\PY{p}{]}\PY{o}{.*}\PY{n}{vλ}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}102}]:}  - 1.0018322839695704 t + 0.18639326303323037 t³ - 0.02918916558897769 t⁵ + 0.003951630172323878 t⁷ + 𝒪(t⁸)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}103}]:} \PY{n}{λvec}\PY{o}{=}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{n}{λθ\PYZus{}pol}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{n}{λp\PYZus{}pol}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}103}]:} 2-element Array\{TaylorSeries.Taylor1\{Float64\},1\}:
+            1.3955217641908624 t - 0.04579966486242166 t³ + 0.0020906759905228492 t⁵ - 9.157066675247724e-5 t⁷ + 𝒪(t⁸)
+              1.0018322839695704 t - 0.18639326303323037 t³ + 0.02918916558897769 t⁵ - 0.003951630172323878 t⁷ + 𝒪(t⁸)
+\end{Verbatim}
+            
+    Queremos observar como se ve el polinomio que obtuvimos hasta ahora.
+Para ello vamos a graficarlo.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}104}]:} \PY{k}{using} \PY{n}{PyPlot}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}105}]:} \PY{c}{\PYZsh{}esta es una función para evaluar el los polinomios que calculamos}
+          \PY{c}{\PYZsh{} recibe como entrada el tiempo que es el valor del parámetro t, el paso}
+          \PY{c}{\PYZsh{} que define en pasos de cuanto queremos ir evaluando y claro los polinomios A,B}
+          \PY{k}{function} \PY{n}{evaluar}\PY{p}{(}\PY{n}{Tiempo}\PY{p}{,} \PY{n}{paso}\PY{p}{,}\PY{n}{A}\PY{p}{,}\PY{n}{B}\PY{p}{)}
+              \PY{n}{ValX}\PY{o}{=}\PY{k+kt}{Float64}\PY{p}{[}\PY{p}{]}
+              
+              \PY{n}{ValY}\PY{o}{=}\PY{k+kt}{Float64}\PY{p}{[}\PY{p}{]}
+          
+              \PY{k}{for} \PY{n}{t} \PY{o}{=} \PY{l+m+mi}{0}\PY{o}{:}\PY{n}{paso}\PY{o}{:}\PY{n}{Tiempo}
+                  \PY{n}{x} \PY{o}{=} \PY{n}{mod2pi}\PY{p}{(}\PY{n}{evaluate}\PY{p}{(}\PY{n}{A}\PY{p}{,}\PY{n}{t}\PY{p}{)}\PY{p}{)}
+                  \PY{n}{y} \PY{o}{=} \PY{n}{mod2pi}\PY{p}{(}\PY{n}{evaluate}\PY{p}{(}\PY{n}{B}\PY{p}{,}\PY{n}{t}\PY{p}{)}\PY{p}{)}
+                  \PY{n}{push!}\PY{p}{(}\PY{n}{ValX}\PY{p}{,}\PY{n}{x}\PY{p}{)}
+                  \PY{n}{push!}\PY{p}{(}\PY{n}{ValY}\PY{p}{,}\PY{n}{y}\PY{p}{)}
+                  
+              \PY{k}{end}
+              \PY{n}{p} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{ValX}\PY{p}{,}\PY{n}{ValY}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{d}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{linestyle}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{marker}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{.}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+              
+          \PY{k}{end}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}105}]:} evaluar (generic function with 1 method)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}106}]:} \PY{k}{function} \PY{n}{iterarMap}\PY{p}{(}\PY{n}{f}\PY{p}{,}\PY{n}{x\PYZus{}i}\PY{p}{,}\PY{n}{p\PYZus{}i}\PY{p}{,}\PY{n}{n}\PY{p}{,} \PY{n}{k}\PY{p}{)}   \PY{c}{\PYZsh{}Definimos una función para iterar el mapeo}
+              
+              \PY{n}{x} \PY{o}{=} \PY{n}{x\PYZus{}i}                      \PY{c}{\PYZsh{}    }
+                                               \PY{c}{\PYZsh{}Damos condiciones iniciales}
+              \PY{n}{y} \PY{o}{=} \PY{n}{p\PYZus{}i}                          \PY{c}{\PYZsh{}}
+          
+              \PY{n}{iteradosMX} \PY{o}{=} \PY{p}{[}\PY{n}{x\PYZus{}i}\PY{p}{]}
+          
+              \PY{n}{iteradosMY} \PY{o}{=} \PY{p}{[}\PY{n}{p\PYZus{}i}\PY{p}{]}               \PY{c}{\PYZsh{}Definimos dos listas que tendran los valores de cada par ordenado de theta y P, y agregamos las condiciones iniciales}
+          
+              \PY{k}{for} \PY{n}{i}\PY{o}{=}\PY{l+m+mi}{0}\PY{o}{:}\PY{n}{n}              \PY{c}{\PYZsh{}iniciamos un ciclo de iteraciones donde se calculan x\PYZus{}n, y\PYZus{}n y se agregan a lalista correspodiente            }
+          
+                  \PY{n}{F} \PY{o}{=} \PY{n}{f}\PY{p}{(}\PY{n}{x\PYZus{}i}\PY{p}{,}\PY{n}{p\PYZus{}i}\PY{p}{,} \PY{n}{k}\PY{p}{)}
+                  
+                  \PY{n}{push!}\PY{p}{(}\PY{n}{iteradosMX}\PY{p}{,}\PY{n}{F}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+                  
+                  \PY{n}{push!}\PY{p}{(}\PY{n}{iteradosMY}\PY{p}{,}\PY{n}{F}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{)}
+                      
+          
+                  \PY{n}{x\PYZus{}i} \PY{o}{=} \PY{n}{F}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+          
+                  \PY{n}{p\PYZus{}i} \PY{o}{=} \PY{n}{F}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
+              \PY{k}{end}
+          
+              \PY{k}{return} \PY{n}{iteradosMX}\PY{p}{,} \PY{n}{iteradosMY}  \PY{c}{\PYZsh{}La funcion iterados regresa las listas que corresponden a la trayectoria del }
+          \PY{k}{end}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}106}]:} iterarMap (generic function with 1 method)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}119}]:} \PY{c}{\PYZsh{}esta función llama la función que itera el mapeo para crear su gráfica.}
+          \PY{k}{function} \PY{n}{graficarMap}\PY{p}{(}\PY{n}{k}\PY{p}{)}
+              \PY{n}{n} \PY{o}{=} \PY{l+m+mi}{100}
+              \PY{n}{s}\PY{o}{=}\PY{l+m+mi}{2}\PY{n+nb}{pi}\PY{o}{/}\PY{l+m+mi}{18}
+          
+              \PY{k}{for} \PY{n}{p\PYZus{}i}\PY{o}{=}\PY{l+m+mi}{0}\PY{o}{:}\PY{n}{s}\PY{o}{:}\PY{l+m+mi}{2}\PY{n+nb}{pi}
+                  \PY{k}{for} \PY{n}{x\PYZus{}i} \PY{o}{=}\PY{l+m+mi}{0}\PY{o}{:}\PY{n}{s}\PY{o}{:}\PY{l+m+mi}{2}\PY{n+nb}{pi}
+                      \PY{n}{t}\PY{p}{,}\PY{n}{p} \PY{o}{=} \PY{n}{iterarMap}\PY{p}{(}\PY{n}{EstandarMap}\PY{p}{,}\PY{n}{x\PYZus{}i}\PY{p}{,}\PY{n}{p\PYZus{}i}\PY{p}{,}\PY{n}{n}\PY{p}{,} \PY{n}{k}\PY{p}{)}
+                      \PY{c}{\PYZsh{}p = scatter(p,t,marker=\PYZdq{}.\PYZdq{},s=0.1)}
+                      \PY{n}{p} \PY{o}{=} \PY{n}{scatter}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{p}\PY{p}{,}\PY{n}{marker}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{.}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{s}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{)}
+                  \PY{k}{end}
+              \PY{k}{end}
+              
+          \PY{k}{end}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}119}]:} graficarMap (generic function with 1 method)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}120}]:} \PY{c}{\PYZsh{}esta función solo llama a las anteriores para que todo sea más compacto, y grafica tamto el mapeo como la variedad}
+          \PY{k}{function} \PY{n}{Graficar}\PY{p}{(}\PY{n}{Tiempo}\PY{p}{,} \PY{n}{paso}\PY{p}{,} \PY{n}{k}\PY{p}{,}\PY{n}{A}\PY{p}{,}\PY{n}{B}\PY{p}{)}
+              \PY{n}{graficarMap}\PY{p}{(}\PY{n}{k}\PY{p}{)}
+              \PY{n}{evaluar}\PY{p}{(}\PY{n}{Tiempo}\PY{p}{,}\PY{n}{paso}\PY{p}{,}\PY{n}{A}\PY{p}{,}\PY{n}{B}\PY{p}{)}
+          \PY{k}{end}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}120}]:} Graficar (generic function with 1 method)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}121}]:} \PY{k}{function} \PY{n}{PolinomioCohomo}\PY{p}{(}\PY{n}{Pol\PYZus{}vec}\PY{p}{,}\PY{n}{λvec}\PY{p}{,} \PY{n}{k}\PY{p}{)}
+              \PY{n}{Map\PYZus{}vec}\PY{o}{=}\PY{n}{EstandarMap}\PY{p}{(}\PY{n}{Pol\PYZus{}vec}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{Pol\PYZus{}vec}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{k}\PY{p}{)}
+              \PY{n}{Ec\PYZus{}Cohomo} \PY{o}{=} \PY{n}{Map\PYZus{}vec}\PY{o}{\PYZhy{}}\PY{n}{λvec}
+              \PY{k}{return} \PY{n}{Ec\PYZus{}Cohomo}
+          \PY{k}{end}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}121}]:} PolinomioCohomo (generic function with 1 method)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}122}]:} \PY{k}{function} \PY{n}{Err}\PY{p}{(}\PY{n}{Ec\PYZus{}Cohomo}\PY{p}{,}\PY{n}{Tiempo}\PY{p}{,}\PY{n}{paso}\PY{p}{)}
+              \PY{k+kt}{Val}\PY{o}{=}\PY{k+kt}{Float64}\PY{p}{[}\PY{p}{]}
+              \PY{n}{Tiem}\PY{o}{=}\PY{k+kt}{Float64}\PY{p}{[}\PY{p}{]}
+              \PY{n}{E1}\PY{o}{=}\PY{n}{Ec\PYZus{}Cohomo}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+              \PY{n}{E2}\PY{o}{=}\PY{n}{Ec\PYZus{}Cohomo}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
+              \PY{k}{for} \PY{n}{t} \PY{o}{=} \PY{l+m+mi}{0}\PY{o}{:}\PY{n}{paso}\PY{o}{:}\PY{n}{Tiempo}
+                  \PY{n}{x} \PY{o}{=} \PY{n}{evaluate}\PY{p}{(}\PY{n}{E1}\PY{p}{,}\PY{n}{t}\PY{p}{)}
+                  \PY{n}{y} \PY{o}{=} \PY{n}{evaluate}\PY{p}{(}\PY{n}{E2}\PY{p}{,}\PY{n}{t}\PY{p}{)}
+                  \PY{n}{E}\PY{o}{=}\PY{p}{[}\PY{n}{x}\PY{p}{,}\PY{n}{y}\PY{p}{]}
+                  
+                  \PY{n}{norma} \PY{o}{=} \PY{n}{norm}\PY{p}{(}\PY{n}{E}\PY{p}{,}\PY{n+nb}{Inf}\PY{p}{)}
+                  \PY{c}{\PYZsh{}print(norma)}
+                  \PY{c}{\PYZsh{}print(\PYZdq{}\PYZbs{}n\PYZdq{})}
+                  \PY{n}{push!}\PY{p}{(}\PY{k+kt}{Val}\PY{p}{,}\PY{n}{norma}\PY{p}{)}
+                  \PY{n}{push!}\PY{p}{(}\PY{n}{Tiem}\PY{p}{,}\PY{n}{t}\PY{p}{)}
+              
+              \PY{k}{end}
+              \PY{k}{return} \PY{n}{Tiem}\PY{p}{,}\PY{k+kt}{Val}
+          \PY{k}{end}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}122}]:} Err (generic function with 1 method)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}123}]:} \PY{k}{function} \PY{n}{ErrorE}\PY{p}{(}\PY{n}{Pol\PYZus{}vec}\PY{p}{,}\PY{n}{λvec}\PY{p}{,}\PY{n}{k}\PY{p}{,}\PY{n}{T}\PY{p}{,}\PY{n}{paso}\PY{p}{)}
+              \PY{n}{EcuaCohomo} \PY{o}{=} \PY{n}{PolinomioCohomo}\PY{p}{(}\PY{n}{Pol\PYZus{}vec}\PY{p}{,}\PY{n}{λvec}\PY{p}{,}\PY{n}{k}\PY{p}{)}
+              \PY{n}{Tiempo}\PY{p}{,}\PY{n}{valor}\PY{o}{=}\PY{n}{Err}\PY{p}{(}\PY{n}{EcuaCohomo}\PY{p}{,}\PY{n}{T}\PY{p}{,}\PY{n}{paso}\PY{p}{)}
+              \PY{k}{return} \PY{n}{Tiempo}\PY{p}{,} \PY{n}{valor}
+          \PY{k}{end}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}123}]:} ErrorE (generic function with 1 method)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}124}]:} \PY{k}{function} \PY{n}{CalculoVariedad}\PY{p}{(}\PY{n}{k}\PY{p}{,}\PY{n}{Tiempo}\PY{p}{,}\PY{n}{paso}\PY{p}{,}\PY{n}{Pol\PYZus{}vec}\PY{p}{,}\PY{n}{λvec}\PY{p}{)}
+              \PY{n}{B}\PY{o}{=}\PY{n}{Pol\PYZus{}vec}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
+              \PY{n}{A}\PY{o}{=}\PY{n}{Pol\PYZus{}vec}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+              \PY{c}{\PYZsh{}Graficar(Tiempo,paso,k,B,A)}
+              \PY{n}{Graficar}\PY{p}{(}\PY{n}{Tiempo}\PY{p}{,}\PY{n}{paso}\PY{p}{,}\PY{n}{k}\PY{p}{,}\PY{n}{A}\PY{p}{,}\PY{n}{B}\PY{p}{)}
+              \PY{n}{x1}\PY{p}{,}\PY{n}{y1}\PY{o}{=}\PY{n}{ErrorE}\PY{p}{(}\PY{n}{Pol\PYZus{}vec}\PY{p}{,}\PY{n}{λvec}\PY{p}{,} \PY{n}{k}\PY{p}{,}\PY{n}{Tiempo}\PY{p}{,}\PY{n}{paso}\PY{p}{)}
+              
+          
+              \PY{k}{return} \PY{n}{A}\PY{p}{,}\PY{n}{B}\PY{p}{,}\PY{n}{x1}\PY{p}{,}\PY{n}{y1}
+          \PY{k}{end}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}124}]:} CalculoVariedad (generic function with 1 method)
+\end{Verbatim}
+            
+    Tenemos todas las funciones resumidas en la función CalculoVariedad.
+Dados los parámetros iniciales como son el punto fijo, la constante del
+mapeo , el valor hasta el cual se quiere evaluar el parámetro y el paso
+que debe ir tomando, calcula los polinomios y genera un gráfica tanto de
+la variedad sobre el espacio fase como del error.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}125}]:} \PY{n}{VariedadX}\PY{p}{,} \PY{n}{VariedadP}\PY{p}{,}\PY{n}{ErrorT}\PY{p}{,}\PY{n}{ErrorX}\PY{o}{=}\PY{n}{CalculoVariedad}\PY{p}{(}\PY{n}{ke}\PY{p}{,}\PY{l+m+mf}{2.9}\PY{p}{,}\PY{l+m+mf}{0.125}\PY{p}{,}\PY{n}{E}\PY{p}{,}\PY{n}{λvec}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_128_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}125}]:} ( 0.8123460094785507 t - 0.009033906934722882 t³ + 0.0001397361967527743 t⁵ - 2.0738982165943525e-6 t⁷ + 𝒪(t⁸),  0.5831757547123116 t - 0.036765757927698775 t³ + 0.0019509397937700751 t⁵ - 8.94967685358829e-5 t⁷ + 𝒪(t⁸), [0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0, 1.125  …  1.75, 1.875, 2.0, 2.125, 2.25, 2.375, 2.5, 2.625, 2.75, 2.875], [0.0, 5.44223e-20, 4.4051e-19, 1.51603e-18, 3.69306e-18, 7.47032e-18, 1.34718e-17, 2.24937e-17, 3.55618e-17, 5.40015e-17  …  3.06239e-16, 4.14429e-16, 5.55112e-16, 7.36713e-16, 9.69493e-16, 1.26586e-15, 1.6407e-15, 2.11179e-15, 2.7002e-15, 3.43073e-15])
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}126}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{ErrorT}\PY{p}{,}\PY{n}{ErrorX}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_129_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}126}]:} 1-element Array\{PyCall.PyObject,1\}:
+           PyObject <matplotlib.lines.Line2D object at 0x7fee509c27d0>
+\end{Verbatim}
+            
+    Podemos notar que el error crece de manera casi exponencial, aunque el
+orden del error para t=3.0 es menor a \(10^{-15}\)
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}

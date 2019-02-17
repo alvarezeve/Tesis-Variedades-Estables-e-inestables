@@ -2,7 +2,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %           Capítulo 2: MARCO TEÓRICO - REVISIÓN DE LITERATURA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Método de parametrización}
+\chapter{Implementación del método de parametrización}
 Este capítulo describe cómo se implementó el método de parametrización aplicado a sistemas Hamiltonianos. Se comienza explicando el análisis del mapeo es\-tán\-dar, siguiendo el trabajo de Mireles James \cite{Mireles}. A partir de este trabajo se generalizó el método para los sistemas Hamiltonianos de dos dimensiones, de manera que dado un mapeo el método programado en Julia pudiera calcular de manera recurrente los polinomios asociados a las variedades.
 \section{Desarrollo explícito para el mapeo estándar}
 Para desarrollar el método de parametrización de manera automática se usó como base el desarrollo que aparece en las notas \cite{Mireles}. En este trabajo se expone de manera explícita cómo se calculan las variedades estables e inestables para el \textit{mapeo estándar}. El \textit{mapeo estándar} tiene la forma \citep{devaney}
@@ -23,7 +23,7 @@ Los puntos fijos del mapeo son aquellos $\mathbf{x}$ tales que
 \begin{eqnarray}
 \mathbf{f}_{k}(\mathbf{x})=\mathbf{x} \label{ec puntos fijos}
 \end{eqnarray}
-con $\mathbf{x}=(\theta,p)$. El resultado de esta condición son unicamente los puntos $\mathbf{x}_{1}=(0,0)$ y $\mathbf{x}_{2}=(0,\pi)$. Para analizar la estabilidad lineal del mapeo se calculó
+con $\mathbf{x}=(\theta,p)$. El resultado de esta condición son unicamente los puntos $\mathbf{x}_{1}=(0,0)$ y $\mathbf{x}_{2}=(0,\pi)$. Para analizar la estabilidad lineal del mapeo se calcula la derivada total
 \begin{eqnarray}
 D\mathbf{f}_{k}(\theta,p)=\begin{pmatrix}
 1 & 1 \\
@@ -56,7 +56,7 @@ Por lo tanto, $\mathbf{x}$, es hiperbólico para cualquier $k>0$. Para $\mathbf{
 \end{eqnarray}
 que resultan ser valores complejos, por lo que para el análisis sólo se ocupará el punto $\mathbf{x_{1}}$.\\
 
-Escribimos a las variables ($\theta,p$) como dos polinomios de variable real $t$, para encontrar la parametrización de las variedades
+Al escribir a las variables ($\theta,p$) como dos polinomios de variable real $t$, para encontrar la parametrización de las variedades se obtiene
 \begin{eqnarray}
 \theta(t)=\sum_{n=0}^{\infty}a_{n}t^{n}  ,
 \label{theta}
@@ -66,7 +66,7 @@ y
 p(t)=\sum_{n=0}^{\infty}b_{n}t^{n},
 \label{p}
 \end{eqnarray}
-tal que $\mathcal{P}(t):=(\theta(t),p(t))$. Necesitamos la parametrización también de la dinámica interna $g$, para la cual usamos la ecuación $g(t)=\lambda t$ \eqref{fun g}. Después de sustituir esto en $\mathbf{f}\circ\mathcal{P}=\mathcal{P}\circ g$ \eqref{Ecua de invariancia} para el mapeo estándar obtenemos
+tal que $\mathcal{P}(t):=(\theta(t),p(t))$. También es necesaria la parametrización de la dinámica interna $g$, para la cual se usa la ecuación $g(t)=\lambda t$ \eqref{fun g}. Después de sustituir esto en $\mathbf{f}\circ\mathcal{P}=\mathcal{P}\circ g$ \eqref{Ecua de invariancia} para el mapeo estándar se obtiene
 \begin{eqnarray}
 \mathbf{f}_{k}(\theta,p) = \left[\begin{array}{c}
 \theta(t) + p(t) \\
@@ -88,33 +88,33 @@ que en forma explícita es
 \end{array}\right].
 \label{expandida}
 \end{eqnarray}
-Desarrollando el primer renglón de la ecuación \eqref{expandida}
+Desarrollando el primer renglón de la ecuación \eqref{expandida} se obtiene
 \begin{eqnarray}
 a_{0}+a_{1}t+a_{2}t^{2}+\cdots +b_{0}+b_{1}t+b_{2}t^{2}+ \cdots=a_{0}+a_{1}\lambda t+\cdots\quad .
 \label{primer renglon}
 \end{eqnarray}
-Agrupamos términos del mismo orden y comparamos primero los de orden cero
+Agrupando términos del mismo orden y comparando primero los de orden cero
 \begin{eqnarray}
 a_{0}+b_{0}=a_{0},
 \end{eqnarray}
-que implica $b_{0}=0$. Hacemos lo mismo pero ahora con el renglón dos de \eqref{expandida} 
+que implica $b_{0}=0$. Haciendo lo mismo, pero ahora con el renglón dos de \eqref{expandida} y 
 usando la serie de Taylor del seno
 \begin{eqnarray}
 \sum_{n=0}^{\infty}b_{n}t^{n} +k\sum_{j=0}^{\infty}\frac{(-1)^{j}}{(2j+1)!}\left[ \sum_{n=0}^{\infty}a_{n}t^{n} +\sum_{n=0}^{\infty}b_{n}t^{n}\right]^{2j+1}=\sum_{n=0}^{\infty}b_{n}\lambda^{n}t^{n}.
 \label{seno exapandido 2}
 \end{eqnarray}
-Desarrollamos cada suma, tomando en cuenta que $b_{0}=0$ :
+Desarrollando cada suma, tomando en cuenta que $b_{0}=0$ se obtiene
 \begin{eqnarray}
 &b_{1}t&+b_{2}t^{2}+\cdots+k\left[a_{0}+(a_{1}+b_{1})t+\cdots\right]-\nonumber\\
 &\frac{k}{3!}&\left[a_{0}+(a_{1}+b_{1})t+(a_{2}+b_{2})t^{2}+\cdots\right]^{3}+\cdots\nonumber\\
 &=&b_{1}\lambda t+b_{2}\lambda^{2}t^{2}+\cdots
 \label{segundo renglon}
 \end{eqnarray}
-e igualando términos de orden cero :
+e igualando términos de orden cero
 \begin{eqnarray}
 k a_{0}+\frac{k}{3!}a_{0}^{3}+\cdots=0, 
 \end{eqnarray}
-por lo que $a_{0}=0$, recordemos que $a_{0},b_{0}$ es el punto fijo. Usando los términos de orden uno en la ecuación \eqref{primer renglon}, \eqref{segundo renglon} respectivamente, obtenemos
+por lo que $a_{0}=0$, recordando que $a_{0},b_{0}$ es el punto fijo. Usando los términos de orden uno en la ecuación \eqref{primer renglon}, \eqref{segundo renglon} respectivamente, se obtiene
 \begin{eqnarray}
 (a_{1}+b_{1})t=a_{1}\lambda t,
 \end{eqnarray}
@@ -122,7 +122,7 @@ por lo que $a_{0}=0$, recordemos que $a_{0},b_{0}$ es el punto fijo. Usando los 
 \begin{eqnarray}
 b_{1}t+k(a_{1}+b_{1})t=b_{1}\lambda t.
 \end{eqnarray}
-Al dividir entre $t$ ambas ecuaciones podemos escribir las ecuaciones en forma matricial
+Al dividir entre $t$ ambas ecuaciones es posible escribir las ecuaciones en forma matricial
 \begin{eqnarray}
 \begin{pmatrix}
 1 & 1\\
@@ -137,17 +137,17 @@ a_{1}\\
 b_{1}
 \end{pmatrix}.
 \end{eqnarray}
-Es posible obtener las soluciones para $a_{1}$ en términos de $b_{1}$ y de $\lambda$ en términos de $k$. Este procedimiento es básicamente el análisis lineal alrededor del punto $(0,0)$. Análogamente se pueden obtener los coeficientes $a_{2},b_{2}$: tomando los términos cuadráticos de la ecuación \ref{primer renglon} y agrupando obtenemos
+Es posible obtener las soluciones para $a_{1}$ en términos de $b_{1}$ y de $\lambda$ en términos de $k$. Este procedimiento es básicamente el análisis lineal alrededor del punto $(0,0)$. Análogamente se pueden obtener los coeficientes $a_{2},b_{2}$: tomando los términos cuadráticos de la ecuación \ref{primer renglon} y agrupando se obtiene
 \begin{eqnarray}
 (a_{2}+b_{2})t^{2}=a_{2}\lambda^{2}t^{2}.
 \label{segundos_coeficientes_a}
 \end{eqnarray}
-De la misma forma tomamos los coeficientes de los términos cuadráticos en la ecuación \ref{segundo renglon} y obtenemos
+De la misma forma se toman los coeficientes de los términos cuadráticos en la ecuación \ref{segundo renglon} y se obtiene
 \begin{eqnarray}
 b_{2}t^{2}+k(a_{2}+b_{2})t^{2}=b_{2}\lambda^{2}t^{2}.
 \label{segundos_coeficientes_b}
 \end{eqnarray}
-Al dividir \ref{segundos_coeficientes_a} y \ref{segundos_coeficientes_b} entre $t^{2}$ podemos formar el sistema matricial
+Al dividir \ref{segundos_coeficientes_a} y \ref{segundos_coeficientes_b} entre $t^{2}$ se forma el sistema matricial siguiente
 \begin{eqnarray}
 \begin{pmatrix}
 1 & 1\\
@@ -163,12 +163,12 @@ b_{2}
 \end{pmatrix}.
 \end{eqnarray}
 
-El sistema se resuelve en términos de $\lambda^{2}$ y de $k$, como en el caso de $a_{1},b_{1}$. Sin embargo, obtener los términos de esta manera es un camino tedioso, se opta entonces por encontrar relaciones de recurrencia que calculen los coeficientes de los polinomios. Usando de nuevo las ecuaciones \eqref{theta}, \eqref{p} escribimos 
+El sistema se resuelve en términos de $\lambda^{2}$ y de $k$, como en el caso de $a_{1},b_{1}$. Sin embargo, obtener los términos de esta manera es un camino tedioso, se opta entonces por encontrar relaciones de recurrencia que calculen los coeficientes de los polinomios. Usando de nuevo las ecuaciones \eqref{theta}, \eqref{p} se escribe
 \begin{eqnarray}
 W(t)=\sum_{n=0}^{\infty}\beta_{n}t^{n}=\sin\left(\sum_{n=0}^{\infty}a_{n}t^{n}+\sum_{n=0}^{\infty}
 b_{n}t^{n}\right),
 \end{eqnarray} 
-es decir la parte que aparece en el mapeo $\sin(\theta+p)$ se puede ver como un solo polinomio con coeficientes $\beta_{n}$. Al considerar de forma compleja a $W$ tenemos
+es decir la parte que aparece en el mapeo $\sin(\theta+p)$ se puede ver como un solo polinomio con coeficientes $\beta_{n}$. Al considerar de forma compleja a $W$ se tiene
 \begin{eqnarray}
 \overline{W}=\sum_{n=0}^{\infty}(\alpha_{n}+i\beta_{n})t^{n}=\exp[i(\theta(t)+p(t))],
 \label{W compleja}
@@ -192,12 +192,12 @@ Con algo de álgebra se pueden desarrollar las sumas y separar las partes real y
 \sum_{n=0}^{\infty}(n+1)\alpha_{n+1}t^{n}=\sum_{n=0}^{\infty}\left[-\sum_{l=0}^{n}(l+1)\beta_{n-l}(a_{l+1}+b_{l+1})\right]t^{n},
 \label{parte real}
 \end{eqnarray}
-mientras que la imaginaria
+mientras que la imaginaria resulta
 \begin{eqnarray}
 \sum_{n=0}^{\infty}(n+1)\beta_{n+1}t^{n}=\sum_{n=0}^{\infty}\left[\sum_{l=0}^{n}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1})\right]t^{n}.
 \label{parte compleja}
 \end{eqnarray}
-Igualando potencias de $t$ en \eqref{parte real}, \eqref{parte compleja} y despejando $\alpha_{n+1},\beta_{n+1}$ obtenemos
+Igualando potencias de $t$ en \eqref{parte real}, \eqref{parte compleja} y despejando $\alpha_{n+1},\beta_{n+1}$ se obtiene
 \begin{eqnarray}
 \alpha_{n+1}=\frac{-1}{n+1}\sum_{l=0}^{n}(l+1)\beta_{n-l}(a_{l+1}+b_{l+1}),
 \label{recurrencia alpha}
@@ -206,13 +206,13 @@ Igualando potencias de $t$ en \eqref{parte real}, \eqref{parte compleja} y despe
 \beta_{n+1}=\frac{1}{n+1}\sum_{l=0}^{n}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1}),
 \label{recurrencia beta}
 \end{eqnarray}
-que son las relaciones de recurrencia para $\alpha,\beta$ en términos de los coeficientes del polinomio, con las que podemos calcular $\sin(\theta+p)$. Se utilizó un truco en el que fue muy importante la forma del mapeo, en el que sólo se usó una expansión en serie de Taylor; sin embargo si en el mapeo aparecieran productos de funciones, no necesariamente se podrán factorizar fácilmente los términos de cada orden.\\
+que son las relaciones de recurrencia para $\alpha,\beta$ en términos de los coeficientes del polinomio, con las que se puede calcular $\sin(\theta+p)$. Se utilizó un truco en el que fue muy importante la forma del mapeo, en el que sólo se usó una expansión en serie de Taylor; sin embargo si en el mapeo aparecieran productos de funciones, no necesariamente se podrán factorizar fácilmente los términos de cada orden.\\
 
 Para obtener las relaciones de recurrencia de $a_{n},b_{n}$ se usó el caso $t=0$, pues ya se saben los primeros valores de las constantes $\alpha_{0}, \beta_{0}, a_{0}, b_{0}$, entonces al sustituir $t=0$ en la ecuación \eqref{W compleja} resulta
 \begin{eqnarray}
 \overline{W}(0)=\alpha_{0}+i\beta_{0}=\cos(\theta(0)+p(0))+i\sin(\theta(0)+p(0))=1,
 \end{eqnarray}
-por lo que $\alpha_{0}=1,\beta_{0}=0$. Ahora ya se tienen los valores iniciales de la recursión y por tanto se pueden calcular los otros valores. Para encontrar los demás coeficientes se usó la ecuación \eqref{expandida}, tomando en cuenta la forma en la que escribimos al seno
+por lo que $\alpha_{0}=1,\beta_{0}=0$. Ahora ya se tienen los valores iniciales de la recursión y por tanto se pueden calcular los otros valores. Para encontrar los demás coeficientes se usó la ecuación \eqref{expandida}, tomando en cuenta que el seno se escribió como un desarrollo en serie de Taylor, obteniendo
 \begin{eqnarray}
 \sum_{n=1}^{\infty}a_{n}t^{n}+\sum_{n=1}^{\infty}b_{n}t^{n}=\sum_{n=1}^{\infty}a_{n}\lambda^{n}t^{n},
 \end{eqnarray}
@@ -288,7 +288,7 @@ siendo
 -k & 1-\lambda^{n+1}
 \end{pmatrix}.
 \end{eqnarray}
-Al escribir de manera separada la ecuación \eqref{Sistema recurrencia} se obtienen las relaciones de recurrencia para los coeficientes de la parametrización
+Al escribir de manera separada la ecuación \eqref{Sistema recurrencia} se obtienen las relaciones de recurrencia para los coeficientes de la parametrización:
 \begin{eqnarray}
 a_{n+1}=\frac{k}{(n+1)[(1-\lambda^{n+1})(1-\lambda^{n+1}+k)-k]}\sum_{l=0}^{n-1}\alpha_{n-l}(l+1)(a_{l+1}+b_{l+1}),
 \end{eqnarray}
@@ -302,7 +302,7 @@ Usando cada uno de los valores propios y las anteriores ecuaciones de recurrenci
 
 
 \section{Implementación del método}
-En esta sección se explica paso a paso cómo se implementó el método. Su\-pon\-dre\-mos que se tiene un mapeo Hamiltoniano $\mathbf{f}_{k}(\mathbf{x})$ donde $k$  es un parámetro, del cual se tiene un punto fijo $\mathbf{x}_{*}=(\theta_{*},p_{*})$. En la siguiente liga se encuentra el archivo llamado \texttt{Implementación.ipynb} que contiene el ejemplo de cómo se aplica el método paso a paso para el mapeo estándar, \url{https://github.com/alvarezeve/Tesis-Variedades-Estables-e-inestables/}. 
+En esta sección se explica paso a paso cómo se implementó el método. Su\-pon\-ga que se tiene un mapeo Hamiltoniano $\mathbf{f}_{k}(\mathbf{x})$ donde $k$  es un parámetro, del cual se tiene un punto fijo $\mathbf{x}_{*}=(\theta_{*},p_{*})$. En la siguiente liga se encuentra el archivo llamado \texttt{Implementación.ipynb} que contiene el ejemplo de cómo se aplica el método paso a paso para el mapeo estándar, \url{https://github.com/alvarezeve/Tesis-Variedades-Estables-e-inestables/}. 
 \linebreak
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840) (preloaded format=pdflatex 2019.1.21)  17 FEB 2019 01:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840) (preloaded format=pdflatex 2019.1.21)  18 FEB 2019 21:58
 entering extended mode
 **./presentacionTesis.tex
 (presentacionTesis.tex
@@ -1286,27 +1286,31 @@ Overfull \vbox (9.95589pt too high) detected at line 136
 <hyperbolic2A.pdf, id=179, 462.49956pt x 346.86755pt>
 File: hyperbolic2A.pdf Graphic file (type pdf)
 <use hyperbolic2A.pdf>
-Package pdftex.def Info: hyperbolic2A.pdf  used on input line 148.
-(pdftex.def)             Requested size: 208.12286pt x 156.08894pt.
- [6
+Package pdftex.def Info: hyperbolic2A.pdf  used on input line 149.
+(pdftex.def)             Requested size: 198.87093pt x 149.15013pt.
+
+Overfull \vbox (8.24136pt too high) detected at line 149
+ []
+
+[6
 
  <./hyperbolic2A.pdf>]
 <diagrama-c2.pdf, id=213, 794.94157pt x 614.26657pt>
 File: diagrama-c2.pdf Graphic file (type pdf)
 <use diagrama-c2.pdf>
-Package pdftex.def Info: diagrama-c2.pdf  used on input line 155.
+Package pdftex.def Info: diagrama-c2.pdf  used on input line 156.
 (pdftex.def)             Requested size: 278.23372pt x 214.9965pt.
  [7
 
- <./diagrama-c2.pdf>]
-<xymatrix 2x2 182> [8
+ <./diagrama-c2.pdf>] <xymatrix 2x2 182> [8
 
-] [9
+]
+[9
 
 ] [10
 
 ]
-Overfull \hbox (5.85959pt too wide) in alignment at lines 283--283
+Overfull \hbox (5.85959pt too wide) in alignment at lines 289--289
  [][][] []
  []
 
@@ -1316,246 +1320,234 @@ Overfull \hbox (5.85959pt too wide) in alignment at lines 283--283
 
 ] [13
 
-] [14
-
-] [15
-
-] [16
-
-] [17
-
-] [18
-
-] [19
-
 ]
-Overfull \hbox (29.76132pt too wide) in alignment at lines 453--453
+Overfull \hbox (29.76132pt too wide) in alignment at lines 409--409
  [][][] []
  []
 
 
-Overfull \hbox (30.15674pt too wide) in alignment at lines 453--453
+Overfull \hbox (30.15674pt too wide) in alignment at lines 409--409
  [][][] []
  []
 
-[20
+[14
 
 ]
-<k03.pdf, id=633, 462.52798pt x 346.89601pt>
+<k03.pdf, id=466, 462.52798pt x 346.89601pt>
 File: k03.pdf Graphic file (type pdf)
 <use k03.pdf>
-Package pdftex.def Info: k03.pdf  used on input line 464.
+Package pdftex.def Info: k03.pdf  used on input line 514.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
- [21
+ [15
 
  <./k03.pdf>]
-<errork03.pdf, id=1146, 462.52798pt x 346.89601pt>
+<errork03.pdf, id=979, 462.52798pt x 346.89601pt>
 File: errork03.pdf Graphic file (type pdf)
 <use errork03.pdf>
-Package pdftex.def Info: errork03.pdf  used on input line 478.
+Package pdftex.def Info: errork03.pdf  used on input line 528.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
 
-Overfull \vbox (2.52795pt too high) detected at line 478
+Overfull \vbox (2.52795pt too high) detected at line 528
  []
 
-[22
+[16
 
  <./errork03.pdf>]
-<k15.pdf, id=1207, 462.52798pt x 346.89601pt>
+<k15.pdf, id=1040, 462.52798pt x 346.89601pt>
 File: k15.pdf Graphic file (type pdf)
 <use k15.pdf>
-Package pdftex.def Info: k15.pdf  used on input line 488.
+Package pdftex.def Info: k15.pdf  used on input line 538.
 (pdftex.def)             Requested size: 161.8872pt x 121.41542pt.
-<errork15.pdf, id=1208, 462.52798pt x 346.89601pt>
+<errork15.pdf, id=1041, 462.52798pt x 346.89601pt>
 File: errork15.pdf Graphic file (type pdf)
 <use errork15.pdf>
-Package pdftex.def Info: errork15.pdf  used on input line 488.
+Package pdftex.def Info: errork15.pdf  used on input line 538.
 (pdftex.def)             Requested size: 161.8872pt x 121.41542pt.
- [23
+ [17
 
  <./k15.pdf> <./errork15.pdf
 
 pdfTeX warning: pdflatex (file ./errork15.pdf): PDF inclusion: multiple pdfs wi
 th page group included in a single page
 >]
-<errorf64.pdf, id=1747, 462.52798pt x 346.89601pt>
+<errorf64.pdf, id=1580, 462.52798pt x 346.89601pt>
 File: errorf64.pdf Graphic file (type pdf)
 <use errorf64.pdf>
-Package pdftex.def Info: errorf64.pdf  used on input line 500.
+Package pdftex.def Info: errorf64.pdf  used on input line 550.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
- [24
+ [18
 
  <./errorf64.pdf>]
-<errorbf.pdf, id=1804, 462.52798pt x 346.89601pt>
+<errorbf.pdf, id=1637, 462.52798pt x 346.89601pt>
 File: errorbf.pdf Graphic file (type pdf)
 <use errorbf.pdf>
-Package pdftex.def Info: errorbf.pdf  used on input line 511.
+Package pdftex.def Info: errorbf.pdf  used on input line 561.
 (pdftex.def)             Requested size: 277.51892pt x 208.1392pt.
 
-Overfull \vbox (23.4112pt too high) detected at line 511
+Overfull \vbox (23.4112pt too high) detected at line 561
  []
 
-[25
+[19
 
  <./errorbf.pdf>]
-<error_inversa.pdf, id=1860, 462.52798pt x 346.89601pt>
+<error_inversa.pdf, id=1693, 462.52798pt x 346.89601pt>
 File: error_inversa.pdf Graphic file (type pdf)
 <use error_inversa.pdf>
-Package pdftex.def Info: error_inversa.pdf  used on input line 529.
+Package pdftex.def Info: error_inversa.pdf  used on input line 579.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 
-Overfull \vbox (3.34782pt too high) detected at line 529
+Overfull \vbox (3.34782pt too high) detected at line 579
  []
 
-[26
+[20
 
- <./error_inversa.pdf>] [27
+ <./error_inversa.pdf>] [21
 
 ]
-<h15.pdf, id=1949, 462.52798pt x 346.89601pt>
+<h15.pdf, id=1782, 462.52798pt x 346.89601pt>
 File: h15.pdf Graphic file (type pdf)
 <use h15.pdf>
-Package pdftex.def Info: h15.pdf  used on input line 563.
+Package pdftex.def Info: h15.pdf  used on input line 613.
 (pdftex.def)             Requested size: 161.8872pt x 121.41542pt.
-<errorH15.pdf, id=1950, 462.52798pt x 346.89601pt>
+<errorH15.pdf, id=1783, 462.52798pt x 346.89601pt>
 File: errorH15.pdf Graphic file (type pdf)
 <use errorH15.pdf>
-Package pdftex.def Info: errorH15.pdf  used on input line 563.
+Package pdftex.def Info: errorH15.pdf  used on input line 613.
 (pdftex.def)             Requested size: 161.8872pt x 121.41542pt.
- [28
+ [22
 
  <./h15.pdf> <./errorH15.pdf
 
 pdfTeX warning: pdflatex (file ./errorH15.pdf): PDF inclusion: multiple pdfs wi
 th page group included in a single page
 >]
-<h65.pdf, id=2043, 462.52798pt x 346.89601pt>
+<h65.pdf, id=1876, 462.52798pt x 346.89601pt>
 File: h65.pdf Graphic file (type pdf)
 <use h65.pdf>
-Package pdftex.def Info: h65.pdf  used on input line 575.
+Package pdftex.def Info: h65.pdf  used on input line 625.
 (pdftex.def)             Requested size: 161.8872pt x 121.41542pt.
-<errorH65.pdf, id=2044, 462.52798pt x 346.89601pt>
+<errorH65.pdf, id=1877, 462.52798pt x 346.89601pt>
 File: errorH65.pdf Graphic file (type pdf)
 <use errorH65.pdf>
-Package pdftex.def Info: errorH65.pdf  used on input line 575.
+Package pdftex.def Info: errorH65.pdf  used on input line 625.
 (pdftex.def)             Requested size: 161.8872pt x 121.41542pt.
- [29
+ [23
 
  <./h65.pdf> <./errorH65.pdf
 
 pdfTeX warning: pdflatex (file ./errorH65.pdf): PDF inclusion: multiple pdfs wi
 th page group included in a single page
->] [30
+>] [24
 
 ]
-<jung57.pdf, id=2164, 462.52798pt x 346.89601pt>
+<jung57.pdf, id=1997, 462.52798pt x 346.89601pt>
 File: jung57.pdf Graphic file (type pdf)
 <use jung57.pdf>
-Package pdftex.def Info: jung57.pdf  used on input line 616.
+Package pdftex.def Info: jung57.pdf  used on input line 666.
 (pdftex.def)             Requested size: 161.8872pt x 121.41542pt.
-<error_jung57.pdf, id=2165, 462.52798pt x 346.89601pt>
+<error_jung57.pdf, id=1998, 462.52798pt x 346.89601pt>
 File: error_jung57.pdf Graphic file (type pdf)
 <use error_jung57.pdf>
-Package pdftex.def Info: error_jung57.pdf  used on input line 616.
+Package pdftex.def Info: error_jung57.pdf  used on input line 666.
 (pdftex.def)             Requested size: 161.8872pt x 121.41542pt.
- [31
+ [25
 
  <./jung57.pdf> <./error_jung57.pdf
 
 pdfTeX warning: pdflatex (file ./error_jung57.pdf): PDF inclusion: multiple pdf
 s with page group included in a single page
 >]
-<convergenciaJungH57.pdf, id=2254, 462.52798pt x 346.89601pt>
+<convergenciaJungH57.pdf, id=2087, 462.52798pt x 346.89601pt>
 File: convergenciaJungH57.pdf Graphic file (type pdf)
 <use convergenciaJungH57.pdf>
-Package pdftex.def Info: convergenciaJungH57.pdf  used on input line 632.
+Package pdftex.def Info: convergenciaJungH57.pdf  used on input line 682.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 
-Overfull \vbox (16.1965pt too high) detected at line 632
+Overfull \vbox (16.1965pt too high) detected at line 682
  []
 
-[32
+[26
 
  <./convergenciaJungH57.pdf>]
-<convergenciaJungT57.pdf, id=2320, 462.52798pt x 346.89601pt>
+<convergenciaJungT57.pdf, id=2153, 462.52798pt x 346.89601pt>
 File: convergenciaJungT57.pdf Graphic file (type pdf)
 <use convergenciaJungT57.pdf>
-Package pdftex.def Info: convergenciaJungT57.pdf  used on input line 646.
+Package pdftex.def Info: convergenciaJungT57.pdf  used on input line 696.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
- [33
+ [27
 
- <./convergenciaJungT57.pdf>] [34
+ <./convergenciaJungT57.pdf>] [28
 
 ]
-<cruce_estandar.pdf, id=2408, 462.52798pt x 346.89601pt>
+<cruce_estandar.pdf, id=2241, 462.52798pt x 346.89601pt>
 File: cruce_estandar.pdf Graphic file (type pdf)
 <use cruce_estandar.pdf>
-Package pdftex.def Info: cruce_estandar.pdf  used on input line 669.
+Package pdftex.def Info: cruce_estandar.pdf  used on input line 719.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
 
-Overfull \vbox (1.75714pt too high) detected at line 669
+Overfull \vbox (1.75714pt too high) detected at line 719
  []
 
-[35
+[29
 
  <./cruce_estandar.pdf>]
-<crucesL.pdf, id=2922, 462.52798pt x 346.89601pt>
+<crucesL.pdf, id=2755, 462.52798pt x 346.89601pt>
 File: crucesL.pdf Graphic file (type pdf)
 <use crucesL.pdf>
-Package pdftex.def Info: crucesL.pdf  used on input line 678.
+Package pdftex.def Info: crucesL.pdf  used on input line 728.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
 
-Overfull \vbox (1.75714pt too high) detected at line 678
+Overfull \vbox (1.75714pt too high) detected at line 728
  []
 
-[36
+[30
 
  <./crucesL.pdf>]
-<alpha.pdf, id=2994, 462.52798pt x 346.89601pt>
+<alpha.pdf, id=2827, 462.52798pt x 346.89601pt>
 File: alpha.pdf Graphic file (type pdf)
 <use alpha.pdf>
-Package pdftex.def Info: alpha.pdf  used on input line 687.
+Package pdftex.def Info: alpha.pdf  used on input line 737.
 (pdftex.def)             Requested size: 142.26378pt x 106.70032pt.
-<beta.pdf, id=2995, 462.52798pt x 346.89601pt>
+<beta.pdf, id=2828, 462.52798pt x 346.89601pt>
 File: beta.pdf Graphic file (type pdf)
 <use beta.pdf>
-Package pdftex.def Info: beta.pdf  used on input line 687.
+Package pdftex.def Info: beta.pdf  used on input line 737.
 (pdftex.def)             Requested size: 142.26378pt x 106.70032pt.
- [37
+ [31
 
  <./alpha.pdf> <./beta.pdf
 
 pdfTeX warning: pdflatex (file ./beta.pdf): PDF inclusion: multiple pdfs with p
 age group included in a single page
 >]
-<cruces_jung1.pdf, id=3078, 462.52798pt x 346.89601pt>
+<cruces_jung1.pdf, id=2911, 462.52798pt x 346.89601pt>
 File: cruces_jung1.pdf Graphic file (type pdf)
 <use cruces_jung1.pdf>
-Package pdftex.def Info: cruces_jung1.pdf  used on input line 697.
+Package pdftex.def Info: cruces_jung1.pdf  used on input line 747.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
 
-Overfull \vbox (1.75714pt too high) detected at line 697
+Overfull \vbox (1.75714pt too high) detected at line 747
  []
 
-[38
+[32
 
  <./cruces_jung1.pdf>]
-<cruce_a.pdf, id=3140, 462.52798pt x 346.89601pt>
+<cruce_a.pdf, id=2973, 462.52798pt x 346.89601pt>
 File: cruce_a.pdf Graphic file (type pdf)
 <use cruce_a.pdf>
-Package pdftex.def Info: cruce_a.pdf  used on input line 707.
+Package pdftex.def Info: cruce_a.pdf  used on input line 757.
 (pdftex.def)             Requested size: 113.81102pt x 85.35814pt.
-<cruce_b.pdf, id=3141, 462.52798pt x 346.89601pt>
+<cruce_b.pdf, id=2974, 462.52798pt x 346.89601pt>
 File: cruce_b.pdf Graphic file (type pdf)
 <use cruce_b.pdf>
-Package pdftex.def Info: cruce_b.pdf  used on input line 707.
+Package pdftex.def Info: cruce_b.pdf  used on input line 757.
 (pdftex.def)             Requested size: 113.81102pt x 85.35814pt.
-<cruce_c.pdf, id=3142, 462.52798pt x 346.89601pt>
+<cruce_c.pdf, id=2975, 462.52798pt x 346.89601pt>
 File: cruce_c.pdf Graphic file (type pdf)
 <use cruce_c.pdf>
-Package pdftex.def Info: cruce_c.pdf  used on input line 707.
+Package pdftex.def Info: cruce_c.pdf  used on input line 757.
 (pdftex.def)             Requested size: 113.81102pt x 85.35814pt.
- [39
+ [33
 
  <./cruce_a.pdf> <./cruce_b.pdf
 
@@ -1566,94 +1558,94 @@ h page group included in a single page
 pdfTeX warning: pdflatex (file ./cruce_c.pdf): PDF inclusion: multiple pdfs wit
 h page group included in a single page
 >]
-<herradura.png, id=3251, 664.4825pt x 635.37375pt>
+<herradura.png, id=3084, 664.4825pt x 635.37375pt>
 File: herradura.png Graphic file (type png)
 <use herradura.png>
-Package pdftex.def Info: herradura.png  used on input line 718.
+Package pdftex.def Info: herradura.png  used on input line 769.
 (pdftex.def)             Requested size: 132.89413pt x 127.0725pt.
- [40
+ [34
 
- <./herradura.png>] [41
+ <./herradura.png>] [35
 
 ]
-<rectangulo_fundamental.pdf, id=3313, 462.52798pt x 346.89601pt>
+<rectangulo_fundamental.pdf, id=3146, 462.52798pt x 346.89601pt>
 File: rectangulo_fundamental.pdf Graphic file (type pdf)
 <use rectangulo_fundamental.pdf>
-Package pdftex.def Info: rectangulo_fundamental.pdf  used on input line 750.
+Package pdftex.def Info: rectangulo_fundamental.pdf  used on input line 801.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
- [42
+ [36
 
  <./rectangulo_fundamental.pdf>]
-<rectangulo1.pdf, id=3379, 462.52798pt x 346.89601pt>
+<rectangulo1.pdf, id=3212, 462.52798pt x 346.89601pt>
 File: rectangulo1.pdf Graphic file (type pdf)
 <use rectangulo1.pdf>
-Package pdftex.def Info: rectangulo1.pdf  used on input line 759.
+Package pdftex.def Info: rectangulo1.pdf  used on input line 810.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
- [43
+ [37
 
- <./rectangulo1.pdf>] [44
+ <./rectangulo1.pdf>] [38
 
 ]
-<error1ite.pdf, id=3467, 462.52798pt x 346.89601pt>
+<error1ite.pdf, id=3300, 462.52798pt x 346.89601pt>
 File: error1ite.pdf Graphic file (type pdf)
 <use error1ite.pdf>
-Package pdftex.def Info: error1ite.pdf  used on input line 781.
+Package pdftex.def Info: error1ite.pdf  used on input line 832.
 (pdftex.def)             Requested size: 277.51892pt x 208.1392pt.
 
-Overfull \vbox (5.73811pt too high) detected at line 781
+Overfull \vbox (5.73811pt too high) detected at line 832
  []
 
-[45
+[39
 
  <./error1ite.pdf>]
-<rectangulo2.pdf, id=3529, 462.52798pt x 346.89601pt>
+<rectangulo2.pdf, id=3362, 462.52798pt x 346.89601pt>
 File: rectangulo2.pdf Graphic file (type pdf)
 <use rectangulo2.pdf>
-Package pdftex.def Info: rectangulo2.pdf  used on input line 792.
+Package pdftex.def Info: rectangulo2.pdf  used on input line 843.
 (pdftex.def)             Requested size: 277.51892pt x 208.1392pt.
 
-Overfull \vbox (29.05078pt too high) detected at line 792
+Overfull \vbox (29.05078pt too high) detected at line 843
  []
 
-[46
+[40
 
  <./rectangulo2.pdf>]
-<rectangulo3.pdf, id=3587, 462.52798pt x 346.89601pt>
+<rectangulo3.pdf, id=3420, 462.52798pt x 346.89601pt>
 File: rectangulo3.pdf Graphic file (type pdf)
 <use rectangulo3.pdf>
-Package pdftex.def Info: rectangulo3.pdf  used on input line 802.
+Package pdftex.def Info: rectangulo3.pdf  used on input line 853.
 (pdftex.def)             Requested size: 277.51892pt x 208.1392pt.
 
-Overfull \vbox (13.01073pt too high) detected at line 802
+Overfull \vbox (13.01073pt too high) detected at line 853
  []
 
-[47
+[41
 
  <./rectangulo3.pdf>]
-<rectangulo4.pdf, id=3645, 462.52798pt x 346.89601pt>
+<rectangulo4.pdf, id=3478, 462.52798pt x 346.89601pt>
 File: rectangulo4.pdf Graphic file (type pdf)
 <use rectangulo4.pdf>
-Package pdftex.def Info: rectangulo4.pdf  used on input line 811.
+Package pdftex.def Info: rectangulo4.pdf  used on input line 862.
 (pdftex.def)             Requested size: 277.51892pt x 208.1392pt.
 
-Overfull \vbox (8.93813pt too high) detected at line 811
+Overfull \vbox (8.93813pt too high) detected at line 862
  []
 
-[48
+[42
 
  <./rectangulo4.pdf>]
-<rectangulo5.pdf, id=3703, 462.52798pt x 346.89601pt>
+<rectangulo5.pdf, id=3536, 462.52798pt x 346.89601pt>
 File: rectangulo5.pdf Graphic file (type pdf)
 <use rectangulo5.pdf>
-Package pdftex.def Info: rectangulo5.pdf  used on input line 820.
+Package pdftex.def Info: rectangulo5.pdf  used on input line 871.
 (pdftex.def)             Requested size: 277.51892pt x 208.1392pt.
 
-Overfull \vbox (8.93813pt too high) detected at line 820
+Overfull \vbox (8.93813pt too high) detected at line 871
  []
 
-[49
+[43
 
- <./rectangulo5.pdf>] [50
+ <./rectangulo5.pdf>] [44
 
 ]
 \tf@nav=\write7
@@ -1665,22 +1657,22 @@ Overfull \vbox (8.93813pt too high) detected at line 820
 \tf@snm=\write9
 \openout9 = `presentacionTesis.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 828.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 828.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 879.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 879.
  (presentacionTesis.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 828.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 828.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 879.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 879.
 Package rerunfilecheck Info: File `presentacionTesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22287 strings out of 494866
- 399977 string characters out of 3178265
- 500030 words of memory out of 3000000
- 25225 multiletter control sequences out of 15000+200000
+ 22253 strings out of 494866
+ 399595 string characters out of 3178265
+ 499907 words of memory out of 3000000
+ 25208 multiletter control sequences out of 15000+200000
  35667 words of font info for 87 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
  56i,19n,59p,3251b,603s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1715,9 +1707,9 @@ amsfonts/symbols/msam10.pfb></home/evelyn/.miktex/texmfs/install/fonts/type1/pu
 blic/amsfonts/symbols/msbm10.pfb></home/evelyn/.miktex/texmfs/install/fonts/typ
 e1/public/xypic/xyatip10.pfb></home/evelyn/.miktex/texmfs/install/fonts/type1/p
 ublic/xypic/xybtip10.pfb>
-Output written on presentacionTesis.pdf (50 pages, 4610608 bytes).
+Output written on presentacionTesis.pdf (44 pages, 4569805 bytes).
 PDF statistics:
- 4212 PDF objects out of 4296 (max. 8388607)
- 161 named destinations out of 1000 (max. 500000)
+ 4040 PDF objects out of 4296 (max. 8388607)
+ 144 named destinations out of 1000 (max. 500000)
  235 words of extra memory for PDF output out of 10000 (max. 10000000)
 

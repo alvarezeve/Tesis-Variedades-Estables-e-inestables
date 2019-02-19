@@ -93,7 +93,7 @@
 \begin{frame}{M\'etodo de parametrizaci\'on}
 Sea $\mathbf{f}:\mathbb{R}^{2}\rightarrow\mathbb{R}^{2}$ un mapeo Hamiltoniano, el cual tiene un punto fijo hiperb\'olico $\mathbf{x}_{*}$.\\
 \begin{teorema}[Hartman-Grobman]
-Sea $\mathbf{x}_{*}$ un punto fijo hiperb\'olico de $\mathbf{f}$ y suponga que $\mathbf{f'}(\mathbf{x_{*}})=\lambda$ con $ \vert \lambda_{1}\vert\neq 0,1 $. Entonces hay vecindades $U$ de $\mathbf{x_{*}}$ y $V$ de $0\in\mathbb{R}$ y un homeomorfismo $h:U\rightarrow\mathbb{R}$ que conjuga $\mathbf{f}$ en $U$ con el mapeo lineal $L(\mathbf{x})=\lambda\mathbf{x}$  en $V$.
+Sea $\mathbf{x}_{*}$ un punto fijo hiperb\'olico de $\mathbf{f}$ y suponga que $\mathbf{f'}(\mathbf{x_{*}})=\lambda_{1}$ con $ \vert \lambda_{1}\vert\neq 0,1 $. Entonces hay vecindades $U$ de $\mathbf{x_{*}}$ y $V$ de $0\in\mathbb{R}$ y un homeomorfismo $h:U\rightarrow\mathbb{R}$ que conjuga $\mathbf{f}$ en $U$ con el mapeo lineal $L(\mathbf{x})=\lambda\mathbf{x}$  en $V$.
 \end{teorema}
 Tomando en cuenta lo anterior
 \begin{equation}
@@ -106,7 +106,7 @@ y sean \\
 \label{primer_valorp}
 \end{equation}
 \begin{equation}
-\vert \lambda_{2}\vert<1 \quad \rightarrow \mathbf{v}
+\vert \lambda_{2}\vert>1 \quad \rightarrow \mathbf{v}
 \label{segundo_valorp}
 \end{equation}
 
@@ -114,16 +114,16 @@ y sean \\
 %----------------------------------------------------------------------
 \begin{frame}
 \begin{definition}[Variedad estable e inestable]
-	\begin{equation}
-	W^{s}=\lbrace \mathbf{x} : \mathbf{f}^{n}(\mathbf{x})\rightarrow \mathbf{x}_{*} \quad \mathrm{cuando} \quad n\rightarrow \infty \rbrace
-	\label{variedad estable}
-	\end{equation}
-	
-	\begin{equation}
-	W^{u}=\lbrace \mathbf{x} : \mathbf{f}^{n}(\mathbf{x})\rightarrow \mathbf{x}_{*} \quad \mathrm{cuando} \quad n\rightarrow -\infty \rbrace.
-	\label{variedad inestable}
-	\end{equation}
-	
+\begin{equation}
+W^{s}=\lbrace \mathbf{x} : \mathbf{f}^{n}(\mathbf{x})\rightarrow \mathbf{x}_{*} \quad \mathrm{cuando} \quad n\rightarrow \infty \rbrace
+\label{variedad estable}
+\end{equation}
+
+\begin{equation}
+W^{u}=\lbrace \mathbf{x} : \mathbf{f}^{n}(\mathbf{x})\rightarrow \mathbf{x}_{*} \quad \mathrm{cuando} \quad n\rightarrow -\infty \rbrace.
+\label{variedad inestable}
+\end{equation}
+
 \end{definition}
 
 \begin{figure}
@@ -143,27 +143,28 @@ Sea  $\mathbf{I} \subset \mathbf{E}$ subconjunto del espacio fase tal que para c
 \end{equation}
 \end{definition}
 \begin{figure}
-	\includegraphics[scale=0.45]{hyperbolic2A.pdf}
+\includegraphics[scale=0.43]{hyperbolic2A.pdf}
+\caption{Comportamiento de las variedades.}
 \end{figure}
 \end{frame}
 %-------------------------------------------------------------
 \begin{frame}
-Para describir usamos una parametrizaci\'on de la variedad.
+Para describir la variedad usamos una parametrizaci\'on $\mathcal{P}$.
 \begin{figure}
-	\includegraphics[scale=0.35]{diagrama-c2.pdf}
+\includegraphics[scale=0.35]{diagrama-c2.pdf}
 \end{figure}
 \end{frame}
 
 %-----------------------------------------------------------
 \begin{frame}
-El siguiente diagrama conmuta
+Escrito como un diagrama
 \begin{eqnarray}
 \xymatrix{
-	\Theta\subset\mathbb{R} \ar[d]^{\mathcal{P}} \ar[r]^{g} & \Theta\subset\mathbb{R} \ar[d]^{\mathcal{P}} \\
-	M\subset\mathbb{R}^{2} \ar[r]^{\mathbf{f}} & M\subset\mathbb{R}^{2}
+\Theta\subset\mathbb{R} \ar[d]^{\mathcal{P}} \ar[r]^{g} & \Theta\subset\mathbb{R} \ar[d]^{\mathcal{P}} \\
+M\subset\mathbb{R}^{2} \ar[r]^{\mathbf{f}} & M\subset\mathbb{R}^{2}
 }\label{conmutativo}
 \end{eqnarray}
-Es decir:
+de donde obtenemos:
 \begin{eqnarray}
 \mathbf{f} \circ \mathcal{P} =\mathcal{P}  \circ g
 \label{Ecua de invariancia}
@@ -172,7 +173,7 @@ usaremos el m\'etodo gr\'afico.
 \begin{equation}
 g=\lambda t.
 \end{equation}
-Para evaluar el error cometido
+El error se evalúa como:
 \begin{eqnarray}
 E_{n}(t) = \parallel \mathbf{f} \circ \mathcal{P}_{n}(t) - \mathcal{P}_{n} \circ g(t) \parallel_{\infty}.  \label{Ecua de invariancia resta}
 \end{eqnarray}
@@ -192,8 +193,13 @@ p + k\sin(\theta +p)
 \end{array}\right] \mod(2\pi),  \label{mapeo estandar}
 \end{eqnarray}
 con $k$ un parámetro. \\
-Los puntos fijos ser\'an los que cumplan que $\mathbf{f}_{k}(\mathbf{x})=\mathbf{x}$
-con $\mathbf{x}=(\theta,p)$. El resultado de esta condición son unicamente los puntos $\mathbf{x}_{1}=(0,0)$ y $\mathbf{x}_{2}=(0,\pi)$.
+Los puntos fijos son:
+\begin{itemize}
+\item $\mathbf{x}_{1}=(0,0)$
+\item $\mathbf{x}_{2}=(0,\pi)$
+\end{itemize}
+%$\mathbf{f}_{k}(\mathbf{x})=\mathbf{x}$
+%con $\mathbf{x}=(\theta,p)$. El resultado de esta condición son unicamente %los puntos $\mathbf{x}_{1}=(0,0)$ y $\mathbf{x}_{2}=(0,\pi)$.
 
 \end{frame}
 %--------------------------------------------------------
@@ -286,15 +292,15 @@ que de forma expl\'icita es
 Usando la serie de Taylor del seno para la segunda ecuaci\'on y expandiendo las sumas resulta:
 \centering
 \begin{eqnarray*}
-	a_{0}+a_{1}t+a_{2}t^{2}+\cdots +b_{0}+b_{1}t+b_{2}t^{2}+ \cdots=a_{0}+a_{1}\lambda t+\cdots\quad .
-	%\label{primer renglon}
+a_{0}+a_{1}t+a_{2}t^{2}+\cdots +b_{0}+b_{1}t+b_{2}t^{2}+ \cdots=a_{0}+a_{1}\lambda t+\cdots\quad .
+%\label{primer renglon}
 \end{eqnarray*}
 
 \begin{eqnarray*}
-	&b_{1}t&+b_{2}t^{2}+\cdots+k\left[a_{0}+(a_{1}+b_{1})t+\cdots\right]-\nonumber\\
-	&\frac{k}{3!}&\left[a_{0}+(a_{1}+b_{1})t+(a_{2}+b_{2})t^{2}+\cdots\right]^{3}+\cdots\nonumber\\
-	&=&b_{1}\lambda t+b_{2}\lambda^{2}t^{2}+\cdots
-	%\label{segundo renglon}
+&b_{1}t&+b_{2}t^{2}+\cdots+k\left[a_{0}+(a_{1}+b_{1})t+\cdots\right]-\nonumber\\
+&\frac{k}{3!}&\left[a_{0}+(a_{1}+b_{1})t+(a_{2}+b_{2})t^{2}+\cdots\right]^{3}+\cdots\nonumber\\
+&=&b_{1}\lambda t+b_{2}\lambda^{2}t^{2}+\cdots
+%\label{segundo renglon}
 \end{eqnarray*}
 \end{frame}
 %\begin{eqnarray}
@@ -315,85 +321,77 @@ Usando la serie de Taylor del seno para la segunda ecuaci\'on y expandiendo las 
 \begin{frame}
 Comparamos t\'erminos del mismo orden:
 \begin{itemize}
-	\item Orden cero:
-	\begin{equation}
-	a_{0}+b_{0}=a_{0} \rightarrow b_{0}=0
-	\end{equation}
-	\begin{equation}
-	k a_{0}+\frac{k}{3!}a_{0}^{3}+\cdots=0  \rightarrow a_{0}=0
-	\end{equation}
-	\item  Orden uno:
-	\begin{eqnarray}
-	(a_{1}+b_{1})t=a_{1}\lambda t,
-	\end{eqnarray}
+\item Orden cero:
+\begin{equation}
+a_{0}+b_{0}=a_{0} \rightarrow b_{0}=0
+\end{equation}
+\begin{equation}
+k a_{0}+\frac{k}{3!}a_{0}^{3}+\cdots=0  \rightarrow a_{0}=0
+\end{equation}
+\item  Orden uno:
+\begin{eqnarray}
+a_{1}+b_{1}=a_{1}\lambda ,
+\end{eqnarray}
 
-	\begin{eqnarray}
-	b_{1}t+k(a_{1}+b_{1})t=b_{1}\lambda t.
-	\end{eqnarray}
-	\item Orden dos:
-	\begin{eqnarray}
-	(a_{2}+b_{2})t^{2}=a_{2}\lambda^{2}t^{2}.
-	\label{segundos_coeficientes_a}
-	\end{eqnarray}
-	\begin{eqnarray}
-	b_{2}t^{2}+k(a_{2}+b_{2})t^{2}=b_{2}\lambda^{2}t^{2}.
-	\label{segundos_coeficientes_b}
-	\end{eqnarray}
+\begin{eqnarray}
+b_{1}+ka_{1}+b_{1}=b_{1}\lambda .
+\end{eqnarray}
+\item Orden dos:
+\begin{eqnarray}
+a_{2}+b_{2}=a_{2}\lambda^{2}.
+\label{segundos_coeficientes_a}
+\end{eqnarray}
+\begin{eqnarray}
+b_{2}+ka_{2}+b_{2}=b_{2}\lambda^{2}.
+\label{segundos_coeficientes_b}
+\end{eqnarray}
 \end{itemize}
 
 \end{frame}
 
 
 %---------------------------------------------------------
+%\begin{frame}
+%Ocuparemos un truco, buscaremos que la ecuaci\'on \eqref{expandida} %satisfaga una ecuaci\'on diferencial simple. Para ello escribimos a $W$ %como:
+%\begin{eqnarray}
+%W(t)=\sum_{n=0}^{\infty}\beta_{n}t^{n}=\sin\left(\sum_{n=0}^{\infty}a_{n}t^%{n}+\sum_{n=0}^{\infty}
+%b_{n}t^{n}\right).
+%\end{eqnarray}
+%Consideramos como un compleja a $W$
+%\begin{eqnarray}
+%\overline{W}=\sum_{n=0}^{\infty}(\alpha_{n}+i\beta_{n})t^{n}=\exp[i(\theta(%t)+p(t))],
+%\label{W compleja}
+%\end{eqnarray}
+%Ya que $W(t)=Im(\overline{W})$.\\
+%Al tomar la derivada de \eqref{W compleja}
+%\begin{eqnarray}
+%\overline{W}'=i\overline{W}[\theta '(t)+p'(t)].
+%\label{W compleja deriv}
+%\end{eqnarray}
+%\end{frame}
+%------------------------------------------------------------------------
+%\begin{frame}
+%Hay otra forma de calcular los coeficientes: mediante relaciones de recurrencia. Para ello se usa el truco de buscar que la ecuación \eqref{expandida} satisfaga una ecuación diferenical simple. Para ello proponemos:
+%\begin{eqnarray}
+%W(t)=\sum_{n=0}^{\infty}\beta_{n}t^{n}=\sin\left(\sum_{n=0}^{\infty}a_{n}t^{n}+\sum_{n=0}^{\infty}
+%b_{n}t^{n}\right).
+%\end{eqnarray}
+%Consideramos como un compleja a $W$
+%\begin{eqnarray}
+%\overline{W}=\sum_{n=0}^{\infty}(\alpha_{n}+i\beta_{n})t^{n}=\exp[i(\theta(t)+p(t))],
+%\label{W compleja}
+%\end{eqnarray}
+%Ya que $W(t)=Im(\overline{W})$.\\
+%Al tomar la derivada de \eqref{W compleja}
+%\begin{eqnarray}
+%\overline{W}'=i\overline{W}[\theta '(t)+p'(t)].
+%\label{W compleja deriv}
+%\end{eqnarray}
+%\end{frame}
+%---------------------------------------------------------
 \begin{frame}
-Ocuparemos un truco, buscaremos que la ecuaci\'on \eqref{expandida} satisfaga una ecuaci\'on diferencial simple. Para ello escribimos a $W$ como:
-\begin{eqnarray}
-W(t)=\sum_{n=0}^{\infty}\beta_{n}t^{n}=\sin\left(\sum_{n=0}^{\infty}a_{n}t^{n}+\sum_{n=0}^{\infty}
-b_{n}t^{n}\right).
-\end{eqnarray}
-Consideramos como un compleja a $W$
-\begin{eqnarray}
-\overline{W}=\sum_{n=0}^{\infty}(\alpha_{n}+i\beta_{n})t^{n}=\exp[i(\theta(t)+p(t))],
-\label{W compleja}
-\end{eqnarray}
-Ya que $W(t)=Im(\overline{W})$.\\
-Al tomar la derivada de \eqref{W compleja}
-\begin{eqnarray}
-\overline{W}'=i\overline{W}[\theta '(t)+p'(t)].
-\label{W compleja deriv}
-\end{eqnarray}
-\end{frame}
-%-------------------------------------------------------
-\begin{frame}
-Mucha talacha!\\
-Expandiendo en potencias de $t$ la ecuaci\'on \eqref{W compleja deriv}, se obtiene
-\begin{eqnarray}
-\sum_{n=0}^{\infty}(n+1)(\alpha_{n+1}+i\beta_{n+1})t^{n}=i\sum_{n=0}^{\infty}c_{n}t^{n}+i\sum_{n=0}^{\infty}d_{n}t^{n},
-\end{eqnarray}
-con
-\begin{eqnarray}
-c_{n}=\sum_{l=0}^{n}(l+1)(\alpha_{n-l}+i\beta_{n-l})a_{l+1}, \\
-d_{n}=\sum_{l=0}^{n}(l+1)(\alpha_{n-l}+i\beta_{n-l})b_{l+1}.
-\end{eqnarray}
 
-\end{frame}
-%---------------------------------------------------
-\begin{frame}
-Separando la parte real 
-\begin{eqnarray}
-\sum_{n=0}^{\infty}(n+1)\alpha_{n+1}t^{n}=\sum_{n=0}^{\infty}\left[-\sum_{l=0}^{n}(l+1)\beta_{n-l}(a_{l+1}+b_{l+1})\right]t^{n},
-\label{parte real}
-\end{eqnarray}
-e imaginaria
-\begin{eqnarray}
-\sum_{n=0}^{\infty}(n+1)\beta_{n+1}t^{n}=\sum_{n=0}^{\infty}\left[\sum_{l=0}^{n}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1})\right]t^{n}.
-\label{parte compleja}
-\end{eqnarray}
-\end{frame}
-
-%-----------------------------------------------------------
-\begin{frame}
-Igualando potencias de $t$ en \eqref{parte real}, \eqref{parte compleja} y despejando $\alpha_{n+1},\beta_{n+1}$ se obtiene
+Hay otra forma de calcular los coeficientes: mediante relaciones de recurrencia. Para ello se usa el truco de buscar que la ecuación \eqref{expandida} satisfaga una ecuación diferenical simple.
 \begin{eqnarray}
 \alpha_{n+1}=\frac{-1}{n+1}\sum_{l=0}^{n}(l+1)\beta_{n-l}(a_{l+1}+b_{l+1}),
 \label{recurrencia alpha}
@@ -402,48 +400,6 @@ Igualando potencias de $t$ en \eqref{parte real}, \eqref{parte compleja} y despe
 \beta_{n+1}=\frac{1}{n+1}\sum_{l=0}^{n}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1}),
 \label{recurrencia beta}
 \end{eqnarray}
-
-Usando el caso $t=0$ en la ecuación \eqref{W compleja} resulta
-\begin{eqnarray}
-\overline{W}(0)=\alpha_{0}+i\beta_{0}=\cos(\theta(0)+p(0))+i\sin(\theta(0)+p(0))=1,
-\end{eqnarray}
-por lo que $\alpha_{0}=1,\beta_{0}=0$.
-\end{frame}
-
-%----------------------------------------------------
-\begin{frame}
-Para encontrar los otros coeficientes usamos de nuevo la ecuaci\'on del mapeo, considerando lo que propusimos para el t\'ermino del seno
-\begin{eqnarray}
-\sum_{n=1}^{\infty}a_{n}t^{n}+\sum_{n=1}^{\infty}b_{n}t^{n}=\sum_{n=1}^{\infty}a_{n}\lambda^{n}t^{n},
-\end{eqnarray}
-\begin{eqnarray}
-\sum_{n=1}^{\infty}b_{n}t^{n}+k\sum_{n=1}^{\infty}\beta_{n}t^{n}=\sum_{n=1}^{\infty}b_{n}
-\lambda^{n}t^{n}.
-\end{eqnarray}
-\end{frame}
-%---------------------------------------------------
-\begin{frame}
-Al agrupar los t\'erminos de orden $n+1$ en ambas ecuaciones resulta:
-\begin{eqnarray}
-\mathbf{A}\begin{pmatrix}
-a_{n+1}\\
-b_{n+1}
-\end{pmatrix}=-\frac{k}{n+1}\sum_{l=0}^{n-1}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1})\begin{pmatrix}
-0\\
-1
-\end{pmatrix},
-\label{sistema recurrencia}
-\end{eqnarray}
-siendo 
-\begin{eqnarray}
-\mathbf{A}=\begin{pmatrix}
-a-\lambda^{n+1} & 1 \\
-k & 1-\lambda^{n+1}+k
-\end{pmatrix}.
-\end{eqnarray}
-\end{frame}
-%---------------------------------------------------------
-\begin{frame}Al multiplicar $\mathbf{A}^{-1}$ por la derecha y separar cada rengl\'on obtenemos las relaciones de recurrencia
 \begin{eqnarray}
 a_{n+1}=\frac{k}{(n+1)[(1-\lambda^{n+1})(1-\lambda^{n+1}+k)-k]}\sum_{l=0}^{n-1}\alpha_{n-l}(l+1)(a_{l+1}+b_{l+1}),
 \end{eqnarray}
@@ -451,15 +407,109 @@ a_{n+1}=\frac{k}{(n+1)[(1-\lambda^{n+1})(1-\lambda^{n+1}+k)-k]}\sum_{l=0}^{n-1}\
 b_{n+1}=\frac{-k 1-\lambda^{n+1}}{(n+1)[(1-\lambda^{n+1})(1-\lambda^{n+1}+k)-k]}\sum_{l=0}^{n-1}\alpha_{n-l}(l+1)(a_{l+1}+b_{l+1}).
 \end{eqnarray}
 \end{frame}
+%----------------------------------------------------------
+%\begin{frame}
+
+%\end{frame}
+%-------------------------------------------------------
+%\begin{frame}
+%Mucha talacha!\\
+%Expandiendo en potencias de $t$ la ecuaci\'on \eqref{W compleja deriv}, se %obtiene
+%\begin{eqnarray}
+%\sum_{n=0}^{\infty}(n+1)(\alpha_{n+1}+i\beta_{n+1})t^{n}=i\sum_{n=0}^{\inft%y}c_{n}t^{n}+i\sum_{n=0}^{\infty}d_{n}t^{n},
+%\end{eqnarray}
+%con
+%\begin{eqnarray}
+%c_{n}=\sum_{l=0}^{n}(l+1)(\alpha_{n-l}+i\beta_{n-l})a_{l+1}, \\
+%d_{n}=\sum_{l=0}^{n}(l+1)(\alpha_{n-l}+i\beta_{n-l})b_{l+1}.
+%\end{eqnarray}
+
+%\end{frame}
+%---------------------------------------------------
+%\begin{frame}
+%Separando la parte real 
+%\begin{eqnarray}
+%\sum_{n=0}^{\infty}(n+1)\alpha_{n+1}t^{n}=\sum_{n=0}^{\infty}\left[-\sum_{l%=0}^{n}(l+1)\beta_{n-l}(a_{l+1}+b_{l+1})\right]t^{n},
+%\label{parte real}
+%\end{eqnarray}
+%e imaginaria
+%\begin{eqnarray}
+%\sum_{n=0}^{\infty}(n+1)\beta_{n+1}t^{n}=\sum_{n=0}^{\infty}\left[\sum_{l=0%}^{n}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1})\right]t^{n}.
+%\label{parte compleja}
+%\end{eqnarray}
+%\end{frame}
+
+%-----------------------------------------------------------
+%\begin{frame}
+%Igualando potencias de $t$ en \eqref{parte real}, \eqref{parte compleja} y despejando $\alpha_{n+1},\beta_{n+1}$ se obtiene
+%Igualando potencias de $t$ en \eqref{W compleja deriv} y %despejando $\alpha_{n+1},\beta_{n+1}$ se obtiene
+%\begin{eqnarray}
+%\alpha_{n+1}=\frac{-1}{n+1}\sum_{l=0}^{n}(l+1)\beta_{n-l}(%a_{l+1}+b_{l+1}),
+%\label{recurrencia alpha}
+%\end{eqnarray}
+%\begin{eqnarray}
+%\beta_{n+1}=\frac{1}{n+1}\sum_{l=0}^{n}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1}),
+%\label{recurrencia beta}
+%\end{eqnarray}
+
+%Usando el caso $t=0$ en la ecuación \eqref{W compleja} %resulta
+%\begin{eqnarray}
+%\overline{W}(0)=\alpha_{0}+i\beta_{0}=\cos(\theta(0)+p(0))+i\sin(\theta(0)+p(0))=1,
+%\end{eqnarray}
+%por lo que $\alpha_{0}=1,\beta_{0}=0$.
+%\end{frame}
+
+%----------------------------------------------------
+%\begin{frame}
+%Para encontrar los otros coeficientes usamos de nuevo la ecuaci\'on del %mapeo, considerando lo que propusimos para el t\'ermino del seno
+%\begin{eqnarray}
+%\sum_{n=1}^{\infty}a_{n}t^{n}+\sum_{n=1}^{\infty}b_{n}t^{n}=\sum_{n=1}^{\in%fty}a_{n}\lambda^{n}t^{n},
+%\end{eqnarray}
+%\begin{eqnarray}
+%\sum_{n=1}^{\infty}b_{n}t^{n}+k\sum_{n=1}^{\infty}\beta_{n}t^{n}=\sum_{n=1}%^{\infty}b_{n}
+%\lambda^{n}t^{n}.
+%\end{eqnarray}
+%\end{frame}
+%---------------------------------------------------
+%\begin{frame}
+%Al agrupar los t\'erminos de orden $n+1$ en ambas ecuaciones resulta:
+%\begin{eqnarray}
+%\mathbf{A}\begin{pmatrix}
+%a_{n+1}\\
+%b_{n+1}
+%\end{pmatrix}=-\frac{k}{n+1}\sum_{l=0}^{n-1}(l+1)\alpha_{n-l}(a_{l+1}+b_{l+1})\begin{pmatrix}
+%0\\
+%1
+%\end{pmatrix},
+%\label{sistema recurrencia}
+%\end{eqnarray}
+%siendo 
+%\begin{eqnarray}
+%\mathbf{A}=\begin{pmatrix}
+%a-\lambda^{n+1} & 1 \\
+%k & 1-\lambda^{n+1}+k
+%\end{pmatrix}.
+%\end{eqnarray}
+%\end{frame}
+%---------------------------------------------------------
+%\begin{frame}
+%Sustituyendo $\sum_{n=0}^{\infty}\beta_{n}t^{n}$ en lugar del seno, agrupamos términos de orden $n+1$ y despejamos $a_{n+1},b_{n+1}$, para obtener:
+%\begin{eqnarray}
+%a_{n+1}=\frac{k}{(n+1)[(1-\lambda^{n+1})(1-\lambda^{n+1}+k)-k]}\sum_{l=0}^{n-1}\alpha_{n-l}(l+1)(a_{l+1}+b_{l+1}),
+%\end{eqnarray}
+%\begin{eqnarray}
+%b_{n+1}=\frac{-k 1-\lambda^{n+1}}{(n+1)[(1-\lambda^{n+1})(1-\lambda^{n+1}+k)-k]}\sum_{l=0}^{n-1}\alpha_{n-l}(l+1)(a_{l+1}+b_{l+1}).
+%\end{eqnarray}
+%\end{frame}
 
 %-----------------------------------------------------
 \begin{frame}{Ejemplos de aplicaci\'on:Mapeo est\'andar}
 En el mapeo estándar \eqref{mapeo estandar} uno de los puntos fijos es el origen de coordenadas $\mathbf{x}_{1}=(0,0)$.
 \begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.4]{k03}
-	\caption{\footnotesize $W^{s},W^{u}$ de orden $25$ en el mapeo estándar con $k=0.3$ en el intervalo $t=[0.,3.]$}
-	\label{estandar03}
+\centering
+\includegraphics[scale=0.4]{k03}
+\caption{\footnotesize $W^{s},W^{u}$ de orden $25$ en el mapeo estándar con $k=0.3$ en el intervalo $t=[0.,3.]$}
+\label{estandar03}
 \end{figure}
 \end{frame}
 %---------------------------------------------------------------------
@@ -470,20 +520,20 @@ E_{n}(t) = \parallel \mathbf{f} \circ \mathcal{P}_{n}(t) - \mathcal{P}_{n} \circ
 %\label{Ecua de invariancia resta}
 \end{eqnarray*}
 \begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{errork03} 
-	\caption{Error en las variedades de la figura \ref{estandar03}.}
-	\label{error est k03}
+\centering
+\includegraphics[scale=0.5]{errork03} 
+\caption{Error en las variedades de la figura \ref{estandar03}.}
+\label{error est k03}
 \end{figure}
 \end{frame}
 %---------------------------------------------------------
 \begin{frame}
 \begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.35]{k15}
-	\includegraphics[scale=0.35]{errork15}
-	\caption{$W^{s},W^{u}$ de orden $80$ en el mapeo estándar con $k=1.5$ en el intervalo $t=[0.,13.]$ y su error.}
-	\label{estandar15}
+\centering
+\includegraphics[scale=0.35]{k15}
+\includegraphics[scale=0.35]{errork15}
+\caption{$W^{s},W^{u}$ de orden $80$ en el mapeo estándar con $k=1.5$ en el intervalo $t=[0.,13.]$ y su error.}
+\label{estandar15}
 \end{figure}
 \end{frame}
 
@@ -492,10 +542,10 @@ E_{n}(t) = \parallel \mathbf{f} \circ \mathcal{P}_{n}(t) - \mathcal{P}_{n} \circ
 \begin{frame}
 Para observar c\'omo cambia el error con el orden de la parametrizaci\'on.
 \begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{errorf64}
-	\caption{Curvas de error para diferentes órdenes en el mapeo estándar, $k=0.3$. }
-	\label{erroresf64}
+\centering
+\includegraphics[scale=0.5]{errorf64}
+\caption{Curvas de error para diferentes órdenes en el mapeo estándar, $k=0.3$. }
+\label{erroresf64}
 \end{figure}
 \end{frame}
 
@@ -503,10 +553,10 @@ Para observar c\'omo cambia el error con el orden de la parametrizaci\'on.
 \begin{frame}
 Usando n\'umeros de presici\'on extendida
 \begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.6]{errorbf}
-	\caption{Curvas de error para diferentes órdenes usando precisión extendida ,$k=0.3$. }
-	\label{erroresBig}
+\centering
+\includegraphics[scale=0.6]{errorbf}
+\caption{Curvas de error para diferentes órdenes usando precisión extendida ,$k=0.3$. }
+\label{erroresBig}
 \end{figure}
 \end{frame}
 
@@ -521,10 +571,10 @@ p  -k\sin(\theta) \\
 \end{eqnarray}
 podemos calcular la varieda estable
 \begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.4]{error_inversa}
-	\caption{Error para las parametrizaciones usando el mapeo y el mapeo inverso con polinomios de orden $20$ y $k=0.3$. }
-	\label{erroresinverso}
+\centering
+\includegraphics[scale=0.4]{error_inversa}
+\caption{Error para las parametrizaciones usando el mapeo y el mapeo inverso con polinomios de orden $20$ y $k=0.3$. }
+\label{erroresinverso}
 \end{figure}
 \end{frame}
 %-------------------------------------------------------------
@@ -553,11 +603,11 @@ y\\
 %--------------------------------------------------------------
 \begin{frame}
 \begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.35]{h15}
-	\includegraphics[scale=0.35]{errorH15}
-	\caption{$W^{u}$ y $W^{s}$ de orden 45 en el intervalo $t=[0.,900.]$ para el mapeo de Hénon con $a=1.5$,$b=1$.}
-	\label{Henon1}
+\centering
+\includegraphics[scale=0.35]{h15}
+\includegraphics[scale=0.35]{errorH15}
+\caption{$W^{u}$ y $W^{s}$ de orden 45 en el intervalo $t=[0.,900.]$ para el mapeo de Hénon con $a=1.5$,$b=1$.}
+\label{Henon1}
 \end{figure}
 
 \end{frame}
@@ -565,11 +615,11 @@ y\\
 %-------------------------------------------------------------------
 \begin{frame}
 \begin{figure}
-	\centering
-	\includegraphics[scale=0.35]{h65}
-		\includegraphics[scale=0.35]{errorH65}
-	\caption{$W^{u}$, $W^{s}$ de orden $78$ en el intervalo $t=[0.,4000.0]$ para el mapeo de Hénon con $a=6.5$,$b=1.$.}
-	\label{Henon3}
+\centering
+\includegraphics[scale=0.35]{h65}
+\includegraphics[scale=0.35]{errorH65}
+\caption{$W^{u}$, $W^{s}$ de orden $78$ en el intervalo $t=[0.,4000.0]$ para el mapeo de Hénon con $a=6.5$,$b=1.$.}
+\label{Henon3}
 \end{figure}
 
 \end{frame}
@@ -594,23 +644,23 @@ x-y+ax(x-1)e^{-x}\\
 \end{eqnarray}
 Los puntos fijos del sistema son:
 \begin{itemize}
-	\item $\mathbf{x}_{0}=(1,0) \rightarrow$ hiperb\'olico
-	\item $\mathbf{x}_{1}=(0,0)$  
-	\begin{itemize}
-		\item el\'iptico si $a<4$
-		\item inverso hiperb\'olico si $a \geq 4$
-	\end{itemize}
+\item $\mathbf{x}_{0}=(1,0) \rightarrow$ hiperb\'olico
+\item $\mathbf{x}_{1}=(0,0)$  
+\begin{itemize}
+\item el\'iptico si $a<4$
+\item inverso hiperb\'olico si $a \geq 4$
+\end{itemize}
 \end{itemize}
 
 \end{frame}
 
 \begin{frame}
 \begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.35]{jung57}
-	\includegraphics[scale=0.35]{error_jung57}
-	\caption{$W^{s}$ y $W^{u}$ de orden 93 en el intervalo $t=[0.,6.5]$, con $a=5.7$ en el punto fijo $x_{0}$.}
-	\label{jung2}
+\centering
+\includegraphics[scale=0.35]{jung57}
+\includegraphics[scale=0.35]{error_jung57}
+\caption{$W^{s}$ y $W^{u}$ de orden 93 en el intervalo $t=[0.,6.5]$, con $a=5.7$ en el punto fijo $x_{0}$.}
+\label{jung2}
 \end{figure}
 
 \end{frame}
@@ -622,10 +672,10 @@ Usando el criterio de Hadamard
 \lim_{n\rightarrow\infty}\frac{a_{n}}{a_{n+1}},\label{hadamard}
 \end{eqnarray} 
 \begin{figure}
-	\centering
-	\includegraphics[scale=0.4]{convergenciaJungH57}
-	\caption{Convergencia de Hadamard asociada a las variedades mostradas en la figura \ref{jung2}.}
-	\label{convergenciaJH}
+\centering
+\includegraphics[scale=0.4]{convergenciaJungH57}
+\caption{Convergencia de Hadamard asociada a las variedades mostradas en la figura \ref{jung2}.}
+\label{convergenciaJH}
 \end{figure}
 
 
@@ -638,10 +688,10 @@ Usando el criterio de los tres t\'erminos:
 \label{tres terminos}
 \end{eqnarray}
 \begin{figure}
-	\centering
-	\includegraphics[scale=0.4]{convergenciaJungT57}
-	\caption{Convergencia de tres términos asociada a las variedades en la figura \ref{jung2}.}
-	\label{convergenciaJ3}
+\centering
+\includegraphics[scale=0.4]{convergenciaJungT57}
+\caption{Convergencia de tres términos asociada a las variedades en la figura \ref{jung2}.}
+\label{convergenciaJ3}
 \end{figure}
 \end{frame}
 %------------------------------------------------------------------------
@@ -649,7 +699,7 @@ Usando el criterio de los tres t\'erminos:
 Siendo que el resultado son polinomios, se puede aplicar el método de Newton, o cualquier otro, en dos dimensiones para resolver $\mathcal{P}^{u}=\mathcal{P}^{s}$.
 Concretamente se tienen \\
 \begin{equation}
- W^{s}(t)=(\mathcal{P}_{x}(t),\mathcal{P}_{y}(t)) ,\quad W^{u}(\tau)=(\mathcal{P}_{x}(\tau),\mathcal{P}_{y}(\tau))
+W^{s}(t)=(\mathcal{P}_{x}(t),\mathcal{P}_{y}(t)) ,\quad W^{u}(\tau)=(\mathcal{P}_{x}(\tau),\mathcal{P}_{y}(\tau))
 \end{equation}
 \begin{eqnarray}
 W^{s}(t)=W^{u}(\tau),
@@ -660,59 +710,60 @@ la intersección se encontrará en $I_{t}\times I_{\tau}$. En el espacio fase la
 %----------------------------------------------------------------------
 \begin{frame}{Est\'andar}
 \begin{figure}
-	\centering
-	\includegraphics[scale=0.5]{cruce_estandar}
-	\caption{Cruces de $W^{u},W^{s}$ de orden $120$ para el mapeo estándar con $k=1.5$, usando una tolerancia de $10^{-6}$.}
-	\label{cruce_estandar}
+\centering
+\includegraphics[scale=0.5]{cruce_estandar}
+\caption{Cruces de $W^{u},W^{s}$ de orden $120$ para el mapeo estándar con $k=1.5$, usando una tolerancia de $10^{-6}$.}
+\label{cruce_estandar}
 \end{figure}
 
 \end{frame}
 %---------------------------------------------------------------------------
 \begin{frame}{H\'enon}
 \begin{figure}
-	\centering
-	\includegraphics[scale=0.5]{crucesL}
-	\caption{Cruces de $W^{u},W^{s}$ encontrados en el intervalo $[-400.,0.] \times [0.,400.]$ con una tolerancia de $10^{-6}$.}
-	\label{crucesH}
+\centering
+\includegraphics[scale=0.5]{crucesL}
+\caption{Cruces de $W^{u},W^{s}$ encontrados en el intervalo $[-400.,0.] \times [0.,400.]$ con una tolerancia de $10^{-6}$.}
+\label{crucesH}
 \end{figure}
 \end{frame}
 
 \begin{frame}
 \begin{figure}
-	\includegraphics[width=50mm]{alpha}
-	\includegraphics[width=50mm]{beta}
-	\caption{Intervalos de intersecciones entre las variedades estable e inestable del mapeo de Hénon.} 
-	\label{matriz_cortes}
+\includegraphics[width=50mm]{alpha}
+\includegraphics[width=50mm]{beta}
+\caption{Intervalos de intersecciones entre las variedades estable e inestable del mapeo de Hénon.} 
+\label{matriz_cortes}
 \end{figure}
 \end{frame}
 
 
 \begin{frame}{Exponencial}
 \begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{cruces_jung1}
-	\caption{Intersecciones en el mapeo exponencial con $a=5.7$, con una toleracia de $10^{-6}$.}
-	\label{jung_cortes}
+\centering
+\includegraphics[scale=0.5]{cruces_jung1}
+\caption{Intersecciones en el mapeo exponencial con $a=5.7$, con una toleracia de $10^{-6}$.}
+\label{jung_cortes}
 \end{figure}
 \end{frame}
 
 \begin{frame}
 \begin{figure}
-	\includegraphics[width=40mm]{cruce_a}
-	\includegraphics[width=40mm]{cruce_b}
-	\includegraphics[width=40mm]{cruce_c}
-	\caption{Intervalo de intersección de las variedades estable e inestable en el mapeo exponencial.} 
-	\label{cruces_jung}
+\includegraphics[width=40mm]{cruce_a}
+\includegraphics[width=40mm]{cruce_b}
+\includegraphics[width=40mm]{cruce_c}
+\caption{Intervalo de intersección de las variedades estable e inestable en el mapeo exponencial.} 
+\label{cruces_jung}
 \end{figure}
 \end{frame}
 
 \begin{frame}{Rect\'angulo fundamental}
- El rect\'angulo fundamental es una región del espacio fase que contiene todas las intersecciones (homoclínicas y heteroclínicas) del mapeo, lo que permite obtener toda la dinámica fuera del mismo.
+El rect\'angulo fundamental es una región del espacio fase que contiene todas las intersecciones (homoclínicas y heteroclínicas) del mapeo, lo que permite obtener toda la dinámica fuera del mismo.
 \begin{figure}
-	\centering
-	\includegraphics[scale=0.20]{herradura}
-	%\caption{Diagrama ilustrativo de la topología de una herradura en un sistema Hamiltoniano de dos dimensiones. Tomada de \cite{Merlo}, pp.8.} %H denota el punto fijo hiperbólico y P la primera intersección. Los tentáculos de la variedad estable son enfatizados con color negro. Tomada de \cite{Merlo}, pp.8.}
-	\label{herradura}
+\centering
+\includegraphics[scale=0.20]{herradura}
+\caption{Diagrama ilustrativo de la topología de una herradura en un sistema Hamiltoniano de dos dimensiones. }
+%Tomada de \cite{Merlo}, pp.8.} H denota el punto fijo hiperbólico y P la primera intersección. Los tentáculos de la variedad estable son enfatizados con color negro. Tomada de \cite{Merlo}, pp.8.}
+\label{herradura}
 \end{figure}
 
 \end{frame}
@@ -742,19 +793,19 @@ Como $\vert \lambda^{s} \vert < 1 $ la ecuación \eqref{InvarianciaEstable3} mue
 %----------------------------------------------------------------------------
 \begin{frame}
 \begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{rectangulo_fundamental}
-	\caption{Variedades estable e inestable de orden 250, para el mapeo de Hénon con $a=6.5,b=1.$, en el intervalo $t=[0.,100.]$. El punto $\omega$ denota el punto fijo mientras que $\alpha, \beta, \gamma$ son las primeras intersecciones de las variedades.}
-	\label{rectangulo0}
+\centering
+\includegraphics[scale=0.5]{rectangulo_fundamental}
+\caption{Variedades estable e inestable de orden 250, para el mapeo de Hénon con $a=6.5,b=1.$, en el intervalo $t=[0.,100.]$. El punto $\omega$ denota el punto fijo mientras que $\alpha, \beta, \gamma$ son las primeras intersecciones de las variedades.}
+\label{rectangulo0}
 \end{figure}
 \end{frame}
 %----------------------------------------------------------------------------
 \begin{frame}
 \begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{rectangulo1.pdf}
-	\caption{Primera aplicación del mapeo a los polinomios de orden 250, $t=[0,100]$.}
-	\label{Rectangulo1}
+\centering
+\includegraphics[scale=0.5]{rectangulo1.pdf}
+\caption{Primera aplicación del mapeo a los polinomios de orden 250, $t=[0,100]$.}
+\label{Rectangulo1}
 \end{figure}
 \end{frame}
 %--------------------------------------------------------------------------
@@ -773,20 +824,20 @@ E_{n}(t)=\bigg\| (f^{-1}_{k})^{n}\left(W_{0}^{s}\left(\frac{t}{\lambda^{s}}\righ
 %----------------------------------------------------------------------------
 \begin{frame}
 \begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.6]{error1ite.pdf}
-	\caption{Error en el polinomio que resulta de aplicar el mapeo a la parametrización de orden 250.}
-	\label{error-1iteracion}
+\centering
+\includegraphics[scale=0.6]{error1ite.pdf}
+\caption{Error en el polinomio que resulta de aplicar el mapeo a la parametrización de orden 250.}
+\label{error-1iteracion}
 \end{figure}
 \end{frame}
 %-------------------------------------------------------------------------
 \begin{frame}
 La segunda aplicación del mapeo a los polinomios, $(W_{x2}^{s},W_{y2}^{s})=f_{a,b}(W_{x1}^{s},W_{y1}^{s})$
 \begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.6]{rectangulo2.pdf}
-	\caption{Segunda aplicación del mapeo a los polinomios de orden 250.}
-	\label{Rectangulo2}
+\centering
+\includegraphics[scale=0.6]{rectangulo2.pdf}
+\caption{Segunda aplicación del mapeo a los polinomios de orden 250.}
+\label{Rectangulo2}
 \end{figure}
 
 \end{frame}
@@ -794,28 +845,28 @@ La segunda aplicación del mapeo a los polinomios, $(W_{x2}^{s},W_{y2}^{s})=f_{a
 \begin{frame}
 La tercera aplicaci\'on
 \begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.6]{rectangulo3.pdf}
-	\caption{Tercer aplicación del mapeo a los polinomios de orden 250.}
-	\label{Rectangulo3}
+\centering
+\includegraphics[scale=0.6]{rectangulo3.pdf}
+\caption{Tercer aplicación del mapeo a los polinomios de orden 250.}
+\label{Rectangulo3}
 \end{figure}
 \end{frame}
 %------------------------------------------------------------------------
 \begin{frame}
 \begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.6]{rectangulo4.pdf}
-	\caption{Cuarta aplicación del mapeo a los polinomios de orden 250.}.
-	\label{Rectangulo4}
+\centering
+\includegraphics[scale=0.6]{rectangulo4.pdf}
+\caption{Cuarta aplicación del mapeo a los polinomios de orden 250.}.
+\label{Rectangulo4}
 \end{figure}
 \end{frame}
 %---------------------------------------------------------------------
 \begin{frame}
 \begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.6]{rectangulo5.pdf}
-	\caption{Quinta aplicación del mapeo a los polinomios de orden 250.}.
-	\label{Rectangulo5}
+\centering
+\includegraphics[scale=0.6]{rectangulo5.pdf}
+\caption{Quinta aplicación del mapeo a los polinomios de orden 250.}.
+\label{Rectangulo5}
 \end{figure}
 \end{frame}
 %------------------------------------------------------------------------------

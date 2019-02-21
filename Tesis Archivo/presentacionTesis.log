@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840) (preloaded format=pdflatex 2019.1.21)  18 FEB 2019 21:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840) (preloaded format=pdflatex 2019.1.21)  20 FEB 2019 20:55
 entering extended mode
 **./presentacionTesis.tex
 (presentacionTesis.tex
@@ -867,6 +867,27 @@ Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
 \colbreak@box=\box84
 \mc@col@check@num=\count184
 )
+(/home/evelyn/.miktex/texmfs/install/tex/latex/ms/ragged2e.sty
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+
+(/home/evelyn/.miktex/texmfs/install/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+\CenteringLeftskip=\skip59
+\RaggedLeftLeftskip=\skip60
+\RaggedRightLeftskip=\skip61
+\CenteringRightskip=\skip62
+\RaggedLeftRightskip=\skip63
+\RaggedRightRightskip=\skip64
+\CenteringParfillskip=\skip65
+\RaggedLeftParfillskip=\skip66
+\RaggedRightParfillskip=\skip67
+\JustifyingParfillskip=\skip68
+\CenteringParindent=\skip69
+\RaggedLeftParindent=\skip70
+\RaggedRightParindent=\skip71
+\JustifyingParindent=\skip72
+)
 (/home/evelyn/.miktex/texmfs/install/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
@@ -1032,6 +1053,22 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
 \@eurobox=\box85
 )
+\c@defn=\count185
+
+
+! LaTeX Error: No counter 'Definition' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \newtheorem{defn}{Definici\'on}[Definition]
+                                                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
 (/home/evelyn/.miktex/texmfs/install/tex/latex/beamer/beamerthemeEastLansing.st
 y
 (/home/evelyn/.miktex/texmfs/install/tex/latex/beamer/beamerinnerthemerounded.s
@@ -1045,27 +1082,27 @@ LaTeX Info: Redefining \% on input line 23.
 )
 \openout1 = `presentacionTesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 35.
 
 (/home/evelyn/.miktex/texmfs/install/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    ... okay on input line 35.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1103,16 +1140,16 @@ LaTeX Font Info:    ... okay on input line 33.
 
 (/home/evelyn/.miktex/texmfs/install/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count185
+\scratchcounter=\count186
 \scratchdimen=\dimen285
 \scratchbox=\box86
-\nofMPsegments=\count186
-\nofMParguments=\count187
+\nofMPsegments=\count187
+\nofMParguments=\count188
 \everyMPshowfont=\toks53
-\MPscratchCnt=\count188
+\MPscratchCnt=\count189
 \MPscratchDim=\dimen286
-\MPnumerator=\count189
-\makeMPintoPDFobject=\count190
+\MPnumerator=\count190
+\makeMPintoPDFobject=\count191
 \everyMPtoPDFconversion=\toks54
 ) (/home/evelyn/.miktex/texmfs/install/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1129,7 +1166,7 @@ G,.JBIG2,.JB2,.eps]
 )
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box87
-Package hyperref Info: Link coloring OFF on input line 33.
+Package hyperref Info: Link coloring OFF on input line 35.
 
 (/home/evelyn/.miktex/texmfs/install/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1137,73 +1174,73 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/home/evelyn/.miktex/texmfs/install/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count191
+\c@section@level=\count192
 )
-LaTeX Info: Redefining \ref on input line 33.
-LaTeX Info: Redefining \pageref on input line 33.
-LaTeX Info: Redefining \nameref on input line 33.
+LaTeX Info: Redefining \ref on input line 35.
+LaTeX Info: Redefining \pageref on input line 35.
+LaTeX Info: Redefining \nameref on input line 35.
 
 (presentacionTesis.out) (presentacionTesis.out)
 \@outlinefile=\write6
 \openout6 = `presentacionTesis.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 33.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 35.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 33.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 35.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 33.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 33.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 35.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 33.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 33.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 33.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 35.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 33.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 33.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 33.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 35.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 33.
+(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 33.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 33.
+(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 35.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 33.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 33.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 35.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 33.
+(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 35.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 33.
+(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmr/bx/n on input line 33.
+(Font)                  OT1/cmss/bx/n --> T1/cmr/bx/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/cmss/bx/n --> T1/cmss/bx/n on input line 33.
+(Font)                  T1/cmss/bx/n --> T1/cmss/bx/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 33.
+(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 33.
+(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 33.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 33.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 35.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 35.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `normal' on input line 33
+(Font)              `pureletters' in the math version `normal' on input line 35
 .
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 33
+(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 35
 .
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `bold' on input line 33.
+(Font)              `pureletters' in the math version `bold' on input line 35.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  T1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 3
-3.
+5.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 33.
+ut line 35.
 
 (/home/evelyn/.miktex/texmfs/install/tex/latex/translator/translator-basic-dict
 ionary-English.dict
@@ -1229,28 +1266,30 @@ Dictionary: translator-numbers-dictionary, Language: English
 ctionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \. on input line 33.
-LaTeX Info: Redefining \% on input line 33.
-LaTeX Font Info:    Try loading font information for U+msa on input line 33.
+LaTeX Info: Redefining \. on input line 35.
+LaTeX Info: Redefining \% on input line 35.
+LaTeX Font Info:    Try loading font information for U+msa on input line 35.
 
 (/home/evelyn/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 33.
+LaTeX Font Info:    Try loading font information for U+msb on input line 35.
 
 (/home/evelyn/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 33.
+line 35.
 
 (/home/evelyn/.miktex/texmfs/install/tex/latex/sansmathaccent/ot1mathkerncmss.f
 d
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-Package xypdf Info: Line width: 0.43799pt on input line 33.
-\c@lstlisting=\count192
+Package xypdf Info: Line width: 0.43799pt on input line 35.
+\c@lstlisting=\count193
+ ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 35.
  (presentacionTesis.nav) [1
 
 {/home/evelyn/.miktex/texmfs/data/pdftex/config/pdftex.map}] [2
@@ -1259,58 +1298,54 @@ Package xypdf Info: Line width: 0.43799pt on input line 33.
 <kicked.jpg, id=74, 89.133pt x 59.0205pt>
 File: kicked.jpg Graphic file (type jpg)
 <use kicked.jpg>
-Package pdftex.def Info: kicked.jpg  used on input line 91.
+Package pdftex.def Info: kicked.jpg  used on input line 93.
 (pdftex.def)             Requested size: 133.69914pt x 88.53049pt.
 <conveccion.png, id=75, 265.99374pt x 190.7125pt>
 File: conveccion.png Graphic file (type png)
 <use conveccion.png>
-Package pdftex.def Info: conveccion.png  used on input line 91.
+Package pdftex.def Info: conveccion.png  used on input line 93.
 (pdftex.def)             Requested size: 106.3956pt x 76.28363pt.
  [3
 
  <./kicked.jpg> <./conveccion.png>] [4
 
 ]
-<hyperbolic2.pdf, id=146, 462.52798pt x 346.89601pt>
+<hyperbolic2.pdf, id=144, 462.52798pt x 346.89601pt>
 File: hyperbolic2.pdf Graphic file (type pdf)
 <use hyperbolic2.pdf>
-Package pdftex.def Info: hyperbolic2.pdf  used on input line 136.
+Package pdftex.def Info: hyperbolic2.pdf  used on input line 138.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 
-Overfull \vbox (9.95589pt too high) detected at line 136
+Overfull \vbox (9.95589pt too high) detected at line 138
  []
 
 [5
 
  <./hyperbolic2.pdf>]
-<hyperbolic2A.pdf, id=179, 462.49956pt x 346.86755pt>
+<hyperbolic2A.pdf, id=178, 462.49956pt x 346.86755pt>
 File: hyperbolic2A.pdf Graphic file (type pdf)
 <use hyperbolic2A.pdf>
-Package pdftex.def Info: hyperbolic2A.pdf  used on input line 149.
+Package pdftex.def Info: hyperbolic2A.pdf  used on input line 151.
 (pdftex.def)             Requested size: 198.87093pt x 149.15013pt.
-
-Overfull \vbox (8.24136pt too high) detected at line 149
- []
-
-[6
+ [6
 
  <./hyperbolic2A.pdf>]
-<diagrama-c2.pdf, id=213, 794.94157pt x 614.26657pt>
+<diagrama-c2.pdf, id=212, 794.94157pt x 614.26657pt>
 File: diagrama-c2.pdf Graphic file (type pdf)
 <use diagrama-c2.pdf>
-Package pdftex.def Info: diagrama-c2.pdf  used on input line 156.
+Package pdftex.def Info: diagrama-c2.pdf  used on input line 158.
 (pdftex.def)             Requested size: 278.23372pt x 214.9965pt.
  [7
 
- <./diagrama-c2.pdf>] <xymatrix 2x2 182> [8
+ <./diagrama-c2.pdf>]
+[8
 
-]
-[9
+] [9
 
 ] [10
 
 ]
-Overfull \hbox (5.85959pt too wide) in alignment at lines 289--289
+Overfull \hbox (5.85959pt too wide) in alignment at lines 290--290
  [][][] []
  []
 
@@ -1318,50 +1353,56 @@ Overfull \hbox (5.85959pt too wide) in alignment at lines 289--289
 
 ] [12
 
-] [13
-
 ]
-Overfull \hbox (29.76132pt too wide) in alignment at lines 409--409
+Overfull \hbox (29.76132pt too wide) in alignment at lines 410--410
  [][][] []
  []
 
 
-Overfull \hbox (30.15674pt too wide) in alignment at lines 409--409
+Overfull \hbox (30.15674pt too wide) in alignment at lines 410--410
  [][][] []
+ []
+
+[13
+
+]
+<iteradosMireles.png, id=435, 953.5625pt x 728.7225pt>
+File: iteradosMireles.png Graphic file (type png)
+<use iteradosMireles.png>
+Package pdftex.def Info: iteradosMireles.png  used on input line 513.
+(pdftex.def)             Requested size: 238.39005pt x 182.18018pt.
+
+Overfull \vbox (12.98914pt too high) detected at line 513
  []
 
 [14
 
-]
-<k03.pdf, id=466, 462.52798pt x 346.89601pt>
+ <./iteradosMireles.png>]
+<k03.pdf, id=467, 462.52798pt x 346.89601pt>
 File: k03.pdf Graphic file (type pdf)
 <use k03.pdf>
-Package pdftex.def Info: k03.pdf  used on input line 514.
+Package pdftex.def Info: k03.pdf  used on input line 523.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
  [15
 
  <./k03.pdf>]
-<errork03.pdf, id=979, 462.52798pt x 346.89601pt>
+<errork03.pdf, id=980, 462.52798pt x 346.89601pt>
 File: errork03.pdf Graphic file (type pdf)
 <use errork03.pdf>
-Package pdftex.def Info: errork03.pdf  used on input line 528.
+Package pdftex.def Info: errork03.pdf  used on input line 537.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
-
-Overfull \vbox (2.52795pt too high) detected at line 528
- []
-
-[16
+ [16
 
  <./errork03.pdf>]
-<k15.pdf, id=1040, 462.52798pt x 346.89601pt>
+<k15.pdf, id=1041, 462.52798pt x 346.89601pt>
 File: k15.pdf Graphic file (type pdf)
 <use k15.pdf>
-Package pdftex.def Info: k15.pdf  used on input line 538.
+Package pdftex.def Info: k15.pdf  used on input line 547.
 (pdftex.def)             Requested size: 161.8872pt x 121.41542pt.
-<errork15.pdf, id=1041, 462.52798pt x 346.89601pt>
+<errork15.pdf, id=1042, 462.52798pt x 346.89601pt>
 File: errork15.pdf Graphic file (type pdf)
 <use errork15.pdf>
-Package pdftex.def Info: errork15.pdf  used on input line 538.
+Package pdftex.def Info: errork15.pdf  used on input line 547.
 (pdftex.def)             Requested size: 161.8872pt x 121.41542pt.
  [17
 
@@ -1370,33 +1411,33 @@ Package pdftex.def Info: errork15.pdf  used on input line 538.
 pdfTeX warning: pdflatex (file ./errork15.pdf): PDF inclusion: multiple pdfs wi
 th page group included in a single page
 >]
-<errorf64.pdf, id=1580, 462.52798pt x 346.89601pt>
+<errorf64.pdf, id=1581, 462.52798pt x 346.89601pt>
 File: errorf64.pdf Graphic file (type pdf)
 <use errorf64.pdf>
-Package pdftex.def Info: errorf64.pdf  used on input line 550.
+Package pdftex.def Info: errorf64.pdf  used on input line 559.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
  [18
 
  <./errorf64.pdf>]
-<errorbf.pdf, id=1637, 462.52798pt x 346.89601pt>
+<errorbf.pdf, id=1638, 462.52798pt x 346.89601pt>
 File: errorbf.pdf Graphic file (type pdf)
 <use errorbf.pdf>
-Package pdftex.def Info: errorbf.pdf  used on input line 561.
+Package pdftex.def Info: errorbf.pdf  used on input line 570.
 (pdftex.def)             Requested size: 277.51892pt x 208.1392pt.
 
-Overfull \vbox (23.4112pt too high) detected at line 561
+Overfull \vbox (22.71645pt too high) detected at line 570
  []
 
 [19
 
  <./errorbf.pdf>]
-<error_inversa.pdf, id=1693, 462.52798pt x 346.89601pt>
+<error_inversa.pdf, id=1694, 462.52798pt x 346.89601pt>
 File: error_inversa.pdf Graphic file (type pdf)
 <use error_inversa.pdf>
-Package pdftex.def Info: error_inversa.pdf  used on input line 579.
+Package pdftex.def Info: error_inversa.pdf  used on input line 588.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 
-Overfull \vbox (3.34782pt too high) detected at line 579
+Overfull \vbox (3.34735pt too high) detected at line 588
  []
 
 [20
@@ -1404,15 +1445,15 @@ Overfull \vbox (3.34782pt too high) detected at line 579
  <./error_inversa.pdf>] [21
 
 ]
-<h15.pdf, id=1782, 462.52798pt x 346.89601pt>
+<h15.pdf, id=1783, 462.52798pt x 346.89601pt>
 File: h15.pdf Graphic file (type pdf)
 <use h15.pdf>
-Package pdftex.def Info: h15.pdf  used on input line 613.
+Package pdftex.def Info: h15.pdf  used on input line 622.
 (pdftex.def)             Requested size: 161.8872pt x 121.41542pt.
-<errorH15.pdf, id=1783, 462.52798pt x 346.89601pt>
+<errorH15.pdf, id=1784, 462.52798pt x 346.89601pt>
 File: errorH15.pdf Graphic file (type pdf)
 <use errorH15.pdf>
-Package pdftex.def Info: errorH15.pdf  used on input line 613.
+Package pdftex.def Info: errorH15.pdf  used on input line 622.
 (pdftex.def)             Requested size: 161.8872pt x 121.41542pt.
  [22
 
@@ -1421,15 +1462,15 @@ Package pdftex.def Info: errorH15.pdf  used on input line 613.
 pdfTeX warning: pdflatex (file ./errorH15.pdf): PDF inclusion: multiple pdfs wi
 th page group included in a single page
 >]
-<h65.pdf, id=1876, 462.52798pt x 346.89601pt>
+<h65.pdf, id=1877, 462.52798pt x 346.89601pt>
 File: h65.pdf Graphic file (type pdf)
 <use h65.pdf>
-Package pdftex.def Info: h65.pdf  used on input line 625.
+Package pdftex.def Info: h65.pdf  used on input line 634.
 (pdftex.def)             Requested size: 161.8872pt x 121.41542pt.
-<errorH65.pdf, id=1877, 462.52798pt x 346.89601pt>
+<errorH65.pdf, id=1878, 462.52798pt x 346.89601pt>
 File: errorH65.pdf Graphic file (type pdf)
 <use errorH65.pdf>
-Package pdftex.def Info: errorH65.pdf  used on input line 625.
+Package pdftex.def Info: errorH65.pdf  used on input line 634.
 (pdftex.def)             Requested size: 161.8872pt x 121.41542pt.
  [23
 
@@ -1440,15 +1481,15 @@ th page group included in a single page
 >] [24
 
 ]
-<jung57.pdf, id=1997, 462.52798pt x 346.89601pt>
+<jung57.pdf, id=1998, 462.52798pt x 346.89601pt>
 File: jung57.pdf Graphic file (type pdf)
 <use jung57.pdf>
-Package pdftex.def Info: jung57.pdf  used on input line 666.
+Package pdftex.def Info: jung57.pdf  used on input line 675.
 (pdftex.def)             Requested size: 161.8872pt x 121.41542pt.
-<error_jung57.pdf, id=1998, 462.52798pt x 346.89601pt>
+<error_jung57.pdf, id=1999, 462.52798pt x 346.89601pt>
 File: error_jung57.pdf Graphic file (type pdf)
 <use error_jung57.pdf>
-Package pdftex.def Info: error_jung57.pdf  used on input line 666.
+Package pdftex.def Info: error_jung57.pdf  used on input line 675.
 (pdftex.def)             Requested size: 161.8872pt x 121.41542pt.
  [25
 
@@ -1457,61 +1498,57 @@ Package pdftex.def Info: error_jung57.pdf  used on input line 666.
 pdfTeX warning: pdflatex (file ./error_jung57.pdf): PDF inclusion: multiple pdf
 s with page group included in a single page
 >]
-<convergenciaJungH57.pdf, id=2087, 462.52798pt x 346.89601pt>
+<convergenciaJungH57.pdf, id=2088, 462.52798pt x 346.89601pt>
 File: convergenciaJungH57.pdf Graphic file (type pdf)
 <use convergenciaJungH57.pdf>
-Package pdftex.def Info: convergenciaJungH57.pdf  used on input line 682.
+Package pdftex.def Info: convergenciaJungH57.pdf  used on input line 691.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 
-Overfull \vbox (16.1965pt too high) detected at line 682
+Overfull \vbox (16.1965pt too high) detected at line 691
  []
 
 [26
 
  <./convergenciaJungH57.pdf>]
-<convergenciaJungT57.pdf, id=2153, 462.52798pt x 346.89601pt>
+<convergenciaJungT57.pdf, id=2154, 462.52798pt x 346.89601pt>
 File: convergenciaJungT57.pdf Graphic file (type pdf)
 <use convergenciaJungT57.pdf>
-Package pdftex.def Info: convergenciaJungT57.pdf  used on input line 696.
+Package pdftex.def Info: convergenciaJungT57.pdf  used on input line 705.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
  [27
 
  <./convergenciaJungT57.pdf>] [28
 
 ]
-<cruce_estandar.pdf, id=2241, 462.52798pt x 346.89601pt>
+<cruce_estandar.pdf, id=2242, 462.52798pt x 346.89601pt>
 File: cruce_estandar.pdf Graphic file (type pdf)
 <use cruce_estandar.pdf>
-Package pdftex.def Info: cruce_estandar.pdf  used on input line 719.
+Package pdftex.def Info: cruce_estandar.pdf  used on input line 729.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
 
-Overfull \vbox (1.75714pt too high) detected at line 719
+Overfull \vbox (1.75714pt too high) detected at line 729
  []
 
 [29
 
  <./cruce_estandar.pdf>]
-<crucesL.pdf, id=2755, 462.52798pt x 346.89601pt>
+<crucesL.pdf, id=2756, 462.52798pt x 346.89601pt>
 File: crucesL.pdf Graphic file (type pdf)
 <use crucesL.pdf>
-Package pdftex.def Info: crucesL.pdf  used on input line 728.
+Package pdftex.def Info: crucesL.pdf  used on input line 738.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
-
-Overfull \vbox (1.75714pt too high) detected at line 728
- []
-
-[30
+ [30
 
  <./crucesL.pdf>]
-<alpha.pdf, id=2827, 462.52798pt x 346.89601pt>
+<alpha.pdf, id=2828, 462.52798pt x 346.89601pt>
 File: alpha.pdf Graphic file (type pdf)
 <use alpha.pdf>
-Package pdftex.def Info: alpha.pdf  used on input line 737.
+Package pdftex.def Info: alpha.pdf  used on input line 747.
 (pdftex.def)             Requested size: 142.26378pt x 106.70032pt.
-<beta.pdf, id=2828, 462.52798pt x 346.89601pt>
+<beta.pdf, id=2829, 462.52798pt x 346.89601pt>
 File: beta.pdf Graphic file (type pdf)
 <use beta.pdf>
-Package pdftex.def Info: beta.pdf  used on input line 737.
+Package pdftex.def Info: beta.pdf  used on input line 747.
 (pdftex.def)             Requested size: 142.26378pt x 106.70032pt.
  [31
 
@@ -1520,32 +1557,32 @@ Package pdftex.def Info: beta.pdf  used on input line 737.
 pdfTeX warning: pdflatex (file ./beta.pdf): PDF inclusion: multiple pdfs with p
 age group included in a single page
 >]
-<cruces_jung1.pdf, id=2911, 462.52798pt x 346.89601pt>
+<cruces_jung1.pdf, id=2912, 462.52798pt x 346.89601pt>
 File: cruces_jung1.pdf Graphic file (type pdf)
 <use cruces_jung1.pdf>
-Package pdftex.def Info: cruces_jung1.pdf  used on input line 747.
+Package pdftex.def Info: cruces_jung1.pdf  used on input line 757.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
 
-Overfull \vbox (1.75714pt too high) detected at line 747
+Overfull \vbox (1.75714pt too high) detected at line 757
  []
 
 [32
 
  <./cruces_jung1.pdf>]
-<cruce_a.pdf, id=2973, 462.52798pt x 346.89601pt>
+<cruce_a.pdf, id=2974, 462.52798pt x 346.89601pt>
 File: cruce_a.pdf Graphic file (type pdf)
 <use cruce_a.pdf>
-Package pdftex.def Info: cruce_a.pdf  used on input line 757.
+Package pdftex.def Info: cruce_a.pdf  used on input line 767.
 (pdftex.def)             Requested size: 113.81102pt x 85.35814pt.
-<cruce_b.pdf, id=2974, 462.52798pt x 346.89601pt>
+<cruce_b.pdf, id=2975, 462.52798pt x 346.89601pt>
 File: cruce_b.pdf Graphic file (type pdf)
 <use cruce_b.pdf>
-Package pdftex.def Info: cruce_b.pdf  used on input line 757.
+Package pdftex.def Info: cruce_b.pdf  used on input line 767.
 (pdftex.def)             Requested size: 113.81102pt x 85.35814pt.
-<cruce_c.pdf, id=2975, 462.52798pt x 346.89601pt>
+<cruce_c.pdf, id=2976, 462.52798pt x 346.89601pt>
 File: cruce_c.pdf Graphic file (type pdf)
 <use cruce_c.pdf>
-Package pdftex.def Info: cruce_c.pdf  used on input line 757.
+Package pdftex.def Info: cruce_c.pdf  used on input line 767.
 (pdftex.def)             Requested size: 113.81102pt x 85.35814pt.
  [33
 
@@ -1558,94 +1595,134 @@ h page group included in a single page
 pdfTeX warning: pdflatex (file ./cruce_c.pdf): PDF inclusion: multiple pdfs wit
 h page group included in a single page
 >]
-<herradura.png, id=3084, 664.4825pt x 635.37375pt>
+<herradura.png, id=3085, 664.4825pt x 635.37375pt>
 File: herradura.png Graphic file (type png)
 <use herradura.png>
-Package pdftex.def Info: herradura.png  used on input line 769.
-(pdftex.def)             Requested size: 132.89413pt x 127.0725pt.
- [34
+Package pdftex.def Info: herradura.png  used on input line 779.
+(pdftex.def)             Requested size: 179.41266pt x 171.55319pt.
+
+Overfull \vbox (2.36215pt too high) detected at line 779
+ []
+
+[34
 
  <./herradura.png>] [35
 
 ]
-<rectangulo_fundamental.pdf, id=3146, 462.52798pt x 346.89601pt>
+<rectangulo_fundamental.pdf, id=3150, 462.52798pt x 346.89601pt>
 File: rectangulo_fundamental.pdf Graphic file (type pdf)
 <use rectangulo_fundamental.pdf>
-Package pdftex.def Info: rectangulo_fundamental.pdf  used on input line 801.
+Package pdftex.def Info: rectangulo_fundamental.pdf  used on input line 811.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
  [36
 
  <./rectangulo_fundamental.pdf>]
-<rectangulo1.pdf, id=3212, 462.52798pt x 346.89601pt>
+<rectangulo1.pdf, id=3216, 462.52798pt x 346.89601pt>
 File: rectangulo1.pdf Graphic file (type pdf)
 <use rectangulo1.pdf>
-Package pdftex.def Info: rectangulo1.pdf  used on input line 810.
+Package pdftex.def Info: rectangulo1.pdf  used on input line 820.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
  [37
 
  <./rectangulo1.pdf>] [38
 
 ]
-<error1ite.pdf, id=3300, 462.52798pt x 346.89601pt>
+<error1ite.pdf, id=3304, 462.52798pt x 346.89601pt>
 File: error1ite.pdf Graphic file (type pdf)
 <use error1ite.pdf>
-Package pdftex.def Info: error1ite.pdf  used on input line 832.
+Package pdftex.def Info: error1ite.pdf  used on input line 842.
 (pdftex.def)             Requested size: 277.51892pt x 208.1392pt.
 
-Overfull \vbox (5.73811pt too high) detected at line 832
+Overfull \vbox (5.73811pt too high) detected at line 842
  []
 
 [39
 
  <./error1ite.pdf>]
-<rectangulo2.pdf, id=3362, 462.52798pt x 346.89601pt>
+<rectangulo2.pdf, id=3366, 462.52798pt x 346.89601pt>
 File: rectangulo2.pdf Graphic file (type pdf)
 <use rectangulo2.pdf>
-Package pdftex.def Info: rectangulo2.pdf  used on input line 843.
+Package pdftex.def Info: rectangulo2.pdf  used on input line 853.
 (pdftex.def)             Requested size: 277.51892pt x 208.1392pt.
 
-Overfull \vbox (29.05078pt too high) detected at line 843
+Overfull \vbox (29.05078pt too high) detected at line 853
  []
 
 [40
 
  <./rectangulo2.pdf>]
-<rectangulo3.pdf, id=3420, 462.52798pt x 346.89601pt>
+<rectangulo3.pdf, id=3424, 462.52798pt x 346.89601pt>
 File: rectangulo3.pdf Graphic file (type pdf)
 <use rectangulo3.pdf>
-Package pdftex.def Info: rectangulo3.pdf  used on input line 853.
+Package pdftex.def Info: rectangulo3.pdf  used on input line 863.
 (pdftex.def)             Requested size: 277.51892pt x 208.1392pt.
 
-Overfull \vbox (13.01073pt too high) detected at line 853
+Overfull \vbox (13.01073pt too high) detected at line 863
  []
 
 [41
 
  <./rectangulo3.pdf>]
-<rectangulo4.pdf, id=3478, 462.52798pt x 346.89601pt>
+<rectangulo4.pdf, id=3482, 462.52798pt x 346.89601pt>
 File: rectangulo4.pdf Graphic file (type pdf)
 <use rectangulo4.pdf>
-Package pdftex.def Info: rectangulo4.pdf  used on input line 862.
+Package pdftex.def Info: rectangulo4.pdf  used on input line 872.
 (pdftex.def)             Requested size: 277.51892pt x 208.1392pt.
 
-Overfull \vbox (8.93813pt too high) detected at line 862
+Overfull \vbox (8.93813pt too high) detected at line 872
  []
 
 [42
 
  <./rectangulo4.pdf>]
-<rectangulo5.pdf, id=3536, 462.52798pt x 346.89601pt>
+<rectangulo5.pdf, id=3540, 462.52798pt x 346.89601pt>
 File: rectangulo5.pdf Graphic file (type pdf)
 <use rectangulo5.pdf>
-Package pdftex.def Info: rectangulo5.pdf  used on input line 871.
+Package pdftex.def Info: rectangulo5.pdf  used on input line 881.
 (pdftex.def)             Requested size: 277.51892pt x 208.1392pt.
 
-Overfull \vbox (8.93813pt too high) detected at line 871
+Overfull \vbox (8.93813pt too high) detected at line 881
  []
 
 [43
 
  <./rectangulo5.pdf>] [44
+
+] (presentacionTesis.bbl
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 5.
+
+(/home/evelyn/.miktex/texmfs/install/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)) [45
+
+ </home/evelyn/.miktex/texmfs/install/tex/latex/beamer/beamericonarticle.pdf>] 
+[46
+
+
+]
+[47
+
+
+] [48
+
+
+] [49
+
+
+] [50
+
+
+] [51
+
+
+] [52
+
+
+] [53
+
+
+] [54
+
 
 ]
 \tf@nav=\write7
@@ -1657,31 +1734,31 @@ Overfull \vbox (8.93813pt too high) detected at line 871
 \tf@snm=\write9
 \openout9 = `presentacionTesis.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 879.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 879.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 907.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 907.
  (presentacionTesis.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 879.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 879.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 907.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 907.
 Package rerunfilecheck Info: File `presentacionTesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22253 strings out of 494866
- 399595 string characters out of 3178265
- 499907 words of memory out of 3000000
- 25208 multiletter control sequences out of 15000+200000
- 35667 words of font info for 87 fonts, out of 3000000 for 9000
+ 22542 strings out of 494866
+ 405714 string characters out of 3178265
+ 511675 words of memory out of 3000000
+ 25432 multiletter control sequences out of 15000+200000
+ 35981 words of font info for 88 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
- 56i,19n,59p,3251b,603s stack positions out of 5000i,500n,10000p,200000b,50000s
- </home/evelyn/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecss070
-0.pk> </home/evelyn/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecss
-0900.pk> </home/evelyn/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/e
-csx0800.pk> </home/evelyn/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi60
-0/ecrm1095.pk> </home/evelyn/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dp
-i600/ecsi1095.pk> </home/evelyn/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec
+ 56i,15n,59p,3251b,600s stack positions out of 5000i,500n,10000p,200000b,50000s
+ </home/evelyn/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ectt109
+5.pk> </home/evelyn/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecss
+0700.pk> </home/evelyn/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/e
+css0900.pk> </home/evelyn/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi60
+0/ecsi1095.pk> </home/evelyn/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dp
+i600/ecrm1095.pk> </home/evelyn/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec
 /dpi600/ecss1200.pk> </home/evelyn/.miktex/texmfs/data/fonts/pk/ljfour/jknappen
 /ec/dpi600/ecsx1095.pk> </home/evelyn/.miktex/texmfs/data/fonts/pk/ljfour/jknap
 pen/ec/dpi600/ecss0600.pk> </home/evelyn/.miktex/texmfs/data/fonts/pk/ljfour/jk
@@ -1704,12 +1781,10 @@ ype1/public/amsfonts/cm/cmsy7.pfb></home/evelyn/.miktex/texmfs/install/fonts/ty
 pe1/public/amsfonts/cm/cmsy8.pfb></home/evelyn/.miktex/texmfs/install/fonts/typ
 e1/public/lm/lmu10.pfb></home/evelyn/.miktex/texmfs/install/fonts/type1/public/
 amsfonts/symbols/msam10.pfb></home/evelyn/.miktex/texmfs/install/fonts/type1/pu
-blic/amsfonts/symbols/msbm10.pfb></home/evelyn/.miktex/texmfs/install/fonts/typ
-e1/public/xypic/xyatip10.pfb></home/evelyn/.miktex/texmfs/install/fonts/type1/p
-ublic/xypic/xybtip10.pfb>
-Output written on presentacionTesis.pdf (44 pages, 4569805 bytes).
+blic/amsfonts/symbols/msbm10.pfb>
+Output written on presentacionTesis.pdf (54 pages, 4972881 bytes).
 PDF statistics:
- 4040 PDF objects out of 4296 (max. 8388607)
- 144 named destinations out of 1000 (max. 500000)
- 235 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4431 PDF objects out of 5155 (max. 8388607)
+ 195 named destinations out of 1000 (max. 500000)
+ 240 words of extra memory for PDF output out of 10000 (max. 10000000)
 

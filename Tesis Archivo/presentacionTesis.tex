@@ -7,11 +7,13 @@
 \usepackage{listings}
 \usepackage{minipage-marginpar}
 \usepackage{multicol}
+\spanishdecimal{.}
+\usepackage{ragged2e}
 \usepackage{upquote} % Upright quotes for verbatim code
 \usepackage{eurosym} % defines \euro
 
 \theoremstyle{definition}
-%\newtheorem{defn}{Definici\'on}[Definition]
+\newtheorem{defn}{Definici\'on}[Definition]
 %\newtheorem{conj}{Conjecture}[section]
 %\newtheorem{exmp}{Example}[section]
 %###########################################################################33
@@ -92,15 +94,15 @@
 %------------------------------------------------------------------------------------------
 \begin{frame}{M\'etodo de parametrizaci\'on}
 Sea $\mathbf{f}:\mathbb{R}^{2}\rightarrow\mathbb{R}^{2}$ un mapeo Hamiltoniano, el cual tiene un punto fijo hiperb\'olico $\mathbf{x}_{*}$.\\
-\begin{teorema}[Hartman-Grobman]
-Sea $\mathbf{x}_{*}$ un punto fijo hiperb\'olico de $\mathbf{f}$ y suponga que $\mathbf{f'}(\mathbf{x_{*}})=\lambda_{1}$ con $ \vert \lambda_{1}\vert\neq 0,1 $. Entonces hay vecindades $U$ de $\mathbf{x_{*}}$ y $V$ de $0\in\mathbb{R}$ y un homeomorfismo $h:U\rightarrow\mathbb{R}$ que conjuga $\mathbf{f}$ en $U$ con el mapeo lineal $L(\mathbf{x})=\lambda\mathbf{x}$  en $V$.
-\end{teorema}
-Tomando en cuenta lo anterior
+%\begin{teorema}[Hartman-Grobman]
+%Sea $\mathbf{x}_{*}$ un punto fijo hiperb\'olico de $\mathbf{f}$ %y suponga que $\mathbf{f'}(\mathbf{x_{*}})=\lambda_{1}$ con $ %\vert \lambda_{1}\vert\neq 0,1 $. Entonces hay vecindades $U$ de %$\mathbf{x_{*}}$ y $V$ de $0\in\mathbb{R}$ y un homeomorfismo %$h:U\rightarrow\mathbb{R}$ que conjuga $\mathbf{f}$ en $U$ con %el mapeo lineal $L(\mathbf{x})=\lambda\mathbf{x}$  en $V$.
+%\end{teorema}
+Tomando la linealización:
 \begin{equation}
 \mathbf{x}_{n+1} =\mathbf{A}\mathbf{x}_{n}, \quad \mathbf{A}=D\mathbf{f}(\mathbf{x}_{*})
 \label{sistema_lineal}
 \end{equation}
-y sean \\
+donde \\
 \begin{equation}
 \vert \lambda_{1}\vert<1 \quad \rightarrow \mathbf{u}
 \label{primer_valorp}
@@ -113,7 +115,7 @@ y sean \\
 \end{frame}
 %----------------------------------------------------------------------
 \begin{frame}
-\begin{definition}[Variedad estable e inestable]
+\begin{defn}[Variedad estable e inestable]
 \begin{equation}
 W^{s}=\lbrace \mathbf{x} : \mathbf{f}^{n}(\mathbf{x})\rightarrow \mathbf{x}_{*} \quad \mathrm{cuando} \quad n\rightarrow \infty \rbrace
 \label{variedad estable}
@@ -124,7 +126,7 @@ W^{u}=\lbrace \mathbf{x} : \mathbf{f}^{n}(\mathbf{x})\rightarrow \mathbf{x}_{*} 
 \label{variedad inestable}
 \end{equation}
 
-\end{definition}
+\end{defn}
 
 \begin{figure}
 \centering
@@ -136,12 +138,12 @@ W^{u}=\lbrace \mathbf{x} : \mathbf{f}^{n}(\mathbf{x})\rightarrow \mathbf{x}_{*} 
 \end{frame}
 %----------------------------------------------------
 \begin{frame}
-\begin{definition}[Conjunto invariante]
-Sea  $\mathbf{I} \subset \mathbf{E}$ subconjunto del espacio fase tal que para cualquier $\mathbf{x}_{i}\in  \mathbf{I}$  y $ n\in\mathbb{N}$ 
+%\begin{definition}[Conjunto invariante]
+%\end{definition}
+Sea  $\mathbf{I} \subset \mathbf{W}$ subconjunto de la variedad, para cualquier $\mathbf{x}_{i}\in  \mathbf{I}$  y $ n\in\mathbb{N}$ 
 \begin{equation}
-\mathbf{f}^{n}(\mathbf{x}_{i}) \in \mathbf{I}
+\mathbf{f}^{n}(\mathbf{x}_{i}) \in \mathbf{W}
 \end{equation}
-\end{definition}
 \begin{figure}
 \includegraphics[scale=0.43]{hyperbolic2A.pdf}
 \caption{Comportamiento de las variedades.}
@@ -157,14 +159,14 @@ Para describir la variedad usamos una parametrizaci\'on $\mathcal{P}$.
 
 %-----------------------------------------------------------
 \begin{frame}
-Escrito como un diagrama
-\begin{eqnarray}
-\xymatrix{
-\Theta\subset\mathbb{R} \ar[d]^{\mathcal{P}} \ar[r]^{g} & \Theta\subset\mathbb{R} \ar[d]^{\mathcal{P}} \\
-M\subset\mathbb{R}^{2} \ar[r]^{\mathbf{f}} & M\subset\mathbb{R}^{2}
-}\label{conmutativo}
-\end{eqnarray}
-de donde obtenemos:
+A partir de esto podemos escribir
+%\begin{eqnarray}
+%\xymatrix{
+%\Theta\subset\mathbb{R} \ar[d]^{\mathcal{P}} \ar[r]^{g} & %\Theta\subset\mathbb{R} \ar[d]^{\mathcal{P}} \\
+%M\subset\mathbb{R}^{2} \ar[r]^{\mathbf{f}} & %M\subset\mathbb{R}^{2}
+%}\label{conmutativo}
+%\end{eqnarray}
+%de donde obtenemos:
 \begin{eqnarray}
 \mathbf{f} \circ \mathcal{P} =\mathcal{P}  \circ g
 \label{Ecua de invariancia}
@@ -184,16 +186,15 @@ E_{n}(t) = \parallel \mathbf{f} \circ \mathcal{P}_{n}(t) - \mathcal{P}_{n} \circ
 %----------------------------------------------------------
 
 %-------------------------------------------------------------
-\begin{frame}{Ejemplo de aplicaci\'on al mapeo est\'andar}
-El \textit{mapeo estándar} tiene la forma
+\begin{frame}{Ejemplo de aplicaci\'on: mapeo est\'andar}
+El \textit{mapeo estándar} es
 \begin{eqnarray}
 \mathbf{f}_{k}(\theta,p) = \left[\begin{array}{c}
 \theta + p \\
 p + k\sin(\theta +p)
 \end{array}\right] \mod(2\pi),  \label{mapeo estandar}
 \end{eqnarray}
-con $k$ un parámetro. \\
-Los puntos fijos son:
+Puntos fijos:
 \begin{itemize}
 \item $\mathbf{x}_{1}=(0,0)$
 \item $\mathbf{x}_{2}=(0,\pi)$
@@ -244,7 +245,7 @@ Los puntos fijos son:
 %\end{frame}
 %-------------------------------------------------------------
 \begin{frame}
-Escribirmos las variables ($\theta,p$) 
+Escribimos las variables ($\theta,p$) 
 \begin{eqnarray}
 \theta(t)=\sum_{n=0}^{\infty}a_{n}t^{n}  ,
 \label{theta}
@@ -269,7 +270,7 @@ p(\lambda t)
 \end{array}\right], 
 \label{sumas en mapeo}
 \end{eqnarray}
-que de forma expl\'icita es
+de forma expl\'icita es
 \begin{eqnarray}
 \left[\begin{array}{c}
 \sum_{n=0}^{\infty}a_{n}t^{n} + \sum_{n=0}^{\infty}b_{n}t^{n} \\
@@ -288,21 +289,21 @@ que de forma expl\'icita es
 
 \end{frame}
 %----------------------------------------------------
-\begin{frame}
-Usando la serie de Taylor del seno para la segunda ecuaci\'on y expandiendo las sumas resulta:
-\centering
-\begin{eqnarray*}
-a_{0}+a_{1}t+a_{2}t^{2}+\cdots +b_{0}+b_{1}t+b_{2}t^{2}+ \cdots=a_{0}+a_{1}\lambda t+\cdots\quad .
+%\begin{frame}
+%Usando la serie de Taylor del seno para la segunda ecuaci\'on y %expandiendo las sumas resulta:
+%\centering
+%\begin{eqnarray*}
+%a_{0}+a_{1}t+a_{2}t^{2}+\cdots +b_{0}+b_{1}t+b_{2}t^{2}+ %\cdots=a_{0}+a_{1}\lambda t+\cdots\quad .
 %\label{primer renglon}
-\end{eqnarray*}
+%\end{eqnarray*}
 
-\begin{eqnarray*}
-&b_{1}t&+b_{2}t^{2}+\cdots+k\left[a_{0}+(a_{1}+b_{1})t+\cdots\right]-\nonumber\\
-&\frac{k}{3!}&\left[a_{0}+(a_{1}+b_{1})t+(a_{2}+b_{2})t^{2}+\cdots\right]^{3}+\cdots\nonumber\\
-&=&b_{1}\lambda t+b_{2}\lambda^{2}t^{2}+\cdots
+%\begin{eqnarray*}
+%&b_{1}t&+b_{2}t^{2}+\cdots+k\left[a_{0}+(a_{1}+b_{1})t+\cdots\right]-\nonumber\\
+%&\frac{k}{3!}&\left[a_{0}+(a_{1}+b_{1})t+(a_{2}+b_{2})t^{2}+\cdots\right]^{3}+\cdots\nonumber\\
+%&=&b_{1}\lambda t+b_{2}\lambda^{2}t^{2}+\cdots
 %\label{segundo renglon}
-\end{eqnarray*}
-\end{frame}
+%\end{eqnarray*}
+%\end{frame}
 %\begin{eqnarray}
 %\sum_{n=0}^{\infty}b_{n}t^{n} %+k\sum_{j=0}^{\infty}\frac{(-1)^{j}}{(2j+1)!}\left[ %\sum_{n=0}^{\infty}a_{n}t^{n} %+\sum_{n=0}^{\infty}b_{n}t^{n}\right]^{2j+1}=\sum_{n=0}^{\infty}b_{n}\lambda^{n%}t^{n}.
 %\label{seno exapandido 2}
@@ -319,7 +320,7 @@ a_{0}+a_{1}t+a_{2}t^{2}+\cdots +b_{0}+b_{1}t+b_{2}t^{2}+ \cdots=a_{0}+a_{1}\lamb
 
 %-----------------------------------------------------
 \begin{frame}
-Comparamos t\'erminos del mismo orden:
+Comparamos t\'erminos del mismo orden
 \begin{itemize}
 \item Orden cero:
 \begin{equation}
@@ -391,7 +392,7 @@ b_{2}+ka_{2}+b_{2}=b_{2}\lambda^{2}.
 %---------------------------------------------------------
 \begin{frame}
 
-Hay otra forma de calcular los coeficientes: mediante relaciones de recurrencia. Para ello se usa el truco de buscar que la ecuación \eqref{expandida} satisfaga una ecuación diferenical simple.
+Hay otra forma de calcular los coeficientes: mediante relaciones de recurrencia. Para ello se usa el truco de buscar que la ecuación \eqref{expandida} satisfaga una ecuaci\'on diferencial simple.
 \begin{eqnarray}
 \alpha_{n+1}=\frac{-1}{n+1}\sum_{l=0}^{n}(l+1)\beta_{n-l}(a_{l+1}+b_{l+1}),
 \label{recurrencia alpha}
@@ -503,8 +504,16 @@ b_{n+1}=\frac{-k 1-\lambda^{n+1}}{(n+1)[(1-\lambda^{n+1})(1-\lambda^{n+1}+k)-k]}
 %\end{frame}
 
 %-----------------------------------------------------
-\begin{frame}{Ejemplos de aplicaci\'on:Mapeo est\'andar}
-En el mapeo estándar \eqref{mapeo estandar} uno de los puntos fijos es el origen de coordenadas $\mathbf{x}_{1}=(0,0)$.
+\begin{frame}{Iterativo}
+\begin{figure}
+	\includegraphics[scale=0.25]{iteradosMireles.png}
+	\caption{Variedades calculadas mediante iterar un conjunto de condiciones iniciales 300 veces. \cite{Mireles}}
+\end{figure}
+
+\end{frame}
+%_________________________________________________________
+\begin{frame}{Ejemplos de aplicaci\'on: mapeo est\'andar}
+Usando el punto fijo  $\mathbf{x}_{1}=(0,0)$.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{k03}
@@ -514,11 +523,11 @@ En el mapeo estándar \eqref{mapeo estandar} uno de los puntos fijos es el orige
 \end{frame}
 %---------------------------------------------------------------------
 \begin{frame}
-El error lo calculamos usando 
-\begin{eqnarray*}
-E_{n}(t) = \parallel \mathbf{f} \circ \mathcal{P}_{n}(t) - \mathcal{P}_{n} \circ g(t) \parallel_{\infty}.
+El error:
+%\begin{eqnarray*}
+%E_{n}(t) = \parallel \mathbf{f} \circ \mathcal{P}_{n}(t) - %\mathcal{P}_{n} \circ g(t) \parallel_{\infty}.
 %\label{Ecua de invariancia resta}
-\end{eqnarray*}
+%\end{eqnarray*}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{errork03} 
@@ -578,7 +587,7 @@ podemos calcular la varieda estable
 \end{figure}
 \end{frame}
 %-------------------------------------------------------------
-\begin{frame}{H\'enon}
+\begin{frame}{Mapeo de H\'enon}
 El mapeo de Hénon se define como:
 \begin{eqnarray}
 \mathbf{f}_{a,b}(x,y)=\left( \begin{array}{lcc}
@@ -626,7 +635,7 @@ y\\
 %------------------------------------------
 
 \begin{frame}{Mapeo exponencial}
-El último mapeo que se estudió fue uno usado en el artículo: 
+El mapeo exponencial se define como:
 \begin{eqnarray}
 \mathbf{j}_{a}(x,y)=\left(\begin{array}{lcc}
 x+y\\
@@ -634,7 +643,7 @@ x+y\\
 \end{array}\right), \quad f(x)=x(x-1)e^{-x}.
 \label{Jung}
 \end{eqnarray}
-A este mapeo le corresponde su mapeo inverso
+y su inverso
 \begin{eqnarray}
 \mathbf{j}^{-1}_{a}(x,y)=\left(\begin{array}{lcc}
 x-y+ax(x-1)e^{-x}\\
@@ -695,7 +704,8 @@ Usando el criterio de los tres t\'erminos:
 \end{figure}
 \end{frame}
 %------------------------------------------------------------------------
-\begin{frame}{Existencia de puntos homocl\'inicos/heterocl\'inicos}
+\begin{frame}{Existencia de puntos homocl\'inicos}
+\justifying
 Siendo que el resultado son polinomios, se puede aplicar el método de Newton, o cualquier otro, en dos dimensiones para resolver $\mathcal{P}^{u}=\mathcal{P}^{s}$.
 Concretamente se tienen \\
 \begin{equation}
@@ -704,7 +714,7 @@ W^{s}(t)=(\mathcal{P}_{x}(t),\mathcal{P}_{y}(t)) ,\quad W^{u}(\tau)=(\mathcal{P}
 \begin{eqnarray}
 W^{s}(t)=W^{u}(\tau),
 \end{eqnarray}
-
+\justifying
 la intersección se encontrará en $I_{t}\times I_{\tau}$. En el espacio fase la intersección se verá como el producto cartesiano de $W^{s}(I_{t})\times W^{u}(I_{\tau})$ formando una sección en la que se garantiza hay un punto homoclínico o heteroclínico. 
 \end{frame}
 %----------------------------------------------------------------------
@@ -722,7 +732,7 @@ la intersección se encontrará en $I_{t}\times I_{\tau}$. En el espacio fase la
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{crucesL}
-\caption{Cruces de $W^{u},W^{s}$ encontrados en el intervalo $[-400.,0.] \times [0.,400.]$ con una tolerancia de $10^{-6}$.}
+\caption{Cruces de $W^{u},W^{s}$ , con una tolerancia de $10^{-6}$.}
 \label{crucesH}
 \end{figure}
 \end{frame}
@@ -741,7 +751,7 @@ la intersección se encontrará en $I_{t}\times I_{\tau}$. En el espacio fase la
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{cruces_jung1}
-\caption{Intersecciones en el mapeo exponencial con $a=5.7$, con una toleracia de $10^{-6}$.}
+\caption{Intersecciones en el mapeo exponencial con $a=5.7$, con una tolerancia de $10^{-6}$.}
 \label{jung_cortes}
 \end{figure}
 \end{frame}
@@ -757,11 +767,11 @@ la intersección se encontrará en $I_{t}\times I_{\tau}$. En el espacio fase la
 \end{frame}
 
 \begin{frame}{Rect\'angulo fundamental}
-El rect\'angulo fundamental es una región del espacio fase que contiene todas las intersecciones (homoclínicas y heteroclínicas) del mapeo, lo que permite obtener toda la dinámica fuera del mismo.
+
 \begin{figure}
 \centering
-\includegraphics[scale=0.20]{herradura}
-\caption{Diagrama ilustrativo de la topología de una herradura en un sistema Hamiltoniano de dos dimensiones. }
+\includegraphics[scale=0.27]{herradura}
+\caption{Diagrama ilustrativo de la topología de una herradura en un sistema Hamiltoniano de dos dimensiones.\cite{Merlo} }
 %Tomada de \cite{Merlo}, pp.8.} H denota el punto fijo hiperbólico y P la primera intersección. Los tentáculos de la variedad estable son enfatizados con color negro. Tomada de \cite{Merlo}, pp.8.}
 \label{herradura}
 \end{figure}
@@ -775,7 +785,7 @@ f_{a,b}^{-1}(W_{0}^{s}(t))=W_{0}^{s}(\lambda^{s}t).
 \label{InvarianciaEstable1}
 \end{eqnarray}
 
-Aplicando el mapeo de Hénon inverso \eqref{HenonI} a la ecuación \eqref{InvarianciaEstable1} resulta
+Aplicando el mapeo de Hénon  \eqref{Henon} a la ecuación \eqref{InvarianciaEstable1} resulta
 \begin{eqnarray}
 W_{0}^{s}(t)=f_{a,b}(W_{0}^{s}(\lambda^{s}t)),
 \label{InvarianciaEstable2}
@@ -817,7 +827,7 @@ E_{1}(t)=\bigg\| W_{0}^{s}\left(\frac{t}{\lambda^{s}}\right)-f_{a,b}(W_{0}^{s}(t
 \end{eqnarray}
 generalizando obtenemos
 \begin{eqnarray}
-E_{n}(t)=\bigg\| (f^{-1}_{k})^{n}\left(W_{0}^{s}\left(\frac{t}{\lambda^{s}}\right)\right)- (f^{-1}_{k})^{n-1}(W_{0}^{s}(t)))\bigg\|_{\infty}.
+E_{n}(t)=\bigg\| (f_{k})^{n}\left(W_{0}^{s}\left(\frac{t}{\lambda^{s}}\right)\right)- (f_{k})^{n-1}(W_{0}^{s}(t)))\bigg\|_{\infty}.
 \label{error-n-aplicacion}
 \end{eqnarray}
 \end{frame}
@@ -871,8 +881,26 @@ La tercera aplicaci\'on
 \end{frame}
 %------------------------------------------------------------------------------
 \begin{frame}{Conclusiones y perspectivas}
+\justifying
+\begin{itemize}
+    \item El método es eficiente para calcular variedades estables e inestables en comparación con los métodos iterativos.
+    \item Se puede estudiar más sobre el comportamiento de las variedades.
+    \item Es posible calcular puntos homoclínicos y heteroclínicos.
+    \item Mediante la iteración de la parametrización bajo el mapeo es posible obtener más sobre las variedades.
+    \item Generalizar el método para otro tipo de sistemas.
+    \item Utilizar cómputo validado.
+\end{itemize}
 
 
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{Bibliografía}
+  
+  \nocite{Mireles, Mireles2,Haro,Meyer, gerald,Meiss, Chang, Merlo,Juergen, Tomoki, Jung,Jung2, Seligman, Ott,gold, arnold,arn,hale, ver, devaney,devaney2,marion, ramon, interval,validated, static,root,Friedberg, Mateo,book:Calvin,Numerics,Ying}
+  
+  \bibliographystyle{plain}
+  \bibliography{referencias}
 \end{frame}
 
 

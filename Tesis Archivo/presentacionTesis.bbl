@@ -1,0 +1,178 @@
+\begin{thebibliography}{10}
+
+\bibitem{interval}
+Interval {A}rithmetic (paquete de julia).
+\newblock \url{https://juliaintervals.github.io/IntervalArithmetic.jl/stable/}.
+
+\bibitem{root}
+Interval {R}oot {F}inding (paquete de julia).
+\newblock \url{https://github.com/JuliaIntervals/IntervalRootFinding.jl}.
+
+\bibitem{static}
+Static {A}rrays (paquete de julia).
+\newblock \url{https://github.com/JuliaArrays/StaticArrays.jl}.
+\newblock v0.7.2.
+
+\bibitem{validated}
+Validated {N}umerics (paquete de julia).
+\newblock \url{https://github.com/JuliaIntervals/ValidatedNumerics.jl}.
+
+\bibitem{Haro}
+J.~Figueras A. Luque y J.~Mondelo Á.~Haro, M.~Canadell.
+\newblock {\em The Parameterization Method for Invariant Manifolds}, volume 195
+  of {\em Applied Mathematical Sciences}.
+\newblock Springer, 1 edition, 2010.
+
+\bibitem{arnold}
+Vladimir~I. Arnol'd.
+\newblock {\em Mathematical Methods of Classical Mechanics}, volume~1 of {\em
+  Analytic Mechanics}.
+\newblock Springer-Verlag, 2nd edition, 1992.
+
+\bibitem{Seligman}
+C.~Lipp y T.H.~Seligman C.~Jung.
+\newblock The inverse scattering problem for chaotic hamiltonian systems.
+\newblock {\em Annals of Physics}, 275:151--189, 1999.
+
+\bibitem{Merlo}
+O.~Merlo y T.H.~Seligman C.~Jung, C. Mejía-Monasterio.
+\newblock Self-pushing effect in chaotic scattering.
+\newblock {\em New Journal of Physics}, 6, 2004.
+
+\bibitem{devaney}
+Robert~L. Devaney.
+\newblock {\em An Introduction to Chaotic Dynamical Systems}.
+\newblock Adyson-Wesley, 2nd edition, 1989.
+
+\bibitem{hale}
+Jack~K. Hale.
+\newblock {\em Ordinary Differential Equations}.
+\newblock Krieger Pub Co, 1980.
+
+\bibitem{gold}
+Charles P. Poole y John L.~Safko Herbert~Goldstein.
+\newblock {\em Classical {M}echanics}.
+\newblock Addison-Wesley, 3 edition, 2000.
+
+\bibitem{Mireles}
+J.D~Mireles James.
+\newblock Elementary example of the parametrization method; stable and unstable
+  manifolds of the standard map.
+\newblock \url{http://cosweb1.fau.edu/~jmirelesjames/standardMapNotes.pdf},
+  2007.
+
+\bibitem{Mireles2}
+J.D. Mireles James y Christian~Reinhardt Jan Bouwe van~den Berg.
+\newblock Computing (un)stable manifolds with validated error bounds:
+  non-resonant and resonant spectra.
+\newblock
+  \url{http://cosweb1.fau.edu/~jmirelesjames/parametrization_draft9.pdf}, 2015.
+
+\bibitem{Meyer}
+Glen R. Hall y Dan~Offin Kenneth R.~Meyerb.
+\newblock {\em Introduction to Hamiltonian Dynamical Systems and the N-Body
+  Poblem}, volume~90 of {\em Applied Mathematical Sciences}.
+\newblock Springer, 2nd edition, 2009.
+
+\bibitem{Meiss}
+James~D. Meiss.
+\newblock {\em Differential Dynamical Systems}, volume~14 of {\em Mathematical
+  modeling and computation}.
+\newblock Society for Industrial and Applied Mathematics ,Philadelphia, 1
+  edition, 2007.
+
+\bibitem{Ott}
+Edward Ott.
+\newblock {\em Chaos in Dynamical Systems}.
+\newblock Cambridge University Press, 5th edition, 1993.
+
+\bibitem{devaney2}
+Robert L. Devaney y Glen R.~Hall Paul~Banchard.
+\newblock {\em Ecuaciones diferenciales}.
+\newblock Thomson, 1th edition, 1998.
+
+\bibitem{Juergen}
+Juergen Quandt.
+\newblock On the {H}artman--{G}robman theorem for maps.
+\newblock {\em Journal of Differential Equations}, 64:154--164, 1986.
+
+\bibitem{ramon}
+R.Baker Kearfott y Michael J.~Cloud Ramon E.~More.
+\newblock {\em Introduction to Interval Analysis}.
+\newblock SIAM, 2009.
+
+\bibitem{Friedberg}
+A.~J. Insel y L.E.~Spence Stephen H.~Friedberg.
+\newblock {\em Algebra lineal}.
+\newblock Publicaciones Cultrales S.A., 1 edition.
+
+\bibitem{gerald}
+Gerald Teschl.
+\newblock {\em Ordinary Differential Equations and Dynamical Systems}.
+\newblock Graduate Studies in Mathematics. American Mathematical Society
+  Providence, Rhode Island, 1 edition, 2011.
+
+\bibitem{Tomoki}
+Anthony M. Bloch y Melvin~Leok Tomoki~Ohsawa.
+\newblock Discrete {H}amilton-{J}acobi theory.
+\newblock {\em SIAM J. Control Optim}, 49:1822--1856, 3009.
+
+\bibitem{Numerics}
+W.~Tucker.
+\newblock {\em Valdated Numerics: A short introduction to Rigorous
+  Computations}.
+\newblock Princeton University Press.
+
+\bibitem{ver}
+Ferdinand Verhulst.
+\newblock {\em Nonlinear Differential Equations and Dynamical Systems}.
+\newblock Springer, 1985.
+
+\bibitem{Mateo}
+Mateo Wirth.
+\newblock Invariant manifolds of dynamical systems and an application to space
+  exploration.
+\newblock
+  \url{http://pi.math.cornell.edu/~templier/junior/final_paper/Mateo_Wirth.pdf}.
+
+\bibitem{book:Calvin}
+Calvin D.~Ahlbrandt y~Allan C. Peterson~(auth.).
+\newblock {\em Discrete Hamiltonian Systems: Difference Equations, Continued
+  Fractions, and Riccati Equations}.
+\newblock Kluwer Texts in the Mathematical Sciences 16. Springer US, 1 edition,
+  1996.
+
+\bibitem{Jung2}
+B.~Rückerl y~C.~Jung.
+\newblock Hierarchical structure in the chaotic scattering off a magnetic
+  dipole.
+\newblock {\em J. Phys A: Math.}, 27:6741--6758, 1994.
+
+\bibitem{Jung}
+B.~Rückerl y~C.~Jung.
+\newblock Scaling properties of a scattering system with an incomplete
+  horseshoe.
+\newblock {\em J. Phys A: Math.}, 27:55--77, 1994.
+
+\bibitem{Chang}
+Y.F.~Chang y~G.~Corliss.
+\newblock Ratio-like and recurrence relation tests for convergence of series.
+\newblock {\em J. Inst. Maths Applies}, 25:349--359, 1980.
+
+\bibitem{marion}
+Stephen T.~Thornton y~Jerry B.~Marion.
+\newblock {\em Classical Dynamics of Particles and Systems}.
+\newblock Thomson, 5th edition, 2004.
+
+\bibitem{arn}
+Vladimir I.~Arnol'd y~Roger~Cooke.
+\newblock {\em Ordinary Differential Equations}.
+\newblock Springer-Verlag, 1991.
+
+\bibitem{Ying}
+Tamás~Tél Ying-Cheng~Lai.
+\newblock {\em Transient Chaos}, volume 173 of {\em Applied Mathematical
+  Sciences}.
+\newblock Springer, 1 edition, 2010.
+
+\end{thebibliography}

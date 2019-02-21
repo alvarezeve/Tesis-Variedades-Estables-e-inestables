@@ -5,7 +5,6 @@
 \beamer@slide {variedad estable}{5}
 \beamer@slide {variedad inestable}{5}
 \beamer@slide {hiperbolico}{5}
-\beamer@slide {conmutativo}{8}
 \beamer@slide {Ecua de invariancia}{8}
 \beamer@slide {Ecua de invariancia resta}{8}
 \beamer@slide {mapeo estandar}{9}
@@ -13,10 +12,10 @@
 \beamer@slide {p}{10}
 \beamer@slide {sumas en mapeo}{11}
 \beamer@slide {expandida}{11}
-\beamer@slide {segundos_coeficientes_a}{13}
-\beamer@slide {segundos_coeficientes_b}{13}
-\beamer@slide {recurrencia alpha}{14}
-\beamer@slide {recurrencia beta}{14}
+\beamer@slide {segundos_coeficientes_a}{12}
+\beamer@slide {segundos_coeficientes_b}{12}
+\beamer@slide {recurrencia alpha}{13}
+\beamer@slide {recurrencia beta}{13}
 \beamer@slide {estandar03}{15}
 \beamer@slide {error est k03}{16}
 \beamer@slide {estandar15}{17}
